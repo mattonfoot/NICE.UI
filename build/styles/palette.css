@@ -1,0 +1,417 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+/*
+ * HTML5 display definitions
+ */
+article,
+aside,
+details,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+[hidden],
+template {
+  display: none;
+}
+/*
+ * Root document elements
+ */
+html {
+  font-size: 10px;
+  /*px*/ line-height: 24px;
+  /**/
+  /*rem*/ line-height: 2.4rem;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  margin: 0;
+  line-height: 1.5;
+  font-size: 1.6em;
+  font-family: Lato, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #111111;
+  background-color: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 12px;
+  }
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Regular.eot');
+  src: url('../fonts/Lato-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/Lato-Regular.woff') format('woff'), /* Modern Browsers */ url('../fonts/Lato-Regular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  
+  /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Bold.eot');
+  src: url('../fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/Lato-Bold.woff') format('woff'), /* Modern Browsers */ url('../fonts/Lato-Bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  
+  /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-Italic.eot');
+  src: url('../fonts/Lato-Italic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/Lato-Italic.woff') format('woff'), /* Modern Browsers */ url('../fonts/Lato-Italic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: normal;
+  text-rendering: optimizeLegibility;
+  
+  /* IE9 Compat Modes */
+}
+@font-face {
+  font-family: 'Lato';
+  src: url('../fonts/Lato-BoldItalic.eot');
+  src: url('../fonts/Lato-BoldItalic.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */ url('../fonts/Lato-BoldItalic.woff') format('woff'), /* Modern Browsers */ url('../fonts/Lato-BoldItalic.ttf') format('truetype');
+  font-style: italic;
+  font-weight: bold;
+  text-rendering: optimizeLegibility;
+  
+  /* IE9 Compat Modes */
+}
+/*
+ * Basic text elements
+ */
+p {
+  /*px*/ margin: 24px 0;
+  /**/
+  /*rem*/ margin: 2.4rem 0;
+  padding: 0;
+}
+a {
+  color: #01769d;
+  background: transparent;
+}
+a:focus,
+a:hover {
+  color: #08455b;
+}
+a:focus {
+  outline: 1px dotted #7fdbff;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+blockquote {
+  /*px*/ margin: 24px;
+  /**/
+  /*rem*/ margin: 2.4rem;
+  padding: 0;
+  color: #656565;
+  font-style: italic;
+}
+u,
+ins {
+  text-decoration: underline;
+}
+b,
+strong {
+  font-weight: 700;
+  line-height: 0;
+}
+em,
+i {
+  font-style: italic;
+  line-height: 0;
+}
+dfn {
+  font-weight: 700;
+  font-style: italic;
+  line-height: 0;
+}
+cite,
+[cite] {
+  font-style: italic;
+  line-height: 0;
+}
+mark {
+  color: #000000;
+  background-color: #ffdc00;
+}
+small {
+  font-size: 80%;
+  line-height: 0;
+}
+sup,
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+abbr[title],
+acronym[title] {
+  border-bottom: 1px dotted #656565;
+}
+address {
+  /*px*/ margin: 24px 0;
+  /**/
+  /*rem*/ margin: 2.4rem 0;
+  padding: 0;
+  font-style: italic;
+}
+del,
+s {
+  text-decoration: line-through;
+}
+del {
+  color: #919191;
+}
+pre {
+  overflow: auto;
+  /*px*/ margin: 24px 0;
+  /**/
+  /*rem*/ margin: 2.4rem 0;
+  padding: 0;
+  white-space: pre;
+}
+pre,
+code,
+tt,
+kbd,
+samp,
+var {
+  font-family: 'andale mono', 'lucida console', monospace;
+  /*px*/ font-size: 16px;
+  /**/
+  /*rem*/ font-size: 1.6rem;
+}
+var {
+  font-style: italic;
+}
+code,
+tt,
+kbd,
+samp,
+var {
+  line-height: 0;
+}
+/* <body> line-height (ie 6,7 fix) */
+pre code {
+  line-height: 1.231;
+}
+.palette {
+  display: block;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  zoom: 1;
+}
+.swatch {
+  display: block;
+  width: 144px;
+  margin: 12px;
+  padding: 0;
+  float: left;
+  text-align: center;
+  background: #f7f7f7;
+}
+.swatch > .example {
+  display: block;
+  height: 120px;
+  margin: 12px;
+  padding: 12px 5px;
+  border: 1px solid transparent;
+  overflow: hidden;
+}
+.swatch > .name {
+  display: block;
+  margin: 0 0 12px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.swatch > .hex {
+  display: block;
+  margin: 0 0 12px;
+  line-height: 24px;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+.theme-document .example {
+  color: #111111;
+  background-color: #ffffff;
+}
+.theme-text-muted .example {
+  color: #111111;
+  background-color: #ffffff;
+  color: #919191;
+}
+.theme-text-strongly-emphasised .example {
+  color: #111111;
+  background-color: #ffffff;
+  font-weight: 700;
+}
+.theme-text-emphasised .example {
+  color: #111111;
+  background-color: #ffffff;
+  font-style: italic;
+}
+.theme-blockquote .example {
+  color: #111111;
+  background-color: #ffffff;
+  color: #656565;
+  font-style: italic;
+}
+.theme-highlighted .example {
+  color: #111111;
+  background-color: #ffffff;
+  color: #000000;
+  background-color: #ffdc00;
+}
+.theme-postal-address .example {
+  color: #111111;
+  background-color: #ffffff;
+  font-style: italic;
+}
+.theme-text-definition .example {
+  color: #111111;
+  background-color: #ffffff;
+  font-weight: 700;
+  font-style: italic;
+}
+.theme-text-cited .example {
+  color: #111111;
+  background-color: #ffffff;
+  font-style: italic;
+}
+.theme-link .example {
+  color: #111111;
+  background-color: #ffffff;
+  color: #01769d;
+  background: transparent;
+}
+.theme-link-hover .example {
+  color: #111111;
+  background-color: #ffffff;
+  color: #08455b;
+}
+.theme-link-cautionary .example {
+  color: #111111;
+  background-color: #ffffff;
+  color: #fb1b1b;
+}
+.theme-link-hover-cautionary .example {
+  color: #111111;
+  background-color: #ffffff;
+  color: #d50404;
+}
+.theme-legend .example {
+  color: #111111;
+  border-color: #cccccc;
+}
+.theme-text-input .example {
+  color: #111111;
+  background-color: #ffffff;
+  border-color: #aaaaaa;
+}
+.theme-text-input-disabled .example {
+  color: #919191;
+  background-color: #f2f2f2;
+  border-color: #cccccc;
+}
+.theme-text-placeholder .example {
+  color: #111111;
+  background-color: #ffffff;
+  border-color: #aaaaaa;
+  color: #aaaaaa;
+}
+.theme-text-output .example {
+  color: #111111;
+  background-color: #f2f2f2;
+}
+.theme-button .example {
+  color: #111111;
+  background-color: #cccccc;
+  border-color: #cccccc;
+}
+.theme-button-hover .example {
+  color: #111111;
+  background-color: #aaaaaa;
+  border-color: #aaaaaa;
+}
+.theme-button-active .example {
+  color: #111111;
+  background-color: #cccccc;
+  border-color: #aaaaaa;
+}
+.theme-button-primary-action .example {
+  color: #111111;
+  background-color: #99ff8b;
+  border-color: #99ff8b;
+}
+.theme-button-primary-action-hover .example {
+  color: #111111;
+  background-color: #63ff4e;
+  border-color: #63ff4e;
+}
+.theme-button-primary-action-active .example {
+  color: #111111;
+  background-color: #99ff8b;
+  border-color: #63ff4e;
+}
+.theme-button-disabled .example {
+  color: #919191;
+  background-color: #cccccc;
+  border-color: #cccccc;
+}
+.theme-table .example {
+  background-color: #ffffff;
+}
+.theme-table-header .example {
+  background-color: #ffffff;
+  color: #111111;
+  background-color: #7fdbff;
+}
+.theme-table-zebra-stripes .example {
+  background-color: #ffffff;
+  background-color: #f2f2f2;
+}
+.theme-table-hover .example {
+  background-color: #ffffff;
+  background-color: #e5f8ff;
+}
+.theme-table-caption .example {
+  background-color: #ffffff;
+  font-style: italic;
+  background-color: #f2f2f2;
+}
+.theme-table-multiple-bodies .example {
+  background-color: #ffffff;
+  border-color: #aaaaaa;
+}
+.theme-table-cell .example {
+  background-color: #ffffff;
+  border-color: #aaaaaa;
+}

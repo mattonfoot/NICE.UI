@@ -3,7 +3,7 @@ module.exports = function( config ) {
     return {
 
         src: {
-            files: 'src/**/*',
+            files: [ './src/**/*.*', './templates/**/*.*'],
             tasks: [ 'generate' ]
         }
 

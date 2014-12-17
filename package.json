@@ -1,5 +1,5 @@
 {
-  "name": "NICE.ui",
+  "name": "NICE.UI",
   "version": "1.0.0",
   "description": "A responsive UI framework for NICE online services and web applications",
   "main": "index.js",
@@ -28,6 +28,8 @@
   "homepage": "https://github.com/mattonfoot/NICE.ui",
   "private": true,
   "devDependencies": {
+    "metalsmith-include": "*",
+    "metalsmith-less": "*",
     "metalsmith-templates": "*",
     "metalsmith-markdown": "*",
     "metalsmith-permalinks": "*",

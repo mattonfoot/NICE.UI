@@ -5,10 +5,11 @@ module.exports = function( config ) {
         dev: {
 
             options: {
+                port: 9001,
                 useAvailablePort: true,
                 keepalive: true,
                 base: [ './build' ],
-                open: '/'
+                open: 'http://remotehost:9001'
             }
 
         }

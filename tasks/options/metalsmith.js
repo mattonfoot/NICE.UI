@@ -4,18 +4,26 @@ module.exports = function( config ) {
     generate: {
       options: {
         metadata: {
-          title: 'NICE UI framework',
-          description: config.pkg.description
+          title: config.pkg.name,
+          description: config.pkg.description,
+          version: config.pkg.version
         },
 
         plugins: {
-          'metalsmith-markdown': {},
+          'metalsmith-less': {
+            pattern: 'styles/*.less',
+            parse: {
+              paths: [ './src/styles' ]
+            }
+          },
+          'metalsmith-markdown': { },
           'metalsmith-permalinks': {
-            pattern: ':title'
+            pattern: ':section-:title'
           },
           'metalsmith-templates': {
             engine: 'handlebars',
-            directory: 'templates'
+            directory: 'templates',
+            partials: loadPartials(  )
           }
         }
       },
@@ -24,4 +32,24 @@ module.exports = function( config ) {
       dest: './build'
     }
   };
+
+
+
+
+
+
+  // helper function to load task configs
+
+  function loadPartials( path ) {
+    var glob = require( 'glob' )
+    , object = {};
+
+    glob.sync('*', { cwd: './templates/includes/' })
+    .forEach(function( option ) {
+      var key = option.replace( /\.html$/, '' );
+      object[ key ] = '/includes/' + key;
+    });
+
+    return object;
+  }
 }

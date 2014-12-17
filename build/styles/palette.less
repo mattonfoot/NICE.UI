@@ -1,0 +1,190 @@
+@import (reference) "./mixins/globals.less";
+@import (reference) "./mixins/helpers.less";
+@import (reference) "./mixins/spacing.less";
+@import (reference) "./mixins/typography.less";
+
+@import (reference) "./themes/default.less";
+
+@import "./plugins/base.less";
+
+@import "./plugins/typography.less";
+
+.palette {
+    display: block;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    zoom: 1;
+}
+
+.swatch {
+    display: block;
+    width: 144px;
+    margin: 12px;
+    padding: 0;
+    float: left;
+    text-align: center;
+    background: #f7f7f7;
+
+    > .example {
+        display: block;
+        height: 120px;
+        margin: 12px;
+        padding: 12px 5px;
+        border: 1px solid transparent;
+        overflow: hidden;
+
+    }
+
+    > .name {
+        display: block;
+        margin: 0 0 12px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    > .hex {
+        display: block;
+        margin: 0 0 12px;
+        line-height: 24px;
+        font-size: 12px;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+}
+
+.example {
+
+  .theme-document & {
+      .theme-document();
+  }
+
+  // text only
+  .theme-text-muted & {
+      .theme-document();          // contrast the text against the actual document background
+      .theme-text-muted();
+  }
+  .theme-text-strongly-emphasised & {
+    .theme-document();          // contrast the text against the actual document background
+      .theme-text-strongly-emphasised();
+  }
+  .theme-text-emphasised & {
+    .theme-document();          // contrast the text against the actual document background
+      .theme-text-emphasised();
+  }
+  .theme-blockquote & {
+    .theme-document();          // contrast the text against the actual document background
+      .theme-blockquote();
+  }
+  .theme-highlighted & {
+    .theme-document();          // contrast the text against the actual document background
+      .theme-highlighted();
+  }
+  .theme-postal-address & {
+    .theme-document();          // contrast the text against the actual document background
+      .theme-postal-address();
+  }
+  .theme-text-definition & {
+    .theme-document();          // contrast the text against the actual document background
+      .theme-text-definition();
+  }
+  .theme-text-cited & {
+    .theme-document();          // contrast the text against the actual document background
+    .theme-text-cited();
+  }
+
+
+  // links
+  .theme-link & {
+      .theme-document();          // contrast the text against the actual document background
+      .theme-link();
+  }
+  .theme-link-hover & {
+      .theme-document();          // contrast the text against the actual document background
+      .theme-link-hover();
+  }
+  .theme-link-cautionary & {
+      .theme-document();          // contrast the text against the actual document background
+      .theme-link-cautionary();
+  }
+  .theme-link-hover-cautionary & {
+      .theme-document();          // contrast the text against the actual document background
+      .theme-link-hover-cautionary();
+  }
+
+
+  // forms
+  .theme-legend & {
+      .theme-legend();
+  }
+  .theme-text-input & {
+      .theme-text-input();
+  }
+  .theme-text-input-disabled & {
+      .theme-text-input-disabled();
+  }
+  .theme-text-placeholder & {
+      .theme-text-input();          // contrast the placeholder text against the actual input background
+      .theme-text-placeholder();
+  }
+  .theme-text-output & {
+      .theme-text-output();
+  }
+
+
+  // buttons
+  .theme-button & {
+      .theme-button();
+  }
+  .theme-button-hover & {
+      .theme-button-hover();
+  }
+  .theme-button-active & {
+      .theme-button-active();
+  }
+  .theme-button-primary-action & {
+      .theme-button-primary-action();
+  }
+  .theme-button-primary-action-hover & {
+      .theme-button-primary-action-hover();
+  }
+  .theme-button-primary-action-active & {
+      .theme-button-primary-action-active();
+  }
+  .theme-button-disabled & {
+      .theme-button-disabled();
+  }
+
+
+  // tables
+  .theme-table & {
+      .theme-table();
+  }
+  .theme-table-header &  {
+    .theme-table();          // contrast the text against the actual table background
+      .theme-table-header();
+  }
+  .theme-table-zebra-stripes & {
+    .theme-table();          // contrast the text against the actual table background
+      .theme-table-zebra-stripes();
+  }
+  .theme-table-hover & {
+    .theme-table();          // contrast the text against the actual table background
+      .theme-table-hover();
+  }
+  .theme-table-caption & {
+    .theme-table();          // contrast the text against the actual table background
+      .theme-table-caption()
+  }
+  .theme-table-multiple-bodies & {
+    .theme-table();          // contrast the text against the actual table background
+      .theme-table-multiple-bodies();
+  }
+  .theme-table-cell & {
+    .theme-table();          // contrast the text against the actual table background
+      .theme-table-cell();
+  }
+
+
+}

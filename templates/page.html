@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>{{ title }}</title>
+
+  {{> _header }}
+</head>
+
+<body data-spy="scroll" data-target=".menu-container">
+  <div class="navbar navbar-global">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul class="nav nav-pills pull-right">
+          <li><a href="/">Home</a></li>
+          <li><a href="/getting-started">Get started</a></li>
+          <li><a href="/Guide.Scaffolding.html">Scaffolding</a></li>
+          <li><a href="/basic-elements">Basic elements</a></li>
+          <li><a href="/Guide.FormElements.html">Form elements</a></li>
+          <li><a href="/Guide.Navigation.html">Navigation</a></li>
+          <li><a href="/Guide.Glyphs.html">Icons</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header
+  ================================================== -->
+  <header class="page-header">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li><a href="./index.html">Home</a> <i class="divider icon-chevron-right"></i></li>
+      </ul>
+
+      <h1>{{ title }}</h1>
+
+      <p class="lead">{{ description }}</p>
+    </div>
+  </header>
+
+  <article class="layout layout-first-right">
+    <div class="content content-primary">
+      {{{ contents }}}
+    </div>
+
+    <aside class="content content-secondary">
+      <!-- Docs nav
+      ================================================== -->
+      <nav class="menu-container">
+        <ul class="nav nav-list">
+          <li><a href="#file-structure"><i class="icon-chevron-right"></i> File structure</a></li>
+        </ul>
+      </nav>
+    </aside>
+  </article>
+
+  <div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul class="nav nav-pills">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/getting-started">Get started</a></li>
+          <li><a href="/Guide.Scaffolding.html">Scaffolding</a></li>
+          <li><a href="/Guide.Navigation.html">Navigation</a></li>
+          <li><a href="/basic-elements">Basic elements</a></li>
+          <li><a href="/Guide.FormElements.html">Form elements</a></li>
+          <li><a href="/Guide.Glyphs.html">Icons</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  {{> _Global.Footer }}
+
+  {{> _footer }}
+</body>
+</html>

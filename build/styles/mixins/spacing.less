@@ -1,0 +1,94 @@
+
+// relative heights
+.span-lines( @numLines ) {
+    .relative_size( height, @numLines * @base-line-height );
+}
+.span-minlines( @numLines ) {
+    .relative_size( min-height, @numLines * @base-line-height );
+}
+
+// padding & margin mixins
+.margin-zero() {
+    margin: 0;
+}
+.margin( @sizeValues: @base-line-height @grid-spacing / 2 ) {
+    .relative_size( margin, @sizeValues );
+}
+.margin-top( @sizeValue: @base-line-height ) {
+    .relative_size( margin-top, @sizeValue );
+}
+.margin-right( @sizeValue: @grid-spacing / 2 ) {
+    .relative_size( margin-right, @sizeValue );
+}
+.margin-bottom( @sizeValue: @base-line-height ) {
+    .relative_size( margin-bottom, @sizeValue );
+}
+.margin-left( @sizeValue: @grid-spacing / 2 ) {
+    .relative_size( margin-left, @sizeValue );
+}
+.padding-zero() {
+    padding: 0;
+}
+.padding( @sizeValues: @base-line-height ) {
+    .relative_size( padding, @sizeValues );
+}
+.padding-top( @sizeValue: @base-line-height ) {
+    .relative_size( padding-top, @sizeValue );
+}
+.padding-right( @sizeValue: @base-line-height ) {
+    .relative_size( padding-right, @sizeValue );
+}
+.padding-bottom( @sizeValue: @base-line-height ) {
+    .relative_size( padding-bottom, @sizeValue );
+}
+.padding-left( @sizeValue: @base-line-height ) {
+    .relative_size( padding-left, @sizeValue );
+}
+
+// block margin mixins
+.block-margins-zero() {
+    .margin-zero;
+    .padding-zero;
+}
+.block-margins-all( @sizeValue: @base-line-height ) {
+    .margin( @sizeValue );
+    .padding-zero;
+}
+.block-margins-vertical( @sizeValue: @base-line-height ) {
+    .margin( @sizeValue 0);
+    .padding-zero;
+}
+.block-margins-left( @sizeValue: @base-line-height ) {
+    .margin( @sizeValue 0 @sizeValue @sizeValue);
+    .padding-zero;
+}
+.block-margins-right( @sizeValue: @base-line-height ) {
+    .margin( @sizeValue @sizeValue @sizeValue 0);
+    .padding-zero;
+}
+
+// borders
+
+.border( @color ) {
+    border: 1px solid @color;
+}
+
+.border-bottom( @color ) {
+    border: 0;
+    border-bottom: 1px solid @color;
+}
+
+.border-top( @color ) {
+    border: 0;
+    border-top: 1px solid @color;
+}
+
+.border-left( @color ) {
+    border: 0;
+    border-left: 1px solid @color;
+}
+
+.border-right( @color ) {
+    border: 0;
+    border-right: 1px solid @color;
+}
