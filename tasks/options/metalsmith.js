@@ -17,9 +17,7 @@ module.exports = function( config ) {
             }
           },
           'metalsmith-markdown': { },
-          'metalsmith-permalinks': {
-            pattern: ':section-:title'
-          },
+          'metalsmith-permalinks': {},
           'metalsmith-templates': {
             engine: 'handlebars',
             directory: 'templates',

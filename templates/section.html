@@ -6,20 +6,62 @@
   <title>{{ title }}</title>
 
   {{> _header }}
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" />
+  <style>
+  .guide-example {
+    position: relative;
+    padding: 45px 15px 15px;
+    margin: 0;
+    background-color: #fff;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  .guide-example > p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .guide-example:after {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #959595;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "Example";
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .guide-example + pre {
+    margin-top: 0;
+    border-top-width: 0;
+  }
+  pre.prettyprint {
+    border: 1px solid #ddd;
+  }
+  .prettyprint ol.linenums {
+    padding-left: 48px;
+    padding-left: 4.8em;
+  }
+  li.L0, li.L1, li.L2, li.L3,
+  li.L5, li.L6, li.L7, li.L8
+  { list-style-type: decimal !important }
+  </style>
 </head>
 
-<body data-spy="scroll" data-target=".menu-container">
-  <div class="navbar navbar-global">
-    <div class="navbar-inner">
-      <div class="container">
-        <ul class="nav nav-pills pull-right">
-          <li><a href="/">Home</a></li>
-          <li><a href="/getting-started">Get started</a></li>
-          <li><a href="/Guide.Scaffolding.html">Scaffolding</a></li>
-          <li><a href="/basic-elements">Basic elements</a></li>
-          <li><a href="/Guide.FormElements.html">Form elements</a></li>
-          <li><a href="/Guide.Navigation.html">Navigation</a></li>
-          <li><a href="/Guide.Glyphs.html">Icons</a></li>
+<body>
+  <div class="nice-tophat">
+    <div class="nice-global" id="nice-global">
+      <div class="tophat-inner">
+        <ul class="menu">
+          {{> _nav }}
         </ul>
       </div>
     </div>
@@ -39,33 +81,15 @@
     </div>
   </header>
 
-  <article class="layout layout-first-right">
-    <div class="content content-primary">
-      {{{ contents }}}
-    </div>
-
-    <aside class="content content-secondary">
-      <!-- Docs nav
-      ================================================== -->
-      <nav class="menu-container">
-        <ul class="nav nav-list">
-          <li><a href="#file-structure"><i class="icon-chevron-right"></i> File structure</a></li>
-        </ul>
-      </nav>
-    </aside>
+  <article class="container">
+    {{{ contents }}}
   </article>
 
   <div class="navbar navbar-inverse">
     <div class="navbar-inner">
       <div class="container">
         <ul class="nav nav-pills">
-          <li class="active"><a href="/">Home</a></li>
-          <li><a href="/getting-started">Get started</a></li>
-          <li><a href="/Guide.Scaffolding.html">Scaffolding</a></li>
-          <li><a href="/Guide.Navigation.html">Navigation</a></li>
-          <li><a href="/basic-elements">Basic elements</a></li>
-          <li><a href="/Guide.FormElements.html">Form elements</a></li>
-          <li><a href="/Guide.Glyphs.html">Icons</a></li>
+          {{> _nav }}
         </ul>
       </div>
     </div>
@@ -74,5 +98,46 @@
   {{> _Global.Footer }}
 
   {{> _footer }}
+
+  <script>
+  (function() {
+    $('.guide-example').each(function() {
+      if ( $(this).is('.example-processed') ) return;
+
+      var $example = $(this).clone();
+
+      $example.children().each( processChild );
+
+      var $code = $('<code/>').text( $example.html().replace( '\n', '' ) );
+
+      $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
+
+      $(this).addClass('example-processed');
+    });
+
+    function processChild() {
+      var $child = $(this);
+
+      if ( $child.is('.example-ignore') ) {
+        if ( this.nextSibling && this.nextSibling.nodeType === 3 && this.nextSibling.data.trim() === '' ) {
+          $( this.nextSibling ).remove();
+        }
+        $child.remove();
+        return;
+      }
+
+      if ( $child.is('.example-tldr') ) {
+        $child.removeClass('example-tldr').html( '...' );
+        if ($child.attr('class').trim() === '') {
+          $child.removeAttr('class');
+        }
+      }
+
+      $child.children().each( processChild );
+    }
+  })();
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 </body>
 </html>

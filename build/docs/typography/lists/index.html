@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Lists</title>
+
+  <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
+  
+  <!--[if lt IE 9]>
+  <script src="/scripts/html5shiv/html5shiv.js"></script>
+  <![endif]-->
+  
+  <!-- Le styles -->
+  <link rel="stylesheet" href="/styles/ui.css">
+  
+  <!-- Fav and touch icons -->
+  <link rel="shortcut icon" href="//cdn.nice.org.uk/V3/Content/nice/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="//cdn.nice.org.uk/V3/Content/nice/favicon-152.png">
+  <meta name="msapplication-TileColor" content="#fafafb">
+  <meta name="msapplication-TileImage" content="//cdn.nice.org.uk/V3/Content/nice/favicon-144.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" />
+  <style>
+  .guide-example {
+    position: relative;
+    padding: 45px 15px 15px;
+    margin: 0;
+    background-color: #fff;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  .guide-example > p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .guide-example:after {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #959595;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "Example";
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .guide-example + pre {
+    margin-top: 0;
+    border-top-width: 0;
+  }
+  pre.prettyprint {
+    border: 1px solid #ddd;
+  }
+  .prettyprint ol.linenums {
+    padding-left: 48px;
+    padding-left: 4.8em;
+  }
+  li.L0, li.L1, li.L2, li.L3,
+  li.L5, li.L6, li.L7, li.L8
+  { list-style-type: decimal !important }
+  </style>
+</head>
+
+<body>
+  <div class="nice-tophat">
+    <div class="nice-global" id="nice-global">
+      <div class="tophat-inner">
+        <ul class="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/docs/getting-started">Get started</a></li>
+          <li><a href="/docs/basic-elements">Basic elements</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header
+  ================================================== -->
+  <header class="page-header">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li><a href="/">Home</a> <i class="divider icon-chevron-right"></i></li>
+      </ul>
+
+      <h1>Lists</h1>
+
+      <p class="lead"></p>
+    </div>
+  </header>
+
+  <article class="container">
+    <h2 id="unordered">Unordered</h2>
+<p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+<div class="guide-example">
+  <ul>
+    <li class="example-tldr">Lorem ipsum dolor sit amet</li>
+    <li class="example-ignore">Consectetur adipiscing elit
+      <ul>
+        <li>Phasellus iaculis neque</li>
+        <li>Vestibulum laoreet porttitor sem</li>
+      </ul>
+    </li>
+    <li class="example-ignore">Aenean sit amet erat nunc</li>
+  </ul>
+</div>
+
+<h2 id="alternate-unordered">Alternate unordered</h2>
+<p>Change the default <code>list-style</code> on list items (immediate children only).</p>
+<div class="guide-example">
+  <ul class="alt">
+    <li class="example-tldr">Lorem ipsum dolor sit amet</li>
+    <li class="example-ignore">Consectetur adipiscing elit
+      <ul>
+        <li>Phasellus iaculis neque</li>
+        <li>Vestibulum laoreet porttitor sem</li>
+      </ul>
+    </li>
+    <li class="example-ignore">Aenean sit amet erat nunc</li>
+  </ul>
+</div>
+
+<h2 id="ordered">Ordered</h2>
+<p>A list of items in which the order <em>does</em> explicitly matter.</p>
+<div class="guide-example">
+  <ol>
+    <li class="example-tldr">Lorem ipsum dolor sit amet</li>
+    <li class="example-ignore">Consectetur adipiscing elit</li>
+    <li class="example-ignore">Phasellus iaculis neque</li>
+    <li class="example-ignore">Vestibulum laoreet porttitor sem</li>
+    <li class="example-ignore">Aenean sit amet erat nunc</li>
+  </ol>
+</div>
+
+<h2 id="alternate-ordered">Alternate Ordered</h2>
+<p>Change the default <code>list-style</code> on list items where the order <em>does</em> matter (immediate children only).</p>
+<div class="guide-example">
+  <ol class="alt">
+    <li class="example-tldr">Lorem ipsum dolor sit amet</li>
+    <li class="example-ignore">Consectetur adipiscing elit</li>
+    <li class="example-ignore">Phasellus iaculis neque</li>
+    <li class="example-ignore">Vestibulum laoreet porttitor sem</li>
+    <li class="example-ignore">Aenean sit amet erat nunc</li>
+  </ol>
+</div>
+
+<h3 id="unstyled">Unstyled</h3>
+<p>Remove the default <code>list-style</code> and left padding on list items (immediate children only).</p>
+<div class="guide-example">
+  <ul class="unstyled">
+    <li class="example-tldr">Lorem ipsum dolor sit amet</li>
+    <li class="example-ignore">Consectetur adipiscing elit
+      <ul>
+        <li>Phasellus iaculis neque</li>
+        <li>Vestibulum laoreet porttitor sem</li>
+      </ul>
+    </li>
+    <li class="example-ignore">Aenean sit amet erat nunc</li>
+  </ul>
+</div>
+
+<h2 id="inline">Inline</h2>
+<p>Place all list items on a single line with <code>inline-block</code> and some light padding.</p>
+<div class="guide-example">
+  <ul class="inline">
+    <li class="example-tldr">Lorem ipsum</li>
+    <li class="example-ignore">Phasellus iaculis</li>
+    <li class="example-ignore">Nulla volutpat</li>
+  </ul>
+</div>
+
+<h2 id="definitions-and-descriptions">Definitions and descriptions</h2>
+<p>A list of terms with their associated definitions or descriptions.</p>
+<div class="guide-example">
+  <dl>
+    <dt class="example-tldr">Definition lists</dt>
+    <dd class="example-tldr">A definition list is perfect for defining terms.</dd>
+    <dt class="example-ignore">Euismod</dt>
+    <dd class="example-ignore">Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+    <dd class="example-ignore">Donec id elit non mi porta gravida at eget metus.</dd>
+    <dt class="example-ignore">Malesuada porta</dt>
+    <dd class="example-ignore">Etiam porta sem malesuada magna mollis euismod.</dd>
+  </dl>
+</div>
+
+<h3 id="options">Options</h3>
+<p>Make terms and definitions in <code>&lt;dl&gt;</code> line up side-by-side.</p>
+<div class="guide-example">
+  <dl class="dl-horizontal">
+    <dt class="example-tldr">Definition lists</dt>
+    <dd class="example-tldr">A definition list is perfect for defining terms.</dd>
+    <dt class="example-ignore">Euismod</dt>
+    <dd class="example-ignore">Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+    <dd class="example-ignore">Donec id elit non mi porta gravida at eget metus.</dd>
+    <dt class="example-ignore">Malesuada porta</dt>
+    <dd class="example-ignore">Etiam porta sem malesuada magna mollis euismod.</dd>
+    <dt class="example-ignore">Felis euismod semper eget lacinia</dt>
+    <dd class="example-ignore">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+  </dl>
+</div>
+
+<div class="alert alert-block alert-info">
+  <h4>Auto-truncating</h4>
+
+  <p>Horizontal description lists will truncate terms that are too long to fit in the left column fix <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.</p>
+</div>
+
+  </article>
+
+  <div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul class="nav nav-pills">
+          <li><a href="/">Home</a></li>
+          <li><a href="/docs/getting-started">Get started</a></li>
+          <li><a href="/docs/basic-elements">Basic elements</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-wrapper">
+    <div class="footer">
+      <div class="container">
+        <a href="http://www.nice.org.uk" class="footer-logo"><i class="logo icon-nice-logo"></i></a>
+  
+          <ul class="nav nav-services">
+              <li><a href="http://pathways.nice.org.uk"><i class="icon-nice-pathways"></i> NICE Pathways</a></li>
+              <li><a href="http://www.nice.org.uk/guidance"><i class="icon-nice-guidance"></i> Guidance</a></li>
+              <li><a href="http://www.nice.org.uk/standards-and-indicators"><i class="icon-nice-standards"></i> Standards &amp;&nbsp;Indicators</a></li>
+              <li><a href="http://www.evidence.nhs.uk"><i class="icon-nice-evidence"></i> Evidence services</a></li>
+          </ul>
+  
+          <div class="legal-panel">
+              <div class="social-panel">
+                  <!-- AddThis Button BEGIN -->
+                  <p class="social-follow addthis_toolbox">
+                  Follow Us
+                  <a class="addthis_button_twitter_follow" addthis:userid="nicecomms" target="_blank" title="Follow on Twitter" href="#">
+                    <i class="icon-twitter"></i>
+                  </a></p>
+                  <!-- AddThis Button END -->
+              </div>
+  
+              <ul class="nav nav-legal">
+                <li><a href="//www.nice.org.uk/about">About</a></li>
+                <li><a href="//www.nice.org.uk/accessibility">Accessibility</a></li>
+                <li><a href="//www.nice.org.uk/freedom-of-information">Freedom of information</a></li>
+                <li><a href="//www.nice.org.uk/get-involved/contact-us">Contact Us</a></li>
+                <li><a href="//www.nice.org.uk/glossary">Glossary</a></li>
+                <li><a href="//www.nice.org.uk/terms-and-conditions">Terms and conditions</a></li>
+                <li><a href="//www.nice.org.uk/subscribe">Subscribe</a></li>
+            </ul>
+  
+            <p class="legal-copyright">Copyright &copy; 2014 National Institute for Health and Care Excellence. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="//cdn.nice.org.uk/V3/Scripts/nice/NICE.TopHat.js"></script>
+  
+  <script src="//cdn.nice.org.uk/V3/Scripts/jquery/jquery-1.10.2.min.js"></script>
+  <script src="//cdn.nice.org.uk/V3/Scripts/twitter.bootstrap.js"></script>
+  <script src="//cdn.nice.org.uk/V3/Scripts/NICE.bootstrap.js"></script>
+  
+  <script src="//cdn.nice.org.uk/V3/Content/assets/js/google-code-prettify/prettify.js"></script>
+  
+  <script src="//cdn.nice.org.uk/V3/Content/assets/js/application.js"></script>
+
+  <script>
+  (function() {
+    $('.guide-example').each(function() {
+      if ( $(this).is('.example-processed') ) return;
+
+      var $example = $(this).clone();
+
+      $example.children().each( processChild );
+
+      var $code = $('<code/>').text( $example.html().replace( '\n', '' ) );
+
+      $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
+
+      $(this).addClass('example-processed');
+    });
+
+    function processChild() {
+      var $child = $(this);
+
+      if ( $child.is('.example-ignore') ) {
+        if ( this.nextSibling && this.nextSibling.nodeType === 3 && this.nextSibling.data.trim() === '' ) {
+          $( this.nextSibling ).remove();
+        }
+        $child.remove();
+        return;
+      }
+
+      if ( $child.is('.example-tldr') ) {
+        $child.removeClass('example-tldr').html( '...' );
+        if ($child.attr('class').trim() === '') {
+          $child.removeAttr('class');
+        }
+      }
+
+      $child.children().each( processChild );
+    }
+  })();
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+</body>
+</html>

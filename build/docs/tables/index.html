@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Tabluar data</title>
+
+  <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
+  
+  <!--[if lt IE 9]>
+  <script src="/scripts/html5shiv/html5shiv.js"></script>
+  <![endif]-->
+  
+  <!-- Le styles -->
+  <link rel="stylesheet" href="/styles/ui.css">
+  
+  <!-- Fav and touch icons -->
+  <link rel="shortcut icon" href="//cdn.nice.org.uk/V3/Content/nice/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="//cdn.nice.org.uk/V3/Content/nice/favicon-152.png">
+  <meta name="msapplication-TileColor" content="#fafafb">
+  <meta name="msapplication-TileImage" content="//cdn.nice.org.uk/V3/Content/nice/favicon-144.png">
+</head>
+
+<body>
+  <div class="nice-tophat">
+    <div class="nice-global" id="nice-global">
+      <div class="tophat-inner">
+        <ul class="menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/docs/getting-started">Get started</a></li>
+          <li><a href="/docs/basic-elements">Basic elements</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header
+  ================================================== -->
+  <header class="page-header">
+    <div class="container">
+      <ul class="breadcrumb">
+        <li><a href="/">Home</a> <i class="divider icon-chevron-right"></i></li>
+      </ul>
+
+      <h1>Tabluar data</h1>
+
+      <p class="lead">A responsive UI framework for NICE online services and web applications</p>
+    </div>
+  </header>
+
+  <article class="layout layout-first-right">
+    <div class="content content-primary">
+      <div class="alert alert-block alert-info">
+  <h4>Do you really need a table?</h4>
+
+  <p>When choosing the best way to correctly markup your content you need to look at the purpose of the information conveyed by it. better ways to mark up your information could be <a href="/docs/typography/lists">lists</a> which can represent either hierarchies or terms and definitions in a much more effective way than a table can.</p>
+</div>
+
+<ul>
+<li><a href="/docs/tables/basic">Basic tables</a></li>
+<li><a href="/docs/tables/emphasis">Emphasising information</a></li>
+</ul>
+<pre><code>          &lt;h2&gt;Optional row classes&lt;/h2&gt;
+          &lt;p&gt;Use contextual classes to color table rows.&lt;/p&gt;
+          &lt;table class=&quot;table table-bordered table-striped&quot;&gt;
+            &lt;colgroup&gt;
+              &lt;col class=&quot;span1&quot;&gt;
+              &lt;col class=&quot;span7&quot;&gt;
+            &lt;/colgroup&gt;
+            &lt;thead&gt;
+              &lt;tr&gt;
+                &lt;th&gt;Class&lt;/th&gt;
+                &lt;th&gt;Description&lt;/th&gt;
+              &lt;/tr&gt;
+            &lt;/thead&gt;
+            &lt;tbody&gt;
+              &lt;tr&gt;
+                &lt;td&gt;
+                  &lt;code&gt;.success&lt;/code&gt;
+                &lt;/td&gt;
+                &lt;td&gt;Indicates a successful or positive action.&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                &lt;td&gt;
+                  &lt;code&gt;.error&lt;/code&gt;
+                &lt;/td&gt;
+                &lt;td&gt;Indicates a dangerous or potentially negative action.&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                &lt;td&gt;
+                  &lt;code&gt;.warning&lt;/code&gt;
+                &lt;/td&gt;
+                &lt;td&gt;Indicates a warning that might need attention.&lt;/td&gt;
+              &lt;/tr&gt;
+              &lt;tr&gt;
+                &lt;td&gt;
+                  &lt;code&gt;.info&lt;/code&gt;
+                &lt;/td&gt;
+                &lt;td&gt;Used as an alternative to the default styles.&lt;/td&gt;
+              &lt;/tr&gt;
+            &lt;/tbody&gt;
+          &lt;/table&gt;
+          &lt;div class=&quot;guide-example&quot;&gt;
+            &lt;table class=&quot;table&quot;&gt;
+              &lt;thead&gt;
+                &lt;tr&gt;
+                  &lt;th&gt;#&lt;/th&gt;
+                  &lt;th&gt;Product&lt;/th&gt;
+                  &lt;th&gt;Payment Taken&lt;/th&gt;
+                  &lt;th&gt;Status&lt;/th&gt;
+                &lt;/tr&gt;
+              &lt;/thead&gt;
+              &lt;tbody&gt;
+                &lt;tr class=&quot;success&quot;&gt;
+                  &lt;td&gt;1&lt;/td&gt;
+                  &lt;td&gt;TB - Monthly&lt;/td&gt;
+                  &lt;td&gt;01/04/2012&lt;/td&gt;
+                  &lt;td&gt;Approved&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class=&quot;error&quot;&gt;
+                  &lt;td&gt;2&lt;/td&gt;
+                  &lt;td&gt;TB - Monthly&lt;/td&gt;
+                  &lt;td&gt;02/04/2012&lt;/td&gt;
+                  &lt;td&gt;Declined&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class=&quot;warning&quot;&gt;
+                  &lt;td&gt;3&lt;/td&gt;
+                  &lt;td&gt;TB - Monthly&lt;/td&gt;
+                  &lt;td&gt;03/04/2012&lt;/td&gt;
+                  &lt;td&gt;Pending&lt;/td&gt;
+                &lt;/tr&gt;
+                &lt;tr class=&quot;info&quot;&gt;
+                  &lt;td&gt;4&lt;/td&gt;
+                  &lt;td&gt;TB - Monthly&lt;/td&gt;
+                  &lt;td&gt;04/04/2012&lt;/td&gt;
+                  &lt;td&gt;Call in to confirm&lt;/td&gt;
+                &lt;/tr&gt;
+              &lt;/tbody&gt;
+            &lt;/table&gt;
+          &lt;/div&gt;
+          &lt;pre class=&quot;prettyprint linenums&quot;&gt;
+            ...
+            &amp;lt;tr class=&quot;success&quot;&amp;gt;
+            &amp;lt;td&amp;gt;1&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;TB - Monthly&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;01/04/2012&amp;lt;/td&amp;gt;
+            &amp;lt;td&amp;gt;Approved&amp;lt;/td&amp;gt;
+            &amp;lt;/tr&amp;gt;
+            ...  &lt;/pre&gt;
+</code></pre>
+    </div>
+
+    <aside class="content content-secondary">
+      <!-- Docs nav
+      ================================================== -->
+      <nav class="menu-container">
+        <ul class="nav nav-list">
+        </ul>
+      </nav>
+    </aside>
+  </article>
+
+  <div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul class="nav nav-pills">
+          <li><a href="/">Home</a></li>
+          <li><a href="/docs/getting-started">Get started</a></li>
+          <li><a href="/docs/basic-elements">Basic elements</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-wrapper">
+    <div class="footer">
+      <div class="container">
+        <a href="http://www.nice.org.uk" class="footer-logo"><i class="logo icon-nice-logo"></i></a>
+  
+          <ul class="nav nav-services">
+              <li><a href="http://pathways.nice.org.uk"><i class="icon-nice-pathways"></i> NICE Pathways</a></li>
+              <li><a href="http://www.nice.org.uk/guidance"><i class="icon-nice-guidance"></i> Guidance</a></li>
+              <li><a href="http://www.nice.org.uk/standards-and-indicators"><i class="icon-nice-standards"></i> Standards &amp;&nbsp;Indicators</a></li>
+              <li><a href="http://www.evidence.nhs.uk"><i class="icon-nice-evidence"></i> Evidence services</a></li>
+          </ul>
+  
+          <div class="legal-panel">
+              <div class="social-panel">
+                  <!-- AddThis Button BEGIN -->
+                  <p class="social-follow addthis_toolbox">
+                  Follow Us
+                  <a class="addthis_button_twitter_follow" addthis:userid="nicecomms" target="_blank" title="Follow on Twitter" href="#">
+                    <i class="icon-twitter"></i>
+                  </a></p>
+                  <!-- AddThis Button END -->
+              </div>
+  
+              <ul class="nav nav-legal">
+                <li><a href="//www.nice.org.uk/about">About</a></li>
+                <li><a href="//www.nice.org.uk/accessibility">Accessibility</a></li>
+                <li><a href="//www.nice.org.uk/freedom-of-information">Freedom of information</a></li>
+                <li><a href="//www.nice.org.uk/get-involved/contact-us">Contact Us</a></li>
+                <li><a href="//www.nice.org.uk/glossary">Glossary</a></li>
+                <li><a href="//www.nice.org.uk/terms-and-conditions">Terms and conditions</a></li>
+                <li><a href="//www.nice.org.uk/subscribe">Subscribe</a></li>
+            </ul>
+  
+            <p class="legal-copyright">Copyright &copy; 2014 National Institute for Health and Care Excellence. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="//cdn.nice.org.uk/V3/Scripts/nice/NICE.TopHat.js"></script>
+  
+  <script src="//cdn.nice.org.uk/V3/Scripts/jquery/jquery-1.10.2.min.js"></script>
+  <script src="//cdn.nice.org.uk/V3/Scripts/twitter.bootstrap.js"></script>
+  <script src="//cdn.nice.org.uk/V3/Scripts/NICE.bootstrap.js"></script>
+  
+  <script src="//cdn.nice.org.uk/V3/Content/assets/js/google-code-prettify/prettify.js"></script>
+  
+  <script src="//cdn.nice.org.uk/V3/Content/assets/js/application.js"></script>
+</body>
+</html>
