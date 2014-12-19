@@ -22,6 +22,62 @@
   <link rel="apple-touch-icon-precomposed" href="//cdn.nice.org.uk/V3/Content/nice/favicon-152.png">
   <meta name="msapplication-TileColor" content="#fafafb">
   <meta name="msapplication-TileImage" content="//cdn.nice.org.uk/V3/Content/nice/favicon-144.png">
+  
+  <!-- docs specific styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" />
+  <style>
+  .container, .layout {
+    width: 95.74468085%;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  
+  .guide-example {
+    position: relative;
+    padding: 45px 15px 15px;
+    margin: 0;
+    background-color: #fff;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px;
+  }
+  
+  .guide-example-tight > p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .guide-example:after {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #959595;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "Example";
+  
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .guide-example + pre.prettyprint {
+    margin-top: 0;
+    border-top-width: 0;
+  }
+  pre.prettyprint {
+    border: 1px solid #ddd;
+  }
+  .prettyprint ol.linenums {
+    padding-left: 48px;
+    padding-left: 4.8em;
+  }
+  li.L0, li.L1, li.L2, li.L3,
+  li.L5, li.L6, li.L7, li.L8
+  { list-style-type: decimal !important }
+  </style>
 </head>
 
 <body>
@@ -63,94 +119,7 @@
 <li><a href="/docs/tables/basic">Basic tables</a></li>
 <li><a href="/docs/tables/emphasis">Emphasising information</a></li>
 </ul>
-<pre><code>          &lt;h2&gt;Optional row classes&lt;/h2&gt;
-          &lt;p&gt;Use contextual classes to color table rows.&lt;/p&gt;
-          &lt;table class=&quot;table table-bordered table-striped&quot;&gt;
-            &lt;colgroup&gt;
-              &lt;col class=&quot;span1&quot;&gt;
-              &lt;col class=&quot;span7&quot;&gt;
-            &lt;/colgroup&gt;
-            &lt;thead&gt;
-              &lt;tr&gt;
-                &lt;th&gt;Class&lt;/th&gt;
-                &lt;th&gt;Description&lt;/th&gt;
-              &lt;/tr&gt;
-            &lt;/thead&gt;
-            &lt;tbody&gt;
-              &lt;tr&gt;
-                &lt;td&gt;
-                  &lt;code&gt;.success&lt;/code&gt;
-                &lt;/td&gt;
-                &lt;td&gt;Indicates a successful or positive action.&lt;/td&gt;
-              &lt;/tr&gt;
-              &lt;tr&gt;
-                &lt;td&gt;
-                  &lt;code&gt;.error&lt;/code&gt;
-                &lt;/td&gt;
-                &lt;td&gt;Indicates a dangerous or potentially negative action.&lt;/td&gt;
-              &lt;/tr&gt;
-              &lt;tr&gt;
-                &lt;td&gt;
-                  &lt;code&gt;.warning&lt;/code&gt;
-                &lt;/td&gt;
-                &lt;td&gt;Indicates a warning that might need attention.&lt;/td&gt;
-              &lt;/tr&gt;
-              &lt;tr&gt;
-                &lt;td&gt;
-                  &lt;code&gt;.info&lt;/code&gt;
-                &lt;/td&gt;
-                &lt;td&gt;Used as an alternative to the default styles.&lt;/td&gt;
-              &lt;/tr&gt;
-            &lt;/tbody&gt;
-          &lt;/table&gt;
-          &lt;div class=&quot;guide-example&quot;&gt;
-            &lt;table class=&quot;table&quot;&gt;
-              &lt;thead&gt;
-                &lt;tr&gt;
-                  &lt;th&gt;#&lt;/th&gt;
-                  &lt;th&gt;Product&lt;/th&gt;
-                  &lt;th&gt;Payment Taken&lt;/th&gt;
-                  &lt;th&gt;Status&lt;/th&gt;
-                &lt;/tr&gt;
-              &lt;/thead&gt;
-              &lt;tbody&gt;
-                &lt;tr class=&quot;success&quot;&gt;
-                  &lt;td&gt;1&lt;/td&gt;
-                  &lt;td&gt;TB - Monthly&lt;/td&gt;
-                  &lt;td&gt;01/04/2012&lt;/td&gt;
-                  &lt;td&gt;Approved&lt;/td&gt;
-                &lt;/tr&gt;
-                &lt;tr class=&quot;error&quot;&gt;
-                  &lt;td&gt;2&lt;/td&gt;
-                  &lt;td&gt;TB - Monthly&lt;/td&gt;
-                  &lt;td&gt;02/04/2012&lt;/td&gt;
-                  &lt;td&gt;Declined&lt;/td&gt;
-                &lt;/tr&gt;
-                &lt;tr class=&quot;warning&quot;&gt;
-                  &lt;td&gt;3&lt;/td&gt;
-                  &lt;td&gt;TB - Monthly&lt;/td&gt;
-                  &lt;td&gt;03/04/2012&lt;/td&gt;
-                  &lt;td&gt;Pending&lt;/td&gt;
-                &lt;/tr&gt;
-                &lt;tr class=&quot;info&quot;&gt;
-                  &lt;td&gt;4&lt;/td&gt;
-                  &lt;td&gt;TB - Monthly&lt;/td&gt;
-                  &lt;td&gt;04/04/2012&lt;/td&gt;
-                  &lt;td&gt;Call in to confirm&lt;/td&gt;
-                &lt;/tr&gt;
-              &lt;/tbody&gt;
-            &lt;/table&gt;
-          &lt;/div&gt;
-          &lt;pre class=&quot;prettyprint linenums&quot;&gt;
-            ...
-            &amp;lt;tr class=&quot;success&quot;&amp;gt;
-            &amp;lt;td&amp;gt;1&amp;lt;/td&amp;gt;
-            &amp;lt;td&amp;gt;TB - Monthly&amp;lt;/td&amp;gt;
-            &amp;lt;td&amp;gt;01/04/2012&amp;lt;/td&amp;gt;
-            &amp;lt;td&amp;gt;Approved&amp;lt;/td&amp;gt;
-            &amp;lt;/tr&amp;gt;
-            ...  &lt;/pre&gt;
-</code></pre>
+
     </div>
 
     <aside class="content content-secondary">

@@ -15,3 +15,59 @@
 <link rel="apple-touch-icon-precomposed" href="//cdn.nice.org.uk/V3/Content/nice/favicon-152.png">
 <meta name="msapplication-TileColor" content="#fafafb">
 <meta name="msapplication-TileImage" content="//cdn.nice.org.uk/V3/Content/nice/favicon-144.png">
+
+<!-- docs specific styles -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" />
+<style>
+.container, .layout {
+  width: 95.74468085%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.guide-example {
+  position: relative;
+  padding: 45px 15px 15px;
+  margin: 0;
+  background-color: #fff;
+  border-color: #ddd;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.guide-example-tight > p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.guide-example:after {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #959595;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  content: "Example";
+
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.guide-example + pre.prettyprint {
+  margin-top: 0;
+  border-top-width: 0;
+}
+pre.prettyprint {
+  border: 1px solid #ddd;
+}
+.prettyprint ol.linenums {
+  padding-left: 48px;
+  padding-left: 4.8em;
+}
+li.L0, li.L1, li.L2, li.L3,
+li.L5, li.L6, li.L7, li.L8
+{ list-style-type: decimal !important }
+</style>

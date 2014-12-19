@@ -22,8 +22,16 @@
   <link rel="apple-touch-icon-precomposed" href="//cdn.nice.org.uk/V3/Content/nice/favicon-152.png">
   <meta name="msapplication-TileColor" content="#fafafb">
   <meta name="msapplication-TileImage" content="//cdn.nice.org.uk/V3/Content/nice/favicon-144.png">
+  
+  <!-- docs specific styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" />
   <style>
+  .container, .layout {
+    width: 95.74468085%;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  
   .guide-example {
     position: relative;
     padding: 45px 15px 15px;
@@ -33,12 +41,12 @@
     border-style: solid;
     border-width: 1px;
   }
-
-  .guide-example > p {
+  
+  .guide-example-tight > p {
     margin-top: 0;
     margin-bottom: 0;
   }
-
+  
   .guide-example:after {
     position: absolute;
     top: 15px;
@@ -49,13 +57,13 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     content: "Example";
-
+  
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-
-  .guide-example + pre {
+  
+  .guide-example + pre.prettyprint {
     margin-top: 0;
     border-top-width: 0;
   }
@@ -110,7 +118,7 @@
 
 <h3 id="options">Options</h3>
 <p>Style and content changes for simple variations on a standard blockquote.</p>
-<h3 id="naming-a-source">Naming a source</h3>
+<h4 id="naming-a-source">Naming a source</h4>
 <p>Add <code>&lt;small&gt;</code> tag for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
 <div class="guide-example">
 <blockquote>
@@ -123,6 +131,13 @@
 <h4>Right pulled quotations</h4>
 
 <p>Although bootstrap provides an alternate display by adding <code>.pull-right</code> to blockquotes NICE does not use this style.</p>
+</div>
+
+
+<h2 id="inline-quotations">Inline quotations</h2>
+<p>Wrap <code>&lt;q&gt;</code> around any span of text within a block of content to identify a quoted phrase. In this format a footnote link should be included to identify the source of the quote.</p>
+<div class="guide-example">
+<p>Lorem ipsum dolor sit <q cite="An unknown source">amet, consectetur adipiscing elit</q>. Integer posuere erat a ante.</p>
 </div>
 
   </article>

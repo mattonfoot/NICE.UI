@@ -105,6 +105,7 @@ p {
 a {
   color: #01769d;
   background: transparent;
+  text-decoration: underline;
 }
 a:focus,
 a:hover {
@@ -117,6 +118,27 @@ a:active,
 a:hover {
   outline: 0;
 }
+small {
+  font-size: 80%;
+  line-height: 0;
+}
+em,
+i {
+  font-style: italic;
+  line-height: 0;
+}
+b,
+strong {
+  font-weight: 700;
+  line-height: 0;
+}
+u {
+  text-decoration: underline;
+}
+mark {
+  color: #000000;
+  background-color: #ffdc00;
+}
 blockquote {
   /*px*/ margin: 24px;
   /**/
@@ -125,36 +147,18 @@ blockquote {
   color: #656565;
   font-style: italic;
 }
-u,
-ins {
-  text-decoration: underline;
-}
-b,
-strong {
-  font-weight: 700;
+cite,
+[cite] {
+  font-style: italic;
   line-height: 0;
 }
-em,
-i {
+q {
   font-style: italic;
   line-height: 0;
 }
 dfn {
   font-weight: 700;
   font-style: italic;
-  line-height: 0;
-}
-cite,
-[cite] {
-  font-style: italic;
-  line-height: 0;
-}
-mark {
-  color: #000000;
-  background-color: #ffdc00;
-}
-small {
-  font-size: 80%;
   line-height: 0;
 }
 sup,
@@ -170,16 +174,8 @@ sup {
 sub {
   bottom: -0.25em;
 }
-abbr[title],
-acronym[title] {
-  border-bottom: 1px dotted #656565;
-}
-address {
-  /*px*/ margin: 24px 0;
-  /**/
-  /*rem*/ margin: 2.4rem 0;
-  padding: 0;
-  font-style: italic;
+ins {
+  text-decoration: underline;
 }
 del,
 s {
@@ -187,6 +183,23 @@ s {
 }
 del {
   color: #919191;
+}
+abbr[title],
+acronym[title] {
+  border-bottom: 1px dotted #656565;
+  cursor: help;
+}
+acronym[title] {
+  /*px*/ font-size: 14.4px;
+  /**/
+  /*rem*/ font-size: 1.44rem;
+}
+address {
+  /*px*/ margin: 24px 0;
+  /**/
+  /*rem*/ margin: 2.4rem 0;
+  padding: 0;
+  font-style: italic;
 }
 pre {
   overflow: auto;
@@ -243,6 +256,11 @@ h3 {
   /*px*/ line-height: 48px;
   /**/
   /*rem*/ line-height: 4.8rem;
+}
+h1 small,
+h2 small,
+h3 small {
+  font-size: 65%;
 }
 h4,
 h5,
@@ -892,4 +910,64 @@ table > caption {
   font-style: italic;
   background-color: #f2f2f2;
   text-align: left;
+}
+table > tbody > tr.success,
+table tr.success,
+table td.success {
+  color: #208e2c;
+  background-color: #d1f5d5;
+}
+table > tbody > tr.success:hover,
+table tr.success:hover,
+table td.success:hover,
+table > tbody > tr.success:hover td,
+table tr.success:hover td,
+table td.success:hover td {
+  color: #208e2c;
+  background-color: #d1f5d5;
+}
+table > tbody > tr.error,
+table tr.error,
+table td.error {
+  color: #e80d00;
+  background-color: #ffd2cf;
+}
+table > tbody > tr.error:hover,
+table tr.error:hover,
+table td.error:hover,
+table > tbody > tr.error:hover td,
+table tr.error:hover td,
+table td.error:hover td {
+  color: #e80d00;
+  background-color: #ffd2cf;
+}
+table > tbody > tr.warning,
+table tr.warning,
+table td.warning {
+  color: #998400;
+  background-color: #fff8cc;
+}
+table > tbody > tr.warning:hover,
+table tr.warning:hover,
+table td.warning:hover,
+table > tbody > tr.warning:hover td,
+table tr.warning:hover td,
+table td.warning:hover td {
+  color: #998400;
+  background-color: #fff8cc;
+}
+table > tbody > tr.info,
+table tr.info,
+table td.info {
+  color: #e5f8ff;
+  background-color: #269aff;
+}
+table > tbody > tr.info:hover,
+table tr.info:hover,
+table td.info:hover,
+table > tbody > tr.info:hover td,
+table tr.info:hover td,
+table td.info:hover td {
+  color: #e5f8ff;
+  background-color: #269aff;
 }

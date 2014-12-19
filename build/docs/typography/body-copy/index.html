@@ -22,8 +22,16 @@
   <link rel="apple-touch-icon-precomposed" href="//cdn.nice.org.uk/V3/Content/nice/favicon-152.png">
   <meta name="msapplication-TileColor" content="#fafafb">
   <meta name="msapplication-TileImage" content="//cdn.nice.org.uk/V3/Content/nice/favicon-144.png">
+  
+  <!-- docs specific styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" />
   <style>
+  .container, .layout {
+    width: 95.74468085%;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  
   .guide-example {
     position: relative;
     padding: 45px 15px 15px;
@@ -33,12 +41,12 @@
     border-style: solid;
     border-width: 1px;
   }
-
-  .guide-example > p {
+  
+  .guide-example-tight > p {
     margin-top: 0;
     margin-bottom: 0;
   }
-
+  
   .guide-example:after {
     position: absolute;
     top: 15px;
@@ -49,13 +57,13 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     content: "Example";
-
+  
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-
-  .guide-example + pre {
+  
+  .guide-example + pre.prettyprint {
     margin-top: 0;
     border-top-width: 0;
   }
@@ -103,9 +111,7 @@
     <p>NICE&#39;s global default <code>font-size</code> is <strong>16px</strong>, with a <code>line-height</code> of <strong>24px</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of their line-height to ensure vertical rhythm is adhered to.</p>
 <div class="guide-example">
   <p class="example-tldr">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
-
   <p class="example-ignore">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
-
   <p class="example-ignore">Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
 </div>
 

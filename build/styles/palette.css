@@ -105,6 +105,7 @@ p {
 a {
   color: #01769d;
   background: transparent;
+  text-decoration: underline;
 }
 a:focus,
 a:hover {
@@ -117,6 +118,27 @@ a:active,
 a:hover {
   outline: 0;
 }
+small {
+  font-size: 80%;
+  line-height: 0;
+}
+em,
+i {
+  font-style: italic;
+  line-height: 0;
+}
+b,
+strong {
+  font-weight: 700;
+  line-height: 0;
+}
+u {
+  text-decoration: underline;
+}
+mark {
+  color: #000000;
+  background-color: #ffdc00;
+}
 blockquote {
   /*px*/ margin: 24px;
   /**/
@@ -125,36 +147,18 @@ blockquote {
   color: #656565;
   font-style: italic;
 }
-u,
-ins {
-  text-decoration: underline;
-}
-b,
-strong {
-  font-weight: 700;
+cite,
+[cite] {
+  font-style: italic;
   line-height: 0;
 }
-em,
-i {
+q {
   font-style: italic;
   line-height: 0;
 }
 dfn {
   font-weight: 700;
   font-style: italic;
-  line-height: 0;
-}
-cite,
-[cite] {
-  font-style: italic;
-  line-height: 0;
-}
-mark {
-  color: #000000;
-  background-color: #ffdc00;
-}
-small {
-  font-size: 80%;
   line-height: 0;
 }
 sup,
@@ -170,16 +174,8 @@ sup {
 sub {
   bottom: -0.25em;
 }
-abbr[title],
-acronym[title] {
-  border-bottom: 1px dotted #656565;
-}
-address {
-  /*px*/ margin: 24px 0;
-  /**/
-  /*rem*/ margin: 2.4rem 0;
-  padding: 0;
-  font-style: italic;
+ins {
+  text-decoration: underline;
 }
 del,
 s {
@@ -187,6 +183,23 @@ s {
 }
 del {
   color: #919191;
+}
+abbr[title],
+acronym[title] {
+  border-bottom: 1px dotted #656565;
+  cursor: help;
+}
+acronym[title] {
+  /*px*/ font-size: 14.4px;
+  /**/
+  /*rem*/ font-size: 1.44rem;
+}
+address {
+  /*px*/ margin: 24px 0;
+  /**/
+  /*rem*/ margin: 2.4rem 0;
+  padding: 0;
+  font-style: italic;
 }
 pre {
   overflow: auto;
@@ -220,6 +233,72 @@ var {
 /* <body> line-height (ie 6,7 fix) */
 pre code {
   line-height: 1.231;
+}
+/*
+ * Headings
+ */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Lato, "Helvetica Neue", sans-serif;
+  font-weight: normal;
+  /*px*/ margin: 24px 0;
+  /**/
+  /*rem*/ margin: 2.4rem 0;
+  padding: 0;
+}
+h1,
+h2,
+h3 {
+  /*px*/ line-height: 48px;
+  /**/
+  /*rem*/ line-height: 4.8rem;
+}
+h1 small,
+h2 small,
+h3 small {
+  font-size: 65%;
+}
+h4,
+h5,
+h6 {
+  /*px*/ line-height: 24px;
+  /**/
+  /*rem*/ line-height: 2.4rem;
+}
+h1 {
+  /*px*/ font-size: 48px;
+  /**/
+  /*rem*/ font-size: 4.8rem;
+}
+h2 {
+  /*px*/ font-size: 32px;
+  /**/
+  /*rem*/ font-size: 3.2rem;
+}
+h3 {
+  /*px*/ font-size: 24px;
+  /**/
+  /*rem*/ font-size: 2.4rem;
+}
+h4 {
+  /*px*/ font-size: 19.2px;
+  /**/
+  /*rem*/ font-size: 1.92rem;
+}
+h5 {
+  /*px*/ font-size: 16px;
+  /**/
+  /*rem*/ font-size: 1.6rem;
+  font-weight: 700;
+}
+h6 {
+  /*px*/ font-size: 16px;
+  /**/
+  /*rem*/ font-size: 1.6rem;
 }
 .palette {
   display: block;

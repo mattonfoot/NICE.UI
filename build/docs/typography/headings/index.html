@@ -22,8 +22,16 @@
   <link rel="apple-touch-icon-precomposed" href="//cdn.nice.org.uk/V3/Content/nice/favicon-152.png">
   <meta name="msapplication-TileColor" content="#fafafb">
   <meta name="msapplication-TileImage" content="//cdn.nice.org.uk/V3/Content/nice/favicon-144.png">
+  
+  <!-- docs specific styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" />
   <style>
+  .container, .layout {
+    width: 95.74468085%;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  
   .guide-example {
     position: relative;
     padding: 45px 15px 15px;
@@ -33,12 +41,12 @@
     border-style: solid;
     border-width: 1px;
   }
-
-  .guide-example > p {
+  
+  .guide-example-tight > p {
     margin-top: 0;
     margin-bottom: 0;
   }
-
+  
   .guide-example:after {
     position: absolute;
     top: 15px;
@@ -49,13 +57,13 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     content: "Example";
-
+  
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
   }
-
-  .guide-example + pre {
+  
+  .guide-example + pre.prettyprint {
     margin-top: 0;
     border-top-width: 0;
   }

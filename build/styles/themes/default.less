@@ -33,6 +33,16 @@
 @aqua:                    #7FDBFF;
 @lightaqua:               lighten( @aqua,   20% );
 
+@green:                   #2ECC40;
+@lightgreen:              lighten( @green,  40% );
+@darkgreen:               darken( @green,   15% );
+@red:                     #FF4136;
+@lightred:                lighten( @red,    30% );
+@darkred:                 darken( @red,     15% );
+@yellow:                  #FFDC00;
+@lightyellow:             lighten( @yellow, 40% );
+@darkyellow:              darken( @yellow,  20% );
+
 // links
 @caution:                 #FB1B1B;
 @caution-hover:           darken( @caution,    12% );
@@ -48,6 +58,22 @@
 @search-meta:             #339900;
 @search-meta-hover:       darken( @search-meta,    12% );
 
+// contextual
+@success-background:      @lightgreen;
+@success-foreground:      @darkgreen;
+@success-foreground-only: @green;
+
+@error-background:        @lightred;
+@error-foreground:        @darkred;
+@error-foreground-only:   @red;
+
+@warning-background:      @lightyellow;
+@warning-foreground:      @darkyellow;
+@warning-foreground-only: @yellow;
+
+@info-background:         @lightblue;
+@info-foreground:         @lightaqua;
+@info-foreground-only:    @blue;
 
 
 
@@ -92,7 +118,9 @@
 .theme-text-cited() {
     font-style: italic;
 }
-
+.theme-text-quoted() {
+    font-style: italic;
+}
 
 // links
 .theme-link() {
@@ -195,4 +223,36 @@
 }
 .theme-table-cell() {
     border-color: @silver;
+}
+.theme-table-success() {
+  color: @success-foreground;
+  background-color: @success-background;
+}
+.theme-table-success-hover() {
+  color: @success-foreground;
+  background-color: @success-background;
+}
+.theme-table-error() {
+  color: @error-foreground;
+  background-color: @error-background;
+}
+.theme-table-error-hover() {
+  color: @error-foreground;
+  background-color: @error-background;
+}
+.theme-table-warning() {
+  color: @warning-foreground;
+  background-color: @warning-background;
+}
+.theme-table-warning-hover() {
+  color: @warning-foreground;
+  background-color: @warning-background;
+}
+.theme-table-info() {
+  color: @info-foreground;
+  background-color: @info-background;
+}
+.theme-table-info-hover() {
+  color: @info-foreground;
+  background-color: @info-background;
 }
