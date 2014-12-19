@@ -39,62 +39,14 @@
     text-rendering: optimizeLegibility;
 }
 
-/*
- * Basic text elements
- */
-p {
-    .block-margins-vertical;
-}
-a {
-    .theme-link;
-    text-decoration: underline;
-
-    &:focus,
-    &:hover {
-        .theme-link-hover;
-    }
-
-    &:focus {
-        outline: 1px dotted @aqua;
-    }
-
-    &:active,
-    &:hover {
-        outline: 0;
-    }
-}
-
+@import "./typography/headings.less";
+@import "./typography/body-copy.less";
 @import "./typography/emphasis.less";
-@import "./typography/quotations.less";
-
-dfn {
-  .theme-text-definition;
-  line-height: 0;       // when mixed fonts are used line height can be affected
-}
-sup, sub {
-    font-size: 75%;        // always relative to parent element
-    line-height: 0;       // when mixed fonts are used line height can be affected
-    position: relative;
-    vertical-align: baseline;
-}
-sup {
-    top: -0.5em;
-}
-sub {
-    bottom: -0.25em;
-}
-ins {
-  text-decoration: underline;
-}
-del, s {
-  text-decoration: line-through;
-}
-del {
-  .theme-text-muted;
-}
-
+@import "./typography/advanced-emphasis.less";
 @import "./typography/abbreviations.less";
 @import "./typography/addresses.less";
+@import "./typography/quotations.less";
+@import "./typography/informative.less";
 
 pre {
     overflow: auto;
@@ -120,5 +72,3 @@ code, tt, kbd, samp, var {
 pre code {
     line-height: 1.231;
 }
-
-@import "./typography/headings.less";

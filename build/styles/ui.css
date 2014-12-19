@@ -94,147 +94,6 @@ body {
   /* IE9 Compat Modes */
 }
 /*
- * Basic text elements
- */
-p {
-  /*px*/ margin: 24px 0;
-  /**/
-  /*rem*/ margin: 2.4rem 0;
-  padding: 0;
-}
-a {
-  color: #01769d;
-  background: transparent;
-  text-decoration: underline;
-}
-a:focus,
-a:hover {
-  color: #08455b;
-}
-a:focus {
-  outline: 1px dotted #7fdbff;
-}
-a:active,
-a:hover {
-  outline: 0;
-}
-small {
-  font-size: 80%;
-  line-height: 0;
-}
-em,
-i {
-  font-style: italic;
-  line-height: 0;
-}
-b,
-strong {
-  font-weight: 700;
-  line-height: 0;
-}
-u {
-  text-decoration: underline;
-}
-mark {
-  color: #000000;
-  background-color: #ffdc00;
-}
-blockquote {
-  /*px*/ margin: 24px;
-  /**/
-  /*rem*/ margin: 2.4rem;
-  padding: 0;
-  color: #656565;
-  font-style: italic;
-}
-cite,
-[cite] {
-  font-style: italic;
-  line-height: 0;
-}
-q {
-  font-style: italic;
-  line-height: 0;
-}
-dfn {
-  font-weight: 700;
-  font-style: italic;
-  line-height: 0;
-}
-sup,
-sub {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-sup {
-  top: -0.5em;
-}
-sub {
-  bottom: -0.25em;
-}
-ins {
-  text-decoration: underline;
-}
-del,
-s {
-  text-decoration: line-through;
-}
-del {
-  color: #919191;
-}
-abbr[title],
-acronym[title] {
-  border-bottom: 1px dotted #656565;
-  cursor: help;
-}
-acronym[title] {
-  /*px*/ font-size: 14.4px;
-  /**/
-  /*rem*/ font-size: 1.44rem;
-}
-address {
-  /*px*/ margin: 24px 0;
-  /**/
-  /*rem*/ margin: 2.4rem 0;
-  padding: 0;
-  font-style: italic;
-}
-pre {
-  overflow: auto;
-  /*px*/ margin: 24px 0;
-  /**/
-  /*rem*/ margin: 2.4rem 0;
-  padding: 0;
-  white-space: pre;
-}
-pre,
-code,
-tt,
-kbd,
-samp,
-var {
-  font-family: 'andale mono', 'lucida console', monospace;
-  /*px*/ font-size: 16px;
-  /**/
-  /*rem*/ font-size: 1.6rem;
-}
-var {
-  font-style: italic;
-}
-code,
-tt,
-kbd,
-samp,
-var {
-  line-height: 0;
-}
-/* <body> line-height (ie 6,7 fix) */
-pre code {
-  line-height: 1.231;
-}
-/*
  * Headings
  */
 h1,
@@ -299,6 +158,171 @@ h6 {
   /*px*/ font-size: 16px;
   /**/
   /*rem*/ font-size: 1.6rem;
+}
+/*
+* Basic text elements
+*/
+p {
+  /*px*/ margin: 24px 0;
+  /**/
+  /*rem*/ margin: 2.4rem 0;
+  padding: 0;
+}
+a {
+  color: #01769d;
+  background: transparent;
+  text-decoration: underline;
+}
+a:focus,
+a:hover {
+  color: #08455b;
+}
+a:focus {
+  outline: 1px dotted #7fdbff;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+small {
+  font-size: 80%;
+  line-height: 0;
+}
+em,
+i {
+  font-style: italic;
+  line-height: 0;
+}
+b,
+strong {
+  font-weight: 700;
+  line-height: 0;
+}
+u {
+  text-decoration: underline;
+}
+mark {
+  color: #000000;
+  background-color: #ffdc00;
+}
+.text-left {
+  text-align: left;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.muted {
+  color: #919191;
+}
+.text-warning {
+  color: #ffdc00;
+}
+.text-info {
+  color: #0074d9;
+}
+.text-error {
+  color: #ff4136;
+}
+.text-success {
+  color: #2ecc40;
+}
+abbr[title],
+acronym[title] {
+  border-bottom: 1px dotted #656565;
+  cursor: help;
+}
+acronym[title] {
+  /*px*/ font-size: 14.4px;
+  /**/
+  /*rem*/ font-size: 1.44rem;
+}
+address {
+  /*px*/ margin: 24px 0;
+  /**/
+  /*rem*/ margin: 2.4rem 0;
+  padding: 0;
+  font-style: italic;
+}
+blockquote {
+  /*px*/ margin: 24px;
+  /**/
+  /*rem*/ margin: 2.4rem;
+  padding: 0;
+  color: #656565;
+  font-style: italic;
+}
+cite,
+[cite] {
+  font-style: italic;
+  line-height: 0;
+}
+q {
+  font-style: italic;
+  line-height: 0;
+}
+dfn {
+  font-weight: 700;
+  font-style: italic;
+  line-height: 0;
+}
+ins {
+  text-decoration: underline;
+}
+del,
+s {
+  text-decoration: line-through;
+}
+del {
+  color: #919191;
+}
+sup,
+sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+pre {
+  overflow: auto;
+  /*px*/ margin: 24px 0;
+  /**/
+  /*rem*/ margin: 2.4rem 0;
+  padding: 0;
+  white-space: pre;
+}
+pre,
+code,
+tt,
+kbd,
+samp,
+var {
+  font-family: 'andale mono', 'lucida console', monospace;
+  /*px*/ font-size: 16px;
+  /**/
+  /*rem*/ font-size: 1.6rem;
+}
+var {
+  font-style: italic;
+}
+code,
+tt,
+kbd,
+samp,
+var {
+  line-height: 0;
+}
+/* <body> line-height (ie 6,7 fix) */
+pre code {
+  line-height: 1.231;
 }
 /*
  * Lists

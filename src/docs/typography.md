@@ -11,4 +11,5 @@ template: page.html
 - [Abbreviations](/docs/typography/abbreviations)
 - [Addresses](/docs/typography/addresses)
 - [Quotations](/docs/typography/quotations)
+- [Semantic information](/docs/typography/informative)
 - [Lists](/docs/typography/lists)
