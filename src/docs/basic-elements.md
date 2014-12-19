@@ -5,4 +5,5 @@ template: page.html
 ---
 
 - [Typography](/docs/typography)
+- [Lists](/docs/lists)
 - [Tables](/docs/tables)

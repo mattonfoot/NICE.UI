@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Basic elements</title>
+  <title>Lists</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -101,30 +101,18 @@
         <li><a href="/">Home</a> <i class="divider icon-chevron-right"></i></li>
       </ul>
 
-      <h1>Basic elements</h1>
+      <h1>Lists</h1>
 
-      <p class="lead">A responsive UI framework for NICE online services and web applications</p>
+      <p class="lead"></p>
     </div>
   </header>
 
-  <article class="layout layout-first-right">
-    <div class="content content-primary">
-      <ul>
-<li><a href="/docs/typography">Typography</a></li>
-<li><a href="/docs/lists">Lists</a></li>
-<li><a href="/docs/tables">Tables</a></li>
+  <article class="container">
+    <ul>
+<li><a href="/docs/lists/basic-text">Basic text</a></li>
+<li><a href="/docs/lists/definitions">Definitions</a></li>
 </ul>
 
-    </div>
-
-    <aside class="content content-secondary">
-      <!-- Docs nav
-      ================================================== -->
-      <nav class="menu-container">
-        <ul class="nav nav-list">
-        </ul>
-      </nav>
-    </aside>
   </article>
 
   <div class="navbar navbar-inverse">
@@ -191,5 +179,46 @@
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/google-code-prettify/prettify.js"></script>
   
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/application.js"></script>
+
+  <script>
+  (function() {
+    $('.guide-example').each(function() {
+      if ( $(this).is('.example-processed') ) return;
+
+      var $example = $(this).clone();
+
+      $example.children().each( processChild );
+
+      var $code = $('<code/>').text( $example.html().replace( '\n', '' ) );
+
+      $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
+
+      $(this).addClass('example-processed');
+    });
+
+    function processChild() {
+      var $child = $(this);
+
+      if ( $child.is('.example-ignore') ) {
+        if ( this.nextSibling && this.nextSibling.nodeType === 3 && this.nextSibling.data.trim() === '' ) {
+          $( this.nextSibling ).remove();
+        }
+        $child.remove();
+        return;
+      }
+
+      if ( $child.is('.example-tldr') ) {
+        $child.removeClass('example-tldr').html( '...' );
+        if ($child.attr('class').trim() === '') {
+          $child.removeAttr('class');
+        }
+      }
+
+      $child.children().each( processChild );
+    }
+  })();
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 </body>
 </html>

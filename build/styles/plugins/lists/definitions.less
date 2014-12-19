@@ -1,0 +1,46 @@
+
+
+dl {
+  .block-margins-vertical;
+
+  dt {
+    font-weight: @font-weight-bold;
+  }
+}
+dd {
+  .margin-left;
+}
+
+@media (min-width: 768px) {
+
+  dl.horizontal {
+    dt {
+      width: 24%;
+
+      float: left;
+      clear: left;
+      text-align: right;
+
+      .text-overflow-ellipsis;
+    }
+
+    dd {
+      margin-left: 26%;
+    }
+  }
+
+}
+
+@media (min-width: 980px) {
+
+  dl.horizontal {
+    dt {
+      width: 14%;
+    }
+
+    dd {
+      margin-left: 16%;
+    }
+  }
+
+}

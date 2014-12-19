@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Basic elements</title>
+  <title>Basic text</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -101,30 +101,65 @@
         <li><a href="/">Home</a> <i class="divider icon-chevron-right"></i></li>
       </ul>
 
-      <h1>Basic elements</h1>
+      <h1>Basic text</h1>
 
-      <p class="lead">A responsive UI framework for NICE online services and web applications</p>
+      <p class="lead"></p>
     </div>
   </header>
 
-  <article class="layout layout-first-right">
-    <div class="content content-primary">
+  <article class="container">
+    <h2 id="unordered">Unordered</h2>
+<p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+<div class="guide-example">
+  <ul>
+    <li class="example-tldr">Lorem ipsum dolor sit amet</li>
+    <li class="example-ignore">Consectetur adipiscing elit
       <ul>
-<li><a href="/docs/typography">Typography</a></li>
-<li><a href="/docs/lists">Lists</a></li>
-<li><a href="/docs/tables">Tables</a></li>
-</ul>
+        <li>Phasellus iaculis neque</li>
+        <li>Vestibulum laoreet porttitor sem</li>
+      </ul>
+    </li>
+    <li class="example-ignore">Aenean sit amet erat nunc</li>
+  </ul>
+</div>
 
-    </div>
+<h2 id="ordered">Ordered</h2>
+<p>A list of items in which the order <em>does</em> explicitly matter.</p>
+<div class="guide-example">
+  <ol>
+    <li class="example-tldr">Lorem ipsum dolor sit amet</li>
+    <li class="example-ignore">Consectetur adipiscing elit</li>
+    <li class="example-ignore">Phasellus iaculis neque</li>
+    <li class="example-ignore">Vestibulum laoreet porttitor sem</li>
+    <li class="example-ignore">Aenean sit amet erat nunc</li>
+  </ol>
+</div>
 
-    <aside class="content content-secondary">
-      <!-- Docs nav
-      ================================================== -->
-      <nav class="menu-container">
-        <ul class="nav nav-list">
-        </ul>
-      </nav>
-    </aside>
+<h3 id="unstyled">Unstyled</h3>
+<p>Remove the default <code>list-style</code> and left padding on list items (immediate children only).</p>
+<div class="guide-example">
+  <ul class="unstyled">
+    <li class="example-tldr">Lorem ipsum dolor sit amet</li>
+    <li class="example-ignore">Consectetur adipiscing elit
+      <ul>
+        <li>Phasellus iaculis neque</li>
+        <li>Vestibulum laoreet porttitor sem</li>
+      </ul>
+    </li>
+    <li class="example-ignore">Aenean sit amet erat nunc</li>
+  </ul>
+</div>
+
+<h2 id="inline">Inline</h2>
+<p>Place all list items on a single line with <code>inline-block</code> and some light padding.</p>
+<div class="guide-example">
+  <ul class="inline">
+    <li class="example-tldr">Lorem ipsum</li>
+    <li class="example-ignore">Phasellus iaculis</li>
+    <li class="example-ignore">Nulla volutpat</li>
+  </ul>
+</div>
+
   </article>
 
   <div class="navbar navbar-inverse">
@@ -191,5 +226,46 @@
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/google-code-prettify/prettify.js"></script>
   
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/application.js"></script>
+
+  <script>
+  (function() {
+    $('.guide-example').each(function() {
+      if ( $(this).is('.example-processed') ) return;
+
+      var $example = $(this).clone();
+
+      $example.children().each( processChild );
+
+      var $code = $('<code/>').text( $example.html().replace( '\n', '' ) );
+
+      $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
+
+      $(this).addClass('example-processed');
+    });
+
+    function processChild() {
+      var $child = $(this);
+
+      if ( $child.is('.example-ignore') ) {
+        if ( this.nextSibling && this.nextSibling.nodeType === 3 && this.nextSibling.data.trim() === '' ) {
+          $( this.nextSibling ).remove();
+        }
+        $child.remove();
+        return;
+      }
+
+      if ( $child.is('.example-tldr') ) {
+        $child.removeClass('example-tldr').html( '...' );
+        if ($child.attr('class').trim() === '') {
+          $child.removeAttr('class');
+        }
+      }
+
+      $child.children().each( processChild );
+    }
+  })();
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 </body>
 </html>

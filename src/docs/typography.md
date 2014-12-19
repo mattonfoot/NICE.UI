@@ -12,4 +12,3 @@ template: page.html
 - [Addresses](/docs/typography/addresses)
 - [Quotations](/docs/typography/quotations)
 - [Semantic information](/docs/typography/informative)
-- [Lists](/docs/typography/lists)
