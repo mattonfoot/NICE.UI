@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Control states</title>
+
+  <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
+  
+  <link rel="canonical" href="basic-elements/forms/control-states.html">
+  
+  <!--[if lt IE 9]>
+  <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
+  <![endif]-->
+  
+  <!-- Le styles -->
+  <link rel="stylesheet" href="/styles/ui.css">
+  
+  <!-- Fav and touch icons -->
+  <link rel="shortcut icon" href="//cdn.nice.org.uk/V3/Content/nice/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="//cdn.nice.org.uk/V3/Content/nice/favicon-152.png">
+  <meta name="msapplication-TileColor" content="#fafafb">
+  <meta name="msapplication-TileImage" content="//cdn.nice.org.uk/V3/Content/nice/favicon-144.png">
+  
+  <!-- docs specific styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" />
+  <style>
+  .container, .layout {
+    width: 95.74468085%;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  
+  .guide-example {
+    position: relative;
+    padding: 45px 15px 15px;
+    margin: 0;
+    background-color: #fff;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px;
+  }
+  
+  .guide-example-tight > p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .guide-example:after {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #959595;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "Example";
+  
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .guide-example + pre.prettyprint {
+    margin-top: 0;
+    border-top-width: 0;
+  }
+  pre.prettyprint {
+    border: 1px solid #ddd;
+  }
+  .prettyprint ol.linenums {
+    padding-left: 48px;
+    padding-left: 4.8em;
+  }
+  li.L0, li.L1, li.L2, li.L3,
+  li.L5, li.L6, li.L7, li.L8
+  { list-style-type: decimal !important }
+  </style>
+</head>
+
+<body>
+  <div class="nice-tophat">
+    <div class="nice-global" id="nice-global">
+      <div class="tophat-inner">
+        <ul class="menu">
+          <li>
+            <a href="../../index.html">Home</a>
+          </li>
+          <li>
+            <a href="../../getting-started.html">Getting started</a>
+          </li>
+          <li>
+            <a href="../../basic-elements.html">Basic elements</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Page Header
+  ================================================== -->
+  <header class="page-header">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li>
+          <a href="../../../../../../..">Home</a>
+        </li>
+        <li>
+          <a href="../../basic-elements.html">Basic elements</a>
+        </li>
+        <li>
+          <a href="../forms.html">Forms</a>
+        </li>
+        <li class="active">
+          Control states
+        </li>
+      </ol>
+
+      <h1>Control states</h1>
+
+      <p class="lead">Provide feedback to users or visitors with basic feedback states on form controls and labels.</p>
+    </div>
+  </header>
+
+  <article class="layout layout-first-right">
+    <div class="content content-primary">
+      <h2 id="input-focus">Input focus</h2>
+<p>We remove the default <code>outline</code> styles on some form controls and apply a <code>box-shadow</code> in its place for <code>:focus</code>.</p>
+<form class="guide-example form-inline">
+  <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused...">
+</form>
+
+<h2 id="invalid-inputs">Invalid inputs</h2>
+<p>Style inputs via default browser functionality with <code>:invalid</code>. Specify a <code>type</code>, add the <code>required</code> attribute if the field is not optional, and (if applicable) specify a <code>pattern</code>.</p>
+<p>This is not available in versions of Internet Explorer 7-9 due to lack of support for CSS pseudo selectors.</p>
+<form class="guide-example form-inline">
+  <input class="span3" type="email" placeholder="test@example.com" required>
+</form>
+
+<h2 id="disabled-inputs">Disabled inputs</h2>
+<p>Add the <code>disabled</code> attribute on an input to prevent user input and trigger a slightly different look.</p>
+<form class="guide-example form-inline">
+  <input class="input-xlarge" id="disabledInput" type="text" placeholder="Disabled input here…" disabled>
+</form>
+
+<h2 id="validation-states">Validation states</h2>
+<p>Bootstrap includes validation styles for error, warning, info, and success messages. To use, add the appropriate class to the surrounding <code>.control-group</code>.</p>
+<form class="guide-example form-horizontal">
+  <div class="control-group warning">
+    <label class="control-label" for="inputWarning">Input with warning</label>
+    <div class="controls">
+      <input type="text" id="inputWarning">
+      <span class="help-inline">Something may have gone wrong</span>
+    </div>
+  </div>
+  <div class="control-group error">
+    <label class="control-label" for="inputError">Input with error</label>
+    <div class="controls">
+      <input type="text" id="inputError">
+      <span class="help-inline">Please correct the error</span>
+    </div>
+  </div>
+  <div class="control-group info">
+    <label class="control-label" for="inputInfo">Input with info</label>
+    <div class="controls">
+      <input type="text" id="inputInfo">
+      <span class="help-inline">Username is taken</span>
+    </div>
+  </div>
+  <div class="control-group success">
+    <label class="control-label" for="inputSuccess">Input with success</label>
+    <div class="controls">
+      <input type="text" id="inputSuccess">
+      <span class="help-inline">Woohoo!</span>
+    </div>
+  </div>
+</form>
+
+    </div>
+
+    <aside class="content content-secondary">
+      <nav class="menu-container">
+        <h3>Control states</h3>
+
+        <ul class="nav nav-list">
+          <ul>
+          </ul>
+        </ul>
+      </nav>
+    </aside>
+  </article>
+
+  <div class="navbar navbar-inverse">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul class="nav nav-pills">
+          <li>
+            <a href="../../index.html">Home</a>
+          </li>
+          <li>
+            <a href="../../getting-started.html">Getting started</a>
+          </li>
+          <li>
+            <a href="../../basic-elements.html">Basic elements</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer-wrapper">
+    <div class="footer">
+      <div class="container">
+        <a href="http://www.nice.org.uk" class="footer-logo"><i class="logo icon-nice-logo"></i></a>
+  
+          <ul class="nav nav-services">
+              <li><a href="http://pathways.nice.org.uk"><i class="icon-nice-pathways"></i> NICE Pathways</a></li>
+              <li><a href="http://www.nice.org.uk/guidance"><i class="icon-nice-guidance"></i> Guidance</a></li>
+              <li><a href="http://www.nice.org.uk/standards-and-indicators"><i class="icon-nice-standards"></i> Standards &amp;&nbsp;Indicators</a></li>
+              <li><a href="http://www.evidence.nhs.uk"><i class="icon-nice-evidence"></i> Evidence services</a></li>
+          </ul>
+  
+          <div class="legal-panel">
+              <div class="social-panel">
+                  <!-- AddThis Button BEGIN -->
+                  <p class="social-follow addthis_toolbox">
+                  Follow Us
+                  <a class="addthis_button_twitter_follow" addthis:userid="nicecomms" target="_blank" title="Follow on Twitter" href="#">
+                    <i class="icon-twitter"></i>
+                  </a></p>
+                  <!-- AddThis Button END -->
+              </div>
+  
+              <ul class="nav nav-legal">
+                <li><a href="//www.nice.org.uk/about">About</a></li>
+                <li><a href="//www.nice.org.uk/accessibility">Accessibility</a></li>
+                <li><a href="//www.nice.org.uk/freedom-of-information">Freedom of information</a></li>
+                <li><a href="//www.nice.org.uk/get-involved/contact-us">Contact Us</a></li>
+                <li><a href="//www.nice.org.uk/glossary">Glossary</a></li>
+                <li><a href="//www.nice.org.uk/terms-and-conditions">Terms and conditions</a></li>
+                <li><a href="//www.nice.org.uk/subscribe">Subscribe</a></li>
+            </ul>
+  
+            <p class="legal-copyright">Copyright &copy; 2014 National Institute for Health and Care Excellence. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="//cdn.nice.org.uk/V3/Scripts/nice/NICE.TopHat.js"></script>
+  
+  <script src="//cdn.nice.org.uk/V3/Scripts/jquery/jquery-1.10.2.min.js"></script>
+  <script src="//cdn.nice.org.uk/V3/Scripts/twitter.bootstrap.js"></script>
+  <script src="//cdn.nice.org.uk/V3/Scripts/NICE.bootstrap.js"></script>
+  
+  <script src="//cdn.nice.org.uk/V3/Content/assets/js/google-code-prettify/prettify.js"></script>
+  
+  <script src="//cdn.nice.org.uk/V3/Content/assets/js/application.js"></script>
+
+  <script>
+  (function() {
+    $('.guide-example').each(function() {
+      if ( $(this).is('.example-processed') ) return;
+
+      var $example = $(this).clone();
+
+      $example.children().each( processChild );
+
+      var $code = $('<code/>').text( $example.html().replace( '\n', '' ) );
+
+      $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
+
+      $(this).addClass('example-processed');
+    });
+
+    function processChild() {
+      var $child = $(this);
+
+      if ( $child.is('.example-ignore') ) {
+        if ( this.nextSibling && this.nextSibling.nodeType === 3 && this.nextSibling.data.trim() === '' ) {
+          $( this.nextSibling ).remove();
+        }
+        $child.remove();
+        return;
+      }
+
+      if ( $child.is('.example-tldr') ) {
+        $child.removeClass('example-tldr').html( '...' );
+        if ($child.attr('class').trim() === '') {
+          $child.removeAttr('class');
+        }
+      }
+
+      $child.children().each( processChild );
+    }
+  })();
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+</body>
+</html>
