@@ -1,0 +1,25 @@
+<div class="navbar navbar-inverse">
+  <div class="navbar-inner">
+    <div class="container">
+      <ul class="nav nav-pills">
+        {{#each navs.footer}}
+        <li>
+          {{#if file}}
+          {{!--
+            @root === the template scope of the current file object being rendered
+            @root.nav_path === currentFileObject.nav_path
+            ('nav_path' property can be configured by navConfig.pathProperty = 'nav_path')
+
+            path === currentNavNode.path
+            (path property is set to all nav nodes)
+          --}}
+          <a href="{{relative_path @root.nav_path path}}">{{file.title}}</a>
+          {{else}}
+          <a href="{{relative_path @root.nav_path path}}">{{name}}</a>
+          {{/if}}
+        </li>
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>

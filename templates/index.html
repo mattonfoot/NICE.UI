@@ -9,15 +9,7 @@
 </head>
 
 <body>
-  <div class="nice-tophat">
-    <div class="nice-global" id="nice-global">
-      <div class="tophat-inner">
-        <ul class="menu">
-          {{> _nav }}
-        </ul>
-      </div>
-    </div>
-  </div>
+  {{> _Global.Nav }}
 
   <div class="jumbotron masthead">
     <div class="container">
@@ -37,15 +29,7 @@
     {{{ contents }}}
   </div>
 
-  <div class="navbar navbar-inverse">
-    <div class="navbar-inner">
-      <div class="container">
-        <ul class="nav nav-pills">
-          {{> _nav }}
-        </ul>
-      </div>
-    </div>
-  </div>
+  {{> _Footer.Nav }}
 
   {{> _Global.Footer }}
 

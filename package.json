@@ -28,14 +28,6 @@
   "homepage": "https://github.com/mattonfoot/NICE.ui",
   "private": true,
   "devDependencies": {
-    "metalsmith-include": "*",
-    "metalsmith-less": "*",
-    "metalsmith-templates": "*",
-    "metalsmith-markdown": "*",
-    "metalsmith-permalinks": "*",
-    "metalsmith": "*",
-    "handlebars": "*",
-
     "glob": "*",
     "grunt": "*",
     "grunt-bower-task": "*",
@@ -44,6 +36,14 @@
     "grunt-contrib-watch": "*",
     "grunt-gh-pages": "*",
     "grunt-metalsmith": "*",
-    "load-grunt-tasks": "*"
+    "handlebars": "*",
+    "load-grunt-tasks": "*",
+    "metalsmith": "*",
+    "metalsmith-include": "*",
+    "metalsmith-less": "*",
+    "metalsmith-markdown": "*",
+    "metalsmith-navigation": "0.0.8",
+    "metalsmith-permalinks": "*",
+    "metalsmith-templates": "*"
   }
 }

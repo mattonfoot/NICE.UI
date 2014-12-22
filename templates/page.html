@@ -9,23 +9,13 @@
 </head>
 
 <body>
-  <div class="nice-tophat">
-    <div class="nice-global" id="nice-global">
-      <div class="tophat-inner">
-        <ul class="menu">
-          {{> _nav }}
-        </ul>
-      </div>
-    </div>
-  </div>
+  {{> _Global.Nav }}
 
   <!-- Page Header
   ================================================== -->
   <header class="page-header">
     <div class="container">
-      <ul class="breadcrumb">
-        <li><a href="/">Home</a> <i class="divider icon-chevron-right"></i></li>
-      </ul>
+      {{> _Global.Breadcrumbs }}
 
       <h1>{{ title }}</h1>
 
@@ -33,30 +23,15 @@
     </div>
   </header>
 
-  <article class="layout layout-first-right">
-    <div class="content content-primary">
-      {{{ contents }}}
-    </div>
+  <article class="container">
+    {{{ contents }}}
 
-    <aside class="content content-secondary">
-      <!-- Docs nav
-      ================================================== -->
-      <nav class="menu-container">
-        <ul class="nav nav-list">
-        </ul>
-      </nav>
-    </aside>
+    <ul class="nav nav-list">
+      {{> _Nav.Relative}}
+    </ul>
   </article>
 
-  <div class="navbar navbar-inverse">
-    <div class="navbar-inner">
-      <div class="container">
-        <ul class="nav nav-pills">
-          {{> _nav }}
-        </ul>
-      </div>
-    </div>
-  </div>
+  {{> _Footer.Nav }}
 
   {{> _Global.Footer }}
 

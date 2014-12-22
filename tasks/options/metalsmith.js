@@ -1,5 +1,10 @@
 module.exports = function( config ) {
 
+  var path        = require('path');
+  var Handlebars  = require('handlebars');
+
+  Handlebars.registerHelper('relative_path', relativePathHelper);
+
   return {
     generate: {
       options: {
@@ -17,11 +22,23 @@ module.exports = function( config ) {
             }
           },
           'metalsmith-markdown': { },
-          'metalsmith-permalinks': {},
+          //'metalsmith-permalinks': {},
+          'metalsmith-navigation': {
+            primary:{
+              sortBy: 'nav_sort',
+              filterProperty: 'nav_groups',
+              mergeMatchingFilesAndDirs: true
+            },
+            footer: {
+              sortBy: 'nav_sort',
+              filterProperty: 'nav_groups',
+              mergeMatchingFilesAndDirs: true
+            }
+          },
           'metalsmith-templates': {
             engine: 'handlebars',
             directory: 'templates',
-            partials: loadPartials(  )
+            partials: loadPartials()
           }
         }
       },
@@ -34,7 +51,16 @@ module.exports = function( config ) {
 
 
 
-
+  function relativePathHelper( current, target ) {
+    // normalize and remove starting slash from path
+    if(!current || !target){
+      return '';
+    }
+    current = path.normalize(current).slice(0);
+    target = path.normalize(target).slice(0);
+    current = path.dirname(current);
+    return path.relative(current, target);
+  };
 
   // helper function to load task configs
 
