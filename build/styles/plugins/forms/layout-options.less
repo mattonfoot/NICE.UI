@@ -1,0 +1,31 @@
+.inline {
+  label,
+  input:not([type=file]),
+  textarea,
+  select,
+  .form-group,
+  .checkbox,
+  .checkbox&,
+  .radio,
+  .radio&,
+  .input-group,
+  .form-control-static {
+    display: inline-block;
+    width: auto;
+    margin: 0;
+    vertical-align: middle;
+  }
+
+  .input-group {
+    display: inline-table;
+
+    label,
+    input:not([type=file]),
+    textarea,
+    select,
+    .addon,
+    .btn {
+      display: table-cell;
+    }
+  }
+}

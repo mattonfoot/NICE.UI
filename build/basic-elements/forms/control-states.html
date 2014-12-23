@@ -91,9 +91,6 @@
             <a href="../../index.html">Home</a>
           </li>
           <li>
-            <a href="../../getting-started.html">Getting started</a>
-          </li>
-          <li>
             <a href="../../basic-elements.html">Basic elements</a>
           </li>
         </ul>
@@ -130,52 +127,74 @@
     <div class="content content-primary">
       <h2 id="input-focus">Input focus</h2>
 <p>We remove the default <code>outline</code> styles on some form controls and apply a <code>box-shadow</code> in its place for <code>:focus</code>.</p>
-<form class="guide-example form-inline">
-  <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused...">
-</form>
-
-<h2 id="invalid-inputs">Invalid inputs</h2>
-<p>Style inputs via default browser functionality with <code>:invalid</code>. Specify a <code>type</code>, add the <code>required</code> attribute if the field is not optional, and (if applicable) specify a <code>pattern</code>.</p>
-<p>This is not available in versions of Internet Explorer 7-9 due to lack of support for CSS pseudo selectors.</p>
-<form class="guide-example form-inline">
-  <input class="span3" type="email" placeholder="test@example.com" required>
+<form class="guide-example">
+  <input class="focused" id="focusedInput" type="text" value="This is focused...">
 </form>
 
 <h2 id="disabled-inputs">Disabled inputs</h2>
 <p>Add the <code>disabled</code> attribute on an input to prevent user input and trigger a slightly different look.</p>
-<form class="guide-example form-inline">
-  <input class="input-xlarge" id="disabledInput" type="text" placeholder="Disabled input here…" disabled>
+<form class="guide-example">
+  <input id="disabledInput" type="text" placeholder="Disabled input here…" disabled>
+</form>
+
+<h2 id="disabled-fieldsets">Disabled fieldsets</h2>
+<p>Add the disabled attribute to a <code>$lt;fieldset$gt;</code> to disable all the controls within the <code>$lt;fieldset$gt;</code> at once.</p>
+<form class="guide-example">
+  <fieldset disabled>
+    <div class="form-group">
+      <label for="disabledTextInput">Disabled input</label>
+      <input type="text" id="disabledTextInput" placeholder="Disabled input">
+    </div>
+    <div class="form-group">
+      <label for="disabledSelect">Disabled select menu</label>
+      <select id="disabledSelect">
+        <option>Disabled select</option>
+      </select>
+    </div>
+    <div class="form-group checkbox">
+      <label>
+        <input type="checkbox"> Can&#39;t check this
+      </label>
+    </div>
+    <button type="submit" class="btn">Submit</button>
+  </fieldset>
 </form>
 
 <h2 id="validation-states">Validation states</h2>
 <p>Bootstrap includes validation styles for error, warning, info, and success messages. To use, add the appropriate class to the surrounding <code>.control-group</code>.</p>
-<form class="guide-example form-horizontal">
-  <div class="control-group warning">
-    <label class="control-label" for="inputWarning">Input with warning</label>
-    <div class="controls">
-      <input type="text" id="inputWarning">
-      <span class="help-inline">Something may have gone wrong</span>
-    </div>
+<form class="guide-example horizontal">
+  <div class="form-group success">
+    <label for="inputSuccess1">Input with success</label>
+    <input type="text" id="inputSuccess1">
   </div>
-  <div class="control-group error">
-    <label class="control-label" for="inputError">Input with error</label>
-    <div class="controls">
-      <input type="text" id="inputError">
-      <span class="help-inline">Please correct the error</span>
-    </div>
+  <div class="form-group warning">
+    <label for="inputWarning1">Input with warning</label>
+    <input type="text" id="inputWarning1" aria-describedby="warningHelpBlock">
+    <span id="warningHelpBlock" class="help-text">This is a warning</span>
   </div>
-  <div class="control-group info">
-    <label class="control-label" for="inputInfo">Input with info</label>
-    <div class="controls">
-      <input type="text" id="inputInfo">
-      <span class="help-inline">Username is taken</span>
-    </div>
+  <div class="form-group error">
+    <label for="inputError1">Input with error</label>
+    <input type="text" id="inputError1" aria-describedby="errorHelpBlock">
+    <span id="errorHelpBlock" class="help-text">There was an error</span>
   </div>
-  <div class="control-group success">
-    <label class="control-label" for="inputSuccess">Input with success</label>
-    <div class="controls">
-      <input type="text" id="inputSuccess">
-      <span class="help-inline">Woohoo!</span>
+  <div class="form-group">
+    <div class="checkbox success">
+      <label>
+        <input type="checkbox" id="checkboxSuccess" value="option1">
+        Checkbox with success
+      </label>
+    </div>
+    <div class="checkbox warning">
+      <label>
+        <input type="checkbox" id="checkboxWarning" value="option1">
+        Checkbox with warning
+      </label>
+    </div>
+    <div class="checkbox error">
+      <label>
+        <input type="checkbox" id="checkboxError" value="option1">
+        Checkbox with error
+      </label>
     </div>
   </div>
 </form>
@@ -200,9 +219,6 @@
         <ul class="nav nav-pills">
           <li>
             <a href="../../index.html">Home</a>
-          </li>
-          <li>
-            <a href="../../getting-started.html">Getting started</a>
           </li>
           <li>
             <a href="../../basic-elements.html">Basic elements</a>
@@ -274,7 +290,7 @@
 
       $example.children().each( processChild );
 
-      var $code = $('<code/>').text( $example.html().replace( '\n', '' ) );
+      var $code = $('<code/>').text( $example.html().replace( '\n', '' ).replace( /=""/mg, '' ) );
 
       $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
 

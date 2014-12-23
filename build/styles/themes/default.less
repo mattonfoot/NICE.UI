@@ -36,12 +36,15 @@
 @green:                   #2ECC40;
 @lightgreen:              lighten( @green,  40% );
 @darkgreen:               darken( @green,   15% );
+@darkergreen:             darken( @green,   25% );
 @red:                     #FF4136;
 @lightred:                lighten( @red,    30% );
 @darkred:                 darken( @red,     15% );
+@darkerred:               darken( @red,     25% );
 @yellow:                  #FFDC00;
 @lightyellow:             lighten( @yellow, 40% );
 @darkyellow:              darken( @yellow,  20% );
+@darkeryellow:            darken( @yellow,  25% );
 
 // links
 @caution:                 #FB1B1B;
@@ -61,15 +64,15 @@
 // contextual
 @success-background:      @lightgreen;
 @success-foreground:      @darkgreen;
-@success-foreground-only: @green;
+@success-foreground-only: @darkergreen;
 
 @error-background:        @lightred;
 @error-foreground:        @darkred;
-@error-foreground-only:   @red;
+@error-foreground-only:   @darkerred;
 
 @warning-background:      @lightyellow;
 @warning-foreground:      @darkyellow;
-@warning-foreground-only: @yellow;
+@warning-foreground-only: @darkeryellow;
 
 @info-background:         @lightblue;
 @info-foreground:         @lightaqua;
@@ -160,17 +163,40 @@
     background-color: @white;
     border-color: @silver;
 }
-.theme-text-input-disabled() {
+.theme-text-output() {
+  color: @black;
+}
+.theme-input-placeholder() {
+  color: @silver;
+}
+.theme-input-disabled() {
     color: @darksilver;
     background-color: @offwhite;
     border-color: @gray;
 }
-.theme-text-placeholder() {
-    color: @silver;
+.theme-label-disabled() {
+  color: @darksilver;
 }
-.theme-text-output() {
-    color: @black;
-    background-color: @offwhite;
+.theme-input-warning() {
+  color: @warning-foreground-only;
+  border-color: @warning-foreground-only;
+}
+.theme-label-warning() {
+  color: @warning-foreground-only;
+}
+.theme-input-success() {
+  color: @success-foreground-only;
+  border-color: @success-foreground-only;
+}
+.theme-label-success() {
+  color: @success-foreground-only;
+}
+.theme-input-error() {
+  color: @error-foreground-only;
+  border-color: @error-foreground-only;
+}
+.theme-label-error() {
+  color: @error-foreground-only;
 }
 
 

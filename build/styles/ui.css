@@ -218,16 +218,16 @@ mark {
   color: #919191;
 }
 .text-warning {
-  color: #ffdc00;
+  color: #806e00;
 }
 .text-info {
   color: #0074d9;
 }
 .text-error {
-  color: #ff4136;
+  color: #b50a00;
 }
 .text-success {
-  color: #2ecc40;
+  color: #17641f;
 }
 abbr[title],
 acronym[title] {
@@ -452,18 +452,71 @@ legend {
   color: #111111;
   border-color: #cccccc;
 }
-label {
-  display: inline-block;
-  max-width: 100%;
+.form-group {
+  display: block;
+  width: 100%;
+  /*px*/ margin-bottom: 24px;
+  /**/
+  /*rem*/ margin-bottom: 2.4rem;
+  /*px*/ line-height: 24px;
+  /**/
+  /*rem*/ line-height: 2.4rem;
 }
-input,
+label {
+  display: block;
+  width: 100%;
+}
+fieldset[disabled] label,
+.disabled label,
+.readonly label {
+  cursor: not-allowed;
+}
+.input-group {
+  display: inline-block;
+}
+.input-group label,
+.input-group input:not([type=file]),
+.input-group textarea,
+.input-group select,
+.input-group .btn {
+  display: inline-block;
+}
+.input-group .btn {
+  vertical-align: middle;
+}
+.inline label,
+.inline input:not([type=file]),
+.inline textarea,
+.inline select,
+.inline .form-group,
+.inline .checkbox,
+.checkbox.inline,
+.inline .radio,
+.radio.inline,
+.inline .input-group,
+.inline .form-control-static {
+  display: inline-block;
+  width: auto;
+  margin: 0;
+  vertical-align: middle;
+}
+.inline .input-group {
+  display: inline-table;
+}
+.inline .input-group label,
+.inline .input-group input:not([type=file]),
+.inline .input-group textarea,
+.inline .input-group select,
+.inline .input-group .addon,
+.inline .input-group .btn {
+  display: table-cell;
+}
+input:not([type=file]),
 textarea,
 select {
   display: block;
   width: 100%;
-  /*px*/ margin: 0 0 24px;
-  /**/
-  /*rem*/ margin: 0 0 2.4rem;
+  margin: 0;
   /*px*/ padding: 12px 11px;
   /**/
   /*rem*/ padding: 1.2rem 1.1rem;
@@ -479,41 +532,44 @@ select {
   color: #111111;
   background-color: #ffffff;
   border-color: #aaaaaa;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
 }
-input:focus,
+input:not([type=file]):focus,
 textarea:focus,
 select:focus {
   border-color: #0074d9;
   outline: 0;
 }
-input::-moz-placeholder,
+input:not([type=file])::-moz-placeholder,
 textarea::-moz-placeholder,
 select::-moz-placeholder {
   color: #aaaaaa;
   opacity: 1;
 }
-input:-ms-input-placeholder,
+input:not([type=file]):-ms-input-placeholder,
 textarea:-ms-input-placeholder,
 select:-ms-input-placeholder {
   color: #aaaaaa;
 }
-input::-webkit-input-placeholder,
+input:not([type=file])::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder,
 select::-webkit-input-placeholder {
   color: #aaaaaa;
 }
-input[disabled],
+input:not([type=file])[disabled],
 textarea[disabled],
 select[disabled],
-input[readonly],
+input:not([type=file])[readonly],
 textarea[readonly],
 select[readonly],
-fieldset[disabled] input,
+fieldset[disabled] input:not([type=file]),
 fieldset[disabled] textarea,
-fieldset[disabled] select {
+fieldset[disabled] select,
+.disabled input:not([type=file]),
+.disabled textarea,
+.disabled select,
+.readonly input:not([type=file]),
+.readonly textarea,
+.readonly select {
   cursor: not-allowed;
   color: #919191;
   background-color: #f2f2f2;
@@ -533,7 +589,7 @@ textarea {
   /*rem*/ padding: 1.1rem;
   overflow: auto;
 }
-input {
+input:not([type=file]) {
   /*px*/ height: 48px;
   /**/
   /*rem*/ height: 4.8rem;
@@ -552,9 +608,6 @@ input[type="radio"] {
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
-}
-input[type=file] {
-  display: block;
 }
 input[type="range"] {
   display: block;
@@ -585,18 +638,20 @@ select[size] {
   /*rem*/ min-height: 4.8rem;
   height: auto;
 }
-input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
   outline: thin dotted;
   outline: 0.5rem auto -webkit-focus-ring-color;
   outline-offset: -0.2rem;
 }
-output {
+output,
+.form-control-static {
   display: block;
-  /*px*/ padding-top: 24px;
+  width: 100%;
+  margin: 0;
+  /*px*/ padding: 12px;
   /**/
-  /*rem*/ padding-top: 2.4rem;
+  /*rem*/ padding: 1.2rem;
   /*px*/ font-size: 16px;
   /**/
   /*rem*/ font-size: 1.6rem;
@@ -604,7 +659,39 @@ output {
   /**/
   /*rem*/ line-height: 2.4rem;
   color: #111111;
-  background-color: #f2f2f2;
+}
+.warning input,
+.warning textarea,
+.warning select {
+  color: #806e00;
+  border-color: #806e00;
+}
+.error input,
+.error textarea,
+.error select {
+  color: #b50a00;
+  border-color: #b50a00;
+}
+.success input,
+.success textarea,
+.success select {
+  color: #17641f;
+  border-color: #17641f;
+}
+.warning label,
+.warning .help-text {
+  color: #806e00;
+  border-color: #806e00;
+}
+.error label,
+.error .help-text {
+  color: #b50a00;
+  border-color: #b50a00;
+}
+.success label,
+.success .help-text {
+  color: #17641f;
+  border-color: #17641f;
 }
 input[type="reset"],
 input[type="submit"],

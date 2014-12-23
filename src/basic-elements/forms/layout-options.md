@@ -7,63 +7,51 @@ nav_groups:
 - primary
 ---
 
-### Search form
+## Inline form
 
-Add <code>.form-search</code> to the form for a special search icon button.
+Add <code>.inline</code> for left-aligned labels and inline-block controls for a compact layout.
 
-<div class="guide-example">
-  <form class="form-search">
-    <input type="text" class="search-query"> <button type="submit" class="btn">Search</button>
-  </form>
+<div class="alert alert-info">
+  <p><strong>Note:</strong> elements become inline and so will wrap when the available width is
+    shorter than the length of the total line</p>
 </div>
 
-### Inline form
-
-Add <code>.form-inline</code> for left-aligned labels and inline-block controls for a compact layout.
-
 <div class="guide-example">
-  <form class="form-inline">
-    <input type="text" placeholder="Email">
-
-    <input type="password" placeholder="Password">
-
-    <label class="checkbox"><input type="checkbox"> Remember me</label>
-
+  <form class="inline" role="form">
+    <div class="form-group">
+      <label for="exampleInputEmail2">Email address</label>
+      <input type="email" id="exampleInputEmail2" placeholder="Enter email">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputPassword2">Password</label>
+      <input type="password" id="exampleInputPassword2" placeholder="Password">
+    </div>
+    <div class="form-group checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
     <button type="submit" class="btn">Sign in</button>
   </form>
 </div>
 
-### Horizontal form
+## Horizontal form
 
-Right align labels and float them to the left to make them appear on the same line as controls. Requires the most markup changes from a default form:
-
--  Add <code>.form-horizontal</code> to the form
--  Wrap labels and controls in <code>.control-group</code>
--  Add <code>.control-label</code> to the label
--  Wrap any associated controls in <code>.controls</code> for proper alignment
+Add <code>.form-horizontal</code> for right aligned labels floated to the left making them appear on the same line as controls.
 
 <div class="guide-example">
-  <form class="form-horizontal">
-    <div class="control-group">
-      <label for="inputEmail">Email</label>
-
-      <div class="controls">
-        <input type="text" id="inputEmail" placeholder="Email">
-      </div>
+  <form class="horizontal" role="form">
+    <div class="form-group">
+      <label for="exampleInputEmail3">Email address</label>
+      <input type="email" id="exampleInputEmail3" placeholder="Enter email">
     </div>
-    <div class="control-group">
-      <label for="inputPassword">Password</label>
-
-      <div class="controls">
-        <input type="password" id="inputPassword" placeholder="Password">
-      </div>
+    <div class="form-group">
+      <label for="exampleInputPassword3">Password</label>
+      <input type="password" id="exampleInputPassword3" placeholder="Password">
     </div>
-    <div class="control-group">
-      <div class="controls">
-        <label class="checkbox"><input type="checkbox"> Remember me</label>
-
-        <button type="submit" class="btn">Sign in</button>
-      </div>
+    <div class="form-group checkbox">
+      <label><input type="checkbox"> Remember me</label>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn">Sign in</button>
     </div>
   </form>
 </div>

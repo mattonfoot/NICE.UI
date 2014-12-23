@@ -91,9 +91,6 @@
             <a href="../../index.html">Home</a>
           </li>
           <li>
-            <a href="../../getting-started.html">Getting started</a>
-          </li>
-          <li>
             <a href="../../basic-elements.html">Basic elements</a>
           </li>
         </ul>
@@ -182,9 +179,6 @@
             <a href="../../index.html">Home</a>
           </li>
           <li>
-            <a href="../../getting-started.html">Getting started</a>
-          </li>
-          <li>
             <a href="../../basic-elements.html">Basic elements</a>
           </li>
         </ul>
@@ -254,7 +248,7 @@
 
       $example.children().each( processChild );
 
-      var $code = $('<code/>').text( $example.html().replace( '\n', '' ) );
+      var $code = $('<code/>').text( $example.html().replace( '\n', '' ).replace( /=""/mg, '' ) );
 
       $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
 

@@ -91,9 +91,6 @@
             <a href="../../index.html">Home</a>
           </li>
           <li>
-            <a href="../../getting-started.html">Getting started</a>
-          </li>
-          <li>
             <a href="../../basic-elements.html">Basic elements</a>
           </li>
         </ul>
@@ -186,9 +183,6 @@ wrapped with <code>&lt;sup&gt;</code> or <code>&lt;sub&gt;</code> respectively.<
             <a href="../../index.html">Home</a>
           </li>
           <li>
-            <a href="../../getting-started.html">Getting started</a>
-          </li>
-          <li>
             <a href="../../basic-elements.html">Basic elements</a>
           </li>
         </ul>
@@ -258,7 +252,7 @@ wrapped with <code>&lt;sup&gt;</code> or <code>&lt;sub&gt;</code> respectively.<
 
       $example.children().each( processChild );
 
-      var $code = $('<code/>').text( $example.html().replace( '\n', '' ) );
+      var $code = $('<code/>').text( $example.html().replace( '\n', '' ).replace( /=""/mg, '' ) );
 
       $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
 

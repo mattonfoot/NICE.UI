@@ -218,16 +218,16 @@ mark {
   color: #919191;
 }
 .text-warning {
-  color: #ffdc00;
+  color: #806e00;
 }
 .text-info {
   color: #0074d9;
 }
 .text-error {
-  color: #ff4136;
+  color: #b50a00;
 }
 .text-success {
-  color: #2ecc40;
+  color: #17641f;
 }
 abbr[title],
 acronym[title] {
@@ -439,12 +439,12 @@ pre code {
   background-color: #ffffff;
   border-color: #aaaaaa;
 }
-.theme-text-input-disabled .example {
+.theme-input-disabled .example {
   color: #919191;
   background-color: #f2f2f2;
   border-color: #cccccc;
 }
-.theme-text-placeholder .example {
+.theme-input-placeholder .example {
   color: #111111;
   background-color: #ffffff;
   border-color: #aaaaaa;
@@ -452,7 +452,6 @@ pre code {
 }
 .theme-text-output .example {
   color: #111111;
-  background-color: #f2f2f2;
 }
 .theme-button .example {
   color: #111111;
