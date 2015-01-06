@@ -469,19 +469,19 @@ pre code {
   border-color: #aaaaaa;
 }
 .theme-button-primary-action .example {
-  color: #111111;
-  background-color: #99ff8b;
-  border-color: #99ff8b;
+  color: #ffffff;
+  background-color: #0074d9;
+  border-color: #0074d9;
 }
 .theme-button-primary-action-hover .example {
-  color: #111111;
-  background-color: #63ff4e;
-  border-color: #63ff4e;
+  color: #ffffff;
+  background-color: #00539c;
+  border-color: #00539c;
 }
 .theme-button-primary-action-active .example {
-  color: #111111;
-  background-color: #99ff8b;
-  border-color: #63ff4e;
+  color: #ffffff;
+  background-color: #0074d9;
+  border-color: #00539c;
 }
 .theme-button-disabled .example {
   color: #919191;

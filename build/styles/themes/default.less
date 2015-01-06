@@ -53,8 +53,21 @@
 @link-hover:              #08455B;
 
 // buttons
-@primary-button:          #99ff8b;
+@primary-button:          @blue;
+@primary-button-text:     @white;
 @primary-button-hover:    darken( @primary-button,    12% );
+@positive-button:         @green;
+@positive-button-text:    @darkergreen;
+@positive-button-hover:   darken( @positive-button,   12% );
+@danger-button:           @red;
+@danger-button-text:      @white;
+@danger-button-hover:     darken( @danger-button,     12% );
+@caution-button:          @darkyellow;
+@caution-button-text:     @lightyellow;
+@caution-button-hover:    darken( @caution-button,    12% );
+@informative-button:      @lightblue;
+@informative-button-text: @lightaqua;
+@informative-button-hover: darken( @informative-button,    12% );
 
 // search
 @highlight-bg:            #FFDC00;
@@ -217,19 +230,79 @@
     border-color: @silver;
 }
 .theme-button-primary-action() {
-    color: @black;
-    background-color: @primary-button;
-    border-color: @primary-button;
+  color: @primary-button-text;
+  background-color: @primary-button;
+  border-color: @primary-button;
 }
 .theme-button-primary-action-hover() {
-    color: @black;
-    background-color: @primary-button-hover;
-    border-color: @primary-button-hover;
+  color: @primary-button-text;
+  background-color: @primary-button-hover;
+  border-color: @primary-button-hover;
 }
 .theme-button-primary-action-active() {
-    color: @black;
-    background-color: @primary-button;
-    border-color: @primary-button-hover;
+  color: @primary-button-text;
+  background-color: @primary-button;
+  border-color: @primary-button-hover;
+}
+.theme-button-positive-action() {
+  color: @positive-button-text;
+  background-color: @positive-button;
+  border-color: @positive-button;
+}
+.theme-button-positive-action-hover() {
+  color: @positive-button-text;
+  background-color: @positive-button-hover;
+  border-color: @positive-button-hover;
+}
+.theme-button-positive-action-active() {
+  color: @positive-button-text;
+  background-color: @positive-button;
+  border-color: @positive-button-hover;
+}
+.theme-button-danger-action() {
+  color: @danger-button-text;
+  background-color: @danger-button;
+  border-color: @danger-button;
+}
+.theme-button-danger-action-hover() {
+  color: @danger-button-text;
+  background-color: @danger-button-hover;
+  border-color: @danger-button-hover;
+}
+.theme-button-danger-action-active() {
+  color: @danger-button-text;
+  background-color: @danger-button;
+  border-color: @danger-button-hover;
+}
+.theme-button-caution-action() {
+  color: @caution-button-text;
+  background-color: @caution-button;
+  border-color: @caution-button;
+}
+.theme-button-caution-action-hover() {
+  color: @caution-button-text;
+  background-color: @caution-button-hover;
+  border-color: @caution-button-hover;
+}
+.theme-button-caution-action-active() {
+  color: @caution-button-text;
+  background-color: @caution-button;
+  border-color: @caution-button-hover;
+}
+.theme-button-informative-action() {
+  color: @informative-button-text;
+  background-color: @informative-button;
+  border-color: @informative-button;
+}
+.theme-button-informative-action-hover() {
+  color: @informative-button-text;
+  background-color: @informative-button-hover;
+  border-color: @informative-button-hover;
+}
+.theme-button-informative-action-active() {
+  color: @informative-button-text;
+  background-color: @informative-button;
+  border-color: @informative-button-hover;
 }
 .theme-button-disabled() {
     color: @darksilver;

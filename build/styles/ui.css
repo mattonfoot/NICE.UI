@@ -695,6 +695,7 @@ output,
 }
 input[type="reset"],
 input[type="submit"],
+input[type="button"],
 button,
 .btn,
 .btn:link,
@@ -728,46 +729,48 @@ button,
 }
 input[type="reset"][disabled],
 input[type="submit"][disabled],
+input[type="button"][disabled],
 button[disabled],
 .btn[disabled],
 .btn:link[disabled],
 .btn:visited[disabled],
-input[type="reset"][readonly],
-input[type="submit"][readonly],
-button[readonly],
-.btn[readonly],
-.btn:link[readonly],
-.btn:visited[readonly],
+input[type="reset"].disabled,
+input[type="submit"].disabled,
+input[type="button"].disabled,
+button.disabled,
+.btn.disabled,
+.btn:link.disabled,
+.btn:visited.disabled,
 fieldset[disabled] input[type="reset"],
 fieldset[disabled] input[type="submit"],
+fieldset[disabled] input[type="button"],
 fieldset[disabled] button,
 fieldset[disabled] .btn,
 fieldset[disabled] .btn:link,
-fieldset[disabled] .btn:visited {
+fieldset[disabled] .btn:visited,
+.disabled input[type="reset"],
+.disabled input[type="submit"],
+.disabled input[type="button"],
+.disabled button,
+.disabled .btn,
+.disabled .btn:link,
+.disabled .btn:visited {
   cursor: not-allowed;
   opacity: 1;
   color: #919191;
   background-color: #cccccc;
   border-color: #cccccc;
 }
-input[type="reset"].action-primary,
-input[type="submit"].action-primary,
-button.action-primary,
-.btn.action-primary,
-.btn:link.action-primary,
-.btn:visited.action-primary {
-  color: #111111;
-  background-color: #99ff8b;
-  border-color: #99ff8b;
-}
 input[type="reset"]:hover,
 input[type="submit"]:hover,
+input[type="button"]:hover,
 button:hover,
 .btn:hover,
 .btn:link:hover,
 .btn:visited:hover,
 input[type="reset"]:focus,
 input[type="submit"]:focus,
+input[type="button"]:focus,
 button:focus,
 .btn:focus,
 .btn:link:focus,
@@ -778,104 +781,9 @@ button:focus,
   border-color: #aaaaaa;
   transition: background-color 0.2s, color 0.2s, border-color 0.2s;
 }
-input[type="reset"]:hover.action-primary,
-input[type="submit"]:hover.action-primary,
-button:hover.action-primary,
-.btn:hover.action-primary,
-.btn:link:hover.action-primary,
-.btn:visited:hover.action-primary,
-input[type="reset"]:focus.action-primary,
-input[type="submit"]:focus.action-primary,
-button:focus.action-primary,
-.btn:focus.action-primary,
-.btn:link:focus.action-primary,
-.btn:visited:focus.action-primary {
-  color: #111111;
-  background-color: #63ff4e;
-  border-color: #63ff4e;
-}
-input[type="reset"]:hover[disabled],
-input[type="submit"]:hover[disabled],
-button:hover[disabled],
-.btn:hover[disabled],
-.btn:link:hover[disabled],
-.btn:visited:hover[disabled],
-input[type="reset"]:focus[disabled],
-input[type="submit"]:focus[disabled],
-button:focus[disabled],
-.btn:focus[disabled],
-.btn:link:focus[disabled],
-.btn:visited:focus[disabled],
-input[type="reset"]:hover[readonly],
-input[type="submit"]:hover[readonly],
-button:hover[readonly],
-.btn:hover[readonly],
-.btn:link:hover[readonly],
-.btn:visited:hover[readonly],
-input[type="reset"]:focus[readonly],
-input[type="submit"]:focus[readonly],
-button:focus[readonly],
-.btn:focus[readonly],
-.btn:link:focus[readonly],
-.btn:visited:focus[readonly],
-fieldset[disabled] input[type="reset"]:hover,
-fieldset[disabled] input[type="submit"]:hover,
-fieldset[disabled] button:hover,
-fieldset[disabled] .btn:hover,
-fieldset[disabled] .btn:link:hover,
-fieldset[disabled] .btn:visited:hover,
-fieldset[disabled] input[type="reset"]:focus,
-fieldset[disabled] input[type="submit"]:focus,
-fieldset[disabled] button:focus,
-fieldset[disabled] .btn:focus,
-fieldset[disabled] .btn:link:focus,
-fieldset[disabled] .btn:visited:focus {
-  color: #919191;
-  background-color: #cccccc;
-  border-color: #cccccc;
-}
-input[type="reset"]:hover[disabled].action-primary,
-input[type="submit"]:hover[disabled].action-primary,
-button:hover[disabled].action-primary,
-.btn:hover[disabled].action-primary,
-.btn:link:hover[disabled].action-primary,
-.btn:visited:hover[disabled].action-primary,
-input[type="reset"]:focus[disabled].action-primary,
-input[type="submit"]:focus[disabled].action-primary,
-button:focus[disabled].action-primary,
-.btn:focus[disabled].action-primary,
-.btn:link:focus[disabled].action-primary,
-.btn:visited:focus[disabled].action-primary,
-input[type="reset"]:hover[readonly].action-primary,
-input[type="submit"]:hover[readonly].action-primary,
-button:hover[readonly].action-primary,
-.btn:hover[readonly].action-primary,
-.btn:link:hover[readonly].action-primary,
-.btn:visited:hover[readonly].action-primary,
-input[type="reset"]:focus[readonly].action-primary,
-input[type="submit"]:focus[readonly].action-primary,
-button:focus[readonly].action-primary,
-.btn:focus[readonly].action-primary,
-.btn:link:focus[readonly].action-primary,
-.btn:visited:focus[readonly].action-primary,
-fieldset[disabled] input[type="reset"]:hover.action-primary,
-fieldset[disabled] input[type="submit"]:hover.action-primary,
-fieldset[disabled] button:hover.action-primary,
-fieldset[disabled] .btn:hover.action-primary,
-fieldset[disabled] .btn:link:hover.action-primary,
-fieldset[disabled] .btn:visited:hover.action-primary,
-fieldset[disabled] input[type="reset"]:focus.action-primary,
-fieldset[disabled] input[type="submit"]:focus.action-primary,
-fieldset[disabled] button:focus.action-primary,
-fieldset[disabled] .btn:focus.action-primary,
-fieldset[disabled] .btn:link:focus.action-primary,
-fieldset[disabled] .btn:visited:focus.action-primary {
-  color: #919191;
-  background-color: #cccccc;
-  border-color: #cccccc;
-}
 input[type="reset"]:active,
 input[type="submit"]:active,
+input[type="button"]:active,
 button:active,
 .btn:active,
 .btn:link:active,
@@ -885,62 +793,9 @@ button:active,
   border-color: #aaaaaa;
   transition: background-color 0.1s, color 0.1s, border-color 0.1s;
 }
-input[type="reset"]:active.action-primary,
-input[type="submit"]:active.action-primary,
-button:active.action-primary,
-.btn:active.action-primary,
-.btn:link:active.action-primary,
-.btn:visited:active.action-primary {
-  color: #111111;
-  background-color: #99ff8b;
-  border-color: #63ff4e;
-}
-input[type="reset"]:active[disabled],
-input[type="submit"]:active[disabled],
-button:active[disabled],
-.btn:active[disabled],
-.btn:link:active[disabled],
-.btn:visited:active[disabled],
-input[type="reset"]:active[readonly],
-input[type="submit"]:active[readonly],
-button:active[readonly],
-.btn:active[readonly],
-.btn:link:active[readonly],
-.btn:visited:active[readonly],
-fieldset[disabled] input[type="reset"]:active,
-fieldset[disabled] input[type="submit"]:active,
-fieldset[disabled] button:active,
-fieldset[disabled] .btn:active,
-fieldset[disabled] .btn:link:active,
-fieldset[disabled] .btn:visited:active {
-  color: #919191;
-  background-color: #cccccc;
-  border-color: #cccccc;
-}
-input[type="reset"]:active[disabled].action-primary,
-input[type="submit"]:active[disabled].action-primary,
-button:active[disabled].action-primary,
-.btn:active[disabled].action-primary,
-.btn:link:active[disabled].action-primary,
-.btn:visited:active[disabled].action-primary,
-input[type="reset"]:active[readonly].action-primary,
-input[type="submit"]:active[readonly].action-primary,
-button:active[readonly].action-primary,
-.btn:active[readonly].action-primary,
-.btn:link:active[readonly].action-primary,
-.btn:visited:active[readonly].action-primary,
-fieldset[disabled] input[type="reset"]:active.action-primary,
-fieldset[disabled] input[type="submit"]:active.action-primary,
-fieldset[disabled] button:active.action-primary,
-fieldset[disabled] .btn:active.action-primary,
-fieldset[disabled] .btn:link:active.action-primary,
-fieldset[disabled] .btn:visited:active.action-primary {
-  color: #919191;
-  background-color: #cccccc;
-  border-color: #cccccc;
-}
 input[type="reset"].btn-fill,
 input[type="submit"].btn-fill,
+input[type="button"].btn-fill,
 button.btn-fill,
 .btn.btn-fill,
 .btn:link.btn-fill,
@@ -955,6 +810,424 @@ button {
   /*px*/ line-height: 22px;
   /**/
   /*rem*/ line-height: 2.2rem;
+}
+input[type="reset"].action-primary,
+input[type="submit"].action-primary,
+input[type="button"].action-primary,
+button.action-primary,
+.btn.action-primary,
+.btn:link.action-primary,
+.btn:visited.action-primary {
+  color: #ffffff;
+  background-color: #0074d9;
+  border-color: #0074d9;
+}
+input[type="reset"].action-positive,
+input[type="submit"].action-positive,
+input[type="button"].action-positive,
+button.action-positive,
+.btn.action-positive,
+.btn:link.action-positive,
+.btn:visited.action-positive {
+  color: #17641f;
+  background-color: #2ecc40;
+  border-color: #2ecc40;
+}
+input[type="reset"].action-caution,
+input[type="submit"].action-caution,
+input[type="button"].action-caution,
+button.action-caution,
+.btn.action-caution,
+.btn:link.action-caution,
+.btn:visited.action-caution {
+  color: #fff8cc;
+  background-color: #998400;
+  border-color: #998400;
+}
+input[type="reset"].action-danger,
+input[type="submit"].action-danger,
+input[type="button"].action-danger,
+button.action-danger,
+.btn.action-danger,
+.btn:link.action-danger,
+.btn:visited.action-danger {
+  color: #ffffff;
+  background-color: #ff4136;
+  border-color: #ff4136;
+}
+input[type="reset"].action-informative,
+input[type="submit"].action-informative,
+input[type="button"].action-informative,
+button.action-informative,
+.btn.action-informative,
+.btn:link.action-informative,
+.btn:visited.action-informative {
+  color: #e5f8ff;
+  background-color: #269aff;
+  border-color: #269aff;
+}
+input[type="reset"][disabled],
+input[type="submit"][disabled],
+input[type="button"][disabled],
+button[disabled],
+.btn[disabled],
+.btn:link[disabled],
+.btn:visited[disabled],
+input[type="reset"].disabled,
+input[type="submit"].disabled,
+input[type="button"].disabled,
+button.disabled,
+.btn.disabled,
+.btn:link.disabled,
+.btn:visited.disabled,
+fieldset[disabled] input[type="reset"],
+fieldset[disabled] input[type="submit"],
+fieldset[disabled] input[type="button"],
+fieldset[disabled] button,
+fieldset[disabled] .btn,
+fieldset[disabled] .btn:link,
+fieldset[disabled] .btn:visited,
+.disabled input[type="reset"],
+.disabled input[type="submit"],
+.disabled input[type="button"],
+.disabled button,
+.disabled .btn,
+.disabled .btn:link,
+.disabled .btn:visited {
+  cursor: not-allowed;
+  opacity: 1;
+  color: #919191;
+  background-color: #cccccc;
+  border-color: #cccccc;
+}
+input[type="reset"]:hover.action-primary,
+input[type="submit"]:hover.action-primary,
+input[type="button"]:hover.action-primary,
+button:hover.action-primary,
+.btn:hover.action-primary,
+.btn:link:hover.action-primary,
+.btn:visited:hover.action-primary,
+input[type="reset"]:focus.action-primary,
+input[type="submit"]:focus.action-primary,
+input[type="button"]:focus.action-primary,
+button:focus.action-primary,
+.btn:focus.action-primary,
+.btn:link:focus.action-primary,
+.btn:visited:focus.action-primary {
+  color: #ffffff;
+  background-color: #00539c;
+  border-color: #00539c;
+}
+input[type="reset"]:hover.action-positive,
+input[type="submit"]:hover.action-positive,
+input[type="button"]:hover.action-positive,
+button:hover.action-positive,
+.btn:hover.action-positive,
+.btn:link:hover.action-positive,
+.btn:visited:hover.action-positive,
+input[type="reset"]:focus.action-positive,
+input[type="submit"]:focus.action-positive,
+input[type="button"]:focus.action-positive,
+button:focus.action-positive,
+.btn:focus.action-positive,
+.btn:link:focus.action-positive,
+.btn:visited:focus.action-positive {
+  color: #17641f;
+  background-color: #239a30;
+  border-color: #239a30;
+}
+input[type="reset"]:hover.action-caution,
+input[type="submit"]:hover.action-caution,
+input[type="button"]:hover.action-caution,
+button:hover.action-caution,
+.btn:hover.action-caution,
+.btn:link:hover.action-caution,
+.btn:visited:hover.action-caution,
+input[type="reset"]:focus.action-caution,
+input[type="submit"]:focus.action-caution,
+input[type="button"]:focus.action-caution,
+button:focus.action-caution,
+.btn:focus.action-caution,
+.btn:link:focus.action-caution,
+.btn:visited:focus.action-caution {
+  color: #fff8cc;
+  background-color: #5c4f00;
+  border-color: #5c4f00;
+}
+input[type="reset"]:hover.action-danger,
+input[type="submit"]:hover.action-danger,
+input[type="button"]:hover.action-danger,
+button:hover.action-danger,
+.btn:hover.action-danger,
+.btn:link:hover.action-danger,
+.btn:visited:hover.action-danger,
+input[type="reset"]:focus.action-danger,
+input[type="submit"]:focus.action-danger,
+input[type="button"]:focus.action-danger,
+button:focus.action-danger,
+.btn:focus.action-danger,
+.btn:link:focus.action-danger,
+.btn:visited:focus.action-danger {
+  color: #ffffff;
+  background-color: #f80e00;
+  border-color: #f80e00;
+}
+input[type="reset"]:hover.action-informative,
+input[type="submit"]:hover.action-informative,
+input[type="button"]:hover.action-informative,
+button:hover.action-informative,
+.btn:hover.action-informative,
+.btn:link:hover.action-informative,
+.btn:visited:hover.action-informative,
+input[type="reset"]:focus.action-informative,
+input[type="submit"]:focus.action-informative,
+input[type="button"]:focus.action-informative,
+button:focus.action-informative,
+.btn:focus.action-informative,
+.btn:link:focus.action-informative,
+.btn:visited:focus.action-informative {
+  color: #e5f8ff;
+  background-color: #007ce8;
+  border-color: #007ce8;
+}
+input[type="reset"]:hover[disabled],
+input[type="submit"]:hover[disabled],
+input[type="button"]:hover[disabled],
+button:hover[disabled],
+.btn:hover[disabled],
+.btn:link:hover[disabled],
+.btn:visited:hover[disabled],
+input[type="reset"]:focus[disabled],
+input[type="submit"]:focus[disabled],
+input[type="button"]:focus[disabled],
+button:focus[disabled],
+.btn:focus[disabled],
+.btn:link:focus[disabled],
+.btn:visited:focus[disabled],
+input[type="reset"]:hover.disabled,
+input[type="submit"]:hover.disabled,
+input[type="button"]:hover.disabled,
+button:hover.disabled,
+.btn:hover.disabled,
+.btn:link:hover.disabled,
+.btn:visited:hover.disabled,
+input[type="reset"]:focus.disabled,
+input[type="submit"]:focus.disabled,
+input[type="button"]:focus.disabled,
+button:focus.disabled,
+.btn:focus.disabled,
+.btn:link:focus.disabled,
+.btn:visited:focus.disabled,
+fieldset[disabled] input[type="reset"]:hover,
+fieldset[disabled] input[type="submit"]:hover,
+fieldset[disabled] input[type="button"]:hover,
+fieldset[disabled] button:hover,
+fieldset[disabled] .btn:hover,
+fieldset[disabled] .btn:link:hover,
+fieldset[disabled] .btn:visited:hover,
+fieldset[disabled] input[type="reset"]:focus,
+fieldset[disabled] input[type="submit"]:focus,
+fieldset[disabled] input[type="button"]:focus,
+fieldset[disabled] button:focus,
+fieldset[disabled] .btn:focus,
+fieldset[disabled] .btn:link:focus,
+fieldset[disabled] .btn:visited:focus,
+.disabled input[type="reset"]:hover,
+.disabled input[type="submit"]:hover,
+.disabled input[type="button"]:hover,
+.disabled button:hover,
+.disabled .btn:hover,
+.disabled .btn:link:hover,
+.disabled .btn:visited:hover,
+.disabled input[type="reset"]:focus,
+.disabled input[type="submit"]:focus,
+.disabled input[type="button"]:focus,
+.disabled button:focus,
+.disabled .btn:focus,
+.disabled .btn:link:focus,
+.disabled .btn:visited:focus {
+  color: #919191;
+  background-color: #cccccc;
+  border-color: #cccccc;
+}
+input[type="reset"]:hover[disabled].action-primary,
+input[type="submit"]:hover[disabled].action-primary,
+input[type="button"]:hover[disabled].action-primary,
+button:hover[disabled].action-primary,
+.btn:hover[disabled].action-primary,
+.btn:link:hover[disabled].action-primary,
+.btn:visited:hover[disabled].action-primary,
+input[type="reset"]:focus[disabled].action-primary,
+input[type="submit"]:focus[disabled].action-primary,
+input[type="button"]:focus[disabled].action-primary,
+button:focus[disabled].action-primary,
+.btn:focus[disabled].action-primary,
+.btn:link:focus[disabled].action-primary,
+.btn:visited:focus[disabled].action-primary,
+input[type="reset"]:hover.disabled.action-primary,
+input[type="submit"]:hover.disabled.action-primary,
+input[type="button"]:hover.disabled.action-primary,
+button:hover.disabled.action-primary,
+.btn:hover.disabled.action-primary,
+.btn:link:hover.disabled.action-primary,
+.btn:visited:hover.disabled.action-primary,
+input[type="reset"]:focus.disabled.action-primary,
+input[type="submit"]:focus.disabled.action-primary,
+input[type="button"]:focus.disabled.action-primary,
+button:focus.disabled.action-primary,
+.btn:focus.disabled.action-primary,
+.btn:link:focus.disabled.action-primary,
+.btn:visited:focus.disabled.action-primary,
+fieldset[disabled] input[type="reset"]:hover.action-primary,
+fieldset[disabled] input[type="submit"]:hover.action-primary,
+fieldset[disabled] input[type="button"]:hover.action-primary,
+fieldset[disabled] button:hover.action-primary,
+fieldset[disabled] .btn:hover.action-primary,
+fieldset[disabled] .btn:link:hover.action-primary,
+fieldset[disabled] .btn:visited:hover.action-primary,
+fieldset[disabled] input[type="reset"]:focus.action-primary,
+fieldset[disabled] input[type="submit"]:focus.action-primary,
+fieldset[disabled] input[type="button"]:focus.action-primary,
+fieldset[disabled] button:focus.action-primary,
+fieldset[disabled] .btn:focus.action-primary,
+fieldset[disabled] .btn:link:focus.action-primary,
+fieldset[disabled] .btn:visited:focus.action-primary,
+.disabled input[type="reset"]:hover.action-primary,
+.disabled input[type="submit"]:hover.action-primary,
+.disabled input[type="button"]:hover.action-primary,
+.disabled button:hover.action-primary,
+.disabled .btn:hover.action-primary,
+.disabled .btn:link:hover.action-primary,
+.disabled .btn:visited:hover.action-primary,
+.disabled input[type="reset"]:focus.action-primary,
+.disabled input[type="submit"]:focus.action-primary,
+.disabled input[type="button"]:focus.action-primary,
+.disabled button:focus.action-primary,
+.disabled .btn:focus.action-primary,
+.disabled .btn:link:focus.action-primary,
+.disabled .btn:visited:focus.action-primary {
+  color: #919191;
+  background-color: #cccccc;
+  border-color: #cccccc;
+}
+input[type="reset"]:active.action-primary,
+input[type="submit"]:active.action-primary,
+input[type="button"]:active.action-primary,
+button:active.action-primary,
+.btn:active.action-primary,
+.btn:link:active.action-primary,
+.btn:visited:active.action-primary {
+  color: #ffffff;
+  background-color: #0074d9;
+  border-color: #00539c;
+}
+input[type="reset"]:active.action-positive,
+input[type="submit"]:active.action-positive,
+input[type="button"]:active.action-positive,
+button:active.action-positive,
+.btn:active.action-positive,
+.btn:link:active.action-positive,
+.btn:visited:active.action-positive {
+  color: #17641f;
+  background-color: #2ecc40;
+  border-color: #239a30;
+}
+input[type="reset"]:active.action-caution,
+input[type="submit"]:active.action-caution,
+input[type="button"]:active.action-caution,
+button:active.action-caution,
+.btn:active.action-caution,
+.btn:link:active.action-caution,
+.btn:visited:active.action-caution {
+  color: #fff8cc;
+  background-color: #998400;
+  border-color: #5c4f00;
+}
+input[type="reset"]:active.action-danger,
+input[type="submit"]:active.action-danger,
+input[type="button"]:active.action-danger,
+button:active.action-danger,
+.btn:active.action-danger,
+.btn:link:active.action-danger,
+.btn:visited:active.action-danger {
+  color: #ffffff;
+  background-color: #ff4136;
+  border-color: #f80e00;
+}
+input[type="reset"]:active.action-informative,
+input[type="submit"]:active.action-informative,
+input[type="button"]:active.action-informative,
+button:active.action-informative,
+.btn:active.action-informative,
+.btn:link:active.action-informative,
+.btn:visited:active.action-informative {
+  color: #e5f8ff;
+  background-color: #269aff;
+  border-color: #007ce8;
+}
+input[type="reset"]:active[disabled],
+input[type="submit"]:active[disabled],
+input[type="button"]:active[disabled],
+button:active[disabled],
+.btn:active[disabled],
+.btn:link:active[disabled],
+.btn:visited:active[disabled],
+input[type="reset"]:active.disabled,
+input[type="submit"]:active.disabled,
+input[type="button"]:active.disabled,
+button:active.disabled,
+.btn:active.disabled,
+.btn:link:active.disabled,
+.btn:visited:active.disabled,
+fieldset[disabled] input[type="reset"]:active,
+fieldset[disabled] input[type="submit"]:active,
+fieldset[disabled] input[type="button"]:active,
+fieldset[disabled] button:active,
+fieldset[disabled] .btn:active,
+fieldset[disabled] .btn:link:active,
+fieldset[disabled] .btn:visited:active,
+.disabled input[type="reset"]:active,
+.disabled input[type="submit"]:active,
+.disabled input[type="button"]:active,
+.disabled button:active,
+.disabled .btn:active,
+.disabled .btn:link:active,
+.disabled .btn:visited:active {
+  color: #919191;
+  background-color: #cccccc;
+  border-color: #cccccc;
+}
+input[type="reset"]:active[disabled].action-primary,
+input[type="submit"]:active[disabled].action-primary,
+input[type="button"]:active[disabled].action-primary,
+button:active[disabled].action-primary,
+.btn:active[disabled].action-primary,
+.btn:link:active[disabled].action-primary,
+.btn:visited:active[disabled].action-primary,
+input[type="reset"]:active.disabled.action-primary,
+input[type="submit"]:active.disabled.action-primary,
+input[type="button"]:active.disabled.action-primary,
+button:active.disabled.action-primary,
+.btn:active.disabled.action-primary,
+.btn:link:active.disabled.action-primary,
+.btn:visited:active.disabled.action-primary,
+fieldset[disabled] input[type="reset"]:active.action-primary,
+fieldset[disabled] input[type="submit"]:active.action-primary,
+fieldset[disabled] input[type="button"]:active.action-primary,
+fieldset[disabled] button:active.action-primary,
+fieldset[disabled] .btn:active.action-primary,
+fieldset[disabled] .btn:link:active.action-primary,
+fieldset[disabled] .btn:visited:active.action-primary,
+.disabled input[type="reset"]:active.action-primary,
+.disabled input[type="submit"]:active.action-primary,
+.disabled input[type="button"]:active.action-primary,
+.disabled button:active.action-primary,
+.disabled .btn:active.action-primary,
+.disabled .btn:link:active.action-primary,
+.disabled .btn:visited:active.action-primary {
+  color: #919191;
+  background-color: #cccccc;
+  border-color: #cccccc;
 }
 /*
  * Tables
