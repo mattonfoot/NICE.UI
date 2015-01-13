@@ -53,6 +53,41 @@
 
 }
 
+/*
+
+.showgrid {
+  background-image:         linear-gradient(#f9fbff 24px, transparent 24px);
+
+  background-size: 100% 48px;
+}
+
+.container {
+  max-width: 1128px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+nav {
+  float: left;
+  width: 239px;
+  border-right: 1px solid #666;
+}
+
+main {
+  margin-left: 264px;
+}
+
+footer {
+  clear: left;
+}
+
+*/
+
+.grid-error,
+.color-error {
+  outline: 1px dotted red;
+}
+
 .example {
 
   .theme-document & {
@@ -92,6 +127,26 @@
     .theme-document();          // contrast the text against the actual document background
     .theme-text-cited();
   }
+  .theme-text-quoted & {
+    .theme-document();          // contrast the text against the actual document background
+    .theme-text-quoted();
+  }
+  .theme-text-warning & {
+    .theme-document();          // contrast the text against the actual document background
+    .theme-text-warning();
+  }
+  .theme-text-info & {
+    .theme-document();          // contrast the text against the actual document background
+    .theme-text-info();
+  }
+  .theme-text-success & {
+    .theme-document();          // contrast the text against the actual document background
+    .theme-text-success();
+  }
+  .theme-text-error & {
+    .theme-document();          // contrast the text against the actual document background
+    .theme-text-error();
+  }
 
 
   // links
@@ -120,70 +175,159 @@
   .theme-text-input & {
       .theme-text-input();
   }
-  .theme-input-disabled & {
-      .theme-input-disabled();
+  .theme-text-output & {
+      .theme-text-output();
   }
   .theme-input-placeholder & {
       .theme-text-input();          // contrast the placeholder text against the actual input background
       .theme-input-placeholder();
   }
-  .theme-text-output & {
-      .theme-text-output();
+  .theme-input-disabled & {
+      .theme-input-disabled();
+  }
+  .theme-label-disabled & {
+      .theme-label-disabled();
+  }
+  .theme-input-warning & {
+      .theme-input-warning();
+  }
+  .theme-label-warning & {
+      .theme-label-warning();
+  }
+  .theme-input-success & {
+      .theme-input-success();
+  }
+  .theme-label-success & {
+      .theme-label-success();
+  }
+  .theme-input-error & {
+      .theme-input-error();
+  }
+  .theme-label-error & {
+      .theme-label-error();
   }
 
 
   // buttons
+
   .theme-button & {
-      .theme-button();
+    .theme-button();
   }
   .theme-button-hover & {
-      .theme-button-hover();
+  .theme-button-hover();
   }
   .theme-button-active & {
-      .theme-button-active();
+  .theme-button-active();
   }
   .theme-button-primary-action & {
-      .theme-button-primary-action();
+  .theme-button-primary-action();
   }
   .theme-button-primary-action-hover & {
-      .theme-button-primary-action-hover();
+  .theme-button-primary-action-hover();
   }
   .theme-button-primary-action-active & {
-      .theme-button-primary-action-active();
+  .theme-button-primary-action-active();
+  }
+  .theme-button-positive-action & {
+  .theme-button-positive-action();
+  }
+  .theme-button-positive-action-hover & {
+  .theme-button-positive-action-hover();
+  }
+  .theme-button-positive-action-active & {
+  .theme-button-positive-action-active();
+  }
+  .theme-button-danger-action & {
+  .theme-button-danger-action();
+  }
+  .theme-button-danger-action-hover & {
+  .theme-button-danger-action-hover();
+  }
+  .theme-button-danger-action-active & {
+  .theme-button-danger-action-active();
+  }
+  .theme-button-caution-action & {
+  .theme-button-caution-action();
+  }
+  .theme-button-caution-action-hover & {
+  .theme-button-caution-action-hover();
+  }
+  .theme-button-caution-action-active & {
+  .theme-button-caution-action-active();
+  }
+  .theme-button-informative-action & {
+  .theme-button-informative-action();
+  }
+  .theme-button-informative-action-hover & {
+  .theme-button-informative-action-hover();
+  }
+  .theme-button-informative-action-active & {
+  .theme-button-informative-action-active();
   }
   .theme-button-disabled & {
-      .theme-button-disabled();
+  .theme-button-disabled();
   }
-
 
   // tables
+
   .theme-table & {
-      .theme-table();
+    .theme-table();
   }
-  .theme-table-header &  {
+  .theme-table-header & {
     .theme-table();          // contrast the text against the actual table background
-      .theme-table-header();
+    .theme-table-header();
   }
   .theme-table-zebra-stripes & {
     .theme-table();          // contrast the text against the actual table background
-      .theme-table-zebra-stripes();
+    .theme-table-zebra-stripes();
   }
   .theme-table-hover & {
     .theme-table();          // contrast the text against the actual table background
-      .theme-table-hover();
+    .theme-table-hover();
   }
   .theme-table-caption & {
     .theme-table();          // contrast the text against the actual table background
-      .theme-table-caption()
+    .theme-table-caption();
   }
   .theme-table-multiple-bodies & {
     .theme-table();          // contrast the text against the actual table background
-      .theme-table-multiple-bodies();
+    .theme-table-multiple-bodies();
   }
   .theme-table-cell & {
     .theme-table();          // contrast the text against the actual table background
-      .theme-table-cell();
+    .theme-table-cell();
   }
-
+  .theme-table-success & {
+    .theme-table();          // contrast the text against the actual table background
+    .theme-table-success();
+  }
+  .theme-table-success-hover & {
+    .theme-table();          // contrast the text against the actual table background
+    .theme-table-success-hover();
+  }
+  .theme-table-error & {
+    .theme-table();          // contrast the text against the actual table background
+    .theme-table-error();
+  }
+  .theme-table-error-hover & {
+    .theme-table();          // contrast the text against the actual table background
+    .theme-table-error-hover();
+  }
+  .theme-table-warning & {
+    .theme-table();          // contrast the text against the actual table background
+    .theme-table-warning();
+  }
+  .theme-table-warning-hover & {
+    .theme-table();          // contrast the text against the actual table background
+    .theme-table-warning-hover();
+  }
+  .theme-table-info & {
+    .theme-table();          // contrast the text against the actual table background
+    .theme-table-info();
+  }
+  .theme-table-info-hover & {
+    .theme-table();          // contrast the text against the actual table background
+    .theme-table-info-hover();
+  }
 
 }

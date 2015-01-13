@@ -55,7 +55,7 @@ module.exports = function( grunt )
     grunt.registerTask(
           'generate'
         , 'generates the documentation site'
-        , [ 'metalsmith:generate' ]
+        , [ 'metalsmith:generate', 'copy' ]
     );
 
     grunt.registerTask(

@@ -221,7 +221,7 @@ mark {
   color: #806e00;
 }
 .text-info {
-  color: #0074d9;
+  color: #0062b8;
 }
 .text-error {
   color: #b50a00;
@@ -536,7 +536,7 @@ select {
 input:not([type=file]):focus,
 textarea:focus,
 select:focus {
-  border-color: #0074d9;
+  border-color: #0062b8;
   outline: 0;
 }
 input:not([type=file])::-moz-placeholder,
@@ -819,8 +819,8 @@ button.action-primary,
 .btn:link.action-primary,
 .btn:visited.action-primary {
   color: #ffffff;
-  background-color: #0074d9;
-  border-color: #0074d9;
+  background-color: #0062b8;
+  border-color: #0062b8;
 }
 input[type="reset"].action-positive,
 input[type="submit"].action-positive,
@@ -863,8 +863,8 @@ button.action-informative,
 .btn:link.action-informative,
 .btn:visited.action-informative {
   color: #e5f8ff;
-  background-color: #269aff;
-  border-color: #269aff;
+  background-color: #058aff;
+  border-color: #058aff;
 }
 input[type="reset"][disabled],
 input[type="submit"][disabled],
@@ -915,8 +915,8 @@ button:focus.action-primary,
 .btn:link:focus.action-primary,
 .btn:visited:focus.action-primary {
   color: #ffffff;
-  background-color: #00539c;
-  border-color: #00539c;
+  background-color: #00417b;
+  border-color: #00417b;
 }
 input[type="reset"]:hover.action-positive,
 input[type="submit"]:hover.action-positive,
@@ -987,8 +987,8 @@ button:focus.action-informative,
 .btn:link:focus.action-informative,
 .btn:visited:focus.action-informative {
   color: #e5f8ff;
-  background-color: #007ce8;
-  border-color: #007ce8;
+  background-color: #006ac7;
+  border-color: #006ac7;
 }
 input[type="reset"]:hover[disabled],
 input[type="submit"]:hover[disabled],
@@ -1118,8 +1118,8 @@ button:active.action-primary,
 .btn:link:active.action-primary,
 .btn:visited:active.action-primary {
   color: #ffffff;
-  background-color: #0074d9;
-  border-color: #00539c;
+  background-color: #0062b8;
+  border-color: #00417b;
 }
 input[type="reset"]:active.action-positive,
 input[type="submit"]:active.action-positive,
@@ -1162,8 +1162,8 @@ button:active.action-informative,
 .btn:link:active.action-informative,
 .btn:visited:active.action-informative {
   color: #e5f8ff;
-  background-color: #269aff;
-  border-color: #007ce8;
+  background-color: #058aff;
+  border-color: #006ac7;
 }
 input[type="reset"]:active[disabled],
 input[type="submit"]:active[disabled],
@@ -1358,7 +1358,7 @@ table > tbody > tr.info,
 table tr.info,
 table td.info {
   color: #e5f8ff;
-  background-color: #269aff;
+  background-color: #058aff;
 }
 table > tbody > tr.info:hover,
 table tr.info:hover,
@@ -1367,5 +1367,5 @@ table > tbody > tr.info:hover td,
 table tr.info:hover td,
 table td.info:hover td {
   color: #e5f8ff;
-  background-color: #269aff;
+  background-color: #058aff;
 }

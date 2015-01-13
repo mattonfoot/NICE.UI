@@ -28,11 +28,13 @@
   "homepage": "https://github.com/mattonfoot/NICE.ui",
   "private": true,
   "devDependencies": {
+    "color": "^0.7.3",
     "glob": "*",
     "grunt": "*",
     "grunt-bower-task": "*",
     "grunt-cli": "*",
     "grunt-contrib-connect": "*",
+    "grunt-contrib-copy": "*",
     "grunt-contrib-watch": "*",
     "grunt-gh-pages": "*",
     "grunt-metalsmith": "*",
