@@ -43,7 +43,5 @@ Add  the <code>.disabled</code> class to <code>&lt;a&gt;</code> buttons;
   <button type="button" class="btn">Default</button>
   <button type="button" class="btn action-primary">Primary</button>
   <button type="button" class="btn action-positive">Positive</button>
-  <button type="button" class="btn action-informative">Informative</button>
-  <button type="button" class="btn action-caution">Caution</button>
   <button type="button" class="btn action-danger">Danger</button>
 </div>

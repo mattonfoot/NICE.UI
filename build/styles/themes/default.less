@@ -73,13 +73,10 @@
     color: @black;
     border-color: @gray;
 }
-.theme-text-input() {
+.theme-input() {
     color: @black;
     background-color: @white;
     border-color: @silver;
-}
-.theme-text-output() {
-  color: @black;
 }
 .theme-input-placeholder() {
   color: @silver;
@@ -89,29 +86,32 @@
     background-color: @offwhite;
     border-color: @gray;
 }
-.theme-label-disabled() {
-  color: @darksilver;
-}
 .theme-input-warning() {
   color: @warning-foreground-only;
   border-color: @warning-foreground-only;
-}
-.theme-label-warning() {
-  color: @warning-foreground-only;
 }
 .theme-input-success() {
   color: @success-foreground-only;
   border-color: @success-foreground-only;
 }
-.theme-label-success() {
-  color: @success-foreground-only;
-}
 .theme-input-error() {
   color: @error-foreground-only;
   border-color: @error-foreground-only;
 }
+.theme-label-disabled() {
+  color: @darksilver;
+}
+.theme-label-warning() {
+  color: @warning-foreground-only;
+}
+.theme-label-success() {
+  color: @success-foreground-only;
+}
 .theme-label-error() {
   color: @error-foreground-only;
+}
+.theme-output() {
+  color: @black;
 }
 
 
@@ -152,7 +152,7 @@
   border-color: @positive-button;
 }
 .theme-button-positive-action-hover() {
-  color: @positive-button-text;
+  color: @positive-button-hover-text;
   background-color: @positive-button-hover;
   border-color: @positive-button-hover;
 }
@@ -175,36 +175,6 @@
   color: @danger-button-text;
   background-color: @danger-button;
   border-color: @danger-button-hover;
-}
-.theme-button-caution-action() {
-  color: @caution-button-text;
-  background-color: @caution-button;
-  border-color: @caution-button;
-}
-.theme-button-caution-action-hover() {
-  color: @caution-button-text;
-  background-color: @caution-button-hover;
-  border-color: @caution-button-hover;
-}
-.theme-button-caution-action-active() {
-  color: @caution-button-text;
-  background-color: @caution-button;
-  border-color: @caution-button-hover;
-}
-.theme-button-informative-action() {
-  color: @informative-button-text;
-  background-color: @informative-button;
-  border-color: @informative-button;
-}
-.theme-button-informative-action-hover() {
-  color: @informative-button-text;
-  background-color: @informative-button-hover;
-  border-color: @informative-button-hover;
-}
-.theme-button-informative-action-active() {
-  color: @informative-button-text;
-  background-color: @informative-button;
-  border-color: @informative-button-hover;
 }
 .theme-button-disabled() {
     color: @darksilver;

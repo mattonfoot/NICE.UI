@@ -28,26 +28,32 @@
 @darkgray:                lighten( @black,  10% );     // #333;
 
 @navy:                    #001F3F;
-@blue:                    #0062B8;
+@blue:                    #0074D9;
 @lightblue:               lighten( @blue,   15% );
+@lighterblue:             lighten( @blue,   50% );
+@darkblue:                darken(  @blue,   5% );
 @aqua:                    #7FDBFF;
 @lightaqua:               lighten( @aqua,   20% );
 
 @green:                   #2ECC40;
 @lightgreen:              lighten( @green,  40% );
-@darkgreen:               darken( @green,   15% );
-@darkergreen:             darken( @green,   25% );
-@red:                     #FF4136;
+@darkgreen:               darken( @green,   17% );
+@darkergreen:             darken( @green,   30% );
+@red:                     #DC372E;
 @lightred:                lighten( @red,    30% );
 @darkred:                 darken( @red,     15% );
 @darkerred:               darken( @red,     25% );
 @yellow:                  #FFDC00;
 @lightyellow:             lighten( @yellow, 40% );
-@darkyellow:              darken( @yellow,  20% );
+@darkyellow:              darken( @yellow,  18% );
 @darkeryellow:            darken( @yellow,  25% );
 
+// #806e00
+
+// #8a6d3b
+
 // links
-@caution:                 #FB1B1B;
+@caution:                 #E91A1A;
 @caution-hover:           darken( @caution,    12% );
 @link:                    #01769D;
 @link-hover:              #08455B;
@@ -59,12 +65,13 @@
 @positive-button:         @green;
 @positive-button-text:    @darkergreen;
 @positive-button-hover:   darken( @positive-button,   12% );
+@positive-button-hover-text:   darken( @positive-button-text,   12% );
 @danger-button:           @red;
 @danger-button-text:      @white;
 @danger-button-hover:     darken( @danger-button,     12% );
-@caution-button:          @darkyellow;
-@caution-button-text:     @lightyellow;
-@caution-button-hover:    darken( @caution-button,    12% );
+@caution-button:          #f0ad4e;
+@caution-button-text:     darken( @caution-button,    40% );
+@caution-button-hover:    #d58512;
 @informative-button:      @lightblue;
 @informative-button-text: @lightaqua;
 @informative-button-hover: darken( @informative-button,    12% );
@@ -76,17 +83,17 @@
 
 // contextual
 @success-background:      @lightgreen;
-@success-foreground:      @darkgreen;
-@success-foreground-only: @darkergreen;
+@success-foreground:      @darkergreen;
+@success-foreground-only: @darkgreen;
 
 @error-background:        @lightred;
-@error-foreground:        @darkred;
-@error-foreground-only:   @darkerred;
+@error-foreground:        @darkerred;
+@error-foreground-only:   @red;
 
 @warning-background:      @lightyellow;
-@warning-foreground:      @darkyellow;
+@warning-foreground:      @darkeryellow;
 @warning-foreground-only: @darkeryellow;
 
-@info-background:         @lightblue;
-@info-foreground:         @lightaqua;
+@info-background:         @lighterblue;
+@info-foreground:         @darkblue;
 @info-foreground-only:    @blue;
