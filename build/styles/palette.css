@@ -362,36 +362,6 @@ pre code {
   white-space: nowrap;
   overflow: hidden;
 }
-/*
-
-.showgrid {
-  background-image:         linear-gradient(#f9fbff 24px, transparent 24px);
-
-  background-size: 100% 48px;
-}
-
-.container {
-  max-width: 1128px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-nav {
-  float: left;
-  width: 239px;
-  border-right: 1px solid #666;
-}
-
-main {
-  margin-left: 264px;
-}
-
-footer {
-  clear: left;
-}
-
-*/
-.grid-error,
 .color-error {
   outline: 1px dotted red;
 }
