@@ -1,4 +1,5 @@
 ---
+section: Forms
 title: Basic controls
 description: Examples of standard form controls supported in an example form layout.
 template: section.html

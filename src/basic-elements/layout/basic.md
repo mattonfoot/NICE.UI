@@ -1,10 +1,11 @@
 ---
+section: Layout
 title: Basic layout
 description: Provides a basic page layout.
 template: section.html
 nav_sort: 1
 nav_groups:
-- primary
+  - primary
 ---
 
 A basic document should follow the basic structure provided by the appropriate HTML

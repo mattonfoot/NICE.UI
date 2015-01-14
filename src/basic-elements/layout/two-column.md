@@ -1,10 +1,11 @@
 ---
+section: Layout
 title: Two column layout
 description: Provides a standard "Two Column" page layout for presenting articles or topics.
 template: section.html
 nav_sort: 2
 nav_groups:
-- primary
+  - primary
 ---
 
 Content areas are added to a layout by using the <code>.content</code> class along with

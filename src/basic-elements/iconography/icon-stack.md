@@ -1,11 +1,11 @@
 ---
+section: Glyphs
 title: Icon stack
 description: It is possible to use the NICE Glyphs along with a Font Awesome style icon-stack
 template: section.html
 nav_sort: 1
 nav_groups:
   - primary
-  - footer
 ---
 
 Use the <code>.glyph-stack</code> class to overlay a list of glyphs on top of

@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Emphasising information</title>
+  <title>Advanced use</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="basic-elements/tables/emphasis.html">
+  <link rel="canonical" href="basic-elements/iconography/character-set.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -157,137 +157,135 @@
           <a href="../../basic-elements.html">Basic elements</a>
         </li>
         <li>
-          <a href="">tables</a>
+          <a href="../iconography.html">Iconography</a>
         </li>
         <li class="active">
-          Emphasising information
+          Advanced use
         </li>
       </ol>
 
-      <h1>Emphasising information</h1>
+      <h1>Advanced use</h1>
 
-      <p class="lead">Use contextual classes to emphasise the information portrayed within table rows or cells.</p>
+      <p class="lead">Each NICE glyph is assigned to a specific character in the font set and can be accessed directly in your CSS classes</p>
     </div>
   </header>
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <section id="tables-emphasis">
-  <table>
-    <colgroup>
-      <col class="span1">
-      <col class="span7">
-    </colgroup>
-    <thead>
-      <tr>
-        <th>Class</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <code>.success</code>
-        </td>
-        <td>Indicates a successful or positive action.</td>
-      </tr>
-      <tr>
-        <td>
-          <code>.error</code>
-        </td>
-        <td>Indicates a dangerous or potentially negative action.</td>
-      </tr>
-      <tr>
-        <td>
-          <code>.warning</code>
-        </td>
-        <td>Indicates a warning that might need attention.</td>
-      </tr>
-      <tr>
-        <td>
-          <code>.info</code>
-        </td>
-        <td>Used as an alternative to the default styles.</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="guide-example example-processed">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Product</th>
-          <th>Payment Taken</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="success">
-          <td>1</td>
-          <td>TB - Monthly</td>
-          <td>01/04/2012</td>
-          <td>Approved</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>TB - Monthly</td>
-          <td>02/04/2012</td>
-          <td>--</td>
-        </tr>
-        <tr class="error">
-          <td>3</td>
-          <td>TB - Monthly</td>
-          <td>03/04/2012</td>
-          <td>Declined</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>TB - Monthly</td>
-          <td>04/04/2012</td>
-          <td>--</td>
-        </tr>
-        <tr class="warning">
-          <td>5</td>
-          <td>TB - Monthly</td>
-          <td>05/04/2012</td>
-          <td>Pending</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>TB - Monthly</td>
-          <td>06/04/2012</td>
-          <td>--</td>
-        </tr>
-        <tr class="info">
-          <td>7</td>
-          <td>TB - Monthly</td>
-          <td>07/04/2012</td>
-          <td>Call in to confirm</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>TB - Monthly</td>
-          <td>08/04/2012</td>
-          <td>--</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-<pre class="prettyprint linenums"><code>...
-  &lt;tr class=&quot;success&quot;&gt;
-  &lt;td&gt;1&lt;/td&gt;
-  &lt;td&gt;TB - Monthly&lt;/td&gt;
-  &lt;td&gt;01/04/2012&lt;/td&gt;
-  &lt;td&gt;Approved&lt;/td&gt;
-  &lt;/tr&gt;
-  ...</code></pre>
-</section>
+      <h2 id="raw-character-set">Raw character set</h2>
+<p>You can use the following reference characters once you have set an elements
+<code>font-family</code> to <code>&#39;NICE Glyphs&#39;</code> using CSS;</p>
+<div class="glyph-grid" id="charset-examples"></div>
+
+<script type="text/javascript" defer>
+setTimeout(function() {
+  var icon_classes = [
+    'twitter'
+    , 'print'
+    , 'standards'
+    , 'email-open'
+    , 'search'
+    , 'pathways'
+    , 'download'
+    , 'support'
+    , 'share'
+    , 'readnews'
+    , 'infoforpublic'
+    , 'podcast'
+    , 'previous'
+    , 'news'
+    , 'guideline'
+    , 'fullscreen'
+    , 'information'
+    , 'guidance'
+    , 'facebook'
+    , 'syndication'
+    , 'email-closed'
+    , 'next'
+    , 'bookmark'
+    , 'evidence'
+    , 'apps'
+    , 'circle'
+    , 'logo'
+    , 'logo-name'
+    , 'capsule'
+    , 'pathways-node'
+    , 'circle-blank'
+    , 'user'
+    , 'trash'
+    , 'sort'
+    , 'sort-up'
+    , 'sort-down'
+    , 'remove'
+    , 'quote-right'
+    , 'quote-left'
+    , 'plus'
+    , 'play'
+    , 'ok'
+    , 'minus'
+    , 'cloud-upload'
+    , 'cloud-download'
+    , 'caret-up'
+    , 'caret-right'
+    , 'caret-left'
+    , 'caret-down'
+    , 'angle-up'
+    , 'angle-right'
+    , 'angle-left'
+    , 'angle-down'
+    , 'double-angle-up'
+    , 'double-angle-right'
+    , 'double-angle-left'
+    , 'double-angle-down'
+    , 'chevron-up'
+    , 'chevron-right'
+    , 'chevron-left'
+    , 'chevron-down'
+    , 'hamburger'
+    , 'file'
+    , 'file-blank'
+    , 'file-text'
+    , 'file-text-blank'
+    , 'spinner'
+    , 'stop'
+    , 'lines'
+    , 'calendar'
+    , 'group'
+    , 'adjust'
+    , 'plus-circle'
+    , 'linkedin'
+    , 'google-plus'
+    , 'warning'
+    , 'prescribing'
+    , 'uptake'
+    , 'filter'
+  ];
+
+  $('#charset-examples').html(
+    $.map(icon_classes, function( value, i ) {
+      var charCode = 'e0' + ('00' + i.toString(16)).substr(-2);
+
+      return '<div class="glyph"><i aria-hidden="true" class="fs1">&#x'
+        + charCode + ';</i><input type="text" readonly="readonly" value="&amp;#x'
+        + charCode + ';" /></div>';
+    }).join('')
+  );
+
+  $('#glyphs').on('click, focus', 'input', function(e) { e.target.select(); });
+}, 500);
+</script>
 
     </article>
 
     <aside class="content content-secondary">
       <ul>
         <ul>
+          <li>
+            <a href="icon-stack.html">Icon stack</a>
+          </li>
+          <li>
+            <a href="character-set.html">Advanced use</a>
+          </li>
         </ul>
       </ul>
     </aside>

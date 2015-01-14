@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Theme</title>
+  <title>Icon stack</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="theme.html">
+  <link rel="canonical" href="basic-elements/iconography/icon-stack.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -135,19 +135,10 @@
       <div class="tophat-inner">
         <ul class="menu">
           <li>
-            <a href="index.html">Home</a>
+            <a href="../../index.html">Home</a>
           </li>
           <li>
-            <a href="theme.html">Theme</a>
-          </li>
-          <li>
-            <a href="basic-elements.html">Basic elements</a>
-          </li>
-          <li>
-            <a href="layout.html">Layout</a>
-          </li>
-          <li>
-            <a href="glyphs.html">Glyphs</a>
+            <a href="../../basic-elements.html">Basic elements</a>
           </li>
         </ul>
       </div>
@@ -160,29 +151,143 @@
     <div class="container">
       <ol class="breadcrumb">
         <li>
-          <a href="../../../../..">Home</a>
+          <a href="../../../../../../..">Home</a>
+        </li>
+        <li>
+          <a href="../../basic-elements.html">Basic elements</a>
+        </li>
+        <li>
+          <a href="../iconography.html">Iconography</a>
         </li>
         <li class="active">
-          Theme
+          Icon stack
         </li>
       </ol>
 
-      <h1>Theme</h1>
+      <h1>Icon stack</h1>
 
-      <p class="lead">A responsive UI framework for NICE online services and web applications</p>
+      <p class="lead">It is possible to use the NICE Glyphs along with a Font Awesome style icon-stack</p>
     </div>
   </header>
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      
+      <p>Use the <code>.glyph-stack</code> class to overlay a list of glyphs on top of
+each other to combine them into more advanced icons;</p>
+<p><div class="glyph-grid" id="iconstack-examples"></div></p>
+<pre class="prettyprint"><code>&lt;span class="glyph-stack"&gt;
+  &lt;i aria-hidden="true" class="glyph-circle glyph-stack-base"&gt;&lt;/i&gt;
+  &lt;i aria-hidden="true" class="glyph-twitter"&gt;&lt;/i&gt;
+&lt;/span&gt;
+</code></pre>
+
+<script type="text/javascript" defer>
+setTimeout(function() {
+  var icon_classes = [
+    'twitter'
+    , 'print'
+    , 'standards'
+    , 'email-open'
+    , 'search'
+    , 'pathways'
+    , 'download'
+    , 'support'
+    , 'share'
+    , 'readnews'
+    , 'infoforpublic'
+    , 'podcast'
+    , 'previous'
+    , 'news'
+    , 'guideline'
+    , 'fullscreen'
+    , 'information'
+    , 'guidance'
+    , 'facebook'
+    , 'syndication'
+    , 'email-closed'
+    , 'next'
+    , 'bookmark'
+    , 'evidence'
+    , 'apps'
+    , 'circle'
+    , 'logo'
+    , 'logo-name'
+    , 'capsule'
+    , 'pathways-node'
+    , 'circle-blank'
+    , 'user'
+    , 'trash'
+    , 'sort'
+    , 'sort-up'
+    , 'sort-down'
+    , 'remove'
+    , 'quote-right'
+    , 'quote-left'
+    , 'plus'
+    , 'play'
+    , 'ok'
+    , 'minus'
+    , 'cloud-upload'
+    , 'cloud-download'
+    , 'caret-up'
+    , 'caret-right'
+    , 'caret-left'
+    , 'caret-down'
+    , 'angle-up'
+    , 'angle-right'
+    , 'angle-left'
+    , 'angle-down'
+    , 'double-angle-up'
+    , 'double-angle-right'
+    , 'double-angle-left'
+    , 'double-angle-down'
+    , 'chevron-up'
+    , 'chevron-right'
+    , 'chevron-left'
+    , 'chevron-down'
+    , 'hamburger'
+    , 'file'
+    , 'file-blank'
+    , 'file-text'
+    , 'file-text-blank'
+    , 'spinner'
+    , 'stop'
+    , 'lines'
+    , 'calendar'
+    , 'group'
+    , 'adjust'
+    , 'plus-circle'
+    , 'linkedin'
+    , 'google-plus'
+    , 'warning'
+    , 'prescribing'
+    , 'uptake'
+    , 'filter'
+  ];
+
+  $('#iconstack-examples').html(
+    $.map(icon_classes, function( value, i ) {
+      var ico_class = 'glyph-' + value;
+      return '<div class="glyph"><span class="fs1 glyph-stack"><i aria-hidden="true" '
+        + 'class="glyph-circle glyph-stack-base"></i><i aria-hidden="true" class="' + ico_class
+        + '"></i></span></div>';
+    }).join('')
+  );
+
+  $('#glyphs').on('click, focus', 'input', function(e) { e.target.select(); });
+}, 500);
+</script>
+
     </article>
 
     <aside class="content content-secondary">
       <ul>
         <ul>
           <li>
-            <a href="theme/palette.html">Palette</a>
+            <a href="icon-stack.html">Icon stack</a>
+          </li>
+          <li>
+            <a href="character-set.html">Advanced use</a>
           </li>
         </ul>
       </ul>
@@ -195,19 +300,10 @@
         <div class="container">
           <ul class="nav nav-pills">
             <li>
-              <a href="index.html">Home</a>
+              <a href="../../index.html">Home</a>
             </li>
             <li>
-              <a href="theme.html">Theme</a>
-            </li>
-            <li>
-              <a href="basic-elements.html">Basic elements</a>
-            </li>
-            <li>
-              <a href="layout.html">Layout</a>
-            </li>
-            <li>
-              <a href="glyphs.html">Glyphs</a>
+              <a href="../../basic-elements.html">Basic elements</a>
             </li>
           </ul>
         </div>
@@ -265,5 +361,46 @@
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/google-code-prettify/prettify.js"></script>
   
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/application.js"></script>
+
+  <script>
+  (function() {
+    $('.guide-example').each(function() {
+      if ( $(this).is('.example-processed') ) return;
+
+      var $example = $(this).clone();
+
+      $example.children().each( processChild );
+
+      var $code = $('<code/>').text( $example.html().replace( '\n', '' ).replace( /=""/mg, '' ) );
+
+      $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
+
+      $(this).addClass('example-processed');
+    });
+
+    function processChild() {
+      var $child = $(this);
+
+      if ( $child.is('.example-ignore') ) {
+        if ( this.nextSibling && this.nextSibling.nodeType === 3 && this.nextSibling.data.trim() === '' ) {
+          $( this.nextSibling ).remove();
+        }
+        $child.remove();
+        return;
+      }
+
+      if ( $child.is('.example-tldr') ) {
+        $child.removeClass('example-tldr').html( '...' );
+        if ($child.attr('class').trim() === '') {
+          $child.removeAttr('class');
+        }
+      }
+
+      $child.children().each( processChild );
+    }
+  })();
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 </body>
 </html>

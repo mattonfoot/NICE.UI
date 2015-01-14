@@ -1,4 +1,5 @@
 ---
+section: Forms
 title: Layout options
 description: Included with NICE.UI are three optional form layouts for common use cases
 template: section.html

@@ -1,11 +1,10 @@
 ---
-title: Glyphs
-description: A set of iconography glyphs that can be used to further enhance meaning
+title: Iconography
+description: A set of glyphs that can be used to further enhance meaning
 template: page.html
-nav_sort: 5
+nav_sort: 4
 nav_groups:
-- primary
-- footer
+  - primary
 ---
 
 ## Class names

@@ -1,11 +1,11 @@
 ---
+section: Glyphs
 title: Advanced use
 description: Each NICE glyph is assigned to a specific character in the font set and can be accessed directly in your CSS classes
 template: section.html
 nav_sort: 2
 nav_groups:
   - primary
-  - footer
 ---
 
 ## Raw character set

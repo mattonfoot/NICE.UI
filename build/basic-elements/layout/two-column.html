@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Icon stack</title>
+  <title>Two column layout</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="glyphs/icon-stack.html">
+  <link rel="canonical" href="basic-elements/layout/two-column.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -135,19 +135,10 @@
       <div class="tophat-inner">
         <ul class="menu">
           <li>
-            <a href="../index.html">Home</a>
+            <a href="../../index.html">Home</a>
           </li>
           <li>
-            <a href="../theme.html">Theme</a>
-          </li>
-          <li>
-            <a href="../basic-elements.html">Basic elements</a>
-          </li>
-          <li>
-            <a href="../layout.html">Layout</a>
-          </li>
-          <li>
-            <a href="../glyphs.html">Glyphs</a>
+            <a href="../../basic-elements.html">Basic elements</a>
           </li>
         </ul>
       </div>
@@ -160,129 +151,73 @@
     <div class="container">
       <ol class="breadcrumb">
         <li>
-          <a href="../../../../../..">Home</a>
+          <a href="../../../../../../..">Home</a>
         </li>
         <li>
-          <a href="../glyphs.html">Glyphs</a>
+          <a href="../../basic-elements.html">Basic elements</a>
+        </li>
+        <li>
+          <a href="../layout.html">Layout</a>
         </li>
         <li class="active">
-          Icon stack
+          Two column layout
         </li>
       </ol>
 
-      <h1>Icon stack</h1>
+      <h1>Two column layout</h1>
 
-      <p class="lead">It is possible to use the NICE Glyphs along with a Font Awesome style icon-stack</p>
+      <p class="lead">Provides a standard &quot;Two Column&quot; page layout for presenting articles or topics.</p>
     </div>
   </header>
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <p>Use the <code>.glyph-stack</code> class to overlay a list of glyphs on top of
-each other to combine them into more advanced icons;</p>
-<p><div class="glyph-grid" id="iconstack-examples"></div></p>
-<pre class="prettyprint"><code>&lt;span class="glyph-stack"&gt;
-  &lt;i aria-hidden="true" class="glyph-circle glyph-stack-base"&gt;&lt;/i&gt;
-  &lt;i aria-hidden="true" class="glyph-twitter"&gt;&lt;/i&gt;
-&lt;/span&gt;
+      <p>Content areas are added to a layout by using the <code>.content</code> class along with
+an additional priority class of either <code>.content-primary</code> or
+<code>.content-secondary</code>.</p>
+<div class="alert alert-info">
+  <p><strong>Note:</strong> Content areas only appear as columns on devices with a
+    screen size of <code>768px</code> or wider.</p>
+
+  <p>Devices with a screen size narrower than <code>768px</code> will display
+    each content areas stacked in the order defined by the HTML.</p>
+</div>
+
+<h2 id="related-site-content-on-the-right">Related site content on the right</h2>
+<p>A basic responsive layout suitable for most topical articles can be
+achieved by incorporating <code>&lt;article&gt;</code> and <code>&lt;aside&gt;</code> elements
+into the document structure with the appropriate <code>.content</code> classes.</p>
+<pre class="prettyprint linenums"><code>&lt;main class="layout" role="main"&gt;
+  &lt;article class="content content-primary" role="article"&gt;
+  ...
+  &lt;/article&gt;
+
+  &lt;aside class="content content-secondary"&gt;...&lt;/aside&gt;
+&lt;/main&gt;
 </code></pre>
 
-<script type="text/javascript" defer>
-setTimeout(function() {
-  var icon_classes = [
-    'twitter'
-    , 'print'
-    , 'standards'
-    , 'email-open'
-    , 'search'
-    , 'pathways'
-    , 'download'
-    , 'support'
-    , 'share'
-    , 'readnews'
-    , 'infoforpublic'
-    , 'podcast'
-    , 'previous'
-    , 'news'
-    , 'guideline'
-    , 'fullscreen'
-    , 'information'
-    , 'guidance'
-    , 'facebook'
-    , 'syndication'
-    , 'email-closed'
-    , 'next'
-    , 'bookmark'
-    , 'evidence'
-    , 'apps'
-    , 'circle'
-    , 'logo'
-    , 'logo-name'
-    , 'capsule'
-    , 'pathways-node'
-    , 'circle-blank'
-    , 'user'
-    , 'trash'
-    , 'sort'
-    , 'sort-up'
-    , 'sort-down'
-    , 'remove'
-    , 'quote-right'
-    , 'quote-left'
-    , 'plus'
-    , 'play'
-    , 'ok'
-    , 'minus'
-    , 'cloud-upload'
-    , 'cloud-download'
-    , 'caret-up'
-    , 'caret-right'
-    , 'caret-left'
-    , 'caret-down'
-    , 'angle-up'
-    , 'angle-right'
-    , 'angle-left'
-    , 'angle-down'
-    , 'double-angle-up'
-    , 'double-angle-right'
-    , 'double-angle-left'
-    , 'double-angle-down'
-    , 'chevron-up'
-    , 'chevron-right'
-    , 'chevron-left'
-    , 'chevron-down'
-    , 'hamburger'
-    , 'file'
-    , 'file-blank'
-    , 'file-text'
-    , 'file-text-blank'
-    , 'spinner'
-    , 'stop'
-    , 'lines'
-    , 'calendar'
-    , 'group'
-    , 'adjust'
-    , 'plus-circle'
-    , 'linkedin'
-    , 'google-plus'
-    , 'warning'
-    , 'prescribing'
-    , 'uptake'
-    , 'filter'
-  ];
 
-  $('#iconstack-examples').html(
-    $.map(icon_classes, function( value, i ) {
-      var ico_class = 'glyph-' + value;
-      return '<div class="glyph"><span class="fs1 glyph-stack"><i aria-hidden="true" '
-        + 'class="glyph-circle glyph-stack-base"></i><i aria-hidden="true" class="' + ico_class
-        + '"></i></span></div>';
-    }).join('')
-  );
+<h2 id="site-navigation-content-on-the-left">Site navigation content on the left</h2>
+<p>By reversing the order of the <code>.content</code> classed elements you can
+position navigational content to the left which will collapse to the
+top of the main article on a narrow screen device.</p>
+<pre class="prettyprint linenums"><code>&lt;main class="layout" role="main"&gt;
+  &lt;div class="content content-secondary"&gt;...&lt;/div&gt;
 
-  $('#glyphs').on('click, focus', 'input', function(e) { e.target.select(); });
-}, 500);
-</script>
+  &lt;article class="content content-primary" role="article"&gt;
+  ...
+  &lt;/article&gt;
+&lt;/main&gt;
+</code></pre>
+
+<h3 id="options">Options</h3>
+<p>By adding the <code>.layout-first-right</code> class to the <code>.layout</code>
+classed element and reversing the order of the <code>.content</code> classed
+elements you can reverse the way content areas collapse on a narrow screen device.</p>
+<pre class="prettyprint linenums"><code>&lt;main class="layout layout-first-right" role="main"&gt;
+  ...
+&lt;/main&gt;
+</code></pre>
 
     </article>
 
@@ -290,10 +225,10 @@ setTimeout(function() {
       <ul>
         <ul>
           <li>
-            <a href="icon-stack.html">Icon stack</a>
+            <a href="basic.html">Basic layout</a>
           </li>
           <li>
-            <a href="character-set.html">Advanced use</a>
+            <a href="two-column.html">Two column layout</a>
           </li>
         </ul>
       </ul>
@@ -306,19 +241,10 @@ setTimeout(function() {
         <div class="container">
           <ul class="nav nav-pills">
             <li>
-              <a href="../index.html">Home</a>
+              <a href="../../index.html">Home</a>
             </li>
             <li>
-              <a href="../theme.html">Theme</a>
-            </li>
-            <li>
-              <a href="../basic-elements.html">Basic elements</a>
-            </li>
-            <li>
-              <a href="../layout.html">Layout</a>
-            </li>
-            <li>
-              <a href="../glyphs.html">Glyphs</a>
+              <a href="../../basic-elements.html">Basic elements</a>
             </li>
           </ul>
         </div>

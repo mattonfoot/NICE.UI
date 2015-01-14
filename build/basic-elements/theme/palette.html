@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Basic layout</title>
+  <title>Palette</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="layout/basic.html">
+  <link rel="canonical" href="basic-elements/theme/palette.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -135,19 +135,10 @@
       <div class="tophat-inner">
         <ul class="menu">
           <li>
-            <a href="../index.html">Home</a>
+            <a href="../../index.html">Home</a>
           </li>
           <li>
-            <a href="../theme.html">Theme</a>
-          </li>
-          <li>
-            <a href="../basic-elements.html">Basic elements</a>
-          </li>
-          <li>
-            <a href="../layout.html">Layout</a>
-          </li>
-          <li>
-            <a href="../glyphs.html">Glyphs</a>
+            <a href="../../basic-elements.html">Basic elements</a>
           </li>
         </ul>
       </div>
@@ -160,36 +151,146 @@
     <div class="container">
       <ol class="breadcrumb">
         <li>
-          <a href="../../../../../..">Home</a>
+          <a href="../../../../../../..">Home</a>
         </li>
         <li>
-          <a href="../layout.html">Layout</a>
+          <a href="../../basic-elements.html">Basic elements</a>
+        </li>
+        <li>
+          <a href="../theme.html">Theme</a>
         </li>
         <li class="active">
-          Basic layout
+          Palette
         </li>
       </ol>
 
-      <h1>Basic layout</h1>
+      <h1>Palette</h1>
 
-      <p class="lead">Provides a basic page layout.</p>
+      <p class="lead">This is a reference screen showing the full default theme elements available through the framework.</p>
     </div>
   </header>
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <p>A basic document should follow the basic structure provided by the appropriate HTML
-elements <code>body</code>, <code>header</code>, <code>footer</code> and <code>main</code></p>
-<pre class="prettyprint linenums"><code>&lt;body&gt;
-  &lt;header role="banner"&gt;...&lt;/header&gt;
+      <link rel="stylesheet" href="../styles/palette.css" />
 
-  &lt;main class="layout" role="main"&gt;
-    ...
-  &lt;/main&gt;
+<h2 id="document-text">Document &amp; Text</h2>
+<ul class="palette palette-document palette-text"></ul>
 
-  &lt;footer role="contentinfo"&gt;...&lt;/footer&gt;
-&lt;/body&gt;
-</code></pre>
+<h2 id="links">Links</h2>
+<ul class="palette palette-link"></ul>
+
+<h2 id="forms">Forms</h2>
+<ul class="palette palette-legend palette-label palette-input palette-output"></ul>
+
+<h2 id="buttons">Buttons</h2>
+<ul class="palette palette-button"></ul>
+
+<h2 id="tables">Tables</h2>
+<ul class="palette palette-table"></ul>
+
+<script type="text/html" id="swatch">
+<li class="swatch {{classname}}">
+<span class="example">
+The quick brown fox jumps over the lazy dog.
+</span>
+<h4 class="name">{{description}}</h4>
+<code class="hex">.{{classname}}()</code>
+</li>
+</script>
+
+<script src="../scripts/color/color-0.4.1.js"></script>
+<script>
+setTimeout(function() {
+  var swatches = {};
+
+  var ss = document.styleSheets;
+  var param = ss[0].cssRules ? 'cssRules' : 'rules';
+  for ( var i = 0, ssLen = ss.length; i < ssLen; i++) {
+    var rules = ss[ i ][ param ];
+
+    if (!rules) continue;
+
+    for ( var j = 0, rLen = rules.length; j < rLen; j++) {
+      var rule = rules[ j ];
+
+      if ( rule.selectorText && ~rule.selectorText.indexOf( '.theme-' ) ) {
+        var item = rule.selectorText.replace('.example', '').trim();
+        var parts = (/\.theme-([^-]*)(?:-([^\s]*).*)*/ig).exec( item );
+
+        swatches[ parts[ 1 ] ] = swatches[ parts[ 1 ] ] || [];
+        swatches[ parts[ 1 ] ].push( parts[ 2 ] || parts[ 1 ] );
+      }
+    }
+  }
+
+  var template = document.getElementById( 'swatch' ).innerHTML;
+  var lists = document.getElementsByTagName('UL');
+  for ( var k = 0, listLen = lists.length; k < listLen; k++ ) {
+    var list = lists[ k ];
+    if (list.className.indexOf('palette ') === 0) {
+      var parts = list.className.replace(/(palette(?:-?))/ig, '').split(' ');
+      for ( var l = 0, partsLen = parts.length; l < partsLen; l++ ) {
+        var part = parts[ l ];
+        if ( swatches[ part ] ) {
+          swatches[ part ].forEach(function( swatch ) {
+            var classname = 'theme-' +  ( swatch !== part ? part + '-' : '' ) + swatch;
+            var description = swatch.replace(/-/mg, ' ') + ( swatch !== part ? ' ' + part : '' )
+
+            list.innerHTML += template.replace(/\{\{classname\}\}/gmi, classname ).replace(/\{\{description\}\}/gmi, description );
+          });
+        }
+      }
+    }
+  }
+
+  highlightAccessibilityColorIssues( document.querySelectorAll( '.palette > .swatch > .example' ) );
+
+  function highlightAccessibilityColorIssues( swatches ) {
+    var i = swatches.length - 1;
+
+    var docColor = getStyle( document.body, 'color', 'color' );
+    var docBackground = getStyle( document.body, 'backgroundColor', 'background-color' );
+
+    while ( i >= 0 ) {
+      var el = swatches[ i-- ];
+
+      var elColor = getStyle(el, 'color', 'color' ) || docColor;
+      var elBackground = getStyle( el, 'backgroundColor', 'background-color' ) || docBackground;
+
+      var color = new Color( elColor );
+      var bgColor = new Color( elBackground.replace( 'rgba(0, 0, 0, 0)', docBackground ) );
+
+
+      var contrast = bgColor.contrast( color );
+
+      var level = ( el.parentNode.className.match(/(disabled|muted)+/i) ? 0 : 4.5 );
+      var compliance = contrast > level ? 'PASS' : 'FAIL';
+
+      el.parentNode.setAttribute( 'title', 'Contrast ratio is ' + contrast + ':' + level + '. ' + compliance );
+
+      if ( compliance === 'FAIL' ) {
+        var themeName = el.parentNode.className.replace( 'swatch', '' );
+        el.parentNode.className += ' color-error';
+        console.log( themeName, elColor, elBackground, contrast, level, compliance );
+      }
+    }
+  }
+
+  function getStyle(el, styleProp, styleName) {
+    var x = el;
+
+    if (x.currentStyle) {
+      var y = x.currentStyle[styleProp];
+
+    } else if (window.getComputedStyle) {
+      var y = document.defaultView.getComputedStyle(x,null).getPropertyValue(styleName);
+    }
+
+    return y;
+  }
+}, 50);
+</script>
 
     </article>
 
@@ -197,10 +298,7 @@ elements <code>body</code>, <code>header</code>, <code>footer</code> and <code>m
       <ul>
         <ul>
           <li>
-            <a href="basic.html">Basic layout</a>
-          </li>
-          <li>
-            <a href="two-column.html">Two column layout</a>
+            <a href="palette.html">Palette</a>
           </li>
         </ul>
       </ul>
@@ -213,19 +311,10 @@ elements <code>body</code>, <code>header</code>, <code>footer</code> and <code>m
         <div class="container">
           <ul class="nav nav-pills">
             <li>
-              <a href="../index.html">Home</a>
+              <a href="../../index.html">Home</a>
             </li>
             <li>
-              <a href="../theme.html">Theme</a>
-            </li>
-            <li>
-              <a href="../basic-elements.html">Basic elements</a>
-            </li>
-            <li>
-              <a href="../layout.html">Layout</a>
-            </li>
-            <li>
-              <a href="../glyphs.html">Glyphs</a>
+              <a href="../../basic-elements.html">Basic elements</a>
             </li>
           </ul>
         </div>

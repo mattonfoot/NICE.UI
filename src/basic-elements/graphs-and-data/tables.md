@@ -1,7 +1,8 @@
 ---
+section: Graphs and data
 title: Tabluar data
-template: page.html
-nav_sort: 3
+template: section.html
+nav_sort: 1
 nav_groups:
   - primary
 ---

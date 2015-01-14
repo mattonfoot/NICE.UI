@@ -1,4 +1,5 @@
 ---
+section: Forms
 title: Default styles
 template: section.html
 nav_sort: 1

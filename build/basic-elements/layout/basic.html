@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Tabluar data</title>
+  <title>Basic layout</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="basic-elements/tables.html">
+  <link rel="canonical" href="basic-elements/layout/basic.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -135,19 +135,10 @@
       <div class="tophat-inner">
         <ul class="menu">
           <li>
-            <a href="../index.html">Home</a>
+            <a href="../../index.html">Home</a>
           </li>
           <li>
-            <a href="../theme.html">Theme</a>
-          </li>
-          <li>
-            <a href="../basic-elements.html">Basic elements</a>
-          </li>
-          <li>
-            <a href="../layout.html">Layout</a>
-          </li>
-          <li>
-            <a href="../glyphs.html">Glyphs</a>
+            <a href="../../basic-elements.html">Basic elements</a>
           </li>
         </ul>
       </div>
@@ -160,29 +151,39 @@
     <div class="container">
       <ol class="breadcrumb">
         <li>
-          <a href="../../../../../..">Home</a>
+          <a href="../../../../../../..">Home</a>
         </li>
         <li>
-          <a href="../basic-elements.html">Basic elements</a>
+          <a href="../../basic-elements.html">Basic elements</a>
+        </li>
+        <li>
+          <a href="../layout.html">Layout</a>
         </li>
         <li class="active">
-          Tabluar data
+          Basic layout
         </li>
       </ol>
 
-      <h1>Tabluar data</h1>
+      <h1>Basic layout</h1>
 
-      <p class="lead">A responsive UI framework for NICE online services and web applications</p>
+      <p class="lead">Provides a basic page layout.</p>
     </div>
   </header>
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <div class="alert alert-block alert-info">
-  <h4>Do you really need a table?</h4>
+      <p>A basic document should follow the basic structure provided by the appropriate HTML
+elements <code>body</code>, <code>header</code>, <code>footer</code> and <code>main</code></p>
+<pre class="prettyprint linenums"><code>&lt;body&gt;
+  &lt;header role="banner"&gt;...&lt;/header&gt;
 
-  <p>When choosing the best way to correctly markup your content you need to look at the purpose of the information conveyed by it. better ways to mark up your information could be <a href="/docs/typography/lists">lists</a> which can represent either hierarchies or terms and definitions in a much more effective way than a table can.</p>
-</div>
+  &lt;main class="layout" role="main"&gt;
+    ...
+  &lt;/main&gt;
+
+  &lt;footer role="contentinfo"&gt;...&lt;/footer&gt;
+&lt;/body&gt;
+</code></pre>
 
     </article>
 
@@ -190,10 +191,10 @@
       <ul>
         <ul>
           <li>
-            <a href="tables/basic.html">Basic tables</a>
+            <a href="basic.html">Basic layout</a>
           </li>
           <li>
-            <a href="tables/emphasis.html">Emphasising information</a>
+            <a href="two-column.html">Two column layout</a>
           </li>
         </ul>
       </ul>
@@ -206,19 +207,10 @@
         <div class="container">
           <ul class="nav nav-pills">
             <li>
-              <a href="../index.html">Home</a>
+              <a href="../../index.html">Home</a>
             </li>
             <li>
-              <a href="../theme.html">Theme</a>
-            </li>
-            <li>
-              <a href="../basic-elements.html">Basic elements</a>
-            </li>
-            <li>
-              <a href="../layout.html">Layout</a>
-            </li>
-            <li>
-              <a href="../glyphs.html">Glyphs</a>
+              <a href="../../basic-elements.html">Basic elements</a>
             </li>
           </ul>
         </div>
@@ -276,5 +268,46 @@
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/google-code-prettify/prettify.js"></script>
   
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/application.js"></script>
+
+  <script>
+  (function() {
+    $('.guide-example').each(function() {
+      if ( $(this).is('.example-processed') ) return;
+
+      var $example = $(this).clone();
+
+      $example.children().each( processChild );
+
+      var $code = $('<code/>').text( $example.html().replace( '\n', '' ).replace( /=""/mg, '' ) );
+
+      $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
+
+      $(this).addClass('example-processed');
+    });
+
+    function processChild() {
+      var $child = $(this);
+
+      if ( $child.is('.example-ignore') ) {
+        if ( this.nextSibling && this.nextSibling.nodeType === 3 && this.nextSibling.data.trim() === '' ) {
+          $( this.nextSibling ).remove();
+        }
+        $child.remove();
+        return;
+      }
+
+      if ( $child.is('.example-tldr') ) {
+        $child.removeClass('example-tldr').html( '...' );
+        if ($child.attr('class').trim() === '') {
+          $child.removeAttr('class');
+        }
+      }
+
+      $child.children().each( processChild );
+    }
+  })();
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 </body>
 </html>

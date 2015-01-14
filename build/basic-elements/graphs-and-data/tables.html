@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Two column layout</title>
+  <title>Tabluar data</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="layout/two-column.html">
+  <link rel="canonical" href="basic-elements/graphs-and-data/tables.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -135,19 +135,10 @@
       <div class="tophat-inner">
         <ul class="menu">
           <li>
-            <a href="../index.html">Home</a>
+            <a href="../../index.html">Home</a>
           </li>
           <li>
-            <a href="../theme.html">Theme</a>
-          </li>
-          <li>
-            <a href="../basic-elements.html">Basic elements</a>
-          </li>
-          <li>
-            <a href="../layout.html">Layout</a>
-          </li>
-          <li>
-            <a href="../glyphs.html">Glyphs</a>
+            <a href="../../basic-elements.html">Basic elements</a>
           </li>
         </ul>
       </div>
@@ -160,70 +151,32 @@
     <div class="container">
       <ol class="breadcrumb">
         <li>
-          <a href="../../../../../..">Home</a>
+          <a href="../../../../../../..">Home</a>
         </li>
         <li>
-          <a href="../layout.html">Layout</a>
+          <a href="../../basic-elements.html">Basic elements</a>
+        </li>
+        <li>
+          <a href="../graphs-and-data.html">Graphs and data</a>
         </li>
         <li class="active">
-          Two column layout
+          Tabluar data
         </li>
       </ol>
 
-      <h1>Two column layout</h1>
+      <h1>Tabluar data</h1>
 
-      <p class="lead">Provides a standard &quot;Two Column&quot; page layout for presenting articles or topics.</p>
+      <p class="lead">A responsive UI framework for NICE online services and web applications</p>
     </div>
   </header>
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <p>Content areas are added to a layout by using the <code>.content</code> class along with
-an additional priority class of either <code>.content-primary</code> or
-<code>.content-secondary</code>.</p>
-<div class="alert alert-info">
-  <p><strong>Note:</strong> Content areas only appear as columns on devices with a
-    screen size of <code>768px</code> or wider.</p>
+      <div class="alert alert-block alert-info">
+  <h4>Do you really need a table?</h4>
 
-  <p>Devices with a screen size narrower than <code>768px</code> will display
-    each content areas stacked in the order defined by the HTML.</p>
+  <p>When choosing the best way to correctly markup your content you need to look at the purpose of the information conveyed by it. better ways to mark up your information could be <a href="/docs/typography/lists">lists</a> which can represent either hierarchies or terms and definitions in a much more effective way than a table can.</p>
 </div>
-
-<h2 id="related-site-content-on-the-right">Related site content on the right</h2>
-<p>A basic responsive layout suitable for most topical articles can be
-achieved by incorporating <code>&lt;article&gt;</code> and <code>&lt;aside&gt;</code> elements
-into the document structure with the appropriate <code>.content</code> classes.</p>
-<pre class="prettyprint linenums"><code>&lt;main class="layout" role="main"&gt;
-  &lt;article class="content content-primary" role="article"&gt;
-  ...
-  &lt;/article&gt;
-
-  &lt;aside class="content content-secondary"&gt;...&lt;/aside&gt;
-&lt;/main&gt;
-</code></pre>
-
-
-<h2 id="site-navigation-content-on-the-left">Site navigation content on the left</h2>
-<p>By reversing the order of the <code>.content</code> classed elements you can
-position navigational content to the left which will collapse to the
-top of the main article on a narrow screen device.</p>
-<pre class="prettyprint linenums"><code>&lt;main class="layout" role="main"&gt;
-  &lt;div class="content content-secondary"&gt;...&lt;/div&gt;
-
-  &lt;article class="content content-primary" role="article"&gt;
-  ...
-  &lt;/article&gt;
-&lt;/main&gt;
-</code></pre>
-
-<h3 id="options">Options</h3>
-<p>By adding the <code>.layout-first-right</code> class to the <code>.layout</code>
-classed element and reversing the order of the <code>.content</code> classed
-elements you can reverse the way content areas collapse on a narrow screen device.</p>
-<pre class="prettyprint linenums"><code>&lt;main class="layout layout-first-right" role="main"&gt;
-  ...
-&lt;/main&gt;
-</code></pre>
 
     </article>
 
@@ -231,10 +184,7 @@ elements you can reverse the way content areas collapse on a narrow screen devic
       <ul>
         <ul>
           <li>
-            <a href="basic.html">Basic layout</a>
-          </li>
-          <li>
-            <a href="two-column.html">Two column layout</a>
+            <a href="tables.html">Tabluar data</a>
           </li>
         </ul>
       </ul>
@@ -247,19 +197,10 @@ elements you can reverse the way content areas collapse on a narrow screen devic
         <div class="container">
           <ul class="nav nav-pills">
             <li>
-              <a href="../index.html">Home</a>
+              <a href="../../index.html">Home</a>
             </li>
             <li>
-              <a href="../theme.html">Theme</a>
-            </li>
-            <li>
-              <a href="../basic-elements.html">Basic elements</a>
-            </li>
-            <li>
-              <a href="../layout.html">Layout</a>
-            </li>
-            <li>
-              <a href="../glyphs.html">Glyphs</a>
+              <a href="../../basic-elements.html">Basic elements</a>
             </li>
           </ul>
         </div>
