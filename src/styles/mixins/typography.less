@@ -20,3 +20,18 @@
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+// based on http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix() {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}
