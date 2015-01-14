@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Two column</title>
+  <title>Two column layout</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
@@ -117,11 +117,11 @@
           <a href="../layout.html">Layout</a>
         </li>
         <li class="active">
-          Two column
+          Two column layout
         </li>
       </ol>
 
-      <h1>Two column</h1>
+      <h1>Two column layout</h1>
 
       <p class="lead">Provides a standard &quot;Two Column&quot; page layout for presenting articles or topics.</p>
     </div>
@@ -181,6 +181,12 @@ elements you can reverse the way content areas collapse on a narrow screen devic
     <aside class="content content-secondary">
       <ul>
         <ul>
+          <li>
+            <a href="basic.html">Basic layout</a>
+          </li>
+          <li>
+            <a href="two-column.html">Two column layout</a>
+          </li>
         </ul>
       </ul>
     </aside>
@@ -259,5 +265,46 @@ elements you can reverse the way content areas collapse on a narrow screen devic
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/google-code-prettify/prettify.js"></script>
   
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/application.js"></script>
+
+  <script>
+  (function() {
+    $('.guide-example').each(function() {
+      if ( $(this).is('.example-processed') ) return;
+
+      var $example = $(this).clone();
+
+      $example.children().each( processChild );
+
+      var $code = $('<code/>').text( $example.html().replace( '\n', '' ).replace( /=""/mg, '' ) );
+
+      $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
+
+      $(this).addClass('example-processed');
+    });
+
+    function processChild() {
+      var $child = $(this);
+
+      if ( $child.is('.example-ignore') ) {
+        if ( this.nextSibling && this.nextSibling.nodeType === 3 && this.nextSibling.data.trim() === '' ) {
+          $( this.nextSibling ).remove();
+        }
+        $child.remove();
+        return;
+      }
+
+      if ( $child.is('.example-tldr') ) {
+        $child.removeClass('example-tldr').html( '...' );
+        if ($child.attr('class').trim() === '') {
+          $child.removeAttr('class');
+        }
+      }
+
+      $child.children().each( processChild );
+    }
+  })();
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 </body>
 </html>

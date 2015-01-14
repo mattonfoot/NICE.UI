@@ -1,7 +1,7 @@
 ---
-title: Two column
+title: Two column layout
 description: Provides a standard "Two Column" page layout for presenting articles or topics.
-template: page.html
+template: section.html
 nav_sort: 2
 nav_groups:
 - primary

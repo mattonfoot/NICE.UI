@@ -1,7 +1,7 @@
 ---
 title: Basic layout
 description: Provides a basic page layout.
-template: page.html
+template: section.html
 nav_sort: 1
 nav_groups:
 - primary
