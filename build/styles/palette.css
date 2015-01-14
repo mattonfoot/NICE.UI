@@ -29,29 +29,8 @@ template {
 /*
  * Root document elements
  */
-html {
-  font-size: 10px;
-  /*px*/ line-height: 24px;
-  /**/
-  /*rem*/ line-height: 2.4rem;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
 body {
   margin: 0;
-  line-height: 1.5;
-  font-size: 1.6em;
-  font-family: Lato, "Helvetica Neue", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: #111111;
-  background-color: #ffffff;
-}
-@media screen and (max-width: 767px) {
-  html {
-    font-size: 12px;
-  }
 }
 @font-face {
   font-family: 'Lato';
@@ -92,6 +71,32 @@ body {
   text-rendering: optimizeLegibility;
   
   /* IE9 Compat Modes */
+}
+/*
+* Root document elements
+*/
+html {
+  font-size: 10px;
+  /*px*/ line-height: 24px;
+  /**/
+  /*rem*/ line-height: 2.4rem;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+body {
+  line-height: 1.5;
+  font-size: 1.6em;
+  font-family: 'Lato';
+  font-weight: 400;
+  font-style: normal;
+  color: #111111;
+  background-color: #ffffff;
+}
+@media screen and (max-width: 767px) {
+  html {
+    font-size: 12px;
+  }
 }
 /*
  * Headings

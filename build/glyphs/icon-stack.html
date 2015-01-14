@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Control states</title>
+  <title>Icon stack</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="basic-elements/forms/control-states.html">
+  <link rel="canonical" href="glyphs/icon-stack.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -135,19 +135,19 @@
       <div class="tophat-inner">
         <ul class="menu">
           <li>
-            <a href="../../index.html">Home</a>
+            <a href="../index.html">Home</a>
           </li>
           <li>
-            <a href="../../theme.html">Theme</a>
+            <a href="../theme.html">Theme</a>
           </li>
           <li>
-            <a href="../../basic-elements.html">Basic elements</a>
+            <a href="../basic-elements.html">Basic elements</a>
           </li>
           <li>
-            <a href="../../layout.html">Layout</a>
+            <a href="../layout.html">Layout</a>
           </li>
           <li>
-            <a href="../../glyphs.html">Glyphs</a>
+            <a href="../glyphs.html">Glyphs</a>
           </li>
         </ul>
       </div>
@@ -160,100 +160,129 @@
     <div class="container">
       <ol class="breadcrumb">
         <li>
-          <a href="../../../../../../..">Home</a>
+          <a href="../../../../../..">Home</a>
         </li>
         <li>
-          <a href="../../basic-elements.html">Basic elements</a>
-        </li>
-        <li>
-          <a href="../forms.html">Forms</a>
+          <a href="../glyphs.html">Glyphs</a>
         </li>
         <li class="active">
-          Control states
+          Icon stack
         </li>
       </ol>
 
-      <h1>Control states</h1>
+      <h1>Icon stack</h1>
 
-      <p class="lead">Provide feedback to users or visitors with basic feedback states on form controls and labels.</p>
+      <p class="lead">It is possible to use the NICE Glyphs along with a Font Awesome style icon-stack</p>
     </div>
   </header>
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <h2 id="input-focus">Input focus</h2>
-<p>We remove the default <code>outline</code> styles on some form controls and apply a <code>box-shadow</code> in its place for <code>:focus</code>.</p>
-<form class="guide-example">
-  <input class="focused" id="focusedInput" type="text" value="This is focused...">
-</form>
+      <p>Use the <code>.glyph-stack</code> class to overlay a list of glyphs on top of
+each other to combine them into more advanced icons;</p>
+<p><div class="glyph-grid" id="iconstack-examples"></div></p>
+<pre class="prettyprint"><code>&lt;span class="glyph-stack"&gt;
+  &lt;i aria-hidden="true" class="glyph-circle glyph-stack-base"&gt;&lt;/i&gt;
+  &lt;i aria-hidden="true" class="glyph-twitter"&gt;&lt;/i&gt;
+&lt;/span&gt;
+</code></pre>
 
-<h2 id="disabled-inputs">Disabled inputs</h2>
-<p>Add the <code>disabled</code> attribute on an input to prevent user input and trigger a slightly different look.</p>
-<form class="guide-example">
-  <input id="disabledInput" type="text" placeholder="Disabled input here…" disabled>
-</form>
+<script type="text/javascript" defer>
+setTimeout(function() {
+  var icon_classes = [
+    'twitter'
+    , 'print'
+    , 'standards'
+    , 'email-open'
+    , 'search'
+    , 'pathways'
+    , 'download'
+    , 'support'
+    , 'share'
+    , 'readnews'
+    , 'infoforpublic'
+    , 'podcast'
+    , 'previous'
+    , 'news'
+    , 'guideline'
+    , 'fullscreen'
+    , 'information'
+    , 'guidance'
+    , 'facebook'
+    , 'syndication'
+    , 'email-closed'
+    , 'next'
+    , 'bookmark'
+    , 'evidence'
+    , 'apps'
+    , 'circle'
+    , 'logo'
+    , 'logo-name'
+    , 'capsule'
+    , 'pathways-node'
+    , 'circle-blank'
+    , 'user'
+    , 'trash'
+    , 'sort'
+    , 'sort-up'
+    , 'sort-down'
+    , 'remove'
+    , 'quote-right'
+    , 'quote-left'
+    , 'plus'
+    , 'play'
+    , 'ok'
+    , 'minus'
+    , 'cloud-upload'
+    , 'cloud-download'
+    , 'caret-up'
+    , 'caret-right'
+    , 'caret-left'
+    , 'caret-down'
+    , 'angle-up'
+    , 'angle-right'
+    , 'angle-left'
+    , 'angle-down'
+    , 'double-angle-up'
+    , 'double-angle-right'
+    , 'double-angle-left'
+    , 'double-angle-down'
+    , 'chevron-up'
+    , 'chevron-right'
+    , 'chevron-left'
+    , 'chevron-down'
+    , 'hamburger'
+    , 'file'
+    , 'file-blank'
+    , 'file-text'
+    , 'file-text-blank'
+    , 'spinner'
+    , 'stop'
+    , 'lines'
+    , 'calendar'
+    , 'group'
+    , 'adjust'
+    , 'plus-circle'
+    , 'linkedin'
+    , 'google-plus'
+    , 'warning'
+    , 'prescribing'
+    , 'uptake'
+    , 'filter'
+  ];
 
-<h2 id="disabled-fieldsets">Disabled fieldsets</h2>
-<p>Add the disabled attribute to a <code>$lt;fieldset$gt;</code> to disable all the controls within the <code>$lt;fieldset$gt;</code> at once.</p>
-<form class="guide-example">
-  <fieldset disabled>
-    <div class="form-group">
-      <label for="disabledTextInput">Disabled input</label>
-      <input type="text" id="disabledTextInput" placeholder="Disabled input">
-    </div>
-    <div class="form-group">
-      <label for="disabledSelect">Disabled select menu</label>
-      <select id="disabledSelect">
-        <option>Disabled select</option>
-      </select>
-    </div>
-    <div class="form-group checkbox">
-      <label>
-        <input type="checkbox"> Can&#39;t check this
-      </label>
-    </div>
-    <button type="submit" class="btn">Submit</button>
-  </fieldset>
-</form>
+  $('#iconstack-examples').html(
+    $.map(icon_classes, function( value, i ) {
+      var ico_class = 'glyph-' + value;
+      return '<div class="glyph"><span class="fs1 glyph-stack"><i aria-hidden="true" '
+        + 'class="glyph-circle glyph-stack-base"></i><i aria-hidden="true" class="' + ico_class
+        + '"></i></span></div>';
+    }).join('')
+  );
 
-<h2 id="validation-states">Validation states</h2>
-<p>Bootstrap includes validation styles for error, warning, info, and success messages. To use, add the appropriate class to the surrounding <code>.control-group</code>.</p>
-<form class="guide-example horizontal">
-  <div class="form-group success">
-    <label for="inputSuccess1">Input with success</label>
-    <input type="text" id="inputSuccess1">
-  </div>
-  <div class="form-group warning">
-    <label for="inputWarning1">Input with warning</label>
-    <input type="text" id="inputWarning1" aria-describedby="warningHelpBlock">
-    <span id="warningHelpBlock" class="help-text">This is a warning</span>
-  </div>
-  <div class="form-group error">
-    <label for="inputError1">Input with error</label>
-    <input type="text" id="inputError1" aria-describedby="errorHelpBlock">
-    <span id="errorHelpBlock" class="help-text">There was an error</span>
-  </div>
-  <div class="form-group">
-    <div class="checkbox success">
-      <label>
-        <input type="checkbox" id="checkboxSuccess" value="option1">
-        Checkbox with success
-      </label>
-    </div>
-    <div class="checkbox warning">
-      <label>
-        <input type="checkbox" id="checkboxWarning" value="option1">
-        Checkbox with warning
-      </label>
-    </div>
-    <div class="checkbox error">
-      <label>
-        <input type="checkbox" id="checkboxError" value="option1">
-        Checkbox with error
-      </label>
-    </div>
-  </div>
-</form>
+  $('#glyphs').on('click, focus', 'input', function(e) { e.target.select(); });
+}, 500);
+</script>
 
     </article>
 
@@ -261,16 +290,10 @@
       <ul>
         <ul>
           <li>
-            <a href="default-styles.html">Default styles</a>
+            <a href="icon-stack.html">Icon stack</a>
           </li>
           <li>
-            <a href="layout-options.html">Layout options</a>
-          </li>
-          <li>
-            <a href="basic-controls.html">Basic controls</a>
-          </li>
-          <li>
-            <a href="control-states.html">Control states</a>
+            <a href="character-set.html">Advanced use</a>
           </li>
         </ul>
       </ul>
@@ -283,19 +306,19 @@
         <div class="container">
           <ul class="nav nav-pills">
             <li>
-              <a href="../../index.html">Home</a>
+              <a href="../index.html">Home</a>
             </li>
             <li>
-              <a href="../../theme.html">Theme</a>
+              <a href="../theme.html">Theme</a>
             </li>
             <li>
-              <a href="../../basic-elements.html">Basic elements</a>
+              <a href="../basic-elements.html">Basic elements</a>
             </li>
             <li>
-              <a href="../../layout.html">Layout</a>
+              <a href="../layout.html">Layout</a>
             </li>
             <li>
-              <a href="../../glyphs.html">Glyphs</a>
+              <a href="../glyphs.html">Glyphs</a>
             </li>
           </ul>
         </div>
