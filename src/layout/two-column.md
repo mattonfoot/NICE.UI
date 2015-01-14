@@ -7,71 +7,56 @@ nav_groups:
 - primary
 ---
 
-Columns are added to a layout by using the <code>.column</code> class along with
-an additional content priority class of either <code>.column-primary</code> or
-<code>.column-secondary</code>.
+Content areas are added to a layout by using the <code>.content</code> class along with
+an additional priority class of either <code>.content-primary</code> or
+<code>.content-secondary</code>.
 
 <div class="alert alert-info">
-  <p><strong>Note:</strong> Layouts only appear as columns on devices with a
-    screen size of <code>768px</code> or wider</p>
+  <p><strong>Note:</strong> Content areas only appear as columns on devices with a
+    screen size of <code>768px</code> or wider.</p>
 
   <p>Devices with a screen size narrower than <code>768px</code> will display
-    each column stacked in the order defined by the HTML</p>
+    each content areas stacked in the order defined by the HTML.</p>
 </div>
 
-## Topical article with related site content on the right
+## Related site content on the right
 
-A basic responsive two column layout suitable for most topical articles can be
-achieved by incorporating <code>article</code> and <code>aside</code> elements
-into the document structure.
+A basic responsive layout suitable for most topical articles can be
+achieved by incorporating <code>&lt;article&gt;</code> and <code>&lt;aside&gt;</code> elements
+into the document structure with the appropriate <code>.content</code> classes.
 
-<pre class="prettyprint linenums"><code>&lt;body&gt;
-  &lt;header role="banner"&gt;...&lt;/header&gt;
+<pre class="prettyprint linenums"><code>&lt;main class="layout" role="main"&gt;
+  &lt;article class="content content-primary" role="article"&gt;
+  ...
+  &lt;/article&gt;
 
-  &lt;main class="layout" role="main"&gt;
-    &lt;article class="column column-primary" role="article"&gt;
-    ...
-    &lt;/article&gt;
-
-    &lt;aside class="column column-secondary"&gt;...&lt;/aside&gt;
-  &lt;/main&gt;
-
-  &lt;footer role="contentinfo"&gt;...&lt;/footer&gt;
-&lt;/body&gt;
+  &lt;aside class="content content-secondary"&gt;...&lt;/aside&gt;
+&lt;/main&gt;
 </code></pre>
 
 
-## Topical article with site navigation content on the left
+## Site navigation content on the left
 
-By adding the <code>.layout-left-secondary</code> to the <code>main</code> element
-you can position navigational content to the left which will collapse to the
-bottom of the main article on a narrow screen device.
+By reversing the order of the <code>.content</code> classed elements you can
+position navigational content to the left which will collapse to the
+top of the main article on a narrow screen device.
 
-<pre class="prettyprint linenums"><code>&lt;body&gt;
-  &lt;header role="banner"&gt;...&lt;/header&gt;
+<pre class="prettyprint linenums"><code>&lt;main class="layout" role="main"&gt;
+  &lt;div class="content content-secondary"&gt;...&lt;/div&gt;
 
-  &lt;main class="layout" role="main"&gt;
-    &lt;div class="column column-secondary"&gt;...&lt;/div&gt;
-
-    &lt;article class="column column-primary" role="article"&gt;
-    ...
-    &lt;/article&gt;
-  &lt;/main&gt;
-
-  &lt;footer role="contentinfo"&gt;
-    &lt;nav role="navigation"&gt;...&lt;/nav&gt;
-  &lt;/footer&gt;
-&lt;/body&gt;
+  &lt;article class="content content-primary" role="article"&gt;
+  ...
+  &lt;/article&gt;
+&lt;/main&gt;
 </code></pre>
 
 ### Options
 
-By adding the <code>.layout-left-secondary</code> to the <code>main</code> element
-and placing the second column after the primary column you can pull the second
-column to the left on wide screen devices and allow the additional content to
-collapse to the bottom of the main article on a narrow screen device.
+By adding the <code>.layout-first-right</code> class to the <code>.layout</code>
+classed element and reversing the order of the <code>.content</code> classed
+elements you can reverse the way content areas collapse on a narrow screen device.
 
-<pre class="prettyprint linenums"><code>&lt;main class="layout layout-left-secondary" role="main"&gt;
+<pre class="prettyprint linenums"><code>&lt;main class="layout layout-first-right" role="main"&gt;
   ...
 &lt;/main&gt;
 </code></pre>

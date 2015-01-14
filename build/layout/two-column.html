@@ -128,64 +128,49 @@
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <p>Columns are added to a layout by using the <code>.column</code> class along with
-an additional content priority class of either <code>.column-primary</code> or
-<code>.column-secondary</code>.</p>
+      <p>Content areas are added to a layout by using the <code>.content</code> class along with
+an additional priority class of either <code>.content-primary</code> or
+<code>.content-secondary</code>.</p>
 <div class="alert alert-info">
-  <p><strong>Note:</strong> Layouts only appear as columns on devices with a
-    screen size of <code>768px</code> or wider</p>
+  <p><strong>Note:</strong> Content areas only appear as columns on devices with a
+    screen size of <code>768px</code> or wider.</p>
 
   <p>Devices with a screen size narrower than <code>768px</code> will display
-    each column stacked in the order defined by the HTML</p>
+    each content areas stacked in the order defined by the HTML.</p>
 </div>
 
-<h2 id="topical-article-with-related-site-content-on-the-right">Topical article with related site content on the right</h2>
-<p>A basic responsive two column layout suitable for most topical articles can be
-achieved by incorporating <code>article</code> and <code>aside</code> elements
-into the document structure.</p>
-<pre class="prettyprint linenums"><code>&lt;body&gt;
-  &lt;header role="banner"&gt;...&lt;/header&gt;
+<h2 id="related-site-content-on-the-right">Related site content on the right</h2>
+<p>A basic responsive layout suitable for most topical articles can be
+achieved by incorporating <code>&lt;article&gt;</code> and <code>&lt;aside&gt;</code> elements
+into the document structure with the appropriate <code>.content</code> classes.</p>
+<pre class="prettyprint linenums"><code>&lt;main class="layout" role="main"&gt;
+  &lt;article class="content content-primary" role="article"&gt;
+  ...
+  &lt;/article&gt;
 
-  &lt;main class="layout" role="main"&gt;
-    &lt;article class="column column-primary" role="article"&gt;
-    ...
-    &lt;/article&gt;
-
-    &lt;aside class="column column-secondary"&gt;...&lt;/aside&gt;
-  &lt;/main&gt;
-
-  &lt;footer role="contentinfo"&gt;...&lt;/footer&gt;
-&lt;/body&gt;
+  &lt;aside class="content content-secondary"&gt;...&lt;/aside&gt;
+&lt;/main&gt;
 </code></pre>
 
 
-<h2 id="topical-article-with-site-navigation-content-on-the-left">Topical article with site navigation content on the left</h2>
-<p>By adding the <code>.layout-left-secondary</code> to the <code>main</code> element
-you can position navigational content to the left which will collapse to the
-bottom of the main article on a narrow screen device.</p>
-<pre class="prettyprint linenums"><code>&lt;body&gt;
-  &lt;header role="banner"&gt;...&lt;/header&gt;
+<h2 id="site-navigation-content-on-the-left">Site navigation content on the left</h2>
+<p>By reversing the order of the <code>.content</code> classed elements you can
+position navigational content to the left which will collapse to the
+top of the main article on a narrow screen device.</p>
+<pre class="prettyprint linenums"><code>&lt;main class="layout" role="main"&gt;
+  &lt;div class="content content-secondary"&gt;...&lt;/div&gt;
 
-  &lt;main class="layout" role="main"&gt;
-    &lt;div class="column column-secondary"&gt;...&lt;/div&gt;
-
-    &lt;article class="column column-primary" role="article"&gt;
-    ...
-    &lt;/article&gt;
-  &lt;/main&gt;
-
-  &lt;footer role="contentinfo"&gt;
-    &lt;nav role="navigation"&gt;...&lt;/nav&gt;
-  &lt;/footer&gt;
-&lt;/body&gt;
+  &lt;article class="content content-primary" role="article"&gt;
+  ...
+  &lt;/article&gt;
+&lt;/main&gt;
 </code></pre>
 
 <h3 id="options">Options</h3>
-<p>By adding the <code>.layout-left-secondary</code> to the <code>main</code> element
-and placing the second column after the primary column you can pull the second
-column to the left on wide screen devices and allow the additional content to
-collapse to the bottom of the main article on a narrow screen device.</p>
-<pre class="prettyprint linenums"><code>&lt;main class="layout layout-left-secondary" role="main"&gt;
+<p>By adding the <code>.layout-first-right</code> class to the <code>.layout</code>
+classed element and reversing the order of the <code>.content</code> classed
+elements you can reverse the way content areas collapse on a narrow screen device.</p>
+<pre class="prettyprint linenums"><code>&lt;main class="layout layout-first-right" role="main"&gt;
   ...
 &lt;/main&gt;
 </code></pre>
@@ -200,7 +185,7 @@ collapse to the bottom of the main article on a narrow screen device.</p>
     </aside>
   </main>
 
-  <footer class="footer-wrapper">
+  <footer class="footer-wrapper" role="contentinfo">
     <div class="navbar navbar-inverse">
       <div class="navbar-inner">
         <div class="container">
@@ -226,35 +211,35 @@ collapse to the bottom of the main article on a narrow screen device.</p>
       <div class="container">
         <a href="http://www.nice.org.uk" class="footer-logo"><i class="logo icon-nice-logo"></i></a>
   
-          <ul class="nav nav-services">
-              <li><a href="http://pathways.nice.org.uk"><i class="icon-nice-pathways"></i> NICE Pathways</a></li>
-              <li><a href="http://www.nice.org.uk/guidance"><i class="icon-nice-guidance"></i> Guidance</a></li>
-              <li><a href="http://www.nice.org.uk/standards-and-indicators"><i class="icon-nice-standards"></i> Standards &amp;&nbsp;Indicators</a></li>
-              <li><a href="http://www.evidence.nhs.uk"><i class="icon-nice-evidence"></i> Evidence services</a></li>
+        <ul class="nav nav-services">
+          <li><a href="http://pathways.nice.org.uk"><i class="icon-nice-pathways"></i> NICE Pathways</a></li>
+          <li><a href="http://www.nice.org.uk/guidance"><i class="icon-nice-guidance"></i> Guidance</a></li>
+          <li><a href="http://www.nice.org.uk/standards-and-indicators"><i class="icon-nice-standards"></i> Standards &amp;&nbsp;indicators</a></li>
+          <li><a href="http://www.evidence.nhs.uk"><i class="icon-nice-evidence"></i> Evidence services</a></li>
+        </ul>
+  
+        <div class="legal-panel">
+          <div class="social-panel">
+            <!-- AddThis Button BEGIN -->
+            <p class="social-follow addthis_toolbox">
+            Follow Us
+            <a class="addthis_button_twitter_follow" addthis:userid="nicecomms" target="_blank" title="Follow on Twitter" href="#">
+              <i class="icon-twitter"></i>
+            </a></p>
+            <!-- AddThis Button END -->
+          </div>
+  
+          <ul class="nav nav-legal">
+            <li><a href="//www.nice.org.uk/about">About</a></li>
+            <li><a href="//www.nice.org.uk/accessibility">Accessibility</a></li>
+            <li><a href="//www.nice.org.uk/freedom-of-information">Freedom of information</a></li>
+            <li><a href="//www.nice.org.uk/get-involved/contact-us">Contact Us</a></li>
+            <li><a href="//www.nice.org.uk/glossary">Glossary</a></li>
+            <li><a href="//www.nice.org.uk/terms-and-conditions">Terms and conditions</a></li>
+            <li><a href="//www.nice.org.uk/subscribe">Subscribe</a></li>
           </ul>
   
-          <div class="legal-panel">
-              <div class="social-panel">
-                  <!-- AddThis Button BEGIN -->
-                  <p class="social-follow addthis_toolbox">
-                  Follow Us
-                  <a class="addthis_button_twitter_follow" addthis:userid="nicecomms" target="_blank" title="Follow on Twitter" href="#">
-                    <i class="icon-twitter"></i>
-                  </a></p>
-                  <!-- AddThis Button END -->
-              </div>
-  
-              <ul class="nav nav-legal">
-                <li><a href="//www.nice.org.uk/about">About</a></li>
-                <li><a href="//www.nice.org.uk/accessibility">Accessibility</a></li>
-                <li><a href="//www.nice.org.uk/freedom-of-information">Freedom of information</a></li>
-                <li><a href="//www.nice.org.uk/get-involved/contact-us">Contact Us</a></li>
-                <li><a href="//www.nice.org.uk/glossary">Glossary</a></li>
-                <li><a href="//www.nice.org.uk/terms-and-conditions">Terms and conditions</a></li>
-                <li><a href="//www.nice.org.uk/subscribe">Subscribe</a></li>
-            </ul>
-  
-            <p class="legal-copyright">Copyright &copy; 2014 National Institute for Health and Care Excellence. All rights reserved.</p>
+          <p class="legal-copyright">Copyright &copy; 2014 National Institute for Health and Care Excellence. All rights reserved.</p>
         </div>
       </div>
     </div>
