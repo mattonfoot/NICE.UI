@@ -23,15 +23,17 @@
     </div>
   </header>
 
-  <article class="container">
-    {{{ contents }}}
+  <main class="layout layout-left-secondary" role="main">
+    <article class="column column-primary">
+      {{{ contents }}}
+    </article>
 
-    <ul class="nav nav-list">
-      {{> _Nav.Relative}}
-    </ul>
-  </article>
-
-  {{> _Footer.Nav }}
+    <aside class="column column-secondary">
+      <ul class="nav nav-list">
+        {{> _Nav.Relative}}
+      </ul>
+    </aside>
+  </main>
 
   {{> _Global.Footer }}
 

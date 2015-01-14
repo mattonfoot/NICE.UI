@@ -11,25 +11,25 @@
 <body>
   {{> _Global.Nav }}
 
-  <div class="jumbotron masthead">
-    <div class="container">
-      <h1>{{ title }}</h1>
+  <main role="main">
+    <header class="masthead" role="banner">
+      <div class="container">
+        <h1>{{ title }}</h1>
 
-      <p>{{ description }}</p>
+        <p>{{ description }}</p>
 
-      <ul class="masthead-links">
-        <li><a href="{{ gitrepo }}" class="btn">GitHub project</a></li>
-        <li><a href="./getting-started#patterns" class="btn action-primary">Patterns</a></li>
-        <li>Version {{ version }}</li>
-      </ul>
+        <ul class="masthead-links">
+          <li><a href="{{ gitrepo }}" class="btn">GitHub project</a></li>
+          <li><a href="./getting-started#patterns" class="btn action-primary">Patterns</a></li>
+          <li>Version {{ version }}</li>
+        </ul>
+      </div>
+    </header>
+
+    <div class="container marketing">
+      {{{ contents }}}
     </div>
-  </div>
-
-  <div class="container marketing">
-    {{{ contents }}}
-  </div>
-
-  {{> _Footer.Nav }}
+  </main>
 
   {{> _Global.Footer }}
 

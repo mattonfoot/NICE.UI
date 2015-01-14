@@ -96,6 +96,9 @@
           <li>
             <a href="../basic-elements.html">Basic elements</a>
           </li>
+          <li>
+            <a href="../layout.html">Layout</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -123,45 +126,52 @@
     </div>
   </header>
 
-  <article class="container">
-    <div class="alert alert-block alert-info">
+  <main class="layout layout-left-secondary" role="main">
+    <article class="column column-primary">
+      <div class="alert alert-block alert-info">
   <h4>Do you really need a table?</h4>
 
   <p>When choosing the best way to correctly markup your content you need to look at the purpose of the information conveyed by it. better ways to mark up your information could be <a href="/docs/typography/lists">lists</a> which can represent either hierarchies or terms and definitions in a much more effective way than a table can.</p>
 </div>
 
+    </article>
 
-    <ul class="nav nav-list">
-      <ul>
-        <li>
-          <a href="tables/basic.html">Basic tables</a>
-        </li>
-        <li>
-          <a href="tables/emphasis.html">Emphasising information</a>
-        </li>
-      </ul>
-    </ul>
-  </article>
-
-  <div class="navbar navbar-inverse">
-    <div class="navbar-inner">
-      <div class="container">
-        <ul class="nav nav-pills">
+    <aside class="column column-secondary">
+      <ul class="nav nav-list">
+        <ul>
           <li>
-            <a href="../index.html">Home</a>
+            <a href="tables/basic.html">Basic tables</a>
           </li>
           <li>
-            <a href="../theme.html">Theme</a>
-          </li>
-          <li>
-            <a href="../basic-elements.html">Basic elements</a>
+            <a href="tables/emphasis.html">Emphasising information</a>
           </li>
         </ul>
-      </div>
-    </div>
-  </div>
+      </ul>
+    </aside>
+  </main>
 
   <footer class="footer-wrapper">
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav nav-pills">
+            <li>
+              <a href="../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../theme.html">Theme</a>
+            </li>
+            <li>
+              <a href="../basic-elements.html">Basic elements</a>
+            </li>
+            <li>
+              <a href="../layout.html">Layout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
     <div class="footer">
       <div class="container">
         <a href="http://www.nice.org.uk" class="footer-logo"><i class="logo icon-nice-logo"></i></a>

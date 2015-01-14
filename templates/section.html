@@ -23,10 +23,10 @@
     </div>
   </header>
 
-  <article class="layout layout-first-right">
-    <div class="content content-primary">
+  <main class="layout layout-first-right" role="main">
+    <article class="content content-primary">
       {{{ contents }}}
-    </div>
+    </article>
 
     <aside class="content content-secondary">
       <nav class="menu-container">
@@ -37,9 +37,7 @@
         </ul>
       </nav>
     </aside>
-  </article>
-
-  {{> _Footer.Nav }}
+  </main>
 
   {{> _Global.Footer }}
 
