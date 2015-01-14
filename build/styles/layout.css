@@ -1,0 +1,75 @@
+.layout,
+.container {
+  display: block;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24;
+  zoom: 1;
+}
+.layout:before,
+.container:before,
+.layout:after,
+.container:after {
+  content: "";
+  display: table;
+}
+.layout:after,
+.container:after {
+  clear: both;
+}
+.layout > .content {
+  display: block;
+  float: left;
+  min-height: 1px;
+  margin-left: 24;
+}
+.layout > :first-child {
+  margin-left: 0;
+}
+.layout > .content-primary {
+  width: 75%;
+}
+.layout > .content-secondary {
+  width: 25%;
+}
+.layout-first-right .layout > .content,
+.layout.layout-first-right > .content {
+  margin-left: 0;
+  margin-right: 24;
+}
+.layout-first-right .layout > :first-child,
+.layout.layout-first-right > :first-child {
+  float: right;
+  margin-right: 0;
+}
+.layout-fill .layout,
+.layout-fill .container,
+.layout.layout-fill,
+.container.layout-fill {
+  max-width: 100%;
+  margin-left: 24;
+  margin-right: 24;
+}
+@media (max-width: 979px) {
+  .layout,
+  .container {
+    padding: 0 12;
+  }
+  .layout {
+    position: inherit;
+  }
+  .layout > .content {
+    float: none;
+    width: auto;
+    margin-bottom: 24;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  .layout,
+  .container {
+    padding: 0 6;
+  }
+}
