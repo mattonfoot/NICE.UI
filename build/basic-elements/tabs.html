@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Basic tables</title>
+  <title>Tabs</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="basic-elements/tables/basic.html">
+  <link rel="canonical" href="basic-elements/tabs.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -135,10 +135,13 @@
       <div class="tophat-inner">
         <ul class="menu">
           <li>
-            <a href="../../index.html">Home</a>
+            <a href="../index.html">Home</a>
           </li>
           <li>
-            <a href="../../basic-elements.html">Basic elements</a>
+            <a href="../basic-elements.html">Basic elements</a>
+          </li>
+          <li>
+            <a href="../design-patterns.html">Design patterns</a>
           </li>
         </ul>
       </div>
@@ -151,146 +154,25 @@
     <div class="container">
       <ol class="breadcrumb">
         <li>
-          <a href="../../../../../../..">Home</a>
+          <a href="../../../../../..">Home</a>
         </li>
         <li>
-          <a href="../../basic-elements.html">Basic elements</a>
-        </li>
-        <li>
-          <a href="">tables</a>
+          <a href="../basic-elements.html">Basic elements</a>
         </li>
         <li class="active">
-          Basic tables
+          Tabs
         </li>
       </ol>
 
-      <h1>Basic tables</h1>
+      <h1>Tabs</h1>
 
-      <p class="lead">Basic styles applied to tables to increase readability</p>
+      <p class="lead"></p>
     </div>
   </header>
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <p>Basic styling covers all <code>&lt;table&gt;</code> elements and within the <code>&lt;tbody&gt;</code> rows will have zebra-striping via the <code>:nth-child</code> CSS selector (not available in IE7-8) and a hover state to highlight row data to make reading across lines easier.</p>
-<p><div class="guide-example example-processed">
-  <table class="example-tldr">
-    <thead>
-      <tr>
-        <th>#</th>
-        <th>First Name</th>
-        <th>Last Name</th>
-        <th>Username</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td colspan="2">Larry the Bird</td>
-        <td>@twitter</td>
-      </tr>
-    </tbody>
-  </table>
-</div></p>
-<pre class="prettyprint linenums"><code>
-  &lt;table&gt;
-  &lt;caption&gt;...&lt;/caption&gt;
-  &lt;thead&gt;
-  &lt;tr&gt;
-  &lt;th&gt;...&lt;/th&gt;
-  &lt;th&gt;...&lt;/th&gt;
-  &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-  &lt;tr&gt;
-  &lt;td&gt;...&lt;/td&gt;
-  &lt;td&gt;...&lt;/td&gt;
-  &lt;/tr&gt;
-  &lt;/tbody&gt;
-  &lt;/table&gt;
-</code></pre>
-
-
-<h2 id="supported-table-markup">Supported table markup</h2>
-<p>List of supported table HTML elements and how they should be used.</p>
-<table>
-  <colgroup>
-    <col class="span1">
-    <col class="span7">
-  </colgroup>
-  <thead>
-    <tr>
-      <th>Tag</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        <code>&lt;table&gt;</code>
-      </td>
-      <td>
-        Wrapping element for displaying data in a tabular format
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>&lt;thead&gt;</code>
-      </td>
-      <td>
-        Container element for table header rows (<code>&lt;tr&gt;</code>) to label table columns
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>&lt;tbody&gt;</code>
-      </td>
-      <td>
-        Container element for table rows (<code>&lt;tr&gt;</code>) in the body of the table
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>&lt;tr&gt;</code>
-      </td>
-      <td>
-        Container element for a set of table cells (<code>&lt;td&gt;</code> or <code>&lt;th&gt;</code>) that appears
-        on a single row
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>&lt;td&gt;</code>
-      </td>
-      <td>
-        Default table cell
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>&lt;th&gt;</code>
-      </td>
-      <td>
-        Special table cell for column (or row, depending on scope and placement) labels
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code>&lt;caption&gt;</code>
-      </td>
-      <td>
-        Description or summary of what the table holds, especially useful for screen readers
-      </td>
-    </tr>
-  </tbody>
-</table>
-
+      
     </article>
 
     <aside class="content content-secondary">
@@ -307,10 +189,13 @@
         <div class="container">
           <ul class="nav nav-pills">
             <li>
-              <a href="../../index.html">Home</a>
+              <a href="../index.html">Home</a>
             </li>
             <li>
-              <a href="../../basic-elements.html">Basic elements</a>
+              <a href="../basic-elements.html">Basic elements</a>
+            </li>
+            <li>
+              <a href="../design-patterns.html">Design patterns</a>
             </li>
           </ul>
         </div>
@@ -368,46 +253,5 @@
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/google-code-prettify/prettify.js"></script>
   
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/application.js"></script>
-
-  <script>
-  (function() {
-    $('.guide-example').each(function() {
-      if ( $(this).is('.example-processed') ) return;
-
-      var $example = $(this).clone();
-
-      $example.children().each( processChild );
-
-      var $code = $('<code/>').text( $example.html().replace( '\n', '' ).replace( /=""/mg, '' ) );
-
-      $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
-
-      $(this).addClass('example-processed');
-    });
-
-    function processChild() {
-      var $child = $(this);
-
-      if ( $child.is('.example-ignore') ) {
-        if ( this.nextSibling && this.nextSibling.nodeType === 3 && this.nextSibling.data.trim() === '' ) {
-          $( this.nextSibling ).remove();
-        }
-        $child.remove();
-        return;
-      }
-
-      if ( $child.is('.example-tldr') ) {
-        $child.removeClass('example-tldr').html( '...' );
-        if ($child.attr('class').trim() === '') {
-          $child.removeAttr('class');
-        }
-      }
-
-      $child.children().each( processChild );
-    }
-  })();
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 </body>
 </html>

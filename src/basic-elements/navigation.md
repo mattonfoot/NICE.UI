@@ -1,8 +1,8 @@
 ---
-title: Basic elements
+title: Navigation
 template: page.html
-nav_sort: 2
+description:
+nav_sort: 10
 nav_groups:
   - primary
-  - footer
 ---

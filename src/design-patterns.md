@@ -1,7 +1,7 @@
 ---
-title: Basic elements
+title: Design patterns
 template: page.html
-nav_sort: 2
+nav_sort: 3
 nav_groups:
   - primary
   - footer

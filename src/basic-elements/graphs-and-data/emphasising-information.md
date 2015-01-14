@@ -1,5 +1,5 @@
 ---
-section: Tabular data
+section: Graphs and data
 title: Emphasising information
 date: 2014-12-16
 template: section.html

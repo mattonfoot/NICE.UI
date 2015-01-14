@@ -1,5 +1,4 @@
 ---
-section: Theme
 title: Palette
 date: 2015-01-13
 template: section.html
@@ -8,7 +7,7 @@ nav_sort: 1
 nav_groups:
 - primary
 ---
-<link rel="stylesheet" href="../styles/palette.css" />
+<link rel="stylesheet" href="/styles/palette.css" />
 
 ## Document & Text
 
@@ -40,7 +39,7 @@ The quick brown fox jumps over the lazy dog.
 </li>
 </script>
 
-<script src="../scripts/color/color-0.4.1.js"></script>
+<script src="/scripts/color/color-0.4.1.js"></script>
 <script>
 setTimeout(function() {
   var swatches = {};

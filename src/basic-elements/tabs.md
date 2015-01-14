@@ -1,7 +1,8 @@
 ---
-title: Theme
+title: Tabs
 template: page.html
-nav_sort: 1
+description:
+nav_sort: 9
 nav_groups:
   - primary
 ---

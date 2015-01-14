@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Emphasising information</title>
+  <title>Navigation</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="basic-elements/tables/emphasis.html">
+  <link rel="canonical" href="basic-elements/navigation.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -135,10 +135,13 @@
       <div class="tophat-inner">
         <ul class="menu">
           <li>
-            <a href="../../index.html">Home</a>
+            <a href="../index.html">Home</a>
           </li>
           <li>
-            <a href="../../basic-elements.html">Basic elements</a>
+            <a href="../basic-elements.html">Basic elements</a>
+          </li>
+          <li>
+            <a href="../design-patterns.html">Design patterns</a>
           </li>
         </ul>
       </div>
@@ -151,138 +154,25 @@
     <div class="container">
       <ol class="breadcrumb">
         <li>
-          <a href="../../../../../../..">Home</a>
+          <a href="../../../../../..">Home</a>
         </li>
         <li>
-          <a href="../../basic-elements.html">Basic elements</a>
-        </li>
-        <li>
-          <a href="">tables</a>
+          <a href="../basic-elements.html">Basic elements</a>
         </li>
         <li class="active">
-          Emphasising information
+          Navigation
         </li>
       </ol>
 
-      <h1>Emphasising information</h1>
+      <h1>Navigation</h1>
 
-      <p class="lead">Use contextual classes to emphasise the information portrayed within table rows or cells.</p>
+      <p class="lead"></p>
     </div>
   </header>
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <section id="tables-emphasis">
-  <table>
-    <colgroup>
-      <col class="span1">
-      <col class="span7">
-    </colgroup>
-    <thead>
-      <tr>
-        <th>Class</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>
-          <code>.success</code>
-        </td>
-        <td>Indicates a successful or positive action.</td>
-      </tr>
-      <tr>
-        <td>
-          <code>.error</code>
-        </td>
-        <td>Indicates a dangerous or potentially negative action.</td>
-      </tr>
-      <tr>
-        <td>
-          <code>.warning</code>
-        </td>
-        <td>Indicates a warning that might need attention.</td>
-      </tr>
-      <tr>
-        <td>
-          <code>.info</code>
-        </td>
-        <td>Used as an alternative to the default styles.</td>
-      </tr>
-    </tbody>
-  </table>
-  <div class="guide-example example-processed">
-    <table class="table">
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>Product</th>
-          <th>Payment Taken</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr class="success">
-          <td>1</td>
-          <td>TB - Monthly</td>
-          <td>01/04/2012</td>
-          <td>Approved</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>TB - Monthly</td>
-          <td>02/04/2012</td>
-          <td>--</td>
-        </tr>
-        <tr class="error">
-          <td>3</td>
-          <td>TB - Monthly</td>
-          <td>03/04/2012</td>
-          <td>Declined</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>TB - Monthly</td>
-          <td>04/04/2012</td>
-          <td>--</td>
-        </tr>
-        <tr class="warning">
-          <td>5</td>
-          <td>TB - Monthly</td>
-          <td>05/04/2012</td>
-          <td>Pending</td>
-        </tr>
-        <tr>
-          <td>6</td>
-          <td>TB - Monthly</td>
-          <td>06/04/2012</td>
-          <td>--</td>
-        </tr>
-        <tr class="info">
-          <td>7</td>
-          <td>TB - Monthly</td>
-          <td>07/04/2012</td>
-          <td>Call in to confirm</td>
-        </tr>
-        <tr>
-          <td>8</td>
-          <td>TB - Monthly</td>
-          <td>08/04/2012</td>
-          <td>--</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-<pre class="prettyprint linenums"><code>...
-  &lt;tr class=&quot;success&quot;&gt;
-  &lt;td&gt;1&lt;/td&gt;
-  &lt;td&gt;TB - Monthly&lt;/td&gt;
-  &lt;td&gt;01/04/2012&lt;/td&gt;
-  &lt;td&gt;Approved&lt;/td&gt;
-  &lt;/tr&gt;
-  ...</code></pre>
-</section>
-
+      
     </article>
 
     <aside class="content content-secondary">
@@ -299,10 +189,13 @@
         <div class="container">
           <ul class="nav nav-pills">
             <li>
-              <a href="../../index.html">Home</a>
+              <a href="../index.html">Home</a>
             </li>
             <li>
-              <a href="../../basic-elements.html">Basic elements</a>
+              <a href="../basic-elements.html">Basic elements</a>
+            </li>
+            <li>
+              <a href="../design-patterns.html">Design patterns</a>
             </li>
           </ul>
         </div>
@@ -360,46 +253,5 @@
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/google-code-prettify/prettify.js"></script>
   
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/application.js"></script>
-
-  <script>
-  (function() {
-    $('.guide-example').each(function() {
-      if ( $(this).is('.example-processed') ) return;
-
-      var $example = $(this).clone();
-
-      $example.children().each( processChild );
-
-      var $code = $('<code/>').text( $example.html().replace( '\n', '' ).replace( /=""/mg, '' ) );
-
-      $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
-
-      $(this).addClass('example-processed');
-    });
-
-    function processChild() {
-      var $child = $(this);
-
-      if ( $child.is('.example-ignore') ) {
-        if ( this.nextSibling && this.nextSibling.nodeType === 3 && this.nextSibling.data.trim() === '' ) {
-          $( this.nextSibling ).remove();
-        }
-        $child.remove();
-        return;
-      }
-
-      if ( $child.is('.example-tldr') ) {
-        $child.removeClass('example-tldr').html( '...' );
-        if ($child.attr('class').trim() === '') {
-          $child.removeAttr('class');
-        }
-      }
-
-      $child.children().each( processChild );
-    }
-  })();
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 </body>
 </html>

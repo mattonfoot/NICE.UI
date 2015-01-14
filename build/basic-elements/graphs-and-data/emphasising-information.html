@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Palette</title>
+  <title>Emphasising information</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="basic-elements/theme/palette.html">
+  <link rel="canonical" href="basic-elements/graphs-and-data/emphasising-information.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -140,6 +140,9 @@
           <li>
             <a href="../../basic-elements.html">Basic elements</a>
           </li>
+          <li>
+            <a href="../../design-patterns.html">Design patterns</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -157,140 +160,131 @@
           <a href="../../basic-elements.html">Basic elements</a>
         </li>
         <li>
-          <a href="../theme.html">Theme</a>
+          <a href="../graphs-and-data.html">Graphs and data</a>
         </li>
         <li class="active">
-          Palette
+          Emphasising information
         </li>
       </ol>
 
-      <h1>Palette</h1>
+      <h1>Emphasising information</h1>
 
-      <p class="lead">This is a reference screen showing the full default theme elements available through the framework.</p>
+      <p class="lead">Use contextual classes to emphasise the information portrayed within table rows or cells.</p>
     </div>
   </header>
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <link rel="stylesheet" href="../styles/palette.css" />
-
-<h2 id="document-text">Document &amp; Text</h2>
-<ul class="palette palette-document palette-text"></ul>
-
-<h2 id="links">Links</h2>
-<ul class="palette palette-link"></ul>
-
-<h2 id="forms">Forms</h2>
-<ul class="palette palette-legend palette-label palette-input palette-output"></ul>
-
-<h2 id="buttons">Buttons</h2>
-<ul class="palette palette-button"></ul>
-
-<h2 id="tables">Tables</h2>
-<ul class="palette palette-table"></ul>
-
-<script type="text/html" id="swatch">
-<li class="swatch {{classname}}">
-<span class="example">
-The quick brown fox jumps over the lazy dog.
-</span>
-<h4 class="name">{{description}}</h4>
-<code class="hex">.{{classname}}()</code>
-</li>
-</script>
-
-<script src="../scripts/color/color-0.4.1.js"></script>
-<script>
-setTimeout(function() {
-  var swatches = {};
-
-  var ss = document.styleSheets;
-  var param = ss[0].cssRules ? 'cssRules' : 'rules';
-  for ( var i = 0, ssLen = ss.length; i < ssLen; i++) {
-    var rules = ss[ i ][ param ];
-
-    if (!rules) continue;
-
-    for ( var j = 0, rLen = rules.length; j < rLen; j++) {
-      var rule = rules[ j ];
-
-      if ( rule.selectorText && ~rule.selectorText.indexOf( '.theme-' ) ) {
-        var item = rule.selectorText.replace('.example', '').trim();
-        var parts = (/\.theme-([^-]*)(?:-([^\s]*).*)*/ig).exec( item );
-
-        swatches[ parts[ 1 ] ] = swatches[ parts[ 1 ] ] || [];
-        swatches[ parts[ 1 ] ].push( parts[ 2 ] || parts[ 1 ] );
-      }
-    }
-  }
-
-  var template = document.getElementById( 'swatch' ).innerHTML;
-  var lists = document.getElementsByTagName('UL');
-  for ( var k = 0, listLen = lists.length; k < listLen; k++ ) {
-    var list = lists[ k ];
-    if (list.className.indexOf('palette ') === 0) {
-      var parts = list.className.replace(/(palette(?:-?))/ig, '').split(' ');
-      for ( var l = 0, partsLen = parts.length; l < partsLen; l++ ) {
-        var part = parts[ l ];
-        if ( swatches[ part ] ) {
-          swatches[ part ].forEach(function( swatch ) {
-            var classname = 'theme-' +  ( swatch !== part ? part + '-' : '' ) + swatch;
-            var description = swatch.replace(/-/mg, ' ') + ( swatch !== part ? ' ' + part : '' )
-
-            list.innerHTML += template.replace(/\{\{classname\}\}/gmi, classname ).replace(/\{\{description\}\}/gmi, description );
-          });
-        }
-      }
-    }
-  }
-
-  highlightAccessibilityColorIssues( document.querySelectorAll( '.palette > .swatch > .example' ) );
-
-  function highlightAccessibilityColorIssues( swatches ) {
-    var i = swatches.length - 1;
-
-    var docColor = getStyle( document.body, 'color', 'color' );
-    var docBackground = getStyle( document.body, 'backgroundColor', 'background-color' );
-
-    while ( i >= 0 ) {
-      var el = swatches[ i-- ];
-
-      var elColor = getStyle(el, 'color', 'color' ) || docColor;
-      var elBackground = getStyle( el, 'backgroundColor', 'background-color' ) || docBackground;
-
-      var color = new Color( elColor );
-      var bgColor = new Color( elBackground.replace( 'rgba(0, 0, 0, 0)', docBackground ) );
-
-
-      var contrast = bgColor.contrast( color );
-
-      var level = ( el.parentNode.className.match(/(disabled|muted)+/i) ? 0 : 4.5 );
-      var compliance = contrast > level ? 'PASS' : 'FAIL';
-
-      el.parentNode.setAttribute( 'title', 'Contrast ratio is ' + contrast + ':' + level + '. ' + compliance );
-
-      if ( compliance === 'FAIL' ) {
-        var themeName = el.parentNode.className.replace( 'swatch', '' );
-        el.parentNode.className += ' color-error';
-        console.log( themeName, elColor, elBackground, contrast, level, compliance );
-      }
-    }
-  }
-
-  function getStyle(el, styleProp, styleName) {
-    var x = el;
-
-    if (x.currentStyle) {
-      var y = x.currentStyle[styleProp];
-
-    } else if (window.getComputedStyle) {
-      var y = document.defaultView.getComputedStyle(x,null).getPropertyValue(styleName);
-    }
-
-    return y;
-  }
-}, 50);
-</script>
+      <section id="tables-emphasis">
+  <table>
+    <colgroup>
+      <col class="span1">
+      <col class="span7">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>Class</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+          <code>.success</code>
+        </td>
+        <td>Indicates a successful or positive action.</td>
+      </tr>
+      <tr>
+        <td>
+          <code>.error</code>
+        </td>
+        <td>Indicates a dangerous or potentially negative action.</td>
+      </tr>
+      <tr>
+        <td>
+          <code>.warning</code>
+        </td>
+        <td>Indicates a warning that might need attention.</td>
+      </tr>
+      <tr>
+        <td>
+          <code>.info</code>
+        </td>
+        <td>Used as an alternative to the default styles.</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="guide-example example-processed">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Product</th>
+          <th>Payment Taken</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="success">
+          <td>1</td>
+          <td>TB - Monthly</td>
+          <td>01/04/2012</td>
+          <td>Approved</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>TB - Monthly</td>
+          <td>02/04/2012</td>
+          <td>--</td>
+        </tr>
+        <tr class="error">
+          <td>3</td>
+          <td>TB - Monthly</td>
+          <td>03/04/2012</td>
+          <td>Declined</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>TB - Monthly</td>
+          <td>04/04/2012</td>
+          <td>--</td>
+        </tr>
+        <tr class="warning">
+          <td>5</td>
+          <td>TB - Monthly</td>
+          <td>05/04/2012</td>
+          <td>Pending</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>TB - Monthly</td>
+          <td>06/04/2012</td>
+          <td>--</td>
+        </tr>
+        <tr class="info">
+          <td>7</td>
+          <td>TB - Monthly</td>
+          <td>07/04/2012</td>
+          <td>Call in to confirm</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>TB - Monthly</td>
+          <td>08/04/2012</td>
+          <td>--</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+<pre class="prettyprint linenums"><code>...
+  &lt;tr class=&quot;success&quot;&gt;
+  &lt;td&gt;1&lt;/td&gt;
+  &lt;td&gt;TB - Monthly&lt;/td&gt;
+  &lt;td&gt;01/04/2012&lt;/td&gt;
+  &lt;td&gt;Approved&lt;/td&gt;
+  &lt;/tr&gt;
+  ...</code></pre>
+</section>
 
     </article>
 
@@ -298,7 +292,10 @@ setTimeout(function() {
       <ul>
         <ul>
           <li>
-            <a href="palette.html">Palette</a>
+            <a href="tables.html">Tabular data</a>
+          </li>
+          <li>
+            <a href="emphasising-information.html">Emphasising information</a>
           </li>
         </ul>
       </ul>
@@ -315,6 +312,9 @@ setTimeout(function() {
             </li>
             <li>
               <a href="../../basic-elements.html">Basic elements</a>
+            </li>
+            <li>
+              <a href="../../design-patterns.html">Design patterns</a>
             </li>
           </ul>
         </div>
