@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Default styles</title>
+  <title>Form controls</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="basic-elements/forms/default-styles.html">
+  <link rel="canonical" href="basic-elements/form-controls.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -135,13 +135,13 @@
       <div class="tophat-inner">
         <ul class="menu">
           <li>
-            <a href="../../index.html">Home</a>
+            <a href="../index.html">Home</a>
           </li>
           <li>
-            <a href="../../basic-elements.html">Basic elements</a>
+            <a href="../basic-elements.html">Basic elements</a>
           </li>
           <li>
-            <a href="../../design-patterns.html">Design patterns</a>
+            <a href="../design-patterns.html">Design patterns</a>
           </li>
         </ul>
       </div>
@@ -154,51 +154,158 @@
     <div class="container">
       <ol class="breadcrumb">
         <li>
-          <a href="../../../../../../..">Home</a>
+          <a href="../../../../../..">Home</a>
         </li>
         <li>
-          <a href="../../basic-elements.html">Basic elements</a>
-        </li>
-        <li>
-          <a href="../forms.html">Form controls</a>
+          <a href="../basic-elements.html">Basic elements</a>
         </li>
         <li class="active">
-          Default styles
+          Form controls
         </li>
       </ol>
 
-      <h1>Default styles</h1>
+      <h1>Form controls</h1>
 
-      <p class="lead">A responsive UI framework for NICE online services and web applications</p>
+      <p class="lead">Examples of standard form controls supported in an example form layout.</p>
     </div>
   </header>
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <p>Individual form controls receive styling, but without any required base class on the <code>&lt;form&gt;</code> or large changes in markup. Results in stacked, left-aligned labels on top of form controls.</p>
-<div class="guide-example">
-  <form role="form">
-    <div class="form-group">
-      <label for="exampleInputEmail">Email address</label>
-      <input type="email" id="exampleInputEmail" placeholder="Enter email">
+      <h2 id="inputs">Inputs</h2>
+<p>Most common form control, text-based input fields. Includes support for all HTML5 types:
+<code>text</code>, <code>password</code>, <code>datetime</code>, <code>datetime-local</code>,
+<code>date</code>, <code>month</code>, <code>time</code>, <code>week</code>, <code>number</code>,
+<code>email</code>, <code>url</code>, <code>search</code>, <code>tel</code>, and <color>color</color>.</p>
+<p>Requires the use of a specified <code>type</code> at all times.</p>
+<div class="alert alert-info">
+  <p><strong>Note:</strong> the <code>file</code> type input field needs to be marked up dfferently so
+    is not included within this basic control section</p>
+  </div>
+
+  <form class="guide-example">
+    <input type="text" placeholder="Text input">
+  </form>
+
+<h2 id="textarea">Textarea</h2>
+<p>  Form control which supports multiple lines of text. Change <code>rows</code> attribute as necessary.</p>
+  <form class="guide-example">
+    <textarea rows="3"></textarea>
+  </form>
+
+<h2 id="checkboxes-and-radios">Checkboxes and radios</h2>
+<p>  Checkboxes are for selecting one or several options in a list, while radios are for selecting one option from many.</p>
+<p>  A checkbox or radio with the <code>disabled</code> attribute will be styled appropriately. To have the <code>&lt;label&gt;</code> for the checkbox or radio also display a &quot;not-allowed&quot; cursor when the user hovers over the label, add the <code>.disabled</code> class to your <code>&lt;input&gt;</code>, or <code>&lt;fieldset&gt;</code>.</p>
+<h3 id="default-stacked-">Default (stacked)</h3>
+  <form class="guide-example">
+    <div class="checkbox">
+      <label>
+        <input type="checkbox" value="">
+        Option one is this and that&mdash;be sure to include why it&#39;s great
+      </label>
     </div>
-    <div class="form-group">
-      <label for="exampleInputPassword">Password</label>
-      <input type="password" id="exampleInputPassword" placeholder="Password">
+    <div class="checkbox disabled">
+      <label>
+        <input type="checkbox" value="" disabled>
+        Option two is disabled
+      </label>
     </div>
-    <div class="form-group">
-      <label for="exampleInputFile">File input</label>
-      <input type="file" id="exampleInputFile">
-      <p class="help-text">Example block-level help text here.</p>
+    <br class="example-ignore"/>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        Option one is this and that&mdash;be sure to include why it&#39;s great
+      </label>
     </div>
-    <div class="form-group checkbox">
-      <label><input type="checkbox"> Check me out</label>
+    <div class="radio">
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+        Option two can be something else and selecting it will deselect option one
+      </label>
     </div>
-    <div class="form-group">
-      <button type="submit" class="btn">Submit</button>
+    <div class="radio disabled">
+      <label>
+        <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+        Option three is disabled
+      </label>
     </div>
   </form>
-</div>
+
+<h3 id="inline-checkboxes-and-radios">Inline checkboxes and radios</h3>
+<p>  Add the <code>.inline</code> class to a series of checkboxes or radios for controls appear on the same line.</p>
+  <form class="guide-example">
+    <label class="checkbox inline">
+      <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+    </label>
+    <label class="checkbox inline">
+      <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+    </label>
+    <label class="checkbox inline">
+      <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+    </label>
+    <br class="example-ignore"/>
+    <label class="radio inline">
+      <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 1
+    </label>
+    <label class="radio inline">
+      <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 2
+    </label>
+    <label class="radio inline">
+      <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"> 3
+    </label>
+  </form>
+
+<h2 id="selects">Selects</h2>
+<p>  Use the default option or specify a <code>multiple=&quot;multiple&quot;</code> to show multiple options at once.</p>
+  <form class="guide-example">
+    <select>
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+
+    <br>
+
+    <select multiple="multiple">
+      <option>1</option>
+      <option>2</option>
+      <option>3</option>
+      <option>4</option>
+      <option>5</option>
+    </select>
+  </form>
+
+<h2 id="static-control">Static control</h2>
+<p>  When you need to place plain text next to a form label within a form, use the <code>.static-control</code> class on a <code>&lt;p&gt;</code>.</p>
+  <div class="guide-example">
+    <form class="horizontal" role="form">
+      <div class="form-group">
+        <label>Email</label>
+        <p class="form-control-static">email@example.com</p>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword">Password</label>
+        <input type="password" id="inputPassword" placeholder="Password">
+      </div>
+    </form>
+  </div>
+
+  <div class="guide-example">
+    <form class="inline" role="form">
+      <div class="form-group">
+        <label>Email</label>
+        <p class="form-control-static">email@example.com</p>
+      </div>
+      <div class="form-group">
+        <label for="inputPassword2">Password</label>
+        <input type="password" id="inputPassword2" placeholder="Password">
+      </div>
+      <button type="submit" class="btn">Confirm identity</button>
+    </form>
+  </div>
+
 
     </article>
 
@@ -206,16 +313,7 @@
       <ul>
         <ul>
           <li>
-            <a href="default-styles.html">Default styles</a>
-          </li>
-          <li>
-            <a href="layout-options.html">Layout options</a>
-          </li>
-          <li>
-            <a href="basic-controls.html">Basic controls</a>
-          </li>
-          <li>
-            <a href="control-states.html">Control states</a>
+            <a href="form-controls/control-states.html">Control states</a>
           </li>
         </ul>
       </ul>
@@ -228,13 +326,13 @@
         <div class="container">
           <ul class="nav nav-pills">
             <li>
-              <a href="../../index.html">Home</a>
+              <a href="../index.html">Home</a>
             </li>
             <li>
-              <a href="../../basic-elements.html">Basic elements</a>
+              <a href="../basic-elements.html">Basic elements</a>
             </li>
             <li>
-              <a href="../../design-patterns.html">Design patterns</a>
+              <a href="../design-patterns.html">Design patterns</a>
             </li>
           </ul>
         </div>
@@ -292,46 +390,5 @@
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/google-code-prettify/prettify.js"></script>
   
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/application.js"></script>
-
-  <script>
-  (function() {
-    $('.guide-example').each(function() {
-      if ( $(this).is('.example-processed') ) return;
-
-      var $example = $(this).clone();
-
-      $example.children().each( processChild );
-
-      var $code = $('<code/>').text( $example.html().replace( '\n', '' ).replace( /=""/mg, '' ) );
-
-      $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
-
-      $(this).addClass('example-processed');
-    });
-
-    function processChild() {
-      var $child = $(this);
-
-      if ( $child.is('.example-ignore') ) {
-        if ( this.nextSibling && this.nextSibling.nodeType === 3 && this.nextSibling.data.trim() === '' ) {
-          $( this.nextSibling ).remove();
-        }
-        $child.remove();
-        return;
-      }
-
-      if ( $child.is('.example-tldr') ) {
-        $child.removeClass('example-tldr').html( '...' );
-        if ($child.attr('class').trim() === '') {
-          $child.removeAttr('class');
-        }
-      }
-
-      $child.children().each( processChild );
-    }
-  })();
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 </body>
 </html>

@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Form controls</title>
+  <title>Form layout</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="basic-elements/forms.html">
+  <link rel="canonical" href="design-patterns/form-layout.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -157,38 +157,53 @@
           <a href="../../../../../..">Home</a>
         </li>
         <li>
-          <a href="../basic-elements.html">Basic elements</a>
+          <a href="../design-patterns.html">Design patterns</a>
         </li>
         <li class="active">
-          Form controls
+          Form layout
         </li>
       </ol>
 
-      <h1>Form controls</h1>
+      <h1>Form layout</h1>
 
-      <p class="lead">A responsive UI framework for NICE online services and web applications</p>
+      <p class="lead">Included with NICE.UI are three optional form layouts for common use cases</p>
     </div>
   </header>
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      
+      <p>Individual form controls receive styling, but without any required base class on the <code>&lt;form&gt;</code> or large changes in markup. Results in stacked, left-aligned labels on top of form controls.</p>
+<div class="guide-example">
+<form role="form">
+<div class="form-group">
+<label for="exampleInputEmail">Email address</label>
+<input type="email" id="exampleInputEmail" placeholder="Enter email">
+</div>
+<div class="form-group">
+<label for="exampleInputPassword">Password</label>
+<input type="password" id="exampleInputPassword" placeholder="Password">
+</div>
+<div class="form-group">
+<label for="exampleInputFile">File input</label>
+<input type="file" id="exampleInputFile">
+<p class="help-text">Example block-level help text here.</p>
+</div>
+<div class="form-group checkbox">
+<label><input type="checkbox"> Check me out</label>
+</div>
+<div class="form-group">
+<button type="submit" class="btn">Submit</button>
+</div>
+</form>
+</div>
+
     </article>
 
     <aside class="content content-secondary">
       <ul>
         <ul>
           <li>
-            <a href="forms/default-styles.html">Default styles</a>
-          </li>
-          <li>
-            <a href="forms/layout-options.html">Layout options</a>
-          </li>
-          <li>
-            <a href="forms/basic-controls.html">Basic controls</a>
-          </li>
-          <li>
-            <a href="forms/control-states.html">Control states</a>
+            <a href="form-layout/layout-options.html">Layout options</a>
           </li>
         </ul>
       </ul>
