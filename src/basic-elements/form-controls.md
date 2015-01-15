@@ -157,4 +157,3 @@ Requires the use of a specified <code>type</code> at all times.
       <button type="submit" class="btn">Confirm identity</button>
     </form>
   </div>
-  

@@ -172,15 +172,38 @@
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      
+      <h2 id="including-the-layout-extension">Including the Layout extension</h2>
+<p>The NICE UI library has a set of pre-defined layouts that have been designed to
+best convey information in a clean and readable format.</p>
+<p>To include the layouts extension you need to include the following link in
+your HTML5 document <code>&lt;head&gt;</code>.</p>
+<pre class="prettyprint linenums"><code>&lt;!-- Layouts --&gt;
+&lt;link rel="stylesheet" href="https://cdn.nice.org.uk/v4.0.0/css/ui.layouts.css"&gt;</code></pre>
+
+<h3 id="combined">Combined</h3>
+<p>You will also get the layouts extension within the basic combined bundle.</p>
+<pre class="prettyprint linenums"><code>&lt;!-- Latest compiled and minified CSS --&gt;
+&lt;link rel="stylesheet" href="https://cdn.nice.org.uk/v4.0.0/css/ui.css"&gt;</code></pre>
+
+<h2 id="the-basic-layout">The basic layout</h2>
+<p>A basic document should follow the basic structure provided by the appropriate HTML
+elements <code>body</code>, <code>header</code>, <code>footer</code> and <code>main</code></p>
+<pre class="prettyprint linenums"><code>&lt;body&gt;
+  &lt;header role="banner"&gt;...&lt;/header&gt;
+
+  &lt;main class="layout" role="main"&gt;
+  ...
+  &lt;/main&gt;
+
+  &lt;footer role="contentinfo"&gt;...&lt;/footer&gt;
+&lt;/body&gt;
+</code></pre>
+
     </article>
 
     <aside class="content content-secondary">
       <ul>
         <ul>
-          <li>
-            <a href="layout/basic.html">Basic layout</a>
-          </li>
           <li>
             <a href="layout/two-column.html">Two column layout</a>
           </li>

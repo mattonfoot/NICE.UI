@@ -1,4 +1,5 @@
 ---
+section: Basic elements
 title: Palette
 date: 2015-01-13
 template: section.html

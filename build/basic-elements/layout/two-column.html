@@ -178,7 +178,7 @@
       <p>Content areas are added to a layout by using the <code>.content</code> class along with
 an additional priority class of either <code>.content-primary</code> or
 <code>.content-secondary</code>.</p>
-<div class="alert alert-info">
+<div class="note">
   <p><strong>Note:</strong> Content areas only appear as columns on devices with a
     screen size of <code>768px</code> or wider.</p>
 
@@ -213,12 +213,18 @@ top of the main article on a narrow screen device.</p>
 &lt;/main&gt;
 </code></pre>
 
-<h3 id="options">Options</h3>
+<h3 id="responsive-navigation-below-main-content">Responsive navigation below main content</h3>
 <p>By adding the <code>.layout-first-right</code> class to the <code>.layout</code>
 classed element and reversing the order of the <code>.content</code> classed
 elements you can reverse the way content areas collapse on a narrow screen device.</p>
 <pre class="prettyprint linenums"><code>&lt;main class="layout layout-first-right" role="main"&gt;
+  &lt;article class="content content-primary" role="article"&gt;
   ...
+  &lt;/article&gt;
+
+  &lt;div class="content content-secondary"&gt;
+    &lt;nav role="navigation"&gt;...&lt;/nav&gt;
+  &lt;/div&gt;
 &lt;/main&gt;
 </code></pre>
 
@@ -227,9 +233,6 @@ elements you can reverse the way content areas collapse on a narrow screen devic
     <aside class="content content-secondary">
       <ul>
         <ul>
-          <li>
-            <a href="basic.html">Basic layout</a>
-          </li>
           <li>
             <a href="two-column.html">Two column layout</a>
           </li>

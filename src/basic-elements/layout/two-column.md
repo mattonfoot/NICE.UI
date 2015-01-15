@@ -3,7 +3,7 @@ section: Layout
 title: Two column layout
 description: Provides a standard "Two Column" page layout for presenting articles or topics.
 template: section.html
-nav_sort: 2
+nav_sort: 1
 nav_groups:
   - primary
 ---
@@ -12,7 +12,7 @@ Content areas are added to a layout by using the <code>.content</code> class alo
 an additional priority class of either <code>.content-primary</code> or
 <code>.content-secondary</code>.
 
-<div class="alert alert-info">
+<div class="note">
   <p><strong>Note:</strong> Content areas only appear as columns on devices with a
     screen size of <code>768px</code> or wider.</p>
 
@@ -51,13 +51,19 @@ top of the main article on a narrow screen device.
 &lt;/main&gt;
 </code></pre>
 
-### Options
+### Responsive navigation below main content
 
 By adding the <code>.layout-first-right</code> class to the <code>.layout</code>
 classed element and reversing the order of the <code>.content</code> classed
 elements you can reverse the way content areas collapse on a narrow screen device.
 
 <pre class="prettyprint linenums"><code>&lt;main class="layout layout-first-right" role="main"&gt;
+  &lt;article class="content content-primary" role="article"&gt;
   ...
+  &lt;/article&gt;
+
+  &lt;div class="content content-secondary"&gt;
+    &lt;nav role="navigation"&gt;...&lt;/nav&gt;
+  &lt;/div&gt;
 &lt;/main&gt;
 </code></pre>

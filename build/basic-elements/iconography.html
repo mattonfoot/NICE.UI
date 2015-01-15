@@ -172,13 +172,32 @@
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <h2 id="class-names">Class names</h2>
-<p>Include NICE Glyphs as icons into your web pages by using the <code>.glyph-*</code> classes.</p>
-<p><div class="glyph-grid" id="classes-examples"></div></p>
-<pre class="prettyprint"><code>&lt;i aria-hidden="true" class="glyph-twitter"&gt;&lt;/i&gt;
-&lt;i aria-hidden="true" class="glyph-print"&gt;&lt;/i&gt;
-&lt;i aria-hidden="true" class="glyph-syndication"&gt;&lt;/i&gt;
+      <h2 id="including-the-iconography-extension">Including the Iconography extension</h2>
+<p>The NICE UI library has a set of brand and service related symbols as well as
+additional glyphs that have been designed to compliment information.</p>
+<p>To include the iconography extension you need to include the following link in
+your HTML5 document <code>&lt;head&gt;</code>.</p>
+<pre class="prettyprint linenums"><code>&lt;!-- Iconography --&gt;
+&lt;link rel="stylesheet" href="https://cdn.nice.org.uk/v4.0.0/css/ui.iconography.css"&gt;</code></pre>
+
+<h3 id="combined">Combined</h3>
+<p>You will also get the iconography extension within the basic combined bundle.</p>
+<pre class="prettyprint linenums"><code>&lt;!-- Latest compiled and minified CSS --&gt;
+&lt;link rel="stylesheet" href="https://cdn.nice.org.uk/v4.0.0/css/ui.css"&gt;</code></pre>
+
+<h2 id="utilising-glyphs">Utilising glyphs</h2>
+<p>Include glyphs as icons into your web pages by using the <code>.glyph-*</code> classes.</p>
+<div class="glyph-grid" id="classes-examples"></div>
+<pre class="prettyprint"><code>&lt;span aria-hidden=&quot;true&quot; class=&quot;glyph-twitter&quot;&gt;&lt;/span&gt;
+&lt;span aria-hidden=&quot;true&quot; class=&quot;glyph-print&quot;&gt;&lt;/span&gt;
+&lt;span aria-hidden=&quot;true&quot; class=&quot;glyph-syndication&quot;&gt;&lt;/span&gt;
 </code></pre>
+
+<div class="note note-warning">
+  <p><strong>Be aware:</strong> If you add a <code>.glyph-*</code> class on an element that is not specifically for displaying icon glyphs then you will find that in browsers below IE8 that the content of the element is replaced by just the glyph.</p>
+
+  <p>Please include icon glyphs as a separate html element inline with your content.</p>
+</div>
 
 <script type="text/javascript" defer>
 setTimeout(function() {
@@ -267,7 +286,7 @@ setTimeout(function() {
   $('#classes-examples').html(
     $.map(icon_classes, function( value, i ) {
       var ico_class = 'glyph-' + value;
-      return '<span class="box1"><i aria-hidden="true" class="' + ico_class + '"></i>&nbsp;' + ico_class + '</span>';
+      return '<span class="box1"><span aria-hidden="true" class="' + ico_class + '"></span>&nbsp;' + ico_class + '</span>';
       }).join('')
     );
 
