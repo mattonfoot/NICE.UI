@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Tophat</title>
+
+  <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="">
+  <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
+  
+  <link rel="canonical" href="design-patterns/menus/tophat.html">
+  
+  <!--[if lt IE 9]>
+  <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
+  <![endif]-->
+  
+  <!-- Le styles -->
+  <link rel="stylesheet" href="/styles/ui.css">
+  <link rel="stylesheet" href="/styles/layout.css">
+  <link rel="stylesheet" href="/styles/iconography.css">
+  
+  <!-- Fav and touch icons -->
+  <link rel="shortcut icon" href="//cdn.nice.org.uk/V3/Content/nice/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" href="//cdn.nice.org.uk/V3/Content/nice/favicon-152.png">
+  <meta name="msapplication-TileColor" content="#fafafb">
+  <meta name="msapplication-TileImage" content="//cdn.nice.org.uk/V3/Content/nice/favicon-144.png">
+  
+  <!-- docs specific styles -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" />
+  <style>
+  .container, .layout {
+    width: 95.74468085%;
+    max-width: 1170px;
+    margin: 0 auto;
+  }
+  
+  .guide-example {
+    position: relative;
+    padding: 45px 15px 15px;
+    margin: 0;
+    background-color: #fff;
+    border-color: #ddd;
+    border-style: solid;
+    border-width: 1px;
+  }
+  
+  .guide-example-tight > p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  .guide-example:after {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #959595;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    content: "Example";
+  
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  
+  .guide-example + pre.prettyprint {
+    margin-top: 0;
+    border-top-width: 0;
+  }
+  pre.prettyprint {
+    border: 1px solid #ddd;
+  }
+  .prettyprint ol.linenums {
+    padding-left: 48px;
+    padding-left: 4.8em;
+  }
+  li.L0, li.L1, li.L2, li.L3,
+  li.L5, li.L6, li.L7, li.L8
+  { list-style-type: decimal !important }
+  
+  .glyph-grid {
+    zoom: 1;
+  }
+  .glyph-grid:before,
+  .glyph-grid:after {
+    content: "";
+    display: table;
+  }
+  .glyph-grid:after {
+    clear: both;
+  }
+  
+  .glyph {
+    float: left;
+    text-align: center;
+    background: #f7f7f7;
+    padding: .75em;
+    margin: .75em 1.5em .75em 0;
+    width: 7.5em;
+  }
+  .glyph input {
+    font-size: .8em;
+    text-align: center;
+  }
+  .fs1 {
+    font-family: 'NICE Glyphs';
+    font-size: 2em;
+    line-height: 2em;
+    font-style: normal;
+  }
+  .box1 {
+    display: inline-block;
+    width: 15em;
+    padding: .25em .5em;
+    background: #f7f7f7;
+    margin: .5em 1em .5em 0;
+  }
+  
+  .glyph .glyph-stack {
+    color: #fff;
+  }
+  .glyph .glyph-stack .glyph-stack-base {
+    color: #111;
+  }
+  </style>
+</head>
+
+<body>
+  <header class="nice-tophat" role="banner">
+    <div class="nice-global" id="nice-global">
+      <div class="tophat-inner">
+        <ul class="menu" role="navigation">
+          <li>
+            <a href="../../index.html">Home</a>
+          </li>
+          <li>
+            <a href="../../basic-elements.html">Basic elements</a>
+          </li>
+          <li>
+            <a href="../../design-patterns.html">Design patterns</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header
+  ================================================== -->
+  <header class="page-header">
+    <div class="container">
+      <ol class="breadcrumb">
+        <li>
+          <a href="../../../../../../..">Home</a>
+        </li>
+        <li>
+          <a href="../../design-patterns.html">Design patterns</a>
+        </li>
+        <li>
+          <a href="../menus.html">Menus</a>
+        </li>
+        <li class="active">
+          Tophat
+        </li>
+      </ol>
+
+      <h1>Tophat</h1>
+
+      <p class="lead">A design pattern used across all services to provide easy access to other services and account information</p>
+    </div>
+  </header>
+
+  <main class="layout layout-first-right" role="main">
+    <article class="content content-primary">
+      <h2 id="including-the-tophat">Including the Tophat</h2>
+<p>The NICE UI library provides a standard component that must be included on all
+web pages to ensure uniformity across services. For an example of the basic
+Tophat just look to <a href="#">the top of this web page</a>.</p>
+<p>To include the component you need to include the following script tag before
+other script tags in your HTML5 document <code>&lt;body&gt;</code>.</p>
+<pre class="prettyprint linenums"><code>&lt;!-- Tophat script --&gt;
+&lt;script src="https://cdn.nice.org.uk/v4.0.0/scripts/ui.tophat.js" async&gt;&lt;/script&gt;</code></pre>
+
+<p>The tophat consists of three tiers of navigation each customisable and
+configurable in different ways;</p>
+<h3 id="the-top-tier">The top tier</h3>
+<p>Displaying the NICE Logo to consistently tie each service into the
+group. Several navigational links are provided that take the user to each of our
+core service offerings. Additional it provides access to the NICE accounts system
+allowing a user to register and manage their profile across the NICE services.</p>
+<h3 id="the-middle-tier">The middle tier</h3>
+<p>Closed by default on short screen devices to provide as much room for visible
+content as possible, this tier provides access to secondary services within the
+evidence service group.</p>
+<h3 id="the-bottom-tier">The bottom tier</h3>
+<p>The most configurable area of the tophat and is unique to
+each service if it is included. See the options for advanced ways to tailor this
+tier to your service but the most basic setup for this tier is to display the
+main service navigation.</p>
+<pre class="prettyprint linenums"><code>&lt;!-- Tophat placeholder --&gt;
+&lt;header class="nice-tophat" role="banner"&gt;
+  &lt;div class="nice-global" id="nice-global"&gt;
+    &lt;div class="tophat-inner"&gt;
+      &lt;ul class="menu" role="navigation"&gt;
+        &lt;li&gt;&lt;a href="/" rel="home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        ...
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;
+</code></pre>
+
+<h3 id="options">Options</h3>
+<p>The Tophat component is highly configurable giving several options that control
+its visible look as well as the features included. Options can be passed via
+data attributes on the script tag simply append the option name to data-, as in
+data-service=&quot;&quot;.</p>
+<p>The following is a summary of the available options;</p>
+<table>
+  <thead>
+    <tr>
+      <th>name</th><th>type</th><th>default</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><var>service</var></td><td>String</td><td><samp>&#39;&#39;</samp></td>
+      <td>The name of this service name so that it can be highlighted in the top tier.
+        <span class="text-info"><strong>Note: </strong> there is no need to use this if it is an evidence service use the <code>evidence</code> option.</span></td>
+    </tr>
+    <tr>
+      <td><var>wtrealm</var></td><td>string</td><td><samp>&#39;&#39;</samp></td>
+      <td>If present the value will be passed on to the accounts system to identify the actual root of a particular service. By default the accounts system assume the domain root is the correct please to send authentication information.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="a-consistent-search-experience">A consistent search experience</h2>
+<p>including the <code>data-search</code> attribute will force the tophat to include
+a search form that provides the consistent search experience design by the
+Search and Information Architecture Team.</p>
+<pre class="prettyprint linenums"><code>&lt;!-- Tophat script --&gt;
+  &lt;script src="https://cdn.nice.org.uk/v4.0.0/scripts/ui.tophat.js"
+  data-search="/search?q=%term"
+  async&gt;&lt;/script&gt;</code></pre>
+
+<p>When the search field is included within the bottom tier additional options are
+available incase the typeahead component has also been included. The options are
+designed to work with <a href="https://twitter.github.io/typeahead.js/" target="_blank">twitters opensource typeahead.js</a>.</p>
+<p>Include the typeahead component by also including the following <code>script</code>
+tags directly after the tophat <code>script</code> tag. jquery is a dependency
+of the twitter typeahead.</p>
+<pre class="prettyprint linenums"><code>&lt;!-- jquery script --&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.2/jquery.min.js" &gt;&lt;/script&gt;
+
+&lt;!-- Typeahead script --&gt;
+&lt;script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.4/dist/typeahead.bundle.min.js" &gt;&lt;/script&gt;</code></pre>
+
+<p>The following is a summary of the additional typeahead options;</p>
+<table>
+  <thead>
+    <tr>
+      <th>name</th><th>type</th><th>default</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><var>search</var></td><td>String</td><td><samp>&#39;&#39;</samp></td>
+      <td>The search url used by this service. If the url is empty then the search field will not be included in the lower tier. The standard template text of <code>%term</code> will get replace by the appropriate search term entered into the search field.</td>
+    </tr>
+    <tr>
+      <td><var>typeaheadtype</var></td><td>String</td><td><samp>&#39;remote&#39;</samp></td>
+      <td>Can be set to <samp>&#39;local&#39;</samp> in order to utilise a javascript array located on the <code>window</code> object</td>
+    </tr>
+    <tr>
+      <td><var>typeaheadsource</var></td><td>String</td><td><samp>&#39;/typeahead?term=%term&#39;</samp></td>
+      <td>Indicates the remote service URL the typeahead will request results from. If the option <var>typeaheadtype</var> is set to local then this must be the <code>window</code> object property name that is a valid string array. Again the standard template text of <code>%term</code> will get replace by the appropriate search term entered into the search field.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="nice-evidence-services-microsites">NICE Evidence services microsites</h2>
+<p>As mentioned in the list of options a NICE evidence service should use the
+<code>data-evidence</code> attribute to highlight the service, this will
+automatically highlight the evidence services item in the top tier and open the
+evidence menu by default on that service.</p>
+<table>
+  <thead>
+    <tr>
+      <th>name</th><th>type</th><th>default</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><var>evidence</var></td><td>String</td><td><samp>&#39;&#39;</samp></td>
+      <td>The name of this evidence service name so that it can be highlighted in the middle tier. If set it will automatically overide the <code>service</code> option and set it to &quot;evidence&quot;.</td>
+    </tr>
+  </tbody>
+</table>
+
+<pre class="prettyprint linenums"><code>&lt;!-- Tophat script --&gt;
+&lt;script src="https://cdn.nice.org.uk/v4.0.0/scripts/ui.tophat.js"
+  data-evidence="bnf"
+  data-search="/formulary/bnf/current/search"
+  data-typeaheadsource="/formulary/bnf/autocomplete?%query"
+  data-wtrealm="http://www.evidence.nhs.uk/formulary/bnf/current/"
+  async&gt;&lt;/script&gt;</code></pre>
+
+<p>Additionally you may want to configure additonal microsite branding and livery
+that will be integrated into the bottom tier. An example of the BNF Microsites
+tophat placeholder is provided for reference. To see the result of using this
+placeholder please refer to the actual <a href="http://www.evidence.nhs.uk/formulary/bnf/current" target="_blank">BNF website</a></p>
+<pre class="prettyprint linenums"><code>&lt;!-- BNF Tophat placeholder --&gt;
+&lt;header class="nice-tophat" role="banner"&gt;
+  &lt;div class="nice-global nice-partner" id="nice-global"&gt;
+    &lt;div class="tophat-inner"&gt;
+      &lt;a href="/formulary/bnf/current/" class="partner-logo"&gt;&lt;img src="/formulary/content/nice/bnf-220-logo.png"/&gt;&lt;/a&gt;
+
+      &lt;span class="partner-brand"&gt;British National Formulary &lt;small class="pull-right"&gt;December 2014&lt;/small&gt;&lt;/span&gt;
+
+      &lt;ul class="menu" role="navigation"&gt;&lt;li&gt;&lt;a href="http://www.nice.org.uk/bnf-feedback"&gt;Leave feedback&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="/formulary/bnf/current/general-information-and-changes/changes"&gt;What's new&lt;/a&gt;&lt;/li&gt;
+        &lt;li class="active"&gt;&lt;a href="/formulary/bnf/current/"&gt;Formulary&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/header&gt;</code></pre>
+
+<h2 id="nice-internal-services">NICE Internal services</h2>
+<p>Along with the primary NICE services, several web services are closed to select
+audiences. These are classed as Internal services and are displayed slightly
+differently so as to be less intrusive visually.</p>
+<pre class="prettyprint linenums"><code>&lt;!-- Internal service Tophat script --&gt;
+&lt;script src="https://cdn.nice.org.uk/v4.0.0/scripts/ui.tophat.js" data-internal="Docs / Appraisals" data-home="/" async&gt;&lt;/script&gt;</code></pre>
+
+<p>Generally other options are ignored but again a placeholder can be included so
+that the bottom tier of the tophat is displayed with local service navigation.
+Also it is usual to set the additonal <code>data-home</code> attribute so that
+the logo directs users to the root of the current service rather than the global
+service root.</p>
+<table>
+  <thead>
+    <tr>
+      <th>name</th><th>type</th><th>default</th>
+      <th>description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><var>internal</var></td><td>String</td><td><samp>&#39;&#39;</samp></td>
+      <td>Certain services fall outside of the primary NICE services and so should set the name of their service in this option. The service name will be displayed after the short version of the NICE logo and the tophat will take on the inverted appearance.</td>
+    </tr>
+    <tr>
+      <td><var>home</var></td><td>String</td><td><samp>&#39;<a href="http://www.nice.org.uk">http://www.nice.org.uk</a>&#39;</samp></td>
+      <td>Sometimes there is a <strong>valid business reason</strong> for the logo to link to somewhere other than the root of the NICE service group.<br/><strong>Please use with caution!</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="tracking-events">Tracking events</h2>
+<p>The Tophat automatically integrates with Google Analytics and Google Tag Manager
+sending trackable events over their integration methods. The following tracking
+events are emitted if a tracking script is detected, if no tracking script is
+detected then it will attempt use the browsers developer console.</p>
+<table>
+  <thead>
+    <tr>
+      <th>Event Category</th><th>Event Action</th><th>Event Label</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><var>tophat</var></td><td>NICE Pathways</td><td>current url</td>
+      <td>Indicates that the &quot;NICE Pathways&quot; service link has been clicked in the tophat.</td>
+    </tr>
+    <tr>
+      <td><var>tophat</var></td><td>Guidance</td><td>current url</td>
+      <td>Indicates that the &quot;Guidance&quot; service link has been clicked in the tophat.</td>
+    </tr>
+    <tr>
+      <td><var>tophat</var></td><td>Standards and indicators</td><td>current url</td>
+      <td>Indicates that the &quot;Standards and indicators&quot; service link has been clicked in the tophat.</td>
+    </tr>
+    <tr>
+      <td><var>tophat</var></td><td>Evidence services expanded</td><td>current url</td>
+      <td>Indicates that the &quot;Evidence services&quot; service menu has been expanded.</td>
+    </tr>
+    <tr>
+      <td><var>tophat</var></td><td>Evidence services collapsed</td><td>current url</td>
+      <td>Indicates that the &quot;Evidence services&quot; service menu has been collapsed.</td>
+    </tr>
+    <tr>
+      <td><var>tophat</var></td><td>Sign in</td><td>current url</td>
+      <td>Indicates that the &quot;Sign in&quot; link has been clicked in the tophat.</td>
+    </tr>
+    <tr>
+      <td><var>tophat</var></td><td>Your Profile expanded</td><td>current url</td>
+      <td>Indicates that the users profile menu has been expanded.</td>
+    </tr>
+    <tr>
+      <td><var>tophat</var></td><td>Your Profile collapsed</td><td>current url</td>
+      <td>Indicates that the users profile menu has been collapsed.</td>
+    </tr>
+    <tr>
+      <td><var>tophat</var></td><td>Evidence search</td><td>current url</td>
+      <td>Indicates that the &quot;Evidence search&quot; service link has been clicked in the tophat.</td>
+    </tr>
+    <tr>
+      <td><var>tophat</var></td><td>BNF</td><td>current url</td>
+      <td>Indicates that the &quot;BNF&quot; service link has been clicked in the tophat.</td>
+    </tr>
+    <tr>
+      <td><var>tophat</var></td><td>BNFC</td><td>current url</td>
+      <td>Indicates that the &quot;BNFC&quot; service link has been clicked in the tophat.</td>
+    </tr>
+    <tr>
+      <td><var>tophat</var></td><td>CKS</td><td>current url</td>
+      <td>Indicates that the &quot;CKS&quot; service link has been clicked in the tophat.</td>
+    </tr>
+    <tr>
+      <td><var>tophat</var></td><td>Journals and databases</td><td>current url</td>
+      <td>Indicates that the &quot;Journals and databases&quot; service link has been clicked in the tophat.</td>
+    </tr>
+    <tr>
+      <td><var>search</var></td><td>term</td><td>search url</td>
+      <td>Indicates that the tophat search was used and includes details of what was searched.</td>
+    </tr>
+    <tr>
+      <td><var>Typeahead</var></td><td>suggestion</td><td>link url</td>
+      <td>Indicates that the typeahead provided a suggestion that was used.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="javascript-callback">JavaScript callback</h2>
+<p>Some services require a notification when the tophat has loaded. This is
+provided through a document level callback. One such use of the callback is to
+allow the UI of the web page to resize any elements that need to fill the
+available area.</p>
+<pre class="prettyprint linenums"><code>document.onTophatReady = function() {
+  // do something when the tophat has injected itself
+}</code></pre>
+
+    </article>
+
+    <aside class="content content-secondary">
+      <ul>
+        <ul>
+          <li>
+            <a href="tophat.html">Tophat</a>
+          </li>
+        </ul>
+      </ul>
+    </aside>
+  </main>
+
+  <footer class="footer-wrapper" role="contentinfo">
+    <div class="navbar navbar-inverse">
+      <div class="navbar-inner">
+        <div class="container">
+          <ul class="nav nav-pills">
+            <li>
+              <a href="../../index.html">Home</a>
+            </li>
+            <li>
+              <a href="../../basic-elements.html">Basic elements</a>
+            </li>
+            <li>
+              <a href="../../design-patterns.html">Design patterns</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <div class="footer">
+      <div class="container">
+        <a href="http://www.nice.org.uk" class="footer-logo"><i class="logo icon-nice-logo"></i></a>
+  
+        <ul class="nav nav-services">
+          <li><a href="http://pathways.nice.org.uk"><i class="icon-nice-pathways"></i> NICE Pathways</a></li>
+          <li><a href="http://www.nice.org.uk/guidance"><i class="icon-nice-guidance"></i> Guidance</a></li>
+          <li><a href="http://www.nice.org.uk/standards-and-indicators"><i class="icon-nice-standards"></i> Standards &amp;&nbsp;indicators</a></li>
+          <li><a href="http://www.evidence.nhs.uk"><i class="icon-nice-evidence"></i> Evidence services</a></li>
+        </ul>
+  
+        <div class="legal-panel">
+          <div class="social-panel">
+            <!-- AddThis Button BEGIN -->
+            <p class="social-follow addthis_toolbox">
+            Follow Us
+            <a class="addthis_button_twitter_follow" addthis:userid="nicecomms" target="_blank" title="Follow on Twitter" href="#">
+              <i class="icon-twitter"></i>
+            </a></p>
+            <!-- AddThis Button END -->
+          </div>
+  
+          <ul class="nav nav-legal">
+            <li><a href="//www.nice.org.uk/about">About</a></li>
+            <li><a href="//www.nice.org.uk/accessibility">Accessibility</a></li>
+            <li><a href="//www.nice.org.uk/freedom-of-information">Freedom of information</a></li>
+            <li><a href="//www.nice.org.uk/get-involved/contact-us">Contact Us</a></li>
+            <li><a href="//www.nice.org.uk/glossary">Glossary</a></li>
+            <li><a href="//www.nice.org.uk/terms-and-conditions">Terms and conditions</a></li>
+            <li><a href="//www.nice.org.uk/subscribe">Subscribe</a></li>
+          </ul>
+  
+          <p class="legal-copyright">Copyright &copy; 2014 National Institute for Health and Care Excellence. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  
+  <!-- Le javascript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="//cdn.nice.org.uk/V3/Scripts/nice/NICE.TopHat.js" async></script>
+  
+  <script src="//cdn.nice.org.uk/V3/Scripts/jquery/jquery-1.10.2.min.js"></script>
+  <script src="//cdn.nice.org.uk/V3/Scripts/twitter.bootstrap.js"></script>
+  <script src="//cdn.nice.org.uk/V3/Scripts/NICE.bootstrap.js"></script>
+  
+  <script src="//cdn.nice.org.uk/V3/Content/assets/js/google-code-prettify/prettify.js"></script>
+  
+  <script src="//cdn.nice.org.uk/V3/Content/assets/js/application.js"></script>
+
+  <script>
+  (function() {
+    $('.guide-example').each(function() {
+      if ( $(this).is('.example-processed') ) return;
+
+      var $example = $(this).clone();
+
+      $example.children().each( processChild );
+
+      var $code = $('<code/>').text( $example.html().replace( '\n', '' ).replace( /=""/mg, '' ) );
+
+      $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
+
+      $(this).addClass('example-processed');
+    });
+
+    function processChild() {
+      var $child = $(this);
+
+      if ( $child.is('.example-ignore') ) {
+        if ( this.nextSibling && this.nextSibling.nodeType === 3 && this.nextSibling.data.trim() === '' ) {
+          $( this.nextSibling ).remove();
+        }
+        $child.remove();
+        return;
+      }
+
+      if ( $child.is('.example-tldr') ) {
+        $child.removeClass('example-tldr').html( '...' );
+        if ($child.attr('class').trim() === '') {
+          $child.removeAttr('class');
+        }
+      }
+
+      $child.children().each( processChild );
+    }
+  })();
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
+</body>
+</html>

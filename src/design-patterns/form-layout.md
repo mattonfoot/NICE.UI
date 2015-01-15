@@ -3,7 +3,7 @@ section: Design patterns
 title: Form layout
 description: Included with NICE.UI are three optional form layouts for common use cases
 template: page.html
-nav_sort: 1
+nav_sort: 3
 nav_groups:
   - primary
 ---

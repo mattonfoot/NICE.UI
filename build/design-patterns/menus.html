@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Emphasis</title>
+  <title>Menus</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="basic-elements/typography/emphasis.html">
+  <link rel="canonical" href="design-patterns/menus.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -135,13 +135,13 @@
       <div class="tophat-inner">
         <ul class="menu" role="navigation">
           <li>
-            <a href="../../index.html">Home</a>
+            <a href="../index.html">Home</a>
           </li>
           <li>
-            <a href="../../basic-elements.html">Basic elements</a>
+            <a href="../basic-elements.html">Basic elements</a>
           </li>
           <li>
-            <a href="../../design-patterns.html">Design patterns</a>
+            <a href="../design-patterns.html">Design patterns</a>
           </li>
         </ul>
       </div>
@@ -154,91 +154,32 @@
     <div class="container">
       <ol class="breadcrumb">
         <li>
-          <a href="../../../../../../..">Home</a>
+          <a href="../../../../../..">Home</a>
         </li>
         <li>
-          <a href="../../basic-elements.html">Basic elements</a>
-        </li>
-        <li>
-          <a href="../typography.html">Typographic Elements</a>
+          <a href="../design-patterns.html">Design patterns</a>
         </li>
         <li class="active">
-          Emphasis
+          Menus
         </li>
       </ol>
 
-      <h1>Emphasis</h1>
+      <h1>Menus</h1>
 
-      <p class="lead">Make use of HTML5&#x27;s default emphasis tags.</p>
+      <p class="lead">A set of common menu patterns for providing methods of navigation around and between services</p>
     </div>
   </header>
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <h3 id="-code-lt-small-gt-code-"><code>&lt;small&gt;</code></h3>
-<p>For de-emphasizing inline or blocks of text, <small>use the small tag.</small></p>
-<div class="guide-example">
-  <p><small>This line of text is meant to be treated as fine print.</small></p>
-</div>
-
-<h3 id="-code-lt-em-gt-code-"><code>&lt;em&gt;</code></h3>
-<p>For emphasising a snippet of text.</p>
-<div class="guide-example">
-<p>The following snippet of text is <em>emphasised</em>.</p>
-</div>
-
-<h3 id="-code-lt-strong-gt-code-"><code>&lt;strong&gt;</code></h3>
-<p>For strongly emphasising a snippet of text.</p>
-<div class="guide-example">
-  <p>The following snippet of text is <strong>strongly emphasised</strong>.</p>
-</div>
-
-<h3 id="-code-lt-u-gt-code-"><code>&lt;u&gt;</code></h3>
-<p>For underlining a snippet of text.</p>
-<div class="guide-example">
-  <p>The following snippet of text is <u>underlined for emphasis</u>.</p>
-</div>
-
-<h3 id="-code-lt-mark-gt-code-"><code>&lt;mark&gt;</code></h3>
-<p>For marking a snippet of text such as a search term.</p>
-<div class="guide-example">
-  <p>The following snippet of text is <mark>marked as found</mark>.</p>
-</div>
-
-<div class="alert alert-info alert-block">
-  <h4>Feel free to also use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code></h4>
-
-  <p>In HTML5 <code>&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance while <code>&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p>
-</div>
-
+      
     </article>
 
     <aside class="content content-secondary">
       <ul>
         <ul>
           <li>
-            <a href="headings.html">Headings</a>
-          </li>
-          <li>
-            <a href="body-copy.html">Body copy</a>
-          </li>
-          <li>
-            <a href="emphasis.html">Emphasis</a>
-          </li>
-          <li>
-            <a href="advanced-emphasis.html">Advanced emphasis</a>
-          </li>
-          <li>
-            <a href="abbreviations.html">Abbreviations</a>
-          </li>
-          <li>
-            <a href="addresses.html">Addresses</a>
-          </li>
-          <li>
-            <a href="quotations.html">Quotations</a>
-          </li>
-          <li>
-            <a href="informative.html">Semantic information</a>
+            <a href="menus/tophat.html">Tophat</a>
           </li>
         </ul>
       </ul>
@@ -251,13 +192,13 @@
         <div class="container">
           <ul class="nav nav-pills">
             <li>
-              <a href="../../index.html">Home</a>
+              <a href="../index.html">Home</a>
             </li>
             <li>
-              <a href="../../basic-elements.html">Basic elements</a>
+              <a href="../basic-elements.html">Basic elements</a>
             </li>
             <li>
-              <a href="../../design-patterns.html">Design patterns</a>
+              <a href="../design-patterns.html">Design patterns</a>
             </li>
           </ul>
         </div>
@@ -315,46 +256,5 @@
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/google-code-prettify/prettify.js"></script>
   
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/application.js"></script>
-
-  <script>
-  (function() {
-    $('.guide-example').each(function() {
-      if ( $(this).is('.example-processed') ) return;
-
-      var $example = $(this).clone();
-
-      $example.children().each( processChild );
-
-      var $code = $('<code/>').text( $example.html().replace( '\n', '' ).replace( /=""/mg, '' ) );
-
-      $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
-
-      $(this).addClass('example-processed');
-    });
-
-    function processChild() {
-      var $child = $(this);
-
-      if ( $child.is('.example-ignore') ) {
-        if ( this.nextSibling && this.nextSibling.nodeType === 3 && this.nextSibling.data.trim() === '' ) {
-          $( this.nextSibling ).remove();
-        }
-        $child.remove();
-        return;
-      }
-
-      if ( $child.is('.example-tldr') ) {
-        $child.removeClass('example-tldr').html( '...' );
-        if ($child.attr('class').trim() === '') {
-          $child.removeAttr('class');
-        }
-      }
-
-      $child.children().each( processChild );
-    }
-  })();
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 </body>
 </html>
