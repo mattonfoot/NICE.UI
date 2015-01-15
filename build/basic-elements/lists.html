@@ -172,15 +172,63 @@
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      
+      <h2 id="unordered">Unordered</h2>
+<p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+<div class="guide-example">
+  <ul>
+    <li class="example-tldr">Lorem ipsum dolor sit amet</li>
+    <li class="example-ignore">Consectetur adipiscing elit
+      <ul>
+        <li>Phasellus iaculis neque</li>
+        <li>Vestibulum laoreet porttitor sem</li>
+      </ul>
+    </li>
+    <li class="example-ignore">Aenean sit amet erat nunc</li>
+  </ul>
+</div>
+
+<h2 id="ordered">Ordered</h2>
+<p>A list of items in which the order <em>does</em> explicitly matter.</p>
+<div class="guide-example">
+  <ol>
+    <li class="example-tldr">Lorem ipsum dolor sit amet</li>
+    <li class="example-ignore">Consectetur adipiscing elit</li>
+    <li class="example-ignore">Phasellus iaculis neque</li>
+    <li class="example-ignore">Vestibulum laoreet porttitor sem</li>
+    <li class="example-ignore">Aenean sit amet erat nunc</li>
+  </ol>
+</div>
+
+<h3 id="unstyled">Unstyled</h3>
+<p>Remove the default <code>list-style</code> and left padding on list items (immediate children only).</p>
+<div class="guide-example">
+  <ul class="unstyled">
+    <li class="example-tldr">Lorem ipsum dolor sit amet</li>
+    <li class="example-ignore">Consectetur adipiscing elit
+      <ul>
+        <li>Phasellus iaculis neque</li>
+        <li>Vestibulum laoreet porttitor sem</li>
+      </ul>
+    </li>
+    <li class="example-ignore">Aenean sit amet erat nunc</li>
+  </ul>
+</div>
+
+<h2 id="inline">Inline</h2>
+<p>Place all list items on a single line with <code>inline-block</code> and some light padding.</p>
+<div class="guide-example">
+  <ul class="inline">
+    <li class="example-tldr">Lorem ipsum</li>
+    <li class="example-ignore">Phasellus iaculis</li>
+    <li class="example-ignore">Nulla volutpat</li>
+  </ul>
+</div>
+
     </article>
 
     <aside class="content content-secondary">
       <ul>
         <ul>
-          <li>
-            <a href="lists/basic-text.html">Basic text</a>
-          </li>
           <li>
             <a href="lists/definitions.html">Definitions</a>
           </li>
