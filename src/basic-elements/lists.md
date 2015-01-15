@@ -8,8 +8,9 @@ nav_groups:
   - primary
 ---
 
+## Basic text lists
 
-## Unordered
+### Unordered
 
 A list of items in which the order does <em>not</em> explicitly matter.
 
@@ -26,7 +27,7 @@ A list of items in which the order does <em>not</em> explicitly matter.
   </ul>
 </div>
 
-## Ordered
+### Ordered
 
 A list of items in which the order <em>does</em> explicitly matter.
 
@@ -57,9 +58,9 @@ Remove the default <code>list-style</code> and left padding on list items (immed
   </ul>
 </div>
 
-## Inline
+### Inline
 
-Place all list items on a single line with <code>inline-block</code> and some light padding.
+Place all list items on a single line by adding <code>.inline</code> to the wrapping <code>&lt;ol&gt;</code> or <code>&lt;ul&gt;</code>.
 
 <div class="guide-example">
   <ul class="inline">
