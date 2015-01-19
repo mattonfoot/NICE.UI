@@ -58,7 +58,10 @@
     background: transparent;
 }
 .theme-link-hover() {
-    color: @link-hover;
+  color: @link-hover;
+}
+.theme-link-disabled() {
+  .theme-text-muted;
 }
 .theme-link-cautionary() {
     color: @caution;
@@ -240,8 +243,8 @@
   background-color: @info-background;
 }
 
-// breadcrumbs
 
+// breadcrumbs
 .theme-breadcrumb-link() {
   color: @midgray;
   text-decoration: none;
@@ -271,4 +274,28 @@
 }
 .theme-breadcrumb-stack-divider-hover() {
   border-top-color: @silver;
+}
+
+
+// pagingation
+.theme-pagination-link() {
+  .theme-button;
+}
+.theme-pagination-link-hover() {
+  .theme-button-primary-action;
+}
+.theme-pagination-link-disabled() {
+  .theme-button-disabled;
+}
+.theme-pager-link() {
+  .theme-link;
+}
+.theme-pager-link-hover() {
+  .theme-link-hover;
+}
+.theme-pager-link-active() {
+  .theme-button-primary-action-active;
+}
+.theme-pager-link-disabled() {
+  .theme-link-disabled;
 }

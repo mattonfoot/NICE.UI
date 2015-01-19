@@ -1,0 +1,35 @@
+.pagination {
+  .block-margins-vertical;
+  list-style: none;
+  text-align: center;
+  .clearfix;
+
+  li {
+    display: inline;
+    float: right;
+
+    > a,
+    > span {
+      display: inline-block;
+      .block-padding-all;
+      text-decoration: none;
+    }
+
+    > a {
+      .theme-pagination-link;
+      &:hover,
+      &:focus {
+        .theme-pagination-link-hover;
+      }
+    }
+
+    > span {
+      .theme-pagination-link-disabled;
+      cursor: default;
+    }
+  }
+
+  > :first-child {
+    float: left;
+  }
+}

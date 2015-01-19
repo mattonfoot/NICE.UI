@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Breadcrumb</title>
+  <title>Pager</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="design-patterns/pagination/breadcrumb.html">
+  <link rel="canonical" href="design-patterns/pagination/pager.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -170,77 +170,79 @@
           <i class="divider glyph-chevron-right"></i>
         </li>
         <li class="active">
-          Breadcrumb
+          Pager
         </li>
       </ol>
 
-      <h1>Breadcrumb</h1>
+      <h1>Pager</h1>
 
-      <p class="lead">A design pattern to show the position of a document in a hierarchy of information</p>
+      <p class="lead">Simple set of page links with additional navigation links if desired, click areas are large for mobile and touch enabled devices.</p>
     </div>
   </header>
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <p>A single example shown as it might be displayed across multiple pages.</p>
-<div class="guide-example guide-example-tight">
-<!-- Site root -->
-<ol class="breadcrumb">
-  <li class="active">Home</li>
-</ol>
-
-<!-- root section -->
-<ol class="breadcrumb">
-  <li><a href="#">Home</a> <i class="divider glyph-chevron-right"></i></li>
-  <li class="active">Library</li>
-</ol>
-
-<!-- sub section -->
-<ol class="breadcrumb">
-  <li><a href="#">Home</a> <i class="divider glyph-chevron-right"></i></li>
-  <li><a href="#">Library</a> <i class="divider glyph-chevron-right"></i></li>
-  <li class="active">Data</li>
-</ol>
+      <div class="guide-example">
+<div class="pager">
+  <ul>
+    <li class="previous"><a href="#" rel="previous">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li class="example-ignore"><a href="#">2</a></li>
+    <li class="example-tldr"><a href="#">3</a></li>
+    <li class="example-ignore"><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li class="next"><a href="#" rel="next">&raquo;</a></li>
+  </ul>
+</div>
 </div>
 
-<h2 id="breadcrumb-stack">Breadcrumb Stack</h2>
-<p>This form of breadcrumb shows the hierarchy of an article and has the added
-advantage of collapsing when viewed on tablet devices.</p>
+<h2 id="options">Options</h2>
+<h3 id="disabled-and-active-states">Disabled and active states</h3>
+<p>Links are customisable for different circumstances. Use a <code>&lt;span&gt;</code> element for unclickable entries and add an <code>.active</code> class to indicate the current page.</p>
 <div class="guide-example">
-<ol class="breadcrumb breadcrumb-stack">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Section</a></li>
-  <li class="active"><a href="#">Parent</a></li>
-</ol>
+<div class="pager">
+  <ul>
+    <li class="previous"><span>&laquo;</span></li>
+    <li class="active"><span>1</span></li>
+    <li class="example-tldr"><a href="#">2</a></li>
+    <li class="example-ignore"><a href="#">3</a></li>
+    <li class="example-ignore"><a href="#">4</a></li>
+    <li class="example-ignore"><a href="#">5</a></li>
+    <li class="next"><a href="#" rel="next">&raquo;</a></li>
+ </ul>
+</div>
 </div>
 
-<h3 id="options">options</h3>
-<p>It is possible to make the breadcrumb collapsible on narrow screen devices by
-adding the <code>.collapse</code> class to the main <code>.breadcrumb</code>
-element and adding the <code>.toggle</code> anchor to the <code>.active</code> element as below;</p>
-<div class="guide-example">
-<ol class="breadcrumb breadcrumb-stack" data-state="off" data-on="collapsed" data-off="" id="stacked-nav">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Section</a></li>
-  <li class="active">
-    <a href="#">Parent</a>
-    <a href="#stacked-nav" class="toggle" data-toggle="state"></a>
-  </li>
-</ol>
+<p>You can optionally swap out active or disabled anchors for spans to remove click functionality while retaining intended styles.</p>
+<h3 id="large-page-sets">Large page sets</h3>
+<p>When a page set has more than 7 pages then an abbreviated version of the pager should be used</p>
+<div class="guide-example example-tight">
+<div class="pager">
+  <ul>
+    <li class="previous"><span>&laquo;</span></li>
+    <li class="active"><span>1</span></li>
+    <li><a href="#">2</a></li>
+    <li class="example-ignore"><a href="#">3</a></li>
+    <li class="example-ignore"><a href="#">4</a></li>
+    <li class="example-ignore"><a href="#">5</a></li>
+    <li class="example-ignore"><a href="#">6</a></li>
+    <li class="example-ignore"><a href="#">7</a></li>
+    <li class="next"><a href="#" rel="next">&raquo;</a></li>
+  </ul>
 </div>
-
-<p>If you wish the collapsible stacked breadcrumb to be collapsed on narrow screen
-devices by default then simply add the <code>.collapsed</code> class on the
-<code>.breadcrumb</code> element;</p>
-<div class="guide-example">
-<ol class="breadcrumb breadcrumb-stack collapsed" data-state="on" data-on="collapsed" data-off="" id="stacked-nav-2">
-  <li><a href="#">Home</a></li>
-  <li><a href="#">Section</a></li>
-  <li class="active">
-    <a href="#">Parent</a>
-    <a href="#stacked-nav-2" class="toggle" data-toggle="state"></a>
-  </li>
-</ol>
+<div class="pager">
+  <ul>
+    <li class="previous"><a href="#" rel="previous">&laquo;</a></li>
+    <li><a href="#">1</a></li>
+    <li><span>...</span></li>
+    <li><a href="#">5</a></li>
+    <li class="example-ignore"><a href="#">6</a></li>
+    <li class="active"><span>7</span></li>
+    <li class="example-ignore"><a href="#">8</a></li>
+    <li class="example-ignore"><a href="#">9</a></li>
+    <li class="next"><a href="#" rel="next">&raquo;</a></li>
+  </ul>
+</div>
 </div>
 
     </article>

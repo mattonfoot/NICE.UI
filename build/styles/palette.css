@@ -674,3 +674,33 @@ pre code {
 .theme-breadcrumb-stack-divider-hover .example {
   border-top-color: #aaaaaa;
 }
+.theme-pagination-link .example {
+  color: #111111;
+  background-color: #cccccc;
+  border-color: #cccccc;
+}
+.theme-pagination-link-hover .example {
+  color: #ffffff;
+  background-color: #0074d9;
+  border-color: #0074d9;
+}
+.theme-pagination-link-disabled .example {
+  color: #919191;
+  background-color: #cccccc;
+  border-color: #cccccc;
+}
+.theme-pager-link .example {
+  color: #01769d;
+  background: transparent;
+}
+.theme-pager-link-hover .example {
+  color: #08455b;
+}
+.theme-pager-link-active .example {
+  color: #ffffff;
+  background-color: #0074d9;
+  border-color: #00539c;
+}
+.theme-pager-link-disabled .example {
+  color: #919191;
+}
