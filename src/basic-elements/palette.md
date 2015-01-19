@@ -30,6 +30,10 @@ nav_groups:
 
 <ul class="palette palette-table"></ul>
 
+## Pagination & breadcrumbs
+
+<ul class="palette palette-breadcrumb palette-pagination"></ul>
+
 <script type="text/html" id="swatch">
 <li class="swatch {{classname}}">
 <span class="example">

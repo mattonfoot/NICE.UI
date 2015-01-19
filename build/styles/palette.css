@@ -644,3 +644,33 @@ pre code {
   color: #0066c0;
   background-color: #d9edff;
 }
+.theme-breadcrumb-link .example {
+  color: #656565;
+  text-decoration: none;
+}
+.theme-breadcrumb-link-hover .example {
+  color: #2b2b2b;
+}
+.theme-breadcrumb-active .example {
+  color: #919191;
+}
+.theme-breadcrumb-divider .example {
+  color: #2b2b2b;
+}
+.theme-breadcrumb-stack-link .example {
+  color: #111111;
+  background: #cccccc;
+}
+.theme-breadcrumb-stack-link-hover .example {
+  background: #aaaaaa;
+}
+.theme-breadcrumb-stack-active .example {
+  color: #ffffff;
+  background-color: #0074d9;
+}
+.theme-breadcrumb-stack-divider .example {
+  border-top-color: #cccccc;
+}
+.theme-breadcrumb-stack-divider-hover .example {
+  border-top-color: #aaaaaa;
+}

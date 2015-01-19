@@ -20,6 +20,7 @@
   <link rel="stylesheet" href="/styles/ui.css">
   <link rel="stylesheet" href="/styles/layout.css">
   <link rel="stylesheet" href="/styles/iconography.css">
+  <link rel="stylesheet" href="/styles/pagination.css">
   
   <!-- Fav and touch icons -->
   <link rel="shortcut icon" href="//cdn.nice.org.uk/V3/Content/nice/favicon.ico">
@@ -46,7 +47,7 @@
     border-width: 1px;
   }
   
-  .guide-example-tight > p {
+  .guide-example-tight > * {
     margin-top: 0;
     margin-bottom: 0;
   }
@@ -154,10 +155,13 @@
     <div class="container">
       <ol class="breadcrumb">
         <li>
-          <a href="../../../../../..">Home</a>
+          <a href="../../../../../..">Home</a> <i class="divider glyph-chevron-right"></i>
         </li>
         <li>
-          <a href="../basic-elements.html">Basic elements</a>
+          <a href="../basic-elements.html">
+            Basic elements
+          </a>
+          <i class="divider glyph-chevron-right"></i>
         </li>
         <li class="active">
           Palette
@@ -188,6 +192,9 @@
 
 <h2 id="tables">Tables</h2>
 <ul class="palette palette-table"></ul>
+
+<h2 id="pagination-breadcrumbs">Pagination &amp; breadcrumbs</h2>
+<ul class="palette palette-breadcrumb palette-pagination"></ul>
 
 <script type="text/html" id="swatch">
 <li class="swatch {{classname}}">
@@ -471,7 +478,7 @@ setTimeout(function() {
 
       $example.children().each( processChild );
 
-      var $code = $('<code/>').text( $example.html().replace( '\n', '' ).replace( /=""/mg, '' ) );
+      var $code = $('<code/>').text( $example.html().replace( /\&/mg, '&amp;' ).replace( '\n', '' ).replace( /=""/mg, '' ) );
 
       $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
 

@@ -1,6 +1,6 @@
 <ol class="breadcrumb">
   <li>
-    <a href="{{relative_path @root.nav_path "/"}}">Home</a>
+    <a href="{{relative_path @root.nav_path "/"}}">Home</a> <i class="divider glyph-chevron-right"></i>
   </li>
 {{!--
   navConfig.breadcrumbProperty = 'breadcrumb_path'
@@ -8,19 +8,21 @@
 --}}
 {{#each breadcrumb_path}}
   <li>
-  {{#if file}}
-    {{!--
-      @root === the template scope of the current file object being rendered
-      @root.nav_path === currentFileObject.nav_path
-      ('nav_path' property can be configured by navConfig.pathProperty = 'nav_path')
+    <a href="{{relative_path @root.nav_path path}}">
+    {{#if file}}
+      {{!--
+        @root === the template scope of the current file object being rendered
+        @root.nav_path === currentFileObject.nav_path
+        ('nav_path' property can be configured by navConfig.pathProperty = 'nav_path')
 
-      path === currentNavNode.path
-      (path property is set to all nav nodes)
-    --}}
-    <a href="{{relative_path @root.nav_path path}}">{{file.title}}</a>
-  {{else}}
-    <a href="{{relative_path @root.nav_path path}}">{{name}}</a>
-  {{/if}}
+        path === currentNavNode.path
+        (path property is set to all nav nodes)
+      --}}{{file.title}}
+    {{else}}
+      {{name}}
+    {{/if}}
+    </a>
+    <i class="divider glyph-chevron-right"></i>
   </li>
 {{/each}}
   <li class="active">

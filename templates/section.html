@@ -48,7 +48,7 @@
 
       $example.children().each( processChild );
 
-      var $code = $('<code/>').text( $example.html().replace( '\n', '' ).replace( /=""/mg, '' ) );
+      var $code = $('<code/>').text( $example.html().replace( /\&/mg, '&amp;' ).replace( '\n', '' ).replace( /=""/mg, '' ) );
 
       $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
 

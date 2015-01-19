@@ -11,7 +11,7 @@ nav_groups:
 
 All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are available.
 
-<div class="guide-example">
+<div class="guide-example guide-example-tight">
   <h1>h1. Bootstrap heading</h1>
   <h2>h2. Bootstrap heading</h2>
   <h3>h3. Bootstrap heading</h3>
@@ -22,7 +22,7 @@ All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are a
 
 Create lighter, secondary text in any heading with a generic <code>&lt;small&gt;</code> tag.
 
-<div class="guide-example">
+<div class="guide-example guide-example-tight">
   <h1>h1. Bootstrap heading <small>Secondary text</small></h1>
   <h2>h2. Bootstrap heading <small>Secondary text</small></h2>
   <h3>h3. Bootstrap heading <small>Secondary text</small></h3>

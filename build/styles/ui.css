@@ -341,9 +341,9 @@ ol {
   /*px*/ margin: 0 24px 24px 0;
   /**/
   /*rem*/ margin: 0 2.4rem 2.4rem 0;
-  /*px*/ padding-left: 24px;
+  /*px*/ padding-left: 12px;
   /**/
-  /*rem*/ padding-left: 2.4rem;
+  /*rem*/ padding-left: 1.2rem;
 }
 ul {
   list-style-type: disc;
