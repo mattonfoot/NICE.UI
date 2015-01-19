@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Body copy</title>
+  <title>Ellipsis</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="basic-elements/typography/body-copy.html">
+  <link rel="canonical" href="basic-elements/typography/ellipsis.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -170,39 +170,23 @@
           <i class="divider glyph-chevron-right"></i>
         </li>
         <li class="active">
-          Body copy
+          Ellipsis
         </li>
       </ol>
 
-      <h1>Body copy</h1>
+      <h1>Ellipsis</h1>
 
-      <p class="lead">Basic typographic styles that are applied to the default body copy of a page</p>
+      <p class="lead">Indicate an intentional omission of a word, sentence, or whole section from a text without altering its original meaning.</p>
     </div>
   </header>
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <p>NICE&#39;s global default <code>font-size</code> is <strong>16px</strong>, with a <code>line-height</code> of <strong>24px</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of their line-height to ensure vertical rhythm is adhered to.</p>
+      <p>By applying the <code>.ellipsis</code> class to an element you set its
+<strong>default height</strong> to <strong>2</strong> lines and set the text block to display an
+ellipsis symbol if the content is larger than the elements content box.</p>
 <div class="guide-example">
-  <p class="example-tldr">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
-  <p class="example-ignore">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
-  <p class="example-ignore">Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-</div>
-
-<h3 id="lead-body-copy">Lead body copy</h3>
-<p>Make a paragraph stand out by adding <code>.lead</code>.</p>
-<div class="guide-example">
-  <p class="lead example-tldr">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
-</div>
-
-<h3 id="paragraphs-directly-following-a-heading">Paragraphs directly following a heading</h3>
-<p>Paragraphs that follow <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> elements will pull up to reduce whitespace between them and the headings.</p>
-<div class="guide-example">
-  <h1>h1. Heading 1</h1>
-  <p class="lead example-tldr">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
-
-  <h2>h2. Heading 2</h2>
-  <p class="example-tldr">Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+<p class="ellipsis example-tldr" style="width: 200px">This content should be long enough to be concatenated and have the ellipsis symbol appended to it so that it indicates that there is more.</p>
 </div>
 
     </article>

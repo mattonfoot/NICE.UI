@@ -247,6 +247,9 @@ wrapped with <code>&lt;sup&gt;</code> or <code>&lt;sub&gt;</code> respectively.<
           <li>
             <a href="informative.html">Semantic information</a>
           </li>
+          <li>
+            <a href="ellipsis.html">Ellipsis</a>
+          </li>
         </ul>
       </ul>
     </aside>
@@ -351,7 +354,7 @@ wrapped with <code>&lt;sup&gt;</code> or <code>&lt;sub&gt;</code> respectively.<
       }
 
       if ( $child.is('.example-tldr') ) {
-        $child.removeClass('example-tldr').html( '...' );
+        $child.removeClass('example-tldr').html( ' [...] ' );
         if ($child.attr('class').trim() === '') {
           $child.removeAttr('class');
         }

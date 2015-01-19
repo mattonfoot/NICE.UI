@@ -224,6 +224,9 @@
           <li>
             <a href="informative.html">Semantic information</a>
           </li>
+          <li>
+            <a href="ellipsis.html">Ellipsis</a>
+          </li>
         </ul>
       </ul>
     </aside>
@@ -328,7 +331,7 @@
       }
 
       if ( $child.is('.example-tldr') ) {
-        $child.removeClass('example-tldr').html( '...' );
+        $child.removeClass('example-tldr').html( ' [...] ' );
         if ($child.attr('class').trim() === '') {
           $child.removeAttr('class');
         }

@@ -206,7 +206,7 @@ The quick brown fox jumps over the lazy dog.
 </li>
 </script>
 
-<script src="/scripts/color/color-0.4.1.js"></script>
+<script src="/scripts/vendor/color.js"></script>
 <script>
 setTimeout(function() {
   var swatches = {};
@@ -333,6 +333,9 @@ setTimeout(function() {
               </li>
               <li>
                 <a href="typography/informative.html">Semantic information</a>
+              </li>
+              <li>
+                <a href="typography/ellipsis.html">Ellipsis</a>
               </li>
             </ul>
           </li>
@@ -497,7 +500,7 @@ setTimeout(function() {
       }
 
       if ( $child.is('.example-tldr') ) {
-        $child.removeClass('example-tldr').html( '...' );
+        $child.removeClass('example-tldr').html( ' [...] ' );
         if ($child.attr('class').trim() === '') {
           $child.removeAttr('class');
         }

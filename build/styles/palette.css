@@ -296,6 +296,28 @@ sup {
 sub {
   bottom: -0.25em;
 }
+.ellipsis {
+  display: block;
+  /*px*/ height: 96px;
+  /**/
+  /*rem*/ height: 9.6rem;
+}
+h1.ellipsis,
+h2.ellipsis,
+h3.ellipsis,
+h4.ellipsis,
+h5.ellipsis,
+h6.ellipsis,
+h1 .ellipsis,
+h2 .ellipsis,
+h3 .ellipsis,
+h4 .ellipsis,
+h5 .ellipsis,
+h6 .ellipsis {
+  /*px*/ height: 48px;
+  /**/
+  /*rem*/ height: 4.8rem;
+}
 pre {
   overflow: auto;
   /*px*/ margin: 24px 0;

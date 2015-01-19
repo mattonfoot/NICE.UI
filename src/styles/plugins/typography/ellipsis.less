@@ -1,15 +1,12 @@
-@import "CONFIG.general.less";
-
 // ellipsis
-
 .ellipsis {
     display: block;
-    height: @baseLineHeight * 2;
+    .span-lines( 4 );
 }
 
 h1, h2, h3, h4, h5, h6 {
     &.ellipsis,
     .ellipsis {
-        height: @baseLineHeight * 2;
+      .span-lines( 2 );
     }
 }

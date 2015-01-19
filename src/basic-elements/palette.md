@@ -44,7 +44,7 @@ The quick brown fox jumps over the lazy dog.
 </li>
 </script>
 
-<script src="/scripts/color/color-0.4.1.js"></script>
+<script src="/scripts/vendor/color.js"></script>
 <script>
 setTimeout(function() {
   var swatches = {};

@@ -47,7 +47,7 @@
   }
 
   $.fn.ellipsis.defaults = {
-    ellipsis  : '… ',
+    ellipsis  : '…',
     wrap    : 'word',
     fallbackToLetter: true,
     after   : null,
@@ -79,14 +79,14 @@
   function setup() {
     $('.ellipsis').ellipsis();
   }
-  
+
   $(setup);
 
   $(window).on('load', function()
   {
 
     $(document).ajaxComplete(setup);
-  
+
   });
 
 }(window.jQuery);

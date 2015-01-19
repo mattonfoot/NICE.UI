@@ -27,6 +27,9 @@
   },
   "homepage": "https://github.com/mattonfoot/NICE.ui",
   "private": true,
+  "dependencies":{
+    "dotdotdot": "*"
+  },
   "devDependencies": {
     "color": "^0.7.3",
     "glob": "*",
