@@ -74,16 +74,3 @@ devices by default then simply add the <code>.collapsed</code> class on the
   </li>
 </ol>
 </div>
-
-## Wizard steps
-
-Create a simple wizard style step counter with some additional markup and classname
-
-<div class="guide-example">
-<ul class="breadcrumb breadcrumb-steps steps4">
-  <li class="completed"><span class="counter">1.</span> Start <span class="divider"></span></li>
-  <li class="active"><span class="counter">2.</span> Next <span class="divider"></span></li>
-  <li><span class="counter">3.</span> More <span class="divider"></span></li>
-  <li><span class="counter">4.</span> Finish</li>
-</ul>
-</div>
