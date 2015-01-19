@@ -1,0 +1,98 @@
+@import "CONFIG.general.less";
+
+.nav-list {
+    li {
+        margin-bottom: 1px;
+
+        > a {
+            padding: 6px 18px;
+            background-color: @grayLighter;
+
+            &:hover,
+            &:focus {
+                background-color: @grayLight;
+            }
+        }
+    }
+
+    > li > a,
+    .nav-header {
+      color: @foregroundColor;
+      text-shadow: none;
+    }
+
+    [class^="icon-"],
+    [class*=" icon-"] {
+      margin-right: 2px;
+    }
+
+    > .active {
+      > a,
+      > a:hover,
+      > a:active,
+      > a:focus {
+        color: @white;
+        text-shadow: none;
+        background-color: @actionColor;
+      }
+    }
+
+    .nav-list {
+      margin-top: 1px;
+      margin-left: -15px;
+      margin-right: -15px;
+
+      > li > a {
+        font-weight: 200;
+        padding-left: 36px;
+      }
+
+      > .active {
+        > a,
+        > a:hover,
+        > a:active,
+        > a:focus {
+          color: @white;
+          background-color: @altActionColor;
+        }
+      }
+
+      .nav-list > li > a {
+        padding-left: 54px;
+      }
+
+      .nav-list .nav-list > li > a {
+        padding-left: 72px;
+      }
+    }
+
+    .active {
+        > a {
+            position: relative;
+            background-color: #1167b7;
+            color: @white;
+
+            &:after {
+                content: "";
+                position: absolute;
+                height: 0;
+                width: 0;
+                left: 100%;
+                top: 50%;
+                margin-top: -10px;
+                border: 10px solid transparent;
+                border-left-color: #1167b7;
+            }
+        }
+    }
+
+    > li .active {
+        > a {
+            background-color: #00a7df;
+
+            &:after {
+                border-left-color: #00a7df;
+            }
+        }
+    }
+}

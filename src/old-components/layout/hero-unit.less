@@ -1,0 +1,31 @@
+@import "CONFIG.general.less";
+
+//
+// Hero unit
+// --------------------------------------------------
+
+
+.hero-unit {
+    padding: @baseLineHeight * 2;
+    margin-bottom: @baseLineHeight * 2;
+    font-size: 16px;
+    font-weight: @baseFontWeight;
+    line-height: @baseLineHeight;
+    color: @heroUnitLeadColor;
+    background-color: @heroUnitBackground;
+    .clearfix();
+
+    h1, h2 {
+        color: @heroUnitHeadingColor;
+    }
+
+    li {
+        line-height: @baseLineHeight * 1.5; // Reset since we specify in type.less
+    }
+
+    .hero-image {
+    		margin: 0 @baseLineHeight * 2 0 0;
+    		padding: 0 !important;
+    		width: 27.863247863248%;
+  	}
+}

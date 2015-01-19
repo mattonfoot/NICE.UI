@@ -26,7 +26,7 @@ You will also get the layouts extension within the basic combined bundle.
 <pre class="prettyprint linenums"><code>&lt;!-- Latest compiled and minified CSS --&gt;
 &lt;link rel="stylesheet" href="https://cdn.nice.org.uk/v4.0.0/css/ui.css"&gt;</code></pre>
 
-## The basic layout
+## The basic page layout
 
 A basic document should follow the basic structure provided by the appropriate HTML
 elements <code>body</code>, <code>header</code>, <code>footer</code> and <code>main</code>
@@ -41,3 +41,34 @@ elements <code>body</code>, <code>header</code>, <code>footer</code> and <code>m
   &lt;footer role="contentinfo"&gt;...&lt;/footer&gt;
 &lt;/body&gt;
 </code></pre>
+
+## Required elements
+
+  - Top hat
+  - Header
+  - Footer
+
+## Advanced layout patterns
+
+### Narrow screen devices
+
+  - Off canvas
+
+### Highlighting content
+
+  - Panels
+    - Hero Unit
+    - Wells
+
+### Promoting & grouping content
+
+  - Accordians
+  - Carousels
+  - Modals
+  - Popovers
+  - tooltips
+
+### Helpers
+
+  - Size grid        ( wrapper, column, grid )
+  - Position helpers ( pull-content, offset-content )

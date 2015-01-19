@@ -1,0 +1,25 @@
+@import "CONFIG.general.less";
+@import "../../../bower_components/bootstrap/less/modals.less";
+
+
+.modal {
+  background-color: @white;
+  border: 0;
+  .border-radius(0);              // not configurable in bootstrap
+  .box-shadow(0 1px 2px rgba(0,0,0,0.05));
+}
+
+.modal-header {
+  border-bottom: 1px solid darken(@white, 5%);
+  margin: 0 10px;
+  padding: 10px 5px 9px;
+}
+
+.modal-footer {
+  background-color: @white;
+  border-top: 1px solid darken(@white, 5%);
+  .border-radius(0);              // not configurable in bootstrap
+  .box-shadow(none);
+  margin: 0 10px;
+  padding: 14px 5px 15px;
+}

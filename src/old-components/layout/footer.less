@@ -1,0 +1,283 @@
+@import "CONFIG.general.less";
+
+/* end of page Callouts */
+
+.callouts {
+    margin-top: 24px;
+    .clearfix();
+
+    .callout-involved {
+        float: right;
+        font-size: @fontSizeLarge;
+        padding: @baseLineHeight / 2 @baseLineHeight * 2;
+        color: @white;
+        background: @navbarInverseBackground;
+        text-decoration: none;
+        .border-top-radius(@baseLineHeight / 2);
+        text-align: center;
+    }
+}
+
+/* footer */
+
+.footer {
+    color: @white;
+    background-color: @footerBackground;
+    .clearfix();
+
+    a {
+      color: @white;
+      font-weight: 400;
+    }
+}
+
+/* footer Logo */
+
+.footer-logo {
+    float: left;
+    display: block;
+    overflow: hidden;
+    width: 120px;
+    margin: 20px 0 0;
+
+    &:hover,
+    &:active,
+    &:focus {
+      text-decoration: none;
+    }
+
+    .icon-nice-logo {
+        font-size: 48px;
+    }
+}
+
+/* Generic Footer Navigation */
+
+.footer .nav {
+    .clearfix();
+
+    > li {
+        float: left;
+
+        > a,
+        > a:hover,
+        > a:active,
+        > a:focus {
+            background: transparent;
+        }
+
+        > a:hover,
+        > a:active,
+        > a:focus {
+            text-decoration: underline;
+        }
+    }
+
+    &.nav-services {
+        > li {
+            > a:hover,
+            > a:active,
+            > a:focus {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/* Service Navigation */
+
+.nav-services {
+    float: left;
+    font-size:.9em;
+    margin: @baseLineHeight 0 @baseLineHeight @baseLineHeight * 2;
+
+    > li > a {
+        text-align: center;
+        width: @baseLineHeight * 3.8;
+        margin: 0;
+        opacity: .5;
+
+        &:hover,
+        &:active,
+        &:focus {
+            opacity: 1;
+        }
+    }
+
+
+    [class^="icon-nice-"],
+    [class*=" icon-nice-"] {
+        display: block;
+        margin: 0 auto 5px;
+        font-size: 2.3em;
+    }
+
+}
+
+/* Social Media Linking */
+
+.social-panel {
+    float: right;
+    margin-top: .6em;
+    margin-bottom: -2.6em;
+
+    a {
+        color: @white;
+        font-size: 2em;
+        padding: 0 0 0 .5em;
+
+        > .icon-stack-base {
+            color: @footerBackground;
+        }
+    }
+
+    a:hover,
+    a:active,
+    a:focus {
+        text-decoration: none;
+    }
+
+    /* social link icons */
+
+    [class^="icon-"] span,
+    [class*=" icon-"] span {
+        visibility: hidden;
+    }
+
+}
+
+/* legal links and text */
+
+.legal-panel {
+    clear: both;
+    padding-bottom: @baseLineHeight / 2;
+    font-size: .8em;
+
+    .clearfix();
+}
+
+.nav-legal {
+    margin: 0 0 0 -8px;
+
+    > li > a {
+        padding: 0 8px;
+        line-height: 1em;
+        border-left: 1px solid @white;
+    }
+
+    > :first-child > a {
+        border-left: 0;
+    }
+}
+
+
+
+// responsive
+
+@media (max-width: 800px) {
+
+    .social-panel {
+        float: none;
+        margin: 0;
+    }
+
+}
+
+
+// mobile responsive
+
+@media (max-width: 680px) {
+
+    .footer {
+        color: @gray;
+
+        a {
+            color: @gray;
+        }
+    }
+
+    .footer-logo {
+        display: none;
+    }
+
+    .navbar-inverse .nav,
+    .footer .nav {
+        margin: 0;
+        padding: 0;
+        font-size: 1em;
+        width: 100%;
+
+        > li {
+            float: none;
+            width: 100%;
+            border-top: 1px solid lighten(@navbarInverseBackground, 10%);
+
+            &:first-child {
+              border-top: 0;
+            }
+
+            > a,
+            &.active > a {
+                &,
+                &:hover,
+                &:active,
+                &:focus {
+                    text-decoration: none;
+                    padding: 12px 0;
+                    margin: 0;
+                    border: 0;
+                    background: transparent;
+                }
+            }
+
+        }
+    }
+
+    .footer .nav {
+        margin: 0 0 @baseLineHeight;
+
+        > li {
+            border-top: 0;
+            border-bottom: 1px solid darken(@grayDarker, 5%);
+
+            > a,
+            > a:hover,
+            > a:active,
+            > a:focus {
+                color: @gray;
+            }
+        }
+    }
+
+    .nav-services {
+        float: none;
+
+        > li > a {
+          width: auto;
+          text-align: inherit;
+          margin: 0;
+          opacity: 1;
+          color: @gray;
+        }
+
+        [class^="icon-nice-"],
+        [class*=" icon-nice-"] {
+          margin-right: 5px;
+          display: inline;
+          font-size: 1em;
+        }
+    }
+
+  .legal-copyright {
+      text-align: center;
+  }
+
+  .nav-legal {
+      margin-bottom: @baseLineHeight / 2;
+
+      > li > a {
+          border-left: 0;
+      }
+  }
+
+}

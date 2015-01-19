@@ -1,0 +1,44 @@
+@import "CONFIG.general.less";
+
+//
+// Close icons
+// --------------------------------------------------
+
+
+.close {
+  float: right;
+  font-size: 20px;
+  font-weight: @strongFontWeight;
+  line-height: @baseLineHeight;
+  color: @black;
+  .opacity(40);
+
+  &:hover,
+  &:focus {
+    color: @black;
+    text-decoration: none;
+    cursor: pointer;
+    .opacity(70);
+  }
+}
+
+// Additional properties for button version
+// iOS requires the button element instead of an anchor tag.
+// If you want the anchor version, it requires `href="#"`.
+button.close {
+  padding: 0;
+  cursor: pointer;
+  background: transparent;
+  border: 0;
+  -webkit-appearance: none;
+}
+
+.form-close {
+  float: right;
+  margin: 0;
+  padding: 0;
+
+  .close {
+      float: none;
+	}
+}

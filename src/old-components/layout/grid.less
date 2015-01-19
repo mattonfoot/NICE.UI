@@ -1,0 +1,321 @@
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Fluid (940px)
+#grid > .universal(@fluidGridColumnWidth, @fluidGridGutterWidth);
+
+// Reset utility classes due to specificity
+[class*="span"].hide,
+.row [class*="span"].hide,
+.row-fluid [class*="span"].hide {
+  display: none;
+}
+
+[class*="span"].pull-right,
+.row [class*="span"].pull-right,
+.row-fluid [class*="span"].pull-right {
+  float: right;
+}
+
+//
+// Responsive: Large desktop and up
+// --------------------------------------------------
+
+
+@media (min-width: 1200px) {
+
+  // Fluid grid
+  #grid > .universal(@fluidGridColumnWidth1200, @fluidGridGutterWidth1200);
+
+  // Input grid
+  #grid > .input(@gridColumnWidth1200, @gridGutterWidth1200);
+
+  // Thumbnails
+  .thumbnails {
+    margin-left: -@gridGutterWidth1200;
+  }
+  .thumbnails > li {
+    margin-left: @gridGutterWidth1200;
+  }
+  .row, .row-fluid {
+  	.thumbnails {
+	    margin-left: 0;
+	}
+  }
+
+}
+
+//
+// Responsive: Tablet to desktop
+// --------------------------------------------------
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+  // Fluid grid
+  #grid > .universal(@fluidGridColumnWidth768, @fluidGridGutterWidth768);
+
+  // Input grid
+  #grid > .input(@gridColumnWidth768, @gridGutterWidth768);
+
+  // No need to reset .thumbnails here since it's the same @gridGutterWidth
+
+}
+
+
+/* grid */
+
+[class^="grid"],
+[class*=" grid"] {
+   width: auto;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  .clearfix();
+
+  > * {
+    float: left;
+    min-height: 1px;
+    padding: 0;
+    margin: 0;
+    margin-left: 0;
+    margin-right: 1.9%;
+
+    list-style: none;
+
+    .box-sizing(border-box);
+  }
+
+}
+
+/* grid 2 */
+
+.grid2 > * { width: 48%; }
+.grid2 > *:nth-child(2n+3) { clear: left; }
+
+@media (max-width: 767px) {
+
+  .grid2 > * {
+    float: none;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .grid2 > *:nth-child(2n+3) { clear: none; }
+
+}
+
+
+
+/* grid 3 */
+
+.grid3 > * { width: 31.333333%; }
+.grid3 > *:nth-child(3n+4) { clear: left; }
+.grid3 > .over2 { width: 64.666666%; }
+
+@media (max-width: 767px) {
+
+  .grid3 {
+    text-align: center;
+  }
+
+  .grid3 > * {
+    float: none;
+    text-align: left;
+    display: inline-block;
+    width: 47.6%;
+  }
+
+  .grid3 > *:nth-child(3n+4) { clear: none; }
+  .grid3 > *:nth-child(2n+3) { clear: left; }
+
+  .grid3 > .over2,
+  .grid3 > .over-fill {
+    display: block;
+    margin-bottom: 3px;
+    width: 97.1%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .grid3 > *,
+  .grid3 > .over2,
+  .grid3 > .over-fill {
+    display: block;
+    margin-right: 0;
+    width: 100%;
+  }
+
+  .grid3 > *:nth-child(2n+3) { clear: none; }
+
+}
+
+
+
+/* grid 4 */
+
+.grid4 > * { width: 23%; }
+.grid4 > *:nth-child(4n+5) { clear: left; }
+.grid4 > .over2 { width: 48%; }
+.grid4 > .over3 { width: 73%; }
+
+@media (max-width: 767px) {
+
+  .grid4 {
+    text-align: center;
+  }
+
+  .grid4 > * {
+    float: none;
+    text-align: left;
+    display: inline-block;
+    margin: -2px -1px;
+    width: 47.6%;
+  }
+
+  .grid4 > *:nth-child(4n+5) { clear: none; }
+  .grid4 > *:nth-child(3n+4) { clear: left; }
+
+  .grid4 > .over2,
+  .grid4 > .over3,
+  .grid4 > .over-fill {
+    display: block;
+    margin-bottom: 3px;
+    width: 97.1%;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .grid4 > *:nth-child(3n+4) { clear: none; }
+  .grid4 > *:nth-child(2n+3) { clear: left; }
+
+  .grid4 > *,
+  .grid4 > .over2,
+  .grid4 > .over3,
+  .grid4 > .over-fill {
+    display: block;
+    margin-right: 0;
+    width: 100%;
+  }
+
+}
+
+
+
+/* grid 5 */
+
+.grid5 > * { width: 18%; }
+//.grid5 > *:nth-child(5n) { clear: left; }
+.grid5 > .over2 { width: 38%; }
+.grid5 > .over3 { width: 58%; }
+.grid5 > .over4 { width: 78%; }
+
+@media (max-width: 767px) {
+
+  .grid5 {
+    text-align: center;
+  }
+
+  .grid5 > * {
+    float: none;
+    text-align: left;
+    display: inline-block;
+    margin: -2px -1px;
+    width: 31.11158%;
+  }
+
+  .grid5 > .over2 {
+    width: 64.666666%;
+  }
+
+  .grid5 > .over3,
+  .grid5 > .over4,
+  .grid5 > .over-fill {
+    display: block;
+    margin-bottom: 3px;
+    width: auto;
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .grid5 {
+
+    > *,
+    > .over2,
+    > .over3,
+    > .over4,
+    > .over-fill {
+      display: block;
+      margin: 0;
+      width: auto;
+    }
+
+  }
+
+}
+
+
+
+/* grid 6 */
+
+.grid6 > * { width: 14.666666%; }
+//.grid6 > *:nth-child(6n) { clear: left; }
+.grid6 > .over2 { width: 31.11158%; }
+.grid6 > .over3 { width: 46.7%; }
+.grid6 > .over4 { width: 64.666666%; }
+.grid6 > .over5 { width: 81.333333%; }
+
+@media (max-width: 767px) {
+
+  .grid6 {
+    text-align: center;
+
+    > * {
+      float: none;
+      text-align: left;
+      display: inline-block;
+      margin: -2px -1px;
+      width: 31.11158%;
+    }
+
+    > .over2 {
+      width: 64.666666%;
+    }
+
+    > .over3,
+    > .over4,
+    > .over5,
+    > .over-fill {
+      display: block;
+      margin-bottom: 3px;
+      width: auto;
+    }
+  }
+
+}
+
+@media (max-width: 480px) {
+
+  .grid6 {
+
+    > *,
+    > .over2,
+    > .over3,
+    > .over4,
+    > .over5 {
+      display: block;
+      margin: 0;
+      width: auto;
+    }
+
+  }
+
+}
