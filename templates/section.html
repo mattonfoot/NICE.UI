@@ -47,12 +47,22 @@
       var $example = $(this).clone();
 
       $example.children().each( processChild );
+      var src = $example.html().replace( /\&/mg, '&amp;' ).replace( '\n', '' ).replace( /=""/mg, '' );
 
-      var $code = $('<code/>').text( $example.html().replace( /\&/mg, '&amp;' ).replace( '\n', '' ).replace( /=""/mg, '' ) );
+      var $code = $('<code/>').text( src );
 
       $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
 
       $(this).addClass('example-processed');
+    });
+
+    $('.footer-code').each(function() {
+      var $example = $('.footer-wrapper').clone();
+
+      $example.children().each( processChild );
+      var src = $example.wrap('<div/>').parent().html().replace( /\&/mg, '&amp;' ).replace( '\n', '' ).replace( /=""/mg, '' );
+
+      $(this).find('code').text( src );
     });
 
     function processChild() {

@@ -1,0 +1,247 @@
+footer {
+  .clearfix;
+  .theme-footer;
+
+  a {
+    .theme-footer-link;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      .theme-footer-link-hover;
+      text-decoration: none;
+    }
+  }
+
+  /* Generic Footer Navigation */
+  .nav {
+    .margin-zero;
+    list-style: none;
+    .clearfix;
+
+    > li {
+      display: inline;
+
+      > a {
+        display: inline-block;
+      }
+
+      > a:hover,
+      > a:focus {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .navbar {
+    .theme-footer-navbar;
+
+    .nav {
+      .margin-left( @grid-spacing * -1 );
+
+      > li > a {
+        .theme-footer-navbar-link;
+        .margin( @threequart-line-height @half-grid-spacing @threequart-line-height 0 );
+        .padding( @quarter-line-height @half-grid-spacing );
+
+        &:hover,
+        &:focus {
+          .theme-footer-navbar-link-hover;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+
+  /* Service Navigation */
+
+  .nav-services {
+    float: left;
+    .font-acronym;
+    .block-margins-all;
+
+    > li > a {
+      text-align: center;
+      .relative_size( width, @grid-spacing * 4 );
+      opacity: .5;
+
+      &:hover,
+      &:active,
+      &:focus {
+        opacity: 1;
+        text-decoration: none;
+      }
+    }
+
+    [class^="glyph-"],
+    [class*=" glyph-"] {
+      display: block;
+      .block-margins-centered( 0 );
+      .font-xlarge;
+    }
+  }
+
+  /* Social Media Linking */
+
+  .social-panel {
+    float: right;
+    .margin-top( @half-line-height * -1 );
+    .font-small;
+
+    p {
+      .margin-zero;
+    }
+
+    a {
+      .font-large;
+      .padding-left;
+    }
+  }
+
+  /* footer Logo */
+
+  .footer-logo {
+      float: left;
+      display: block;
+      overflow: hidden;
+
+      .glyph-logo {
+        .font-xxlarge;
+        line-height: 2.2;
+      }
+  }
+
+  /* legal links and text */
+
+  .nav-legal {
+    .margin-left( @quarter-grid-spacing * -1 );
+    .padding-zero;
+    .font-small;
+
+    > li > a {
+      .block-padding-horizontal( @quarter-grid-spacing );
+      border-left: 1px solid @white;
+    }
+
+    > :first-child > a {
+      border-left: 0;
+    }
+  }
+
+  .legal-copyright {
+    .block-margins-bottom;
+    .font-small;
+  }
+
+}
+
+// responsive
+
+@media ( max-width: 767px ) {
+
+  footer {
+    color: @gray;
+
+    a {
+      color: @gray;
+
+      &:hover,
+      &:focus {
+        color: @white;
+      }
+    }
+
+    .footer-logo {
+      display: none;
+    }
+
+    .nav {
+      .block-margins-vertical( @half-line-height );
+      width: 100%;
+
+      > li {
+        display: block;
+        width: 100%;
+        .border-top( lighten( @footer-background, 10% ) );
+
+        > a,
+        &.active > a {
+          display: block;
+          .margin-zero;
+          .padding( @quarter-line-height 0 );
+          &,
+          &:hover,
+          &:focus {
+            text-decoration: none;
+            background: transparent;
+          }
+        }
+      }
+    }
+
+    .navbar .nav {
+      .margin-zero;
+
+      > li {
+        border-color: lighten( @footer-navbar-background, 5% );
+
+        > a {
+          .margin-zero;
+          .padding( @quarter-line-height 0 );
+        }
+      }
+    }
+
+    .nav-services {
+      .font-small;
+      float: none;
+
+      > li {
+        .border-zero;
+        .border-bottom( lighten( @footer-background, 10% ) );
+
+        > a {
+          width: auto;
+          text-align: inherit;
+          opacity: 1;
+          color: @gray;
+        }
+      }
+
+      [class^="glyph-"],
+      [class*=" glyph-"] {
+        .block-margins-right( @quarter-grid-spacing );
+        display: inline;
+        .font-small;
+      }
+    }
+    .social-panel {
+      float: none;
+      .margin-zero;
+      .clearfix;
+      .line-height;
+
+      a {
+        float: right;
+        width: 75%;
+        .margin-zero;
+        .padding-zero;
+        .font-large;
+      }
+    }
+
+    .legal-copyright {
+        text-align: center;
+    }
+
+    .nav-legal {
+      .block-margins-vertical( @half-line-height );
+
+      > li > a {
+          border-left: 0;
+      }
+    }
+  }
+
+}

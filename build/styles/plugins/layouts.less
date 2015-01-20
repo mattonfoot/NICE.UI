@@ -4,8 +4,8 @@
   width: 100%;
   max-width: 1200px;
 
-  margin: 0 auto;
-  padding: 0 @grid-spacing;
+  .block-margins-centered( 0 );
+  .padding( 0 @grid-spacing );
 
   .clearfix();
 }
@@ -15,7 +15,7 @@
     display: block;
     float: left;
     min-height: 1px;
-    margin-left: @grid-spacing;
+    .margin-left;
   }
 
   > :first-child {
@@ -23,7 +23,7 @@
   }
 
   > .content-primary {
-    width: 75%;
+    width: 72%;
   }
 
   > .content-secondary {
@@ -35,8 +35,7 @@
   & .layout,
   .layout& {
     > .content {
-      margin-left: 0;
-      margin-right: @grid-spacing;
+      .block-margins-right;
     }
 
     > :first-child {
@@ -52,27 +51,30 @@
   .layout&,
   .container& {
     max-width: 100%;
-    margin-left: @grid-spacing;
-    margin-right: @grid-spacing;
+    .block-margins-horizontal;
   }
 }
 
 @media (max-width: 979px) {
   .layout,
   .container {
-    padding: 0 @grid-spacing / 2;
+    .block-padding-horizontal( @half-grid-spacing );
   }
 
-  .layout {
+  .layout-first-right {
+    & .layout,
+    .layout& {
+      position: inherit;
 
-    position: inherit;
+      > .content {
+        float: none;
+        width: auto;
+        .block-margins-bottom;
+      }
 
-    > .content {
-      float: none;
-      width: auto;
-      margin-bottom: @grid-spacing;
-      margin-left: 0;
-      margin-right: 0;
+      > :first-child {
+        float: none;
+      }
     }
   }
 }
@@ -80,6 +82,6 @@
 @media (max-width: 767px) {
   .layout,
   .container {
-    padding: 0 @grid-spacing / 4;
+    .block-padding-horizontal;
   }
 }

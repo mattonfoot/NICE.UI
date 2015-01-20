@@ -238,58 +238,56 @@
   </main>
 
   <footer class="footer-wrapper" role="contentinfo">
-    <div class="navbar navbar-inverse">
-      <div class="navbar-inner">
-        <div class="container">
-          <ul class="nav nav-pills">
-            <li>
-              <a href="../../index.html">Home</a>
-            </li>
-            <li>
-              <a href="../../basic-elements.html">Basic elements</a>
-            </li>
-            <li>
-              <a href="../../design-patterns.html">Design patterns</a>
-            </li>
-          </ul>
-        </div>
+    <div class="navbar">
+      <div class="container">
+        <ul class="nav example-tldr" role="navigation">
+          <li>
+            <a href="../../index.html">Home</a>
+          </li>
+          <li>
+            <a href="../../basic-elements.html">Basic elements</a>
+          </li>
+          <li>
+            <a href="../../design-patterns.html">Design patterns</a>
+          </li>
+        </ul>
       </div>
     </div>
   
     <div class="footer">
       <div class="container">
-        <a href="http://www.nice.org.uk" class="footer-logo"><i class="logo icon-nice-logo"></i></a>
+        <a href="http://www.nice.org.uk" class="footer-logo"><span class="glyph-logo"></span></a>
   
-        <ul class="nav nav-services">
-          <li><a href="http://pathways.nice.org.uk"><i class="icon-nice-pathways"></i> NICE Pathways</a></li>
-          <li><a href="http://www.nice.org.uk/guidance"><i class="icon-nice-guidance"></i> Guidance</a></li>
-          <li><a href="http://www.nice.org.uk/standards-and-indicators"><i class="icon-nice-standards"></i> Standards &amp;&nbsp;indicators</a></li>
-          <li><a href="http://www.evidence.nhs.uk"><i class="icon-nice-evidence"></i> Evidence services</a></li>
+        <ul class="nav nav-services" role="navigation">
+          <li><a href="http://pathways.nice.org.uk"><span class="glyph-pathways"></span> NICE Pathways</a></li>
+          <li><a href="http://www.nice.org.uk/guidance"><span class="glyph-guidance"></span> Guidance</a></li>
+          <li><a href="http://www.nice.org.uk/standards-and-indicators"><span class="glyph-standards"></span> Standards &amp;&nbsp;indicators</a></li>
+          <li><a href="http://www.evidence.nhs.uk"><span class="glyph-evidence"></span> Evidence services</a></li>
+        </ul>
+      </div>
+  
+      <div class="container">
+        <div class="social-panel">
+          <!-- AddThis Button BEGIN -->
+          <p class="social-follow addthis_toolbox">
+          Follow Us
+          <a class="addthis_button_twitter_follow" addthis:userid="nicecomms" target="_blank" title="Follow on Twitter" href="#">
+            <span class="glyph-twitter"></span>
+          </a></p>
+          <!-- AddThis Button END -->
+        </div>
+  
+        <ul class="nav nav-legal" role="navigation">
+          <li><a href="//www.nice.org.uk/about">About</a></li>
+          <li><a href="//www.nice.org.uk/accessibility">Accessibility</a></li>
+          <li><a href="//www.nice.org.uk/freedom-of-information">Freedom of information</a></li>
+          <li><a href="//www.nice.org.uk/get-involved/contact-us">Contact Us</a></li>
+          <li><a href="//www.nice.org.uk/glossary">Glossary</a></li>
+          <li><a href="//www.nice.org.uk/terms-and-conditions">Terms and conditions</a></li>
+          <li><a href="//www.nice.org.uk/subscribe">Subscribe</a></li>
         </ul>
   
-        <div class="legal-panel">
-          <div class="social-panel">
-            <!-- AddThis Button BEGIN -->
-            <p class="social-follow addthis_toolbox">
-            Follow Us
-            <a class="addthis_button_twitter_follow" addthis:userid="nicecomms" target="_blank" title="Follow on Twitter" href="#">
-              <i class="icon-twitter"></i>
-            </a></p>
-            <!-- AddThis Button END -->
-          </div>
-  
-          <ul class="nav nav-legal">
-            <li><a href="//www.nice.org.uk/about">About</a></li>
-            <li><a href="//www.nice.org.uk/accessibility">Accessibility</a></li>
-            <li><a href="//www.nice.org.uk/freedom-of-information">Freedom of information</a></li>
-            <li><a href="//www.nice.org.uk/get-involved/contact-us">Contact Us</a></li>
-            <li><a href="//www.nice.org.uk/glossary">Glossary</a></li>
-            <li><a href="//www.nice.org.uk/terms-and-conditions">Terms and conditions</a></li>
-            <li><a href="//www.nice.org.uk/subscribe">Subscribe</a></li>
-          </ul>
-  
-          <p class="legal-copyright">Copyright &copy; 2014 National Institute for Health and Care Excellence. All rights reserved.</p>
-        </div>
+        <p class="legal-copyright">Copyright &copy; 2014 National Institute for Health and Care Excellence. All rights reserved.</p>
       </div>
     </div>
   </footer>
@@ -316,12 +314,22 @@
       var $example = $(this).clone();
 
       $example.children().each( processChild );
+      var src = $example.html().replace( /\&/mg, '&amp;' ).replace( '\n', '' ).replace( /=""/mg, '' );
 
-      var $code = $('<code/>').text( $example.html().replace( /\&/mg, '&amp;' ).replace( '\n', '' ).replace( /=""/mg, '' ) );
+      var $code = $('<code/>').text( src );
 
       $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
 
       $(this).addClass('example-processed');
+    });
+
+    $('.footer-code').each(function() {
+      var $example = $('.footer-wrapper').clone();
+
+      $example.children().each( processChild );
+      var src = $example.wrap('<div/>').parent().html().replace( /\&/mg, '&amp;' ).replace( '\n', '' ).replace( /=""/mg, '' );
+
+      $(this).find('code').text( src );
     });
 
     function processChild() {

@@ -1,8 +1,10 @@
 
 @half-line-height:        @base-line-height / 2;
 @quarter-line-height:     @half-line-height / 2;
+@threequart-line-height: @quarter-line-height * 3;
 @half-grid-spacing:       @grid-spacing / 2;
 @quarter-grid-spacing:    @half-grid-spacing / 2;
+@threequart-grid-spacing: @quarter-grid-spacing * 3;
 
 // relative heights
 .span-lines( @numLines ) {
@@ -63,6 +65,10 @@
   .margin( @sizeValue 0);
   .padding-zero;
 }
+.block-margins-horizontal( @sizeValue: @grid-spacing ) {
+  .margin( 0 @sizeValue );
+  .padding-zero;
+}
 .block-margins-left( @sizeValue: @base-line-height ) {
   .margin( @sizeValue 0 @sizeValue @sizeValue);
   .padding-zero;
@@ -71,24 +77,32 @@
   .margin( @sizeValue @sizeValue @sizeValue 0);
   .padding-zero;
 }
+.block-margins-top( @sizeValue: @base-line-height ) {
+  .margin( @sizeValue 0 0 );
+  .padding-zero;
+}
+.block-margins-bottom( @sizeValue: @base-line-height ) {
+  .margin( 0 0 @sizeValue );
+  .padding-zero;
+}
 .block-margins-centered( @sizeValue: @base-line-height ) {
   .margin( @sizeValue auto );
   .padding-zero;
 }
 
-.block-padding-all( @sizeValue: @base-line-height / 4 @grid-spacing / 2) {
+.block-padding-all( @sizeValue: @quarter-line-height @half-grid-spacing ) {
   .margin-zero;
   .padding( @sizeValue );
 }
-.block-padding-vertical( @sizeValue: @base-line-height / 4 ) {
+.block-padding-vertical( @sizeValue: @quarter-line-height / 4 ) {
   .margin-zero;
   .padding( @sizeValue 0);
 }
-.block-padding-horizontal( @sizeValue: @grid-spacing / 2 ) {
+.block-padding-horizontal( @sizeValue: @half-grid-spacing ) {
   .margin-zero;
   .padding( 0 @sizeValue );
 }
-.block-padding-left( @sizeValue: @grid-spacing / 2 ) {
+.block-padding-left( @sizeValue: @half-grid-spacing ) {
   .margin-zero;
   .padding( @base-line-height / 4 0 @base-line-height / 4 @sizeValue );
 }
