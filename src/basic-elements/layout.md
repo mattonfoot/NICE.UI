@@ -42,31 +42,11 @@ elements <code>body</code>, <code>header</code>, <code>footer</code> and <code>m
 &lt;/body&gt;
 </code></pre>
 
-## Required elements
-
-  - Top hat
-  - Header
-  - Footer
-
 ## Advanced layout patterns
 
 ### Narrow screen devices
 
   - Off canvas
-
-### Highlighting content
-
-  - Panels
-    - Hero Unit
-    - Wells
-
-### Promoting & grouping content
-
-  - Accordians
-  - Carousels
-  - Modals
-  - Popovers
-  - tooltips
 
 ### Helpers
 

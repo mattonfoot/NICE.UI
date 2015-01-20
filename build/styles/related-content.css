@@ -1,0 +1,131 @@
+.panel {
+  /*px*/ margin: 24px 0;
+  /**/
+  /*rem*/ margin: 2.4rem 0;
+  padding: 0;
+  background: #f2f2f2;
+}
+.panel .panel-heading {
+  /*px*/ padding: 12px 12px;
+  /**/
+  /*rem*/ padding: 1.2rem 1.2rem;
+  border-width: 0;
+  border-bottom: 1px solid transparent;
+  /*px*/ font-size: 24px;
+  /**/
+  /*rem*/ font-size: 2.4rem;
+  border-color: #e6e6e6;
+}
+.panel .panel-heading h1,
+.panel .panel-heading h2,
+.panel .panel-heading h3,
+.panel .panel-heading h4,
+.panel .panel-heading h5,
+.panel .panel-heading h6,
+.panel .panel-heading .panel-title {
+  margin: 0;
+  padding: 0;
+  /*px*/ font-size: 24px;
+  /**/
+  /*rem*/ font-size: 2.4rem;
+}
+.panel .panel-heading h1 > a,
+.panel .panel-heading h2 > a,
+.panel .panel-heading h3 > a,
+.panel .panel-heading h4 > a,
+.panel .panel-heading h5 > a,
+.panel .panel-heading h6 > a,
+.panel .panel-heading .panel-title > a {
+  color: inherit;
+}
+.panel .panel-body {
+  /*px*/ padding: 12px 12px;
+  /**/
+  /*rem*/ padding: 1.2rem 1.2rem;
+  zoom: 1;
+}
+.panel .panel-body:before,
+.panel .panel-body:after {
+  content: "";
+  display: table;
+}
+.panel .panel-body:after {
+  clear: both;
+}
+.panel .panel-body > :first-child {
+  /*px*/ padding-top: 0;
+  /**/
+  /*rem*/ padding-top: 0;
+}
+.panel .panel-body > :last-child {
+  /*px*/ padding-top: 0;
+  /**/
+  /*rem*/ padding-top: 0;
+}
+.panel .panel-footer {
+  /*px*/ padding: 12px 12px;
+  /**/
+  /*rem*/ padding: 1.2rem 1.2rem;
+}
+.panel .panel-header > :first-child,
+.panel .panel-body > :first-child,
+.panel .panel-footer > :first-child {
+  /*px*/ margin-top: 0;
+  /**/
+  /*rem*/ margin-top: 0;
+}
+.panel .panel-header > :last-child,
+.panel .panel-body > :last-child,
+.panel .panel-footer > :last-child {
+  /*px*/ margin-bottom: 0;
+  /**/
+  /*rem*/ margin-bottom: 0;
+}
+.panel > table,
+.panel > .table-responsive {
+  margin: 0;
+}
+.panel-outline {
+  background: transparent;
+  border: 1px solid #f2f2f2;
+}
+.panel-success {
+  background: #d1f5d5;
+  color: #124f19;
+}
+.panel-success .panel-heading {
+  border-color: #124f19;
+}
+.panel-error,
+.panel-danger {
+  background: #f2b4b1;
+  color: #771914;
+}
+.panel-error .panel-heading,
+.panel-danger .panel-heading {
+  border-color: #771914;
+}
+.panel-info {
+  background: #d9edff;
+  color: #0066c0;
+}
+.panel-info .panel-heading {
+  border-color: #0066c0;
+}
+.panel-warning {
+  background: #fff8cc;
+  color: #806e00;
+}
+.panel-warning .panel-heading {
+  border-color: #806e00;
+}
+.panel-large-well .panel-body {
+  /*px*/ padding: 24px 12px;
+  /**/
+  /*rem*/ padding: 2.4rem 1.2rem;
+}
+.panel-small-well .panel-body {
+  /*px*/ padding: 6px 12px;
+  /**/
+  /*rem*/ padding: 0.6rem 1.2rem;
+}
