@@ -3,7 +3,7 @@ section: Design patterns
 title: Related content
 description: Patterns for displaying content that is related to the the current context of the information presented.
 template: page.html
-nav_sort: 1
+nav_sort: 4
 nav_groups:
   - primary
 ---

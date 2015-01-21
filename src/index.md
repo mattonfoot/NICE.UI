@@ -26,6 +26,6 @@ nav_groups:
   <div>
     <h3>Packed with features.</h3>
 
-    <p><a href="/basic-elements/layout.html">Specialist layouts</a>, <a href="/design-patterns.html">design patterns</a>, <a href="/basic-elements/typography.html">typography</a> and <a href="/basic-elements/forms.html">form controls</a>.</p>
+    <p><a href="/basic-elements/layout.html">Specialist layouts</a>, <a href="/design-patterns.html">design patterns</a>, <a href="/basic-elements/typography.html">typography</a> and <a href="/basic-elements/form-controls.html">form controls</a>.</p>
   </div>
 </div>

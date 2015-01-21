@@ -34,6 +34,14 @@ nav_groups:
 
 <ul class="palette palette-breadcrumb palette-pagination"></ul>
 
+## Footer
+
+<ul class="palette palette-footer"></ul>
+
+## Panels
+
+<ul class="palette palette-panel palette-hero"></ul>
+
 <script type="text/html" id="swatch">
 <li class="swatch {{classname}}">
 <span class="example">

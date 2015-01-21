@@ -3,7 +3,7 @@
   /**/
   /*rem*/ margin: 2.4rem 0;
   padding: 0;
-  background: #f2f2f2;
+  background: #ffffff;
 }
 .panel .panel-heading {
   /*px*/ padding: 12px 12px;
@@ -14,6 +14,7 @@
   /*px*/ font-size: 24px;
   /**/
   /*rem*/ font-size: 2.4rem;
+  background: #f2f2f2;
   border-color: #e6e6e6;
 }
 .panel .panel-heading h1,
@@ -84,15 +85,6 @@
 .panel > table,
 .panel > .table-responsive {
   margin: 0;
-}
-.panel {
-  background: #ffffff;
-  border: 1px solid #e5e5e5;
-}
-.panel .panel-heading {
-  background: #f2f2f2;
-  border-width: 0;
-  border-bottom: 1px solid #e5e5e5;
 }
 .panel-outline .panel-heading {
   background: transparent;

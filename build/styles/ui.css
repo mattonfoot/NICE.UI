@@ -362,9 +362,9 @@ ol {
   /**/
   /*rem*/ margin: 2.4rem 2.4rem 2.4rem 0;
   padding: 0;
-  /*px*/ padding-left: 12px;
+  /*px*/ padding-left: 24px;
   /**/
-  /*rem*/ padding-left: 1.2rem;
+  /*rem*/ padding-left: 2.4rem;
 }
 ul {
   list-style-type: disc;
@@ -376,17 +376,26 @@ ul.unstyled,
 ol.unstyled,
 ul.inline,
 ol.inline {
-  /*px*/ margin-left: 0;
+  /*px*/ margin-right: 0;
   /**/
-  /*rem*/ margin-left: 0;
+  /*rem*/ margin-right: 0;
+  /*px*/ padding-left: 0;
+  /**/
+  /*rem*/ padding-left: 0;
   list-style: none;
 }
 ul.inline > li,
 ol.inline > li {
   display: inline-block;
-  /*px*/ padding: 0 6px;
+  /*px*/ padding-left: 12px;
   /**/
-  /*rem*/ padding: 0 0.6rem;
+  /*rem*/ padding-left: 1.2rem;
+}
+ul.inline > li:first-child,
+ol.inline > li:first-child {
+  /*px*/ padding-left: 0;
+  /**/
+  /*rem*/ padding-left: 0;
 }
 dl {
   /*px*/ margin: 24px 0;
