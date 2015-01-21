@@ -2,9 +2,11 @@
  * Headings
  */
 h1, h2, h3, h4, h5, h6 {
-    font-family: @title-font-face;
-    font-weight: normal;
-    .block-margins-vertical;
+  .block-margins-vertical;
+  font-family: @title-font-face;
+  font-weight: @base-font-weight;
+
+  text-rendering: optimizelegibility;
 }
 h1, h2, h3 {
     .line-height( @base-line-height * 2 );

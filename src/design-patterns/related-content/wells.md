@@ -8,11 +8,11 @@ nav_groups:
 - primary
 ---
 
+A well is simple a panel with no body, heading or footer and an additional <code>.code-well*</code> class.
+
 <div class="guide-example">
-<div class="panel">
-  <div class="panel-body">
-    Look, I'm in a well!
-  </div>
+<div class="panel panel-well">
+  Look, I'm in a well!
 </div>
 </div>
 
@@ -21,14 +21,10 @@ nav_groups:
 Control padding with two optional modifier classes.
 
 <div class="guide-example">
-<div class="panel panel-large-well example-tldr">
-  <div class="panel-body">
-    Look, I'm in a well!
-  </div>
+<div class="panel panel-well-large example-tldr">
+  Look, I'm in a big well!
 </div>
-<div class="panel panel-small-well example-tldr">
-  <div class="panel-body">
-    Look, I'm in a well!
-  </div>
+<div class="panel panel-well-small example-tldr">
+  Look, I'm in a small well!
 </div>
 </div>

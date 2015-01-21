@@ -1,20 +1,20 @@
 ---
-title: Home
+title: the NICE UI library
 template: index.html
 nav_sort: 1
 nav_groups:
   - primary
   - footer
 ---
-# Introducing NICE Bootstrap.
+# Introducing the NICE UI library.
 
-<p class="marketing-byline">Need reasons to love NICE Bootstrap? Look no further.</p>
+<p class="marketing-byline">Need reasons to love the NICE UI library? Look no further.</p>
 
 <div class="grid3">
   <div>
     <h3>By us, for us.</h3>
 
-    <p>Built at NICE by us, NICE Bootstrap utilizes <a href="http://lesscss.org">LESS CSS</a>, is compiled via <a href="http://nodejs.org">Node</a>, and is managed through <a href="http://github.com">GitHub</a> to help us do awesome stuff on the web.</p>
+    <p>Built at NICE by us, the NICE UI library utilizes <a href="http://lesscss.org">LESS CSS</a>, is compiled via <a href="http://nodejs.org">Node</a>, and is managed through <a href="http://github.com">GitHub</a> to help us do awesome stuff on the web.</p>
   </div>
 
   <div>
