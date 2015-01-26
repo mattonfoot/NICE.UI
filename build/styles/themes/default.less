@@ -3,8 +3,8 @@
 // document
 
 .theme-document {
-    color: @black;
-    background-color: @white;
+  color: @black;
+  background-color: @white;
 }
 
 // text
@@ -13,31 +13,31 @@
   color: @darksilver;
 }
 .theme-text-strongly-emphasised {
-    font-weight: @font-weight-bold;
+  font-weight: @font-weight-bold;
 }
 .theme-text-emphasised {
-    font-style: italic;
+  font-style: italic;
 }
 .theme-blockquote {
-    color: @midgray;
-    font-style: italic;
+  color: @midgray;
+  font-style: italic;
 }
 .theme-highlighted {
-    color: @superblack;
-    background-color: @highlight-bg;
+  color: @superblack;
+  background-color: @highlight-bg;
 }
 .theme-postal-address {
-    font-style: italic;
+  font-style: italic;
 }
 .theme-text-definition {
-    font-weight: @font-weight-bold;
-    font-style: italic;
+  font-weight: @font-weight-bold;
+  font-style: italic;
 }
 .theme-text-cited {
-    font-style: italic;
+  font-style: italic;
 }
 .theme-text-quoted {
-    font-style: italic;
+  font-style: italic;
 }
 .theme-text-warning {
   color: @warning-foreground-only;
@@ -55,14 +55,15 @@
 
 // links
 .theme-link {
-    color: @link;
-    background: transparent;
+  color: @link;
+  background: transparent;
 }
 .theme-link-hover {
   color: @link-hover;
 }
 .theme-link-disabled {
   .theme-text-muted;
+  cursor: @cursor-disabled;
 }
 .theme-link-cautionary {
     color: @caution;
@@ -79,6 +80,7 @@
 }
 .theme-label-disabled {
   color: @darksilver;
+  cursor: @cursor-disabled;
 }
 .theme-label-warning {
   color: @warning-foreground-only;
@@ -101,6 +103,7 @@
     color: @darksilver;
     background-color: @offwhite;
     border-color: @gray;
+    cursor: @cursor-disabled;
 }
 .theme-input-warning {
   color: @warning-foreground-only;
@@ -184,6 +187,7 @@
     color: @darksilver;
     background-color: @gray;
     border-color: @gray;
+    cursor: @cursor-disabled;
 }
 
 
@@ -287,6 +291,7 @@
 }
 .theme-pagination-link-disabled {
   .theme-button-disabled;
+  cursor: default;
 }
 .theme-pager-link {
   .theme-link;
@@ -299,6 +304,7 @@
 }
 .theme-pager-link-disabled {
   .theme-link-disabled;
+  cursor: default;
 }
 
 // headers
@@ -396,4 +402,50 @@
 .theme-panel-info-header {
   background: @info-background;
   .border-bottom( darken( @info-background, 5% ) );
+}
+
+// navigation
+.theme-menu {
+  background-color: @menu-background;
+}
+.theme-menu-link {
+  color: @menu-foreground;
+  background: transparent;
+}
+.theme-menu-link-hover {
+  color: @menu-hover-foreground;
+  background-color: @menu-hover-background
+}
+.theme-menu-link-active {
+  color: @menu-active-foreground;
+  background-color: @menu-active-background
+}
+.theme-menu-link-open {
+  color: @submenu-foreground;
+  background-color: @submenu-background;
+}
+.theme-menu-link-disabled {
+  .theme-text-muted;
+  background-color: transparent;
+  cursor: @cursor-disabled;
+}
+.theme-submenu {
+  background-color: @submenu-background;
+}
+.theme-submenu-link {
+  color: @submenu-foreground;
+  background: transparent;
+}
+.theme-submenu-link-hover {
+  color: @submenu-hover-foreground;
+  background-color: @submenu-hover-background
+}
+.theme-submenu-link-active {
+  color: @submenu-active-foreground;
+  background-color: @submenu-active-background
+}
+.theme-submenu-link-disabled {
+  .theme-text-muted;
+  background-color: transparent;
+  cursor: @cursor-disabled;
 }

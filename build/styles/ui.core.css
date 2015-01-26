@@ -621,10 +621,10 @@ fieldset[disabled] select,
 .readonly input:not([type=file]),
 .readonly textarea,
 .readonly select {
-  cursor: not-allowed;
   color: #919191;
   background-color: #f2f2f2;
   border-color: #cccccc;
+  cursor: not-allowed;
   opacity: 1;
 }
 textarea {
@@ -806,11 +806,11 @@ fieldset[disabled] .btn:visited,
 .disabled .btn,
 .disabled .btn:link,
 .disabled .btn:visited {
-  cursor: not-allowed;
   opacity: 1;
   color: #919191;
   background-color: #cccccc;
   border-color: #cccccc;
+  cursor: not-allowed;
 }
 input[type="reset"]:hover,
 input[type="submit"]:hover,
@@ -923,11 +923,11 @@ fieldset[disabled] .btn:visited,
 .disabled .btn,
 .disabled .btn:link,
 .disabled .btn:visited {
-  cursor: not-allowed;
   opacity: 1;
   color: #919191;
   background-color: #cccccc;
   border-color: #cccccc;
+  cursor: not-allowed;
 }
 input[type="reset"]:hover.action-primary,
 input[type="submit"]:hover.action-primary,
@@ -1042,6 +1042,7 @@ fieldset[disabled] .btn:visited:focus,
   color: #919191;
   background-color: #cccccc;
   border-color: #cccccc;
+  cursor: not-allowed;
 }
 input[type="reset"]:hover[disabled].action-primary,
 input[type="submit"]:hover[disabled].action-primary,
@@ -1102,6 +1103,7 @@ fieldset[disabled] .btn:visited:focus.action-primary,
   color: #919191;
   background-color: #cccccc;
   border-color: #cccccc;
+  cursor: not-allowed;
 }
 input[type="reset"]:active.action-primary,
 input[type="submit"]:active.action-primary,
@@ -1167,6 +1169,7 @@ fieldset[disabled] .btn:visited:active,
   color: #919191;
   background-color: #cccccc;
   border-color: #cccccc;
+  cursor: not-allowed;
 }
 input[type="reset"]:active[disabled].action-primary,
 input[type="submit"]:active[disabled].action-primary,
@@ -1199,6 +1202,7 @@ fieldset[disabled] .btn:visited:active.action-primary,
   color: #919191;
   background-color: #cccccc;
   border-color: #cccccc;
+  cursor: not-allowed;
 }
 /*
  * Tables

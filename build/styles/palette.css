@@ -451,6 +451,7 @@ pre code {
 }
 .theme-link-disabled {
   color: #919191;
+  cursor: not-allowed;
 }
 .theme-link-cautionary {
   color: #e91a1a;
@@ -464,6 +465,7 @@ pre code {
 }
 .theme-label-disabled {
   color: #919191;
+  cursor: not-allowed;
 }
 .theme-label-warning {
   color: #806e00;
@@ -486,6 +488,7 @@ pre code {
   color: #919191;
   background-color: #f2f2f2;
   border-color: #cccccc;
+  cursor: not-allowed;
 }
 .theme-input-warning {
   color: #806e00;
@@ -566,6 +569,7 @@ pre code {
   color: #919191;
   background-color: #cccccc;
   border-color: #cccccc;
+  cursor: not-allowed;
 }
 .theme-table {
   background-color: #ffffff;
@@ -666,6 +670,8 @@ pre code {
   color: #919191;
   background-color: #cccccc;
   border-color: #cccccc;
+  cursor: not-allowed;
+  cursor: default;
 }
 .theme-pager-link {
   color: #01769d;
@@ -681,6 +687,8 @@ pre code {
 }
 .theme-pager-link-disabled {
   color: #919191;
+  cursor: not-allowed;
+  cursor: default;
 }
 .theme-header {
   color: #111111;
@@ -774,4 +782,48 @@ pre code {
   background: #d9edff;
   border-width: 0;
   border-bottom: 1px solid #c0e1ff;
+}
+.theme-menu {
+  background-color: transparent;
+}
+.theme-menu-link {
+  color: #111111;
+  background: transparent;
+}
+.theme-menu-link-hover {
+  color: #ffffff;
+  background-color: #00539c;
+}
+.theme-menu-link-active {
+  color: #ffffff;
+  background-color: #0074d9;
+}
+.theme-menu-link-open {
+  color: #111111;
+  background-color: #ddeef4;
+}
+.theme-menu-link-disabled {
+  color: #919191;
+  background-color: transparent;
+  cursor: not-allowed;
+}
+.theme-submenu {
+  background-color: #ddeef4;
+}
+.theme-submenu-link {
+  color: #111111;
+  background: transparent;
+}
+.theme-submenu-link-hover {
+  color: #11779b;
+  background-color: #cae4ee;
+}
+.theme-submenu-link-active {
+  color: #ffffff;
+  background-color: #00a7df;
+}
+.theme-submenu-link-disabled {
+  color: #919191;
+  background-color: transparent;
+  cursor: not-allowed;
 }
