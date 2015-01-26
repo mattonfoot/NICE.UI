@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Navigation</title>
+  <title>Basic Navigation</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="basic-elements/navigation.html">
+  <link rel="canonical" href="basic-elements/navigation/basic.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -133,13 +133,13 @@
       <div class="tophat-inner">
         <ul class="menu" role="navigation">
           <li>
-            <a href="../index.html">the NICE UI library</a>
+            <a href="../../index.html">the NICE UI library</a>
           </li>
           <li>
-            <a href="../basic-elements.html">Basic elements</a>
+            <a href="../../basic-elements.html">Basic elements</a>
           </li>
           <li>
-            <a href="../design-patterns.html">Design patterns</a>
+            <a href="../../design-patterns.html">Design patterns</a>
           </li>
         </ul>
       </div>
@@ -152,20 +152,26 @@
     <div class="container">
       <ol class="breadcrumb">
         <li>
-          <a href="../../../../../..">Home</a> <i class="divider glyph-chevron-right"></i>
+          <a href="../../../../../../..">Home</a> <i class="divider glyph-chevron-right"></i>
         </li>
         <li>
-          <a href="../basic-elements.html">
+          <a href="../../basic-elements.html">
             Basic elements
           </a>
           <i class="divider glyph-chevron-right"></i>
         </li>
+        <li>
+          <a href="../navigation.html">
+            Navigation
+          </a>
+          <i class="divider glyph-chevron-right"></i>
+        </li>
         <li class="active">
-          Navigation
+          Basic Navigation
         </li>
       </ol>
 
-      <h1>Navigation</h1>
+      <h1>Basic Navigation</h1>
 
       <p class="lead"></p>
     </div>
@@ -173,14 +179,45 @@
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      
+      <p>A basic navigation list is best used for navigating around the information within a single document. You can highlight the current section by adding the <code>.active</code> class to the list item wrapping the associated link.</p>
+<div class="guide-example">
+<nav>
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li class="active"><a href="#">First section</a></li>
+    <li class="example-tldr"><a href="#">last section</a></li>
+  </ul>
+</nav>
+</div>
+
+<h2 id="sub-navigation">Sub navigation</h2>
+<p>Navigation lists can be nested to show the hierarchy of information within a
+document. simple place the sub navigation within a child list to apply the
+desired styles. You will also need to add the <code>.open</code> class to the
+parent list item inorder to highlight it correctly.</p>
+<div class="guide-example">
+<nav>
+  <ul>
+    <li class="example-ignore"><a href="#">Home</a></li>
+    <li class="open"><a href="#">First section</a>
+      <ul class="example-tldr">
+        <li><a href="#">Home</a></li>
+        <li class="active"><a href="#">First section</a></li>
+        <li><a href="#">last section</a></li>
+      </ul>
+    </li>
+    <li class="example-ignore"><a href="#">last section</a></li>
+  </ul>
+</nav>
+</div>
+
     </article>
 
     <aside class="content content-secondary">
       <nav>
-        <ul class="menu">
+        <ul>
           <li>
-            <a href="navigation/basic.html">Basic Navigation</a>
+            <a href="basic.html">Basic Navigation</a>
           </li>
         </ul>
       </nav>
@@ -192,13 +229,13 @@
       <div class="container">
         <ul class="nav example-tldr" role="navigation">
           <li>
-            <a href="../index.html">the NICE UI library</a>
+            <a href="../../index.html">the NICE UI library</a>
           </li>
           <li>
-            <a href="../basic-elements.html">Basic elements</a>
+            <a href="../../basic-elements.html">Basic elements</a>
           </li>
           <li>
-            <a href="../design-patterns.html">Design patterns</a>
+            <a href="../../design-patterns.html">Design patterns</a>
           </li>
         </ul>
       </div>
@@ -255,5 +292,56 @@
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/google-code-prettify/prettify.js"></script>
   
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/application.js"></script>
+
+  <script>
+  (function() {
+    $('.guide-example').each(function() {
+      if ( $(this).is('.example-processed') ) return;
+
+      var $example = $(this).clone();
+
+      $example.children().each( processChild );
+      var src = $example.html().replace( /\&/mg, '&amp;' ).replace( '\n', '' ).replace( /=""/mg, '' );
+
+      var $code = $('<code/>').text( src );
+
+      $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
+
+      $(this).addClass('example-processed');
+    });
+
+    $('.footer-code').each(function() {
+      var $example = $('.footer-wrapper').clone();
+
+      $example.children().each( processChild );
+      var src = $example.wrap('<div/>').parent().html().replace( /\&/mg, '&amp;' ).replace( '\n', '' ).replace( /=""/mg, '' );
+
+      $(this).find('code').text( src );
+    });
+
+    function processChild() {
+      var $child = $(this);
+
+      if ( $child.is('.example-ignore') ) {
+        if ( this.nextSibling && this.nextSibling.nodeType === 3 && this.nextSibling.data.trim() === '' ) {
+          $( this.nextSibling ).remove();
+        }
+        $child.remove();
+        return;
+      }
+
+      if ( $child.is('.example-tldr') ) {
+        $child.removeClass('example-tldr').html( ' [...] ' );
+        if ($child.attr('class').trim() === '') {
+          $child.removeAttr('class');
+        }
+      }
+
+      $child.children().each( processChild );
+    }
+  })();
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 </body>
 </html>
