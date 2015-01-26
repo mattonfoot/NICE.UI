@@ -12,7 +12,7 @@ nav_groups:
 
 ## Document & Text
 
-<ul class="palette palette-document palette-text"></ul>
+<ul class="palette palette-document palette-text palette-blockquote palette-highlighted palette-postal"></ul>
 
 ## Links
 
@@ -32,7 +32,11 @@ nav_groups:
 
 ## Pagination & breadcrumbs
 
-<ul class="palette palette-breadcrumb palette-pagination"></ul>
+<ul class="palette palette-breadcrumb palette-pagination palette-pager"></ul>
+
+## Headers
+
+<ul class="palette palette-header"></ul>
 
 ## Footer
 
@@ -40,15 +44,13 @@ nav_groups:
 
 ## Panels
 
-<ul class="palette palette-panel palette-hero"></ul>
+<ul class="palette palette-panel palette-herounit palete-well"></ul>
 
 <script type="text/html" id="swatch">
-<li class="swatch {{classname}}">
-<span class="example">
-The quick brown fox jumps over the lazy dog.
-</span>
-<h4 class="name">{{description}}</h4>
-<code class="hex">.{{classname}}()</code>
+<li class="swatch">
+  <span class="example {{classname}}">The quick brown fox jumps over the lazy dog.</span>
+  <h4 class="name">{{description}}</h4>
+  <code class="hex" title="{{swatchclass}}">{{swatchclass}}</code>
 </li>
 </script>
 
@@ -87,10 +89,11 @@ setTimeout(function() {
         var part = parts[ l ];
         if ( swatches[ part ] ) {
           swatches[ part ].forEach(function( swatch ) {
-            var classname = 'theme-' +  ( swatch !== part ? part + '-' : '' ) + swatch;
+            var classname = 'theme-' +  ( swatch !== part ? part + ' theme-' + part + '-' : '' ) + swatch;
+            var swatchclass = 'theme-' +  ( swatch !== part ? part + '-' : '' ) + swatch;
             var description = swatch.replace(/-/mg, ' ') + ( swatch !== part ? ' ' + part : '' )
 
-            list.innerHTML += template.replace(/\{\{classname\}\}/gmi, classname ).replace(/\{\{description\}\}/gmi, description );
+            list.innerHTML += template.replace(/\{\{classname\}\}/gmi, classname ).replace(/\{\{swatchclass\}\}/gmi, swatchclass ).replace(/\{\{description\}\}/gmi, description );
           });
         }
       }

@@ -180,7 +180,7 @@
       <link rel="stylesheet" href="/styles/palette.css" />
 
 <h2 id="document-text">Document &amp; Text</h2>
-<ul class="palette palette-document palette-text"></ul>
+<ul class="palette palette-document palette-text palette-blockquote palette-highlighted palette-postal"></ul>
 
 <h2 id="links">Links</h2>
 <ul class="palette palette-link"></ul>
@@ -195,21 +195,22 @@
 <ul class="palette palette-table"></ul>
 
 <h2 id="pagination-breadcrumbs">Pagination &amp; breadcrumbs</h2>
-<ul class="palette palette-breadcrumb palette-pagination"></ul>
+<ul class="palette palette-breadcrumb palette-pagination palette-pager"></ul>
+
+<h2 id="headers">Headers</h2>
+<ul class="palette palette-header"></ul>
 
 <h2 id="footer">Footer</h2>
 <ul class="palette palette-footer"></ul>
 
 <h2 id="panels">Panels</h2>
-<ul class="palette palette-panel palette-hero"></ul>
+<ul class="palette palette-panel palette-herounit palete-well"></ul>
 
 <script type="text/html" id="swatch">
-<li class="swatch {{classname}}">
-<span class="example">
-The quick brown fox jumps over the lazy dog.
-</span>
-<h4 class="name">{{description}}</h4>
-<code class="hex">.{{classname}}()</code>
+<li class="swatch">
+  <span class="example {{classname}}">The quick brown fox jumps over the lazy dog.</span>
+  <h4 class="name">{{description}}</h4>
+  <code class="hex" title="{{swatchclass}}">{{swatchclass}}</code>
 </li>
 </script>
 
@@ -248,10 +249,11 @@ setTimeout(function() {
         var part = parts[ l ];
         if ( swatches[ part ] ) {
           swatches[ part ].forEach(function( swatch ) {
-            var classname = 'theme-' +  ( swatch !== part ? part + '-' : '' ) + swatch;
+            var classname = 'theme-' +  ( swatch !== part ? part + ' theme-' + part + '-' : '' ) + swatch;
+            var swatchclass = 'theme-' +  ( swatch !== part ? part + '-' : '' ) + swatch;
             var description = swatch.replace(/-/mg, ' ') + ( swatch !== part ? ' ' + part : '' )
 
-            list.innerHTML += template.replace(/\{\{classname\}\}/gmi, classname ).replace(/\{\{description\}\}/gmi, description );
+            list.innerHTML += template.replace(/\{\{classname\}\}/gmi, classname ).replace(/\{\{swatchclass\}\}/gmi, swatchclass ).replace(/\{\{description\}\}/gmi, description );
           });
         }
       }

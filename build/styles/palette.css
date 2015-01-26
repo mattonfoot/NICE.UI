@@ -366,7 +366,6 @@ pre code {
   padding: 0;
   float: left;
   text-align: center;
-  background: #f7f7f7;
 }
 .swatch > .example {
   display: block;
@@ -390,388 +389,389 @@ pre code {
   white-space: nowrap;
   overflow: hidden;
 }
+.example {
+  color: #111111;
+  background-color: #ffffff;
+}
 .color-error {
   outline: 1px dotted red;
 }
-.theme-document .example {
+.theme-document {
   color: #111111;
   background-color: #ffffff;
 }
-.theme-text-muted .example {
-  color: #111111;
-  background-color: #ffffff;
+.theme-text-muted {
   color: #919191;
 }
-.theme-text-strongly-emphasised .example {
-  color: #111111;
-  background-color: #ffffff;
+.theme-text-strongly-emphasised {
   font-weight: 700;
 }
-.theme-text-emphasised .example {
-  color: #111111;
-  background-color: #ffffff;
+.theme-text-emphasised {
   font-style: italic;
 }
-.theme-blockquote .example {
-  color: #111111;
-  background-color: #ffffff;
+.theme-blockquote {
   color: #656565;
   font-style: italic;
 }
-.theme-highlighted .example {
-  color: #111111;
-  background-color: #ffffff;
+.theme-highlighted {
   color: #000000;
   background-color: #ffdc00;
 }
-.theme-postal-address .example {
-  color: #111111;
-  background-color: #ffffff;
+.theme-postal-address {
   font-style: italic;
 }
-.theme-text-definition .example {
-  color: #111111;
-  background-color: #ffffff;
+.theme-text-definition {
   font-weight: 700;
   font-style: italic;
 }
-.theme-text-cited .example {
-  color: #111111;
-  background-color: #ffffff;
+.theme-text-cited {
   font-style: italic;
 }
-.theme-text-quoted .example {
-  color: #111111;
-  background-color: #ffffff;
+.theme-text-quoted {
   font-style: italic;
 }
-.theme-text-warning .example {
-  color: #111111;
-  background-color: #ffffff;
+.theme-text-warning {
   color: #806e00;
 }
-.theme-text-info .example {
-  color: #111111;
-  background-color: #ffffff;
+.theme-text-info {
   color: #0074d9;
 }
-.theme-text-success .example {
-  color: #111111;
-  background-color: #ffffff;
+.theme-text-success {
   color: #1e852a;
 }
-.theme-text-error .example {
-  color: #111111;
-  background-color: #ffffff;
+.theme-text-error {
   color: #dc372e;
 }
-.theme-link .example {
-  color: #111111;
-  background-color: #ffffff;
+.theme-link {
   color: #01769d;
   background: transparent;
 }
-.theme-link-hover .example {
-  color: #111111;
-  background-color: #ffffff;
+.theme-link-hover {
   color: #08455b;
 }
-.theme-link-cautionary .example {
-  color: #111111;
-  background-color: #ffffff;
+.theme-link-disabled {
+  color: #919191;
+}
+.theme-link-cautionary {
   color: #e91a1a;
 }
-.theme-link-hover-cautionary .example {
-  color: #111111;
-  background-color: #ffffff;
+.theme-link-hover-cautionary {
   color: #b41111;
 }
-.theme-legend .example {
+.theme-legend {
   color: #111111;
   border-color: #cccccc;
 }
-.theme-input .example {
+.theme-label-disabled {
+  color: #919191;
+}
+.theme-label-warning {
+  color: #806e00;
+}
+.theme-label-success {
+  color: #1e852a;
+}
+.theme-label-error {
+  color: #dc372e;
+}
+.theme-input {
   color: #111111;
   background-color: #ffffff;
   border-color: #aaaaaa;
 }
-.theme-input-placeholder .example {
-  color: #111111;
-  background-color: #ffffff;
-  border-color: #aaaaaa;
+.theme-input-placeholder {
   color: #aaaaaa;
 }
-.theme-input-disabled .example {
+.theme-input-disabled {
   color: #919191;
   background-color: #f2f2f2;
   border-color: #cccccc;
 }
-.theme-input-warning .example {
+.theme-input-warning {
   color: #806e00;
   border-color: #806e00;
 }
-.theme-input-success .example {
+.theme-input-success {
   color: #1e852a;
   border-color: #1e852a;
 }
-.theme-input-error .example {
+.theme-input-error {
   color: #dc372e;
   border-color: #dc372e;
 }
-.theme-label-disabled .example {
-  color: #919191;
-}
-.theme-label-warning .example {
-  color: #806e00;
-}
-.theme-label-success .example {
-  color: #1e852a;
-}
-.theme-label-error .example {
-  color: #dc372e;
-}
-.theme-output .example {
+.theme-output {
   color: #111111;
 }
-.theme-button .example {
+.theme-button {
   color: #111111;
   background-color: #cccccc;
   border-color: #cccccc;
 }
-.theme-button-hover .example {
+.theme-button-hover {
   color: #111111;
   background-color: #aaaaaa;
   border-color: #aaaaaa;
 }
-.theme-button-active .example {
+.theme-button-active {
   color: #111111;
   background-color: #cccccc;
   border-color: #aaaaaa;
 }
-.theme-button-primary-action .example {
+.theme-button-primary-action {
   color: #ffffff;
   background-color: #0074d9;
   border-color: #0074d9;
 }
-.theme-button-primary-action-hover .example {
+.theme-button-primary-action-hover {
   color: #ffffff;
   background-color: #00539c;
   border-color: #00539c;
 }
-.theme-button-primary-action-active .example {
+.theme-button-primary-action-active {
   color: #ffffff;
   background-color: #0074d9;
   border-color: #00539c;
 }
-.theme-button-positive-action .example {
+.theme-button-positive-action {
   color: #124f19;
   background-color: #2ecc40;
   border-color: #2ecc40;
 }
-.theme-button-positive-action-hover .example {
+.theme-button-positive-action-hover {
   color: #071d09;
   background-color: #239a30;
   border-color: #239a30;
 }
-.theme-button-positive-action-active .example {
+.theme-button-positive-action-active {
   color: #124f19;
   background-color: #2ecc40;
   border-color: #239a30;
 }
-.theme-button-danger-action .example {
+.theme-button-danger-action {
   color: #ffffff;
   background-color: #dc372e;
   border-color: #dc372e;
 }
-.theme-button-danger-action-hover .example {
+.theme-button-danger-action-hover {
   color: #ffffff;
   background-color: #af251d;
   border-color: #af251d;
 }
-.theme-button-danger-action-active .example {
+.theme-button-danger-action-active {
   color: #ffffff;
   background-color: #dc372e;
   border-color: #af251d;
 }
-.theme-button-disabled .example {
+.theme-button-disabled {
   color: #919191;
   background-color: #cccccc;
   border-color: #cccccc;
 }
-.theme-table .example {
+.theme-table {
   background-color: #ffffff;
 }
-.theme-table-header .example {
-  background-color: #ffffff;
+.theme-table-header {
   color: #111111;
   background-color: #7fdbff;
 }
-.theme-table-zebra-stripes .example {
-  background-color: #ffffff;
+.theme-table-zebra-stripes {
   background-color: #f2f2f2;
 }
-.theme-table-hover .example {
-  background-color: #ffffff;
+.theme-table-hover {
   background-color: #e5f8ff;
 }
-.theme-table-caption .example {
-  background-color: #ffffff;
+.theme-table-caption {
   font-style: italic;
   background-color: #f2f2f2;
 }
-.theme-table-multiple-bodies .example {
-  background-color: #ffffff;
+.theme-table-multiple-bodies {
   border-color: #aaaaaa;
 }
-.theme-table-cell .example {
-  background-color: #ffffff;
+.theme-table-cell {
   border-color: #aaaaaa;
 }
-.theme-table-success .example {
-  background-color: #ffffff;
+.theme-table-success {
   color: #124f19;
   background-color: #d1f5d5;
 }
-.theme-table-success-hover .example {
-  background-color: #ffffff;
+.theme-table-success-hover {
   color: #124f19;
   background-color: #d1f5d5;
 }
-.theme-table-error .example {
-  background-color: #ffffff;
+.theme-table-error {
   color: #771914;
   background-color: #f2b4b1;
 }
-.theme-table-error-hover .example {
-  background-color: #ffffff;
+.theme-table-error-hover {
   color: #771914;
   background-color: #f2b4b1;
 }
-.theme-table-warning .example {
-  background-color: #ffffff;
+.theme-table-warning {
   color: #806e00;
   background-color: #fff8cc;
 }
-.theme-table-warning-hover .example {
-  background-color: #ffffff;
+.theme-table-warning-hover {
   color: #806e00;
   background-color: #fff8cc;
 }
-.theme-table-info .example {
-  background-color: #ffffff;
+.theme-table-info {
   color: #0066c0;
   background-color: #d9edff;
 }
-.theme-table-info-hover .example {
-  background-color: #ffffff;
+.theme-table-info-hover {
   color: #0066c0;
   background-color: #d9edff;
 }
-.theme-breadcrumb-link .example {
+.theme-breadcrumb-link {
   color: #656565;
   text-decoration: none;
 }
-.theme-breadcrumb-link-hover .example {
+.theme-breadcrumb-link-hover {
   color: #2b2b2b;
 }
-.theme-breadcrumb-active .example {
+.theme-breadcrumb-active {
   color: #919191;
 }
-.theme-breadcrumb-divider .example {
+.theme-breadcrumb-divider {
   color: #2b2b2b;
 }
-.theme-breadcrumb-stack-link .example {
+.theme-breadcrumb-stack-link {
   color: #111111;
   background: #cccccc;
 }
-.theme-breadcrumb-stack-link-hover .example {
+.theme-breadcrumb-stack-link-hover {
   background: #aaaaaa;
 }
-.theme-breadcrumb-stack-active .example {
+.theme-breadcrumb-stack-active {
   color: #ffffff;
   background-color: #0074d9;
 }
-.theme-breadcrumb-stack-divider .example {
+.theme-breadcrumb-stack-divider {
   border-top-color: #cccccc;
 }
-.theme-breadcrumb-stack-divider-hover .example {
+.theme-breadcrumb-stack-divider-hover {
   border-top-color: #aaaaaa;
 }
-.theme-pagination-link .example {
+.theme-pagination-link {
   color: #111111;
   background-color: #cccccc;
   border-color: #cccccc;
 }
-.theme-pagination-link-hover .example {
+.theme-pagination-link-hover {
   color: #ffffff;
   background-color: #0074d9;
   border-color: #0074d9;
 }
-.theme-pagination-link-disabled .example {
+.theme-pagination-link-disabled {
   color: #919191;
   background-color: #cccccc;
   border-color: #cccccc;
 }
-.theme-pager-link .example {
+.theme-pager-link {
   color: #01769d;
   background: transparent;
 }
-.theme-pager-link-hover .example {
+.theme-pager-link-hover {
   color: #08455b;
 }
-.theme-pager-link-active .example {
+.theme-pager-link-active {
   color: #ffffff;
   background-color: #0074d9;
   border-color: #00539c;
 }
-.theme-pager-link-disabled .example {
+.theme-pager-link-disabled {
   color: #919191;
 }
-.theme-footer .example {
-  color: #ffffff;
-  background-color: #2b2b2b;
+.theme-header {
+  color: #111111;
+  background-color: #f2f2f2;
 }
-.theme-footer-link .example {
-  background-color: #2b2b2b;
-  color: #ffffff;
+.theme-header-article {
+  color: inherit;
+  background-color: transparent;
 }
-.theme-footer-link-hover .example {
-  background-color: #2b2b2b;
-  color: #ffffff;
+.theme-header-link {
+  color: #111111;
 }
-.theme-footer-navbar .example {
-  color: #ffffff;
-  background: #043c4d;
-}
-.theme-footer-navbar-link .example {
-  background: #043c4d;
-  color: #ffffff;
-}
-.theme-footer-navbar-link-hover .example {
-  color: #ffffff;
-  background: #043c4d;
-  background: #006e93;
-}
-.theme-footer-navbar-link-active .example {
-  color: #ffffff;
-  background: #043c4d;
+.theme-header-link-hover {
   color: #111111;
   background: #ffdc00;
 }
-.theme-panel-basic .example {
+.theme-header-link-active {
+  color: #111111;
+  background: #ffdc00;
+}
+.theme-footer {
+  color: #ffffff;
+  background-color: #2b2b2b;
+}
+.theme-footer-link {
+  color: #ffffff;
+}
+.theme-footer-link-hover {
+  color: #ffffff;
+}
+.theme-footer-navbar {
+  color: #ffffff;
+  background: #043c4d;
+}
+.theme-footer-navbar-link {
+  color: #ffffff;
+}
+.theme-footer-navbar-link-hover {
+  background: #006e93;
+}
+.theme-footer-navbar-link-active {
+  color: #111111;
+  background: #ffdc00;
+}
+.theme-panel-basic {
   background: #ffffff;
 }
-.theme-panel-basic-header .example {
-  background: #ffffff;
+.theme-panel-basic-header {
   background: #f2f2f2;
   border-color: #e6e6e6;
 }
-.theme-hero-unit .example {
+.theme-herounit {
   color: #cccccc;
   background: #043c4d;
 }
-.theme-hero-unit-heading .example {
-  color: #cccccc;
-  background: #043c4d;
+.theme-herounit-heading {
   color: #ffffff;
+}
+.theme-panel-success {
+  color: #124f19;
+  border: 1px solid #bcf0c2;
+}
+.theme-panel-success-header {
+  background: #d1f5d5;
+  border-width: 0;
+  border-bottom: 1px solid #bcf0c2;
+}
+.theme-panel-error {
+  color: #771914;
+  border: 1px solid #eea09b;
+}
+.theme-panel-error-header {
+  background: #f2b4b1;
+  border-width: 0;
+  border-bottom: 1px solid #eea09b;
+}
+.theme-panel-warning {
+  color: #806e00;
+  border: 1px solid #fff4b3;
+}
+.theme-panel-warning-header {
+  background: #fff8cc;
+  border-width: 0;
+  border-bottom: 1px solid #fff4b3;
+}
+.theme-panel-info {
+  color: #0066c0;
+  border: 1px solid #c0e1ff;
+}
+.theme-panel-info-header {
+  background: #d9edff;
+  border-width: 0;
+  border-bottom: 1px solid #c0e1ff;
 }
