@@ -223,3 +223,92 @@ nav .active > a:focus {
 .share-links > li > a {
   text-decoration: none;
 }
+.tabs > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  zoom: 1;
+}
+.tabs > ul:before,
+.tabs > ul:after {
+  content: "";
+  display: table;
+}
+.tabs > ul:after {
+  clear: both;
+}
+.tabs > ul li {
+  position: relative;
+  display: block;
+  float: left;
+  /*px*/ margin-right: 1px;
+  /**/
+  /*rem*/ margin-right: 0.1rem;
+}
+.tabs > ul a {
+  position: relative;
+  display: block;
+  /*px*/ padding: 6px 24px 12px;
+  /**/
+  /*rem*/ padding: 0.6rem 2.4rem 1.2rem;
+  text-align: center;
+  height: auto;
+  /*px*/ line-height: 24px;
+  /**/
+  /*rem*/ line-height: 2.4rem;
+  text-decoration: none;
+  border-top: 6px solid transparent;
+}
+.tabs > ul a:hover,
+.tabs > ul a:focus {
+  border-top-color: #fff5b3;
+  background-color: #fafafa;
+  outline: 0;
+}
+.tabs > ul .active a,
+.tabs > ul .active a:hover,
+.tabs > ul .active a:focus {
+  color: #111111;
+  background-color: #f2f2f2;
+  border-top-color: #ffdc00;
+  cursor: default;
+}
+.tabs > ul .disabled a,
+.tabs > ul .disabled a:hover,
+.tabs > ul .disabled a:focus {
+  /*px*/ padding-top: 12px;
+  /**/
+  /*rem*/ padding-top: 1.2rem;
+}
+.tabs .content {
+  zoom: 1;
+  background-color: #f2f2f2;
+}
+.tabs .content:before,
+.tabs .content:after {
+  content: "";
+  display: table;
+}
+.tabs .content:after {
+  clear: both;
+}
+.tabs .content > .pane {
+  /*px*/ padding: 0 24px;
+  /**/
+  /*rem*/ padding: 0 2.4rem;
+  zoom: 1;
+  display: none;
+  visibility: hidden;
+}
+.tabs .content > .pane:before,
+.tabs .content > .pane:after {
+  content: "";
+  display: table;
+}
+.tabs .content > .pane:after {
+  clear: both;
+}
+.tabs .content > .active {
+  display: block;
+  visibility: visible;
+}

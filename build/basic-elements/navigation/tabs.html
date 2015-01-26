@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Sharing links</title>
+  <title>Tabbed sections</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="basic-elements/navigation/sharing-links.html">
+  <link rel="canonical" href="basic-elements/navigation/tabs.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -167,11 +167,11 @@
           <i class="divider glyph-chevron-right"></i>
         </li>
         <li class="active">
-          Sharing links
+          Tabbed sections
         </li>
       </ol>
 
-      <h1>Sharing links</h1>
+      <h1>Tabbed sections</h1>
 
       <p class="lead"></p>
     </div>
@@ -179,52 +179,32 @@
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <p>Basic tool bar with add this integration.</p>
+      <p>The basic tab markup;</p>
 <div class="guide-example">
-<ul class="share-links">
-  <li><a href="#" title="Download a PDF version of this document">
-    <span class="glyph-download"></span> <span class="label">Download</span></a>
-  </li>
-  <li class="dropdown" data-state="off" data-on="in" data-off="">
-    <a href="#share-menu" id="share-menu-label" class="action-link" data-toggle="state" title="Share">
-      <i class="glyph-share"></i> <span class="label">Share</span> <span class="caret"></span>
-    </a>
-    <ul class="menu addthis_toolbox" id="share-menu" role="menu" aria-labelledby="share-menu-label">
-      <li>Share</li>
-      <!-- AddThis Buttons START -->
-      <li><a class="addthis_button_linkedin addthis_event" ><i class="icon-linkedin"></i> Linked In</a></li>
-      <li><a class="addthis_button_twitter addthis_event" ><i class="glyph-twitter"></i> Twitter</a></li>
-      <li><a class="addthis_button_facebook addthis_event" ><i class="glyph-facebook"></i> Facebook</a></li>
-      <li><a class="addthis_button_email addthis_event"><i class="glyph-email-closed"></i> Email</a></li>
-      <li><a class="addthis_button_more"><i class="glyph-plus"></i> More...</a></li>
-      <!-- AddThis Buttons END -->
-    </ul>
-  </li>
-  <li><a href="#" title="Print friendly version" rel="nofollow">
-    <span class="glyph-print"></span> <span class="label">Print</span></a>
-  </li>
-</ul>
+<div class="tabs" role="tabpanel">
+  <ul role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="content">
+    <div role="tabpanel" class="pane active example-tldr" id="home">
+      <p>Raw denim you probably haven&#39;t heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+    </div>
+    <div role="tabpanel" class="pane example-tldr" id="profile">
+      <p>Food truck fixie locavore, accusamus mcsweeney&#39;s marfa nulla single-origin coffee squid. Exercitation +1 labore velit, blog sartorial PBR leggings next level wes anderson artisan four loko farm-to-table craft beer twee. Qui photo booth letterpress, commodo enim craft beer mlkshk aliquip jean shorts ullamco ad vinyl cillum PBR. Homo nostrud organic, assumenda labore aesthetic magna delectus mollit. Keytar helvetica VHS salvia yr, vero magna velit sapiente labore stumptown. Vegan fanny pack odio cillum wes anderson 8-bit, sustainable jean shorts beard ut DIY ethical culpa terry richardson biodiesel. Art party scenester stumptown, tumblr butcher vero sint qui sapiente accusamus tattooed echo park.</p>
+    </div>
+    <div role="tabpanel" class="pane example-tldr" id="messages">
+      <p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney&#39;s organic lomo retro fanny pack lo-fi farm-to-table readymade. Messenger bag gentrify pitchfork tattooed craft beer, iphone skateboard locavore carles etsy salvia banksy hoodie helvetica. DIY synth PBR banksy irony. Leggings gentrify squid 8-bit cred pitchfork. Williamsburg banh mi whatever gluten-free, carles pitchfork biodiesel fixie etsy retro mlkshk vice blog. Scenester cred you probably haven&#39;t heard of them, vinyl craft beer blog stumptown. Pitchfork sustainable tofu synth chambray yr.</p>
+    </div>
+    <div role="tabpanel" class="pane example-tldr" id="settings">
+      <p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin. Cred vinyl keffiyeh DIY salvia PBR, banh mi before they sold out farm-to-table VHS viral locavore cosby sweater. Lomo wolf viral, mustache readymade thundercats keffiyeh craft beer marfa ethical. Wolf salvia freegan, sartorial keffiyeh echo park vegan.</p>
+    </div>
+  </div>
 </div>
-
-<h3 id="add-this-integration">Add this integration</h3>
-<p>To get add this integrating with Google Analytics you will need to include the following scripts at the bottom of your web.</p>
-<pre class="prettyprint linenums"><code>
-&lt;script src="//s7.addthis.com/js/250/addthis_widget.js" defer async&gt;&lt;/script&gt;
-
-&lt;script type="text/javascript"&gt;
-var addthis_config = {
-  data_ga_property: '{{ GA-CODE }}' ),
-  data_ga_social : true
-};
-&lt;/script&gt;
-</code></pre>
-
-<div class="info info-note">
-  <p><strong>Please note:</strong> You will need to replace <code>{{ GA-CODE }}</code> with the correct GA code you are using for analytics.</p>
-</div>
-
-<div class="info info-warning">
-  <p><strong>Beware:</strong> Add this integration only works with Google analytics not Universal Analytics, we are monitoring this state but currently add this do not intend to support UA with this feature.</p>
 </div>
 
     </article>
