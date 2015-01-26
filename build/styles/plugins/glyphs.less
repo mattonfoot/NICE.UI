@@ -310,3 +310,16 @@
 .glyph-stack.glyph-oversized { .glyph-stack-size( @glyph-oversized-size ); }
 .glyph-stack.glyph-mahoosive { .glyph-stack-size( @glyph-mahoosive-size ); }
 .glyph-stack.glyph-ridiculous { .glyph-stack-size( @glyph-ridiculous-size ); }
+
+// helper class to add carets to dropdowns
+
+.caret {
+  font-size: 1em;
+  font-style: normal;
+
+  .use-nice-glyph;
+
+  &:before {
+    content: @glyph-caret-down;
+  }
+}

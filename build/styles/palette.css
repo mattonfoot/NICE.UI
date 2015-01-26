@@ -384,7 +384,9 @@ pre code {
 .swatch > .hex {
   display: block;
   margin: 0 0 12px;
-  line-height: 24px;
+  /*px*/ line-height: 24px;
+  /**/
+  /*rem*/ line-height: 2.4rem;
   font-size: 12px;
   white-space: nowrap;
   overflow: hidden;

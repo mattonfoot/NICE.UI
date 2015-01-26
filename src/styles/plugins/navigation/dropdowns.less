@@ -1,0 +1,110 @@
+
+.dropdown {
+  position: relative;
+
+  .toggle {
+    // The caret makes the toggle a bit too tall in IE7
+    *margin-bottom: -3px;
+  }
+}
+
+.dropdown .toggle:active,
+.open .toggle {
+  outline: 0;
+}
+
+// The dropdown menu (ul)
+// ----------------------
+.dropdown .menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: @zindex-dropdown;
+  display: none; // none by default, but block on "open" of the menu
+  float: left;
+
+  .relative_size( min-width, @grid-spacing * 6 );
+  .padding( 5 0 );
+  .margin( 2 0 0 );
+
+  list-style: none;
+
+  background-color: @white;
+  .border( @lightgray );
+
+  // Aligns the dropdown menu to right
+  &.pull-right {
+    right: 0;
+    left: auto;
+  }
+
+  // Links within the dropdown menu
+  li {
+    .block-padding-horizontal;
+
+    > a {
+      display: block;
+      .block-padding-all;
+      .margin( 0 @half-grid-spacing * -1 );
+      clear: both;
+      .line-height;
+  //  color: @link;
+      text-decoration: none;
+      white-space: nowrap;
+
+      &:hover,
+      &:focus {
+        //  color: @white;
+        //  background-color: @link-hover;
+      }
+    }
+  }
+
+  .active > a {
+    &,
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      outline: 0;
+
+  //  color: @dropdownLinkColorActive;
+  //  background-color: @dropdownLinkBackgroundActive;
+    }
+  }
+
+  .disabled > a {
+    &,
+    &:hover,
+    &:focus {
+  //  color: @grayLight;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-color: transparent;
+      cursor: default;
+    }
+  }
+}
+
+.dropdown.in {
+  // IE7's z-index only goes to the nearest positioned ancestor, which would
+  // make the menu appear below buttons that appeared later on the page
+  *z-index: @zindex-dropdown;
+
+  & > .menu {
+    display: block;
+  }
+}
+
+// Backdrop to catch body clicks on mobile, etc.
+// ---------------------------
+.dropdown-backdrop {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: @zindex-dropdown - 10;
+}

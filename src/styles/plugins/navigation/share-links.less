@@ -1,0 +1,19 @@
+.share-links {
+  .margin-right( 0 );
+  .padding-left( 0 );
+  list-style: none;
+
+  > li {
+    display: inline-block;
+
+    .margin-left( @half-grid-spacing );
+
+    &:first-child {
+      .margin-left( 0 );
+    }
+
+    > a {
+      text-decoration: none;
+    }
+  }
+}

@@ -48,18 +48,14 @@ header .nav > li.active > a {
   color: #111111;
   background: #ffdc00;
 }
+header .share-links {
+  float: right;
+  /*px*/ margin: 0 0 0 24px;
+  /**/
+  /*rem*/ margin: 0 0 0 2.4rem;
+}
 article > header {
   background: transparent;
-}
-.dropdown {
-  position: relative;
-}
-.dropdown .menu {
-  display: none;
-}
-.dropdown.in .menu {
-  display: block;
-  position: absolute;
 }
 @media (max-width: 767px) {
   header .nav {

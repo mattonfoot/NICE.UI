@@ -37,15 +37,14 @@ When placed directly within an <code>&lt;article&gt;</code> element the header t
 <article>
   <header role="header">
     <h2>Weighing the benefits and risks of sunlight exposure</h2>
-    <ul class="inline share-links example-tldr" style="float: right; margin: 0 0 0 24px;">
+    <ul class="share-links example-tldr">
       <li><a href="#" title="Download a PDF version of this document">
         <span class="glyph-download"></span>
         <span class="label">Download</span></a></li>
       <li class="dropdown" data-state="off" data-on="in" data-off="">
-        <button class="action-link" data-toggle="state" title="Share">
+        <a href="#share-menu" class="action-link" data-toggle="state" title="Share">
           <i class="glyph-share"></i>
-          <span class="label">Share</span>
-        </button>
+          <span class="label">Share</span></a>
         <ul class="menu addthis_toolbox" id="share-menu" role="menu" aria-labelledby="nice-share">
           <li>Share</li>
           <!-- AddThis Button BEGIN -->
