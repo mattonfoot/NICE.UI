@@ -1,4 +1,4 @@
-NICE.TopHat
-===========
+NICE UI library
+===============
 
-Distributable, branded tophat component for NICE Services and Web Applications
+A responsive UI library for NICE online services and web applications

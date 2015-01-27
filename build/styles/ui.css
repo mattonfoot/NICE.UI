@@ -2524,6 +2524,7 @@ footer .legal-copyright {
   /*rem*/ margin: 2.4rem 0;
   padding: 0;
   background: #ffffff;
+  border: 1px solid #d9d9d9;
 }
 .panel .panel-heading {
   /*px*/ padding: 12px 12px;
@@ -2652,16 +2653,22 @@ footer .legal-copyright {
   /*px*/ padding: 12px 12px;
   /**/
   /*rem*/ padding: 1.2rem 1.2rem;
+  background: #f2f2f2;
+  border: 0;
 }
 .panel-well-small {
   /*px*/ padding: 6px 12px;
   /**/
   /*rem*/ padding: 0.6rem 1.2rem;
+  background: #f2f2f2;
+  border: 0;
 }
 .panel-well-large {
   /*px*/ padding: 24px 12px;
   /**/
   /*rem*/ padding: 2.4rem 1.2rem;
+  background: #f2f2f2;
+  border: 0;
 }
 .hero-unit {
   /*px*/ padding: 48px 48px;

@@ -737,6 +737,7 @@ pre code {
 }
 .theme-panel-basic {
   background: #ffffff;
+  border: 1px solid #d9d9d9;
 }
 .theme-panel-basic-header {
   background: #f2f2f2;
@@ -784,6 +785,10 @@ pre code {
   background: #d9edff;
   border-width: 0;
   border-bottom: 1px solid #c0e1ff;
+}
+.theme-panel-well {
+  background: #f2f2f2;
+  border: 0;
 }
 .theme-menu {
   background-color: transparent;

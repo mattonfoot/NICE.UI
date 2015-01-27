@@ -1,10 +1,11 @@
 {
   "name": "NICE.UI",
   "version": "1.0.0",
-  "description": "A responsive UI framework for NICE online services and web applications",
+  "description": "A responsive UI library for NICE online services and web applications",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/grunt-cli/bin/grunt test"
+    "test": "./node_modules/grunt-cli/bin/grunt test",
+    "start": "./node_modules/grunt-cli/bin/grunt serve"
   },
   "repository": {
     "type": "git",

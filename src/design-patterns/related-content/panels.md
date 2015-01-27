@@ -11,7 +11,7 @@ nav_groups:
 By default, all the <code>.panel</code> does is apply some basic border and padding to contain some content.
 
 <div class="guide-example">
-  <div class="panel panel-default">
+  <div class="panel">
     <div class="panel-body">
       Basic panel example
     </div>
@@ -25,14 +25,14 @@ You may also include any <code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code> with a
 <code>.panel-title</code> class to add a pre-styled heading.
 
 <div class="guide-example">
-  <div class="panel panel-default">
+  <div class="panel">
     <div class="panel-heading example-tldr">Panel heading without title</div>
     <div class="panel-body example-ignore">
       Panel content
     </div>
   </div>
 
-  <div class="panel panel-default">
+  <div class="panel">
     <div class="panel-heading">
       <h3 class="panel-title example-tldr">Panel title</h3>
     </div>
@@ -49,7 +49,7 @@ footers **do not** inherit colours and borders when using contextual variations
 as they are not meant to be in the foreground.
 
 <div class="guide-example">
-  <div class="panel panel-default">
+  <div class="panel">
     <div class="panel-body example-ignore">
       Panel content
     </div>
@@ -63,7 +63,7 @@ Like other components, easily make a panel more meaningful to a particular
 context by adding any of the contextual state classes.
 
 <div class="guide-example">
-<div class="panel panel-default example-tldr">
+<div class="panel example-tldr">
   <div class="panel-heading">
     <h3 class="panel-title">Panel title <a href="#">A link</a></h3>
   </div>
@@ -120,7 +120,7 @@ If there is a ```.panel-body```, we add an extra border to the top of the table
 for separation.
 
 <div class="guide-example">
-<div class="panel panel-default">
+<div class="panel">
   <div class="panel-heading example-tldr">Panel heading</div>
   <div class="panel-body example-tldr">
     <p>Some default panel content here. Nulla vitae elit libero, a pharetra augue. Aenean lacinia bibendum nulla sed consectetur. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -161,7 +161,7 @@ for separation.
 If there is no panel body, the component moves from panel header to table without interruption.
 
 <div class="guide-example">
-<div class="panel panel-default">
+<div class="panel">
   <div class="panel-heading example-tldr">Panel heading</div>
   <table class="table example-tldr">
     <thead>
