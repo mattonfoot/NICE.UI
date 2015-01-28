@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Hero unit</title>
+  <title>Grid framework</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="design-patterns/related-content/hero-unit.html">
+  <link rel="canonical" href="basic-elements/layout/grid.html">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -211,61 +211,267 @@
           <a href="../../../../../../..">Home</a> <i class="divider glyph-chevron-right"></i>
         </li>
         <li>
-          <a href="../../design-patterns.html">
-            Design patterns
+          <a href="../../basic-elements.html">
+            Basic elements
           </a>
           <i class="divider glyph-chevron-right"></i>
         </li>
         <li>
-          <a href="../related-content.html">
-            Related content
+          <a href="../layout.html">
+            Layout
           </a>
           <i class="divider glyph-chevron-right"></i>
         </li>
         <li class="active">
-          Hero unit
+          Grid framework
         </li>
       </ol>
 
-      <h1>Hero unit</h1>
+      <h1>Grid framework</h1>
 
-      <p class="lead">A lightweight, flexible component that can optionally extend the entire viewport to showcase key content on your site.</p>
+      <p class="lead">A responsive, proportional, and mobile-first 12-column grid framework</p>
     </div>
   </header>
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <p>The basic hero unit.</p>
-<div class="guide-example">
-<header class="hero-unit" role="banner">
-  <h1>Hello, world!</h1>
-  <p class="example-tldr">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
-  <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
-</header>
+      <p>The NICE UI library layout patterns are based around a 12 column design grid. When laying out content this basic presentation rule should be adhered to as often as possible.</p>
+<h2 id="features">Features</h2>
+<ol>
+<li><strong>Responsive grid</strong> defined in percentages</li>
+<li><strong>Flexible media</strong> that will proportionaly scale down when larger than the parent tag</li>
+<li><strong>Media Queries</strong> that create breakpoints at: 768px and 980px</li>
+<li><strong>Mobile-First</strong> Only when the viewport width is above 768px does the grid take affect, otherwise it remains collapsed vertically.</li>
+</ol>
+<h2 id="getting-started">Getting Started</h2>
+<p>The framework is built around a combination of these three elements: <code>.container</code>, <code>.row</code>, and <code>.span*of*</code>.</p>
+<ol>
+<li>The <code>.container</code> class sets the max-width of the page and centers it horizontally. It also sets the left and right margins on small screens.</li>
+<li>The <code>.row</code> class defines horizontal divisions of the page.</li>
+<li>The <code>.span*of*</code> classes create vertical divisions of the page with defined sizes for containing content. (They can be thought of as &quot;column spans&quot;)</li>
+</ol>
+<div class="guide-example example-processed">
+<div class="row">
+  <div class="span2of3">2/3</div>
+  <div class="span1of3">1/3</div>
 </div>
-
-<h2 id="options">Options</h2>
-<p>Place the hero unit at the root of the document and wrap all of its contents in a <code>.container</code> element to allow it to fill the horizontal area of the viewport.</p>
-<pre class="prettyprint linenums"><code>
-&lt;header class="hero-unit" role="banner"&gt;
-  &lt;div class="container"&gt;
-    &lt;h1&gt;...&lt;/h1&gt;
-    &lt;p&gt;...&lt;/p&gt;
+</div>
+<pre class="prettyprint linenums"><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;span2of3&quot;&gt;2/3&lt;/div&gt;
+    &lt;div class=&quot;span1of3&quot;&gt;1/3&lt;/div&gt;
   &lt;/div&gt;
-&lt;/header&gt;
+&lt;/div&gt;
 </code></pre>
 
-<p>Downgrade the semantics of the heading by changing the <code>&lt;h1&gt;</code> to a <code>&lt;h2&gt;</code> without loosing size;</p>
-<pre class="prettyprint linenums"><code>
-&lt;header class="hero-unit" role="banner"&gt;
-  &lt;h2&gt;...&lt;/h2&gt;
-  &lt;p&gt;...&lt;/p&gt;
-&lt;/header&gt;
+<div class="note note-info">
+  <strong><em>Note:</em></strong> it is possible to use the <code>.span*</code> classes to indicate how many columns the element will span. This is the equivalent of <code>.span*of12</code> as the grid is based on twelve columns.
+</div>
+
+<div class="note note-important">
+  <strong>Beware</strong> Do not add additional styles to rows and spans as this could affect the layout especially if the styles add borders margins or paddings. Best practice is to keep grid elements as layout helpers and style other elements visually within the grid elements.
+</div>
+
+<h2 id="sizes">Sizes</h2>
+<p>All of the available sizes can also be seen below.</p>
+<div class="guide-example example-processed">
+<div class="row">
+  <div class="span1of1">1/1</div>
+</div>
+
+<div class="row">
+  <div class="span1of2">1/2</div>
+  <div class="span1of2">1/2</div>
+</div>
+
+<div class="row">
+  <div class="span1of3">1/3</div>
+  <div class="span1of3">1/3</div>
+  <div class="span1of3">1/3</div>
+</div>
+
+<div class="row">
+  <div class="span1of4">1/4</div>
+  <div class="span1of4">1/4</div>
+  <div class="span1of4">1/4</div>
+  <div class="span1of4">1/4</div>
+</div>
+
+<div class="row">
+  <div class="span1of6">1/6</div>
+  <div class="span1of6">1/6</div>
+  <div class="span1of6">1/6</div>
+  <div class="span1of6">1/6</div>
+  <div class="span1of6">1/6</div>
+  <div class="span1of6">1/6</div>
+</div>
+
+<div class="row">
+  <div class="span1of12">1/12</div>
+  <div class="span1of12">1/12</div>
+  <div class="span1of12">1/12</div>
+  <div class="span1of12">1/12</div>
+  <div class="span1of12">1/12</div>
+  <div class="span1of12">1/12</div>
+  <div class="span1of12">1/12</div>
+  <div class="span1of12">1/12</div>
+  <div class="span1of12">1/12</div>
+  <div class="span1of12">1/12</div>
+  <div class="span1of12">1/12</div>
+  <div class="span1of12">1/12</div>
+</div>
+</div>
+
+<p>The different sized columns can be used in multiple combinations but be aware that if the sum of the column spans is greater than 12 they will wrap onto the next line.</p>
+<div class="guide-example example-processed">
+<div class="row">
+  <div class="span1of3">1/3</div>
+  <div class="span2of3">2/3</div>
+</div>
+
+<div class="row">
+  <div class="span1of4">1/4</div>
+  <div class="span3of4">3/4</div>
+</div>
+
+<div class="row">
+  <div class="span1of6">1/6</div>
+  <div class="span5of6">5/6</div>
+</div>
+
+<div class="row">
+  <div class="span2of3">2/3</div>
+  <div class="span1of3">1/3</div>
+</div>
+
+<div class="row">
+  <div class="span3of4">3/4</div>
+  <div class="span1of4">1/4</div>
+</div>
+
+<div class="row">
+  <div class="span5of6">5/6</div>
+  <div class="span1of6">1/6</div>
+</div>
+
+<div class="row">
+  <div class="span1of4">1/4</div>
+  <div class="span1of4">1/4</div>
+  <div class="span1of2">1/2</div>
+</div>
+
+<div class="row">
+  <div class="span1of4">1/4</div>
+  <div class="span1of2">1/2</div>
+  <div class="span1of4">1/4</div>
+</div>
+
+<div class="row">
+  <div class="span1of2">1/2</div>
+  <div class="span1of4">1/4</div>
+  <div class="span1of4">1/4</div>
+</div>
+
+<div class="row">
+  <div class="span5of6">5/6</div>
+  <div class="span1of12">1/12</div>
+  <div class="span1of12">1/12</div>
+</div>
+
+<div class="row">
+  <div class="span1of12">1/12</div>
+  <div class="span5of6">5/6</div>
+  <div class="span1of12">1/12</div>
+</div>
+</div>
+
+<h2 id="nesting-columns">Nesting columns</h2>
+<p>It is possible to nest columns within other columns. However, only certain combinations should be nested and the result of the nesting should adhere to the twelve column design grid.</p>
+<pre class="prettyprint linenums"><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="span2of3"&gt;
+      &lt;div class="row"&gt;
+        &lt;div class="span2of3"&gt;2/3&lt;/div&gt;
+        &lt;div class="span1of3"&gt;1/3&lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="span1of3"&gt;1/3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
 </code></pre>
 
 <div class="note note-important">
-  <p>If you choose to use the Hero unit pattern you must only include one per web page and it must be positioned at the head of the document content directly below the tophat.</p>
+  <p><strong>Beware</strong> It is easy to break the grid based designs by nesting columns. <strong>Use with caution</strong>.</p>
+
+  <p>If you were to nest a <code>.span1of2</code> (which has a width of 50%) within a <code>.span1of6</code> (which has a width of 16.67%) you get a column which is now equivalent to <code>.span1of12</code> 8.33%; This is ok because it still fits with the design grid.</p>
+
+  <p>If, however, you were to nest a <code>.span1of6</code> inside another <code>.span1of6</code> then this would be one sixth of one sixth which is 1/36<sup>th</sup> or 2.78% ( thats as if you are designing to a 36 column design grid ).</p>
 </div>
+
+<h2 id="centering">Centering</h2>
+<div class="guide-example example-processed">
+<div class="row">
+  <div class="span1of6 centered">
+    1/6
+  </div>
+</div>
+
+<div class="row">
+  <div class="span1of3 centered">
+    1/3
+  </div>
+</div>
+
+<div class="row">
+  <div class="span1of2 centered">
+    1/2
+  </div>
+</div>
+
+<div class="row">
+  <div class="span2of3 centered">
+    2/3
+  </div>
+</div>
+
+<div class="row">
+  <div class="span5of6 centered">
+    5/6
+  </div>
+</div>
+</div>
+<pre class="prettyprint linenums"><code>&lt;div class=&quot;container&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;span2of3 centered&quot;&gt;1/7&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<div class="note note-important">
+  <p><strong>Beware</strong> Again it is easy to break the grid based designs by centring if . <strong>Use with caution</strong>.</p>
+
+  <p>Never use <code>.span1of12</code>, <code>.span3of4</code>, <code>.span6of8</code> or <code>.span1of4</code> as these do not align with the design grid when centered.</p>
+</div>
+
+<h2 id="tiles-grid">Tiles grid</h2>
+<p>The tiles style grid is used for repeating content holders of equal width. They appear in two-up, three-up, four-up, five-up, and six-up variations.</p>
+<p><div class="guide-example example-processed"></p>
+<p><ul class="grid1of3">
+  <li><img src="http://placehold.it/240x240" style="width:100%;height:auto;" /></li>
+  <li><img src="http://placehold.it/240x240" style="width:100%;height:auto;" /></li>
+  <li><img src="http://placehold.it/240x240" style="width:100%;height:auto;" /></li>
+  <li><img src="http://placehold.it/240x240" style="width:100%;height:auto;" /></li>
+  <li><img src="http://placehold.it/240x240" style="width:100%;height:auto;" /></li>
+</ul>
+</div></p>
+<pre class="prettyprint linenums"><code>&lt;div class="container"&gt;
+  &lt;ul class="grid1of3"&gt;
+    &lt;li&gt; [...] &lt;/li&gt;
+    &lt;li&gt; [...] &lt;/li&gt;
+    [...]
+  &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
 
     </article>
 
@@ -273,13 +479,13 @@
       <nav>
         <ul>
           <li>
-            <a href="panels.html">Panels</a>
+            <a href="two-column.html">Two column layout</a>
           </li>
           <li>
-            <a href="wells.html">Wells</a>
+            <a href="header.html">Header</a>
           </li>
           <li>
-            <a href="hero-unit.html">Hero unit</a>
+            <a href="grid.html">Grid framework</a>
           </li>
         </ul>
       </nav>

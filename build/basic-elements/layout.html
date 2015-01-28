@@ -80,6 +80,62 @@
   li.L5, li.L6, li.L7, li.L8
   { list-style-type: decimal !important }
   
+  code {
+    border: 1px solid rgba(0,0,255,.05);
+    padding: 0 .2em;
+    background: rgba(0,0,255,.01);
+  }
+  pre code {
+    border:0;
+    padding: 0;
+    background: none;
+  }
+  
+  .guide-example .row {
+    font-size: 1.1rem;
+    line-height: 2.4rem;
+    background: #f6f6f6;
+    margin: 1.2rem 0;
+    background-image:   linear-gradient(
+                          90deg,
+                          transparent 24.75%,
+                          rgba(0, 0, 255, .1) 24.75%,
+                          rgba(0, 0, 255, .1) 25.25%,
+                          transparent 25.25%,
+                          transparent 49.65%,
+                          rgba(0, 0, 255, .2) 49.65%,
+                          rgba(0, 0, 255, .2) 50.3%,
+                          transparent 50.3%,
+                          transparent 74.75%,
+                          rgba(0, 0, 255, .1) 74.75%,
+                          rgba(0, 0, 255, .1) 75.25%,
+                          transparent 75.25%,
+                          transparent 99.5%,
+                          rgba(0, 0, 255, .2) 99%
+                        );
+    background-size: 33.39% 10px;
+    background-position: 50% 50%;
+  }
+  .guide-example .row > * {
+    border-radius: .3rem;
+    color: #666;
+    font-weight: bold;
+    text-align: center;
+  }
+  .guide-example .row > :nth-of-type(1n) {
+    background-color:rgba(  0,110,147,.4);
+  }
+  .guide-example .row > :nth-of-type(2n) {
+    background-color:rgba(  0,110,147,.3);
+  }
+  .guide-example .row > :nth-of-type(3n) {
+    background-color:rgba(  0,110,147,.2);
+  }
+  .guide-example .row > :nth-of-type(4n) {
+    background-color:rgba(  0,110,147,.1);
+  }
+  
+  
   .glyph-grid {
     zoom: 1;
   }
@@ -217,10 +273,13 @@ elements <code>body</code>, <code>header</code>, <code>footer</code> and <code>m
       <nav>
         <ul class="menu">
           <li>
+            <a href="layout/two-column.html">Two column layout</a>
+          </li>
+          <li>
             <a href="layout/header.html">Header</a>
           </li>
           <li>
-            <a href="layout/two-column.html">Two column layout</a>
+            <a href="layout/grid.html">Grid framework</a>
           </li>
         </ul>
       </nav>
