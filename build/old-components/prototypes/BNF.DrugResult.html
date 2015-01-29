@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>NICE.Bootstrap BNF Home</title>
+    <!-- @include _header.html -->
+  </head>
+
+    <style>
+    .link-block {
+        display: block;
+        min-height: 120px;
+        margin: 0 15px 24px;
+        padding: 15px 10px;
+        background-color: #898a89;
+        color: white;
+        font: 400;
+        font-size: 18px;
+        line-height: 20px;
+    }
+    .link-block:hover {
+        color: white;
+        text-decoration: none;
+    }
+    .link-block > [class^="icon-nice-"],
+    .link-block > [class*=" icon-nice-"] {
+        float: right;
+        font-size: 2em;
+        margin: -5px 0 0 5px;
+    }
+
+    .link-block-primary {
+        background-color: #346e7f;
+        min-height: 220px;
+    }
+
+    .brand-bnf {
+        font: 900 64px/70px arial,sans-serif;
+        margin: 0 15px;
+    }
+
+    .brand-bnf > small{
+        display: block;
+        font: normal 13px/16px arial,sans-serif;
+    }
+
+    .form-search.form-full {
+        margin: 20px 0 0;
+    }
+
+    .form-search.form-full .search-query {
+        width: 89.8%;
+        padding-left: 2%;
+        padding-right: 2%;
+        margin-right:-0.8%;
+    }
+
+    .form-search.form-full .btn {
+        width: 6.022%;
+        background-color: #346e7f;
+    }
+
+    .form-search.form-full .btn:before {
+        padding-left: 18%;
+    }
+
+    .panel ul {
+
+    }
+
+    @media (max-width: 767px) {
+
+        .link-block {
+            min-height: 0;
+        }
+
+    }
+
+    section h2 {
+        margin-left: -2px;
+    }
+
+    section p {
+        border-left: 10px solid #346e7f;
+        padding-left: 5px;
+    }
+
+    section.section-caution p {
+        border-left-color: #fc7823;
+    }
+
+    #sub-sections .media-list .media-body {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .toc {
+        padding: 24px 15px;
+    }
+
+    .toc .nav-list .nav-list {
+        display: block;
+    }
+
+    .toc .affix {
+        top: 20px;
+        width: 16.5%;
+    }
+
+    @media (min-width: 1200px) {
+
+        .toc .affix {
+            width: 15.5%;
+        }
+
+    }
+
+    @media (max-width: 959px) {
+
+        .toc {
+            display: none;
+            visible: hidden;
+        }
+
+        .toc .affix {
+            top: inherit;
+            position: inherit;
+        }
+
+    }
+    </style>
+  <body data-spy="scroll" data-target=".toc">
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+            <div class="nav-collapse collapse">
+                <form action="/search" class="navbar-search" method="get">
+                    <div class="navbar-search-inner">
+                        <div class="control-group">
+                            <div class="controls">
+                                <input type="text" autocomplete="off" spellcheck="false" name="q" placeholder="Search..." maxlength="250" class="search-query" />
+                            </div>
+                        </div>
+                        <button type="submit" value="go" title="go" class="btn">Search</button>
+                    </div>
+                </form>
+
+                <ul class="nav pull-right">
+                    <li><a href="#" title="What's changed">What's changed</a></li>
+                    <li><a href="#" title="A to Z">Formulary</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+    <div class="layout">
+        <div class="content content-secondary">
+            <span class="brand brand-bnf">BNF <small>British National Formulary</small></span>
+        </div>
+
+        <div class="content content-primary">
+                <h1>PARACETAMOL</h1>
+
+                <p class="lead">
+                    <em class="scientific-name">(Acetaminophen)</em>
+                    <span class="interactions"><strong>Additional information</strong> interactions (<a href="#" title="Paracetamol">Paracetamol</a>).</span></p>
+        </div>
+    </div> <!-- /layout -->
+
+    <div class="layout layout-first-right">
+        <div class="content content-primary">
+
+            <ul class="pagination">
+                <li class="previous">
+                    <a accesskey="[" href="#" title="Previous: x" rel="prev"><i class="icon-chevron-left"></i> Previous</a>
+                </li>
+                <li class="next">
+                    <a accesskey="]" href="#"title="Next: x" rel="next">Next <i class="icon-chevron-right"></i></a>
+                </li>
+            </ul>
+
+            <section id="indications">
+                <h2>Indications</h2>
+
+                <p>mild to moderate pain, pyrexia (pyrexia with discomfort in
+                children)</p>
+            </section>
+
+            <section class="section-caution" id="cautions">
+                <h2>Cautions</h2>
+
+                <p>alcohol dependence; max. daily infusion dose 3 g in patients with
+                hepatocellular insufficiency, chronic alcoholism, chronic malnutrition,
+                or dehydration; before administering, check when paracetamol last
+                administered and cumulative paracetamol dose over previous 24 hours;
+                <strong>interactions:</strong> Appendix 1 (paracetamol)</p>
+            </section>
+
+            <section id="hepatic">
+                <h2>Hepatic impairment</h2>
+
+                <p>dose-related toxicity—avoid large doses; see also Cautions</p>
+            </section>
+
+            <section id="renal">
+                <h2>Renal impairment</h2>
+
+                <p>increase infusion dose interval to every 6 hours if eGFR less than 30
+                mL/minute/1.73 m<sup>2</sup>; note also sodium content of effervescent
+                tablets (see under relevant preparation entry)</p>
+            </section>
+
+            <section id="pregnancy">
+                <h2>Pregnancy</h2>
+
+                <p>not known to be harmful</p>
+            </section>
+
+            <section id="breast-feeding">
+                <h2>Breast-feeding</h2>
+
+                <p>amount too small to be harmful</p>
+            </section>
+
+            <section id="side-effects">
+                <h2>Side-effects</h2>
+
+                <p>side-effects <em>rare</em>, malaise, skin reactions including
+                Stevens-Johnson syndrome, toxic epidermal necrolysis, acute
+                generalised exanthematous pustulosis; blood disorders including
+                thrombocytopenia, leucopenia, neutropenia reported; hypotension,
+                flushing, and tachycardia reported on infusion;
+                <strong>important:</strong> liver damage (and less frequently renal
+                damage) following <strong>overdosage</strong>, see <a href=
+                "/formulary/bnf/current/emergency-treatment-of-poisoning/specific-drugs/analgesics-non-opioid#PHP191"
+                title="target-block: Paracetamol poisoning management">Emergency
+                Treatment of Poisoning</a></p>
+            </section>
+
+            <section id="dose">
+                <h2>Dose</h2>
+
+                <p class="age-group">
+                    <strong class="route">By mouth</strong>, 0.5–1 g every
+                    4–6 hours to a max. of 4 g daily;
+                    <em class="age-category">CHILD</em> 2–3 months 60 mg for post-immunisation
+                    pyrexia, repeated once after 4–6 hours if
+                    necessary; otherwise under 3 months see <a href=
+                    "/formulary/bnfc/current/4-central-nervous-system/47-analgesics/471-non-opioid-analgesics-and-compound-analgesic-preparations/paracetamol"
+                    title="BNFC:monograph: PARACETAMOL">BNF for
+                    Children</a>; 3–6 months 60 mg, 6 months–2
+                    years 120 mg, 2–4 years 180 mg, 4–6 years 240 mg,
+                    6–8 years 240–250 mg, 8–10 years 360–375 mg, 10–12
+                    years 480–500 mg, 12–16 years 480–750 mg; these
+                    doses may be repeated every 4–6 hours when
+                    necessary (max. of 4 doses in 24 hours);
+                    postoperative pain in children see <a href=
+                    "/formulary/bnfc/current/4-central-nervous-system/47-analgesics/471-non-opioid-analgesics-and-compound-analgesic-preparations/paracetamol"
+                    title="PARACETAMOL">BNF for Children</a>
+                </p>
+
+                <p class="age-group">
+                    <strong class="route">By intravenous infusion</strong>
+                    over 15 minutes,
+                    <em class=age-category>
+                        ADULT
+                    </em>and
+
+                    <em class="age-category">
+                        CHILD
+                    </em>over 50 kg, 1 g every 4–6 hours, max. 4 g
+                    daily;
+
+                    <em class="age-category">
+                        ADULT
+                    </em>and
+
+                    <em class="age-category">
+                        CHILD
+                    </em>10–50 kg, 15 mg/kg every 4–6 hours, max. 60
+                    mg/kg daily;
+
+                    <em class="age-category">
+                        CHILD
+                    </em>less than 10 kg see <a href=
+                    "/formulary/bnfc/current/4-central-nervous-system/47-analgesics/471-non-opioid-analgesics-and-compound-analgesic-preparations/paracetamol"
+                    title="BNFC:monograph: PARACETAMOL">BNF for
+                    Children</a>
+                </p>
+
+                <p class="age-group">
+                    <strong class="route">By rectum</strong>, 0.5–1 g every
+                    4–6 hours to a max. of 4 g daily;
+
+                    <em class="age-category">
+                        CHILD
+                    </em>under 3 months see <a href=
+                    "/formulary/bnfc/current/4-central-nervous-system/47-analgesics/471-non-opioid-analgesics-and-compound-analgesic-preparations/paracetamol"
+                    title="BNFC:monograph: PARACETAMOL">BNF for
+                    Children</a>, 3 months–1 year 60–125 mg, 1–5
+                    years 125–250 mg, 5–12 years 250–500 mg, 12–18
+                    years 500 mg; these doses may be repeated every 4–6
+                    hours as necessary (max. 4 doses in 24 hours);
+                    postoperative pain in children see <a href=
+                    "/formulary/bnfc/current/4-central-nervous-system/47-analgesics/471-non-opioid-analgesics-and-compound-analgesic-preparations/paracetamol"
+                    title="PARACETAMOL">BNF for Children</a>
+                </p>
+            </section>
+
+            <aside class="typenote alert alert-info">
+                <p><strong>Note</strong> For full Joint Committee on Vaccination and Immunisation
+                    recommendation on post-immunisation pyrexia, see <a href=
+                    "/formulary/bnf/current/14-immunological-products-and-vaccines/141-active-immunity"
+                    title=" Active immunity">section 14.1</a></p>
+            </aside>
+
+            <section id="sub-sections">
+                <h2>Sub-sections</h2>
+
+                <div class="media-list">
+                    <article class="media">
+                        <h4 class="media-heading">
+                            <a class="preparation" href="#paracetamol-presentations" data-toggle="collapse">Paracetamol</a>
+                            <span class="ph organisation">(Non-proprietary)</span></h4>
+
+                        <div class="collapse" id="paracetamol-presentations">
+                            <div class="media-body">
+                                <section class="presentation">
+                                    <p><strong>Tablets (and caplets)</strong><img alt=
+                                    "Prescription-only Medicine" src=
+                                    "https://www.evidence.nhs.uk/formulary/BnfData/bnf/64/images/pom_s.png" title=
+                                    "Prescription-only Medicine"><a class="footnote-link" href=
+                                    "#bnf-fn_1" title="Go to footnote"><sup>1</sup></a>, paracetamol
+                                    500 mg, <a href=
+                                    "/formulary/bnf/current/general-information-and-changes/how-to-use-the-bnf/prices-in-the-bnf"
+                                    title="Prices in the BNF">net price</a> 32–tab pack =
+                                    88p, 100-tab pack = £2.75. Label: 29, 30</p>
+
+                                    <aside class="typenote alert alert-info">
+                                        <strong>Dental prescribing on NHS</strong> Paracetamol Tablets may be prescribed
+                                    </aside>
+                                </section>
+
+                                <section class="presentation">
+                                    <p><strong>Capsules</strong><img alt=
+                                    "Prescription-only Medicine" src=
+                                    "https://www.evidence.nhs.uk/formulary/BnfData/bnf/64/images/pom_s.png" title=
+                                    "Prescription-only Medicine"><a class="footnote" href=
+                                    "#bnf-fn_1" title="Go to footnote"><sup>1</sup></a>, paracetamol
+                                    500 mg, <a href=
+                                    "/formulary/bnf/current/general-information-and-changes/how-to-use-the-bnf/prices-in-the-bnf"
+                                    title="Prices in the BNF">net price</a> 32-cap pack =
+                                    £1.23, 100-cap pack = £3.84. Label: 29, 30</p>
+                                </section>
+
+                                <section class="presentation">
+                                    <p><strong>Soluble tablets</strong> (= Dispersible
+                                    tablets)<img alt="Prescription-only Medicine" src=
+                                    "https://www.evidence.nhs.uk/formulary/BnfData/bnf/64/images/pom_s.png" title=
+                                    "Prescription-only Medicine">, paracetamol 500 mg,
+                                    <a href=
+                                    "/formulary/bnf/current/general-information-and-changes/how-to-use-the-bnf/prices-in-the-bnf"
+                                    title="Prices in the BNF">net price</a> 24-tab pack =
+                                    £2.21, 100-tab pack = £9.21. Label: 13, 29, 30</p>
+
+                                    <aside class="typenote alert alert-info">
+                                        <strong>Dental prescribing on NHS</strong> Paracetamol Soluble Tablets 500 mg may be
+                                        prescribed
+                                    </aside>
+                                </section>
+
+                                <section class="presentation">
+                                    <p><strong>Oral suspension 120 mg/5 mL</strong>,
+                                    paracetamol 120 mg/5 mL, <a href=
+                                    "/formulary/bnf/current/general-information-and-changes/how-to-use-the-bnf/prices-in-the-bnf"
+                                    title="Prices in the BNF">net price</a> 100 mL = 74p,
+                                    500 mL = £3.05. Label: 30</p>
+
+                                    <aside class="typenote alert alert-info">
+                                        <strong>Note</strong> BP directs that when Paediatric Paracetamol Oral
+                                        Suspension or Paediatric Paracetamol Mixture is
+                                        prescribed Paracetamol Oral Suspension 120 mg/5 mL
+                                        should be dispensed; sugar-free versions can be
+                                        ordered by specifying ‘sugar-free’ on the
+                                        prescription
+                                    </aside>
+                                </section>
+
+                                <section class="presentation">
+                                    <p><strong>Oral suspension 250 mg/5 mL</strong>,
+                                    paracetamol 250 mg/5 mL, <a href=
+                                    "/formulary/bnf/current/general-information-and-changes/how-to-use-the-bnf/prices-in-the-bnf"
+                                    title="Prices in the BNF">net price</a> 100 mL = £1.26,
+                                    200 mL = £1.65. Label: 30</p>
+
+                                    <aside class="typenote alert alert-info">
+                                        <p><strong>Dental prescribing on NHS</strong> Paracetamol Oral Suspension may be
+                                        prescribed</p>
+                                    </aside>
+                                </section>
+
+                                <section class="presentation">
+                                    <p><strong>Oral suspension 500 mg/5
+                                    mL</strong><img alt="Prescription-only Medicine" src=
+                                    "https://www.evidence.nhs.uk/formulary/BnfData/bnf/64/images/pom_s.png" title=
+                                    "Prescription-only Medicine">, paracetamol 500 mg/5 mL
+                                    sugar-free, <a href=
+                                    "/formulary/bnf/current/general-information-and-changes/how-to-use-the-bnf/prices-in-the-bnf"
+                                    title="Prices in the BNF">net price</a> 150 mL =
+                                    £20.00. Label: 30</p>
+                                </section>
+
+                                <section class="presentation">
+                                    <p><strong>Suppositories</strong>, paracetamol 60 mg,
+                                    <a href=
+                                    "/formulary/bnf/current/general-information-and-changes/how-to-use-the-bnf/prices-in-the-bnf"
+                                    title="Prices in the BNF">net price</a> 10 = £11.95;
+                                    120 mg, 10 = £10.78; 125 mg, 10 = £13.80; 240 mg, 10 =
+                                    £21.07; 250 mg, 10 = £27.60; 500 mg, 10 = £31.83; 1 g,
+                                    12 = £60.00. Label: 30</p>
+
+                                    <aside class="typenote alert alert-info">
+                                        <p><strong>Note</strong> Other strengths available from <a href=
+                                        "/formulary/bnf/current/special-order-manufacturers"
+                                        title=
+                                        "BNF:appendix: Special-order Manufacturers">‘special-order’
+                                        manufacturers or specialist importing
+                                        companies</a></p>
+                                    </aside>
+                                </section>
+
+                                <aside class="footnote" id="bnf-fn_1">
+                                    <p><sup>1</sup> Can be sold to the public provided packs contain no
+                                    more than 32 capsules or tablets; pharmacists can sell
+                                    multiple packs up to a total quantity of 100 capsules
+                                    or tablets in justifiable circumstances.</p>
+                                </aside>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="media">
+                        <h4 class="media-heading"><a class="preparation" href="#panadol-presentations" data-toggle="collapse">Panadol OA®</a>
+                            <span class="ph organisation">(<a href="/formulary/bnf/current/index-of-manufacturers#PHP10174" title="GSK">GSK</a>)</span>
+                            <img alt="Prescription only medicine" src="https://www.evidence.nhs.uk/formulary/BnfData/bnf/64/images/pom_l.png" class="ph symbol" /></h4>
+
+                        <div class="collapse" id="panadol-presentations">
+                            <div class="media-body">
+                                <section class="presentation">
+                                    <p><strong>Tablets</strong>, f/c, paracetamol 1 g,
+                                    <a href=
+                                    "/formulary/bnf/current/general-information-and-changes/how-to-use-the-bnf/prices-in-the-bnf"
+                                    title="Prices in the BNF">net price</a> 100-tab pack =
+                                    £3.45. Label: 30<br/>
+
+                                    <span class="age-group"><strong>Dose</strong> <span class="age-category">ADULT</span> and <span class="age-category">CHILD</span> over 12 years, 1 tablet up to 4 times daily, not more often than every 4 hours</span></p>
+                                </section>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="media">
+                        <h4 class="media-heading"><a class="preparation" href="#isometheptene-mucate-presentations" data-toggle="collapse"><i class="icon-caret-right"></i> With isometheptene
+                        mucate</a></h4>
+
+                        <div class="collapse" id="isometheptene-mucate-presentations">
+                            <div class="media-body">
+                                <p><strong>Isometheptene mucate</strong> (in combination
+                                with paracetamol) is licensed for the treatment of acute
+                                attacks of migraine; other more effective treatments are
+                                available.</p>
+
+                                <article class="media">
+                                    <h4 class="media-heading"><a class="preparation" href="#midrid-presentations" data-toggle="collapse">Midrid®</a>
+                                            <span class="ph organisation">(<a href="/formulary/bnf/current/index-of-manufacturers#PHP10223" title="Manx">Manx</a>)</span>
+                                            <img alt="Prescription only medicine" src="https://www.evidence.nhs.uk/formulary/BnfData/bnf/64/images/pom_l.png" class="ph symbol"/>
+                                            <img alt="Less suitable for prescribing" src="https://www.evidence.nhs.uk/formulary/BnfData/bnf/64/images/rect_l.png" class="ph symbol"/></h4>
+
+                                    <div class="collapse" id="midrid-presentations">
+                                        <div class="media-body">
+                                            <section class="presentation">
+                                                <p><strong>Capsules</strong>, red,
+                                                isometheptene mucate 65 mg, paracetamol 325 mg,
+                                                net price 30-cap pack = £5.50. Label: 30,
+                                                counselling, dosage<br/>
+
+                                                <span class="age-group">
+                                                    <strong>Dose</strong> migraine, 2 capsules
+                                                    at onset of attack, followed by 1 capsule
+                                                    every hour if necessary; max. 5 capsules in
+                                                    12 hours;
+
+                                                    <span class="age-category">
+                                                        CHILD
+                                                    </span>not recommended</span>
+                                                </p>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="media">
+                        <h4 class="media-heading"><a class="preparation" href="#tramadol-presentations" data-toggle="collapse"><i class="icon-caret-right"></i> With tramadol</a></h4>
+
+                        <div class="collapse" id="tramadol-presentations">
+                            <div class="media-body">
+                               <p>For prescribing information on tramadol, see <a href=
+                                "/formulary/bnf/current/4-central-nervous-system/47-analgesics/472-opioid-analgesics/tramadol-hydrochloride"
+                                title="BNF:monograph: TRAMADOL HYDROCHLORIDE">section
+                                4.7.2</a></p>
+
+                                <article class="media">
+                                        <h4 class="media-heading"><a class="preparation" href="#tramacet-presentations" data-toggle="collapse">Tramacet®</a>
+                                            <span class="ph organisation">(<a href="/formulary/bnf/current/index-of-manufacturers#PHP10173" title="Grünenthal">Grünenthal</a>)</span>
+                                            <img alt="Prescription only medicine" src="https://www.evidence.nhs.uk/formulary/BnfData/bnf/64/images/pom_l.png" class="ph symbol"></h4>
+
+                                        <div id="tramacet-presentations" class="collapse">
+                                        <div class="media-body">
+                                            <section class="presentation">
+                                                <p><strong>Tablets</strong>, f/c, yellow,
+                                                tramadol hydrochloride 37.5 mg, paracetamol 325
+                                                mg, <a href=
+                                                "/formulary/bnf/current/general-information-and-changes/how-to-use-the-bnf/prices-in-the-bnf"
+                                                title="Prices in the BNF">net price</a> 60-tab
+                                                pack = £9.68. Label: 2, 25, 29, 30<br/>
+
+                                                <span class="age-group">
+                                                    <strong>Dose</strong> 2 tablets not more
+                                                    often than every 6 hours; max. 8 tablets
+                                                    daily;
+
+                                                    <span class="age-category">
+                                                        CHILD
+                                                    </span>under 12 years not recommended
+                                                </span>
+                                                </p>
+                                            </section>
+
+                                            <section class="presentation">
+                                                <p><strong>Effervescent tablets</strong>, pink,
+                                                tramadol hydrochloride 37.5 mg, paracetamol 325
+                                                mg, <a href=
+                                                "/formulary/bnf/current/general-information-and-changes/how-to-use-the-bnf/prices-in-the-bnf"
+                                                title="Prices in the BNF">net price</a> 60-tab
+                                                pack = £9.68. Label: 2, 13, 29, 30</p>
+
+                                                <p class="title">
+                                                    <strong class="presentation-classification">
+                                                    Electrolytes</strong> Na<sup>+</sup> 7.8
+                                                    mmol/tablet
+                                                </p>
+
+                                                <p class="age-group">
+                                                    <strong>Dose</strong> 2 tablets not more
+                                                    often than every 6 hours; max. 8 tablets
+                                                    daily;
+
+                                                    <span class="age-category">
+                                                        CHILD
+                                                    </span>under 12 years not recommended
+                                                </p>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="media">
+                        <h4 class="media-heading"><a class="preparation" href="#antiemetics-presentations" data-toggle="collapse"><i class="icon-caret-right"></i> With antiemetics</a></h4>
+
+                        <div class="collapse" id="antiemetics-presentations">
+                            <div class="media-body">
+                                <article class="media">
+                                    <h4 class="media-title"><a class="preparation" href="#paramax-presentations" data-toggle="collapse">Paramax®</a>
+                                        (<a href="#" title="Zentiva" class="ph organisation">Zentiva</a>)
+                                            <img alt="Prescription only medicine" src="https://www.evidence.nhs.uk/formulary/BnfData/bnf/64/images/pom_l.png" class="ph symbol"/></h4>
+
+                                    <div id="paramax-presentations" class="collapse">
+                                        <div class="media-body">
+                                            <section class="presentation">
+                                                <p><strong>Tablets</strong>, scored,
+                                                paracetamol 500 mg, metoclopramide
+                                                hydrochloride 5 mg, <a href=
+                                                "/formulary/bnf/current/general-information-and-changes/how-to-use-the-bnf/prices-in-the-bnf"
+                                                title="Prices in the BNF">net price</a> 42-tab
+                                                pack = £9.64. Label: 17, 30<br/>
+
+                                                <span class="age-group">
+                                                    <strong>Dose</strong> acute migraine,
+
+                                                    <span class="patient-type">
+                                                        ADULT
+                                                    </span>over 18 years, 2 tablets at the onset
+                                                    of attack then repeat every 4 hours when
+                                                    necessary to max. 6 tablets in 24 hours
+                                                </span>
+                                                </p>
+                                            </section>
+
+                                            <section class="presentation">
+                                                <p><strong>Sachets</strong>, effervescent
+                                                powder, sugar-free, paracetamol 500 mg,
+                                                metoclopramide hydrochloride 5 mg, <a href=
+                                                "/formulary/bnf/current/general-information-and-changes/how-to-use-the-bnf/prices-in-the-bnf"
+                                                title="Prices in the BNF">net price</a>
+                                                42-sachet pack = £12.52. Label: 13, 17, 30<br/>
+
+                                                    <span class="age-group">
+                                                        <strong>Dose</strong> acute migraine,
+
+                                                        <span class="patient-type">ADULT</span> over 18 years, 2 sachets dissolved in
+                                                        a quarter tumblerful of water at onset of
+                                                        attack then repeat every 4 hours when
+                                                        necessary to max. 6 sachets in 24 hours
+                                                    </span>
+                                                </p>
+
+                                                <aside class="typenote alert alert-warning">
+                                                    <p><strong>Important</strong> Metoclopramide can cause <strong>severe
+                                                    extrapyramidal effects</strong>,
+                                                    particularly in young adults (for further
+                                                    details, see <a href=
+                                                    "/formulary/bnf/current/4-central-nervous-system/46-drugs-used-in-nausea-and-vertigo#PHP2506"
+                                                    title=
+                                                    "target-block: metoclopramide text">Metoclopramide</a>)</p>
+                                                </aside>
+
+                                                <aside class="typenote alert alert-info">
+                                                    <p><strong>Note</strong> Treatment should not exceed 3 months due
+                                                    to risk of tardive dyskinesia, but see also
+                                                    MHRA advice on Metoclopramide, <a href=
+                                                    "/formulary/bnf/current/4-central-nervous-system/46-drugs-used-in-nausea-and-vertigo#PHP34099"
+                                                    title=
+                                                    "MHRA advice Metoclopramide: risk of neurological adverse effects - restricted dose and duration of use">
+                                                    section 4.6</a></p>
+                                                </aside>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </article>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <ul class="pagination">
+                <li class="previous">
+                    <a accesskey="[" href="#" title="Previous: x" rel="prev"><i class="icon-chevron-left"></i> Previous</a>
+                </li>
+                <li class="next">
+                    <a accesskey="]" href="#"title="Next: x" rel="next">Next <i class="icon-chevron-right"></i></a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="content content-secondary">
+
+            <ul class="breadcrumb breadcrumb-stack">
+                <li><a href="#">Index</a> <i class="divider"></i></li>
+                <li><a href="#">4 Central nervous system</a> <i class="divider"></i></li>
+                <li><a href="#">4.7 Analgesics</a> <i class="divider"></i></li>
+                <li><a href="#">4.7.1 Non-opioid analgesics and compound analgesic preparations</a> <i class="divider"></i></li>
+                <li class="active">PARACETAMOL</li>
+            </ul>
+
+        <!-- sub sections -->
+            <div class="toc">
+                <ul class="nav nav-list">
+                    <li><a href="#indications">Indications</a></li>
+                    <li><a href="#cautions">Cautions</a></li>
+                    <li><a href="#hepatic">Hepatic impairment</a></li>
+                    <li><a href="#renal">Renal impairment</a></li>
+                    <li><a href="#breast-feeding">Breast-feeding</a></li>
+                    <li><a href="#side-effects">Side-effects</a></li>
+                    <li><a href="#dose">Dose</a></li>
+
+                    <li><a href="#sub-sections">Sub-sections</a>
+                        <ul class="nav nav-list">
+                            <li><a href="#paracetemol-presentations" data-toggle="collapse">Paracetemol</a></li>
+                            <li><a href="#panadol-presentations" data-toggle="collapse">Panadol OA®</a></li>
+                            <li><a href="#isometheptene-mucate-presentations" data-toggle="collapse">With isometheptene mucate</a></li>
+                            <li><a href="#tramadol-presentations" data-toggle="collapse">With tramadol</a></li>
+                            <li><a href="#antiemetics-presentations" data-toggle="collapse">With antiemetics</a></li>
+                        </ul></li>
+                </ul>
+            </div>
+        </div>
+    </div> <!-- /layout -->
+
+    <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+            <div class="container">
+                <ul class="nav nav-pills">
+                    <li><a href="#" title="What's changed">What's changed</a></li>
+                    <li><a href="#" title="A to Z">Formulary</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-wrapper">
+        <div class="footer" id="footer">
+            <div class="container">
+                <span class="footer-logo"><a href="#" class="footer-logo-link"><object data="https://test-my.nice.org.uk/content/images/nicelogo.svg" type="image/svg+xml" class="logo"></object></a></span>
+
+                <ul class="nav nav-services">
+                    <li><a href="#"><i class="icon-nice-guidance"></i> Guidance</a></li>
+                    <li><a href="#"><i class="icon-nice-standards"></i> Standards and Indicators</a></li>
+                    <li><a href="#"><i class="icon-nice-pathways"></i> Pathways</a></li>
+                    <li><a href="#"><i class="icon-nice-evidence"></i> Evidence</a></li>
+                    <li><a href="#"><i class="icon-nice-information"></i> About NICE</a></li>
+                </ul>
+
+                <div class="social-panel">
+                    <!-- AddThis Button BEGIN -->
+                    <p class="social-follow addthis_toolbox">
+                        Follow Us
+                        <a class="icon-stack addthis_button_facebook_follow" addthis:userid="pages/National-Institute-for-Health-and-Clinical-Excellence/163126660371022" href="http://www.facebook.com/pages/National-Institute-for-Health-and-Clinical-Excellence/163126660371022" target="_blank" title="Follow on Facebook">
+                            <i class="icon-nice-circle icon-light icon-stack-base"></i>
+                            <i class="icon-nice-facebook"></i>
+                        </a>
+                        <a class="icon-stack addthis_button_twitter_follow" addthis:userid="nicecomms" target="_blank" title="Follow on Twitter" href="#">
+                            <i class="icon-nice-circle icon-light icon-stack-base"></i>
+                            <i class="icon-nice-twitter"></i>
+                        </a></p>
+                        <!-- AddThis Button END -->
+                    </div>
+
+                    <div class="legal-panel clearfix">
+                        <ul class="nav nav-legal">
+                            <li><a href="http://www.nice.org.uk/accessibility">Accessibility</a></li>
+                            <li><a href="http://www.nice.org.uk/freedom-of-information">Freedom of information</a></li>
+                            <li><a href="http://www.nice.org.uk/get-involved/contact-us">Contact Us</a></li>
+                            <li><a href="http://www.nice.org.uk/glossary">Glossary</a></li>
+                            <li><a href="http://www.nice.org.uk/terms-and-conditions">Terms and conditions</a></li>
+                            <!-- not in original design -->
+                            <li><a href="http://www.nice.org.uk/news/newsletters">Subscribe</a></li>
+                            <li><a href="http://www.nice.org.uk/website/rss/rss.jsp">RSS</a></li>
+                            <!-- not in original design -->
+                        </ul>
+
+                        <p class="legal-copyright"><a href="/website/TermsAndConditions.jsp#copyright">Copyright © 2013 National Institute for Health and Care Excellence. All rights reserved.</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- @include _footer.html -->
+</body>
+</html>

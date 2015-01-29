@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Hypermedia - NICE Bootstrap</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Lato:400normal,400italic,700normal,700italic" rel="stylesheet" />
+    <link href="../Content/NICE.bootstrap.css" rel="stylesheet" />
+</head>
+
+<body data-log="error">
+    <div class="message-log"></div>
+
+    <h2>Simple list manager</h2>
+
+    <div class="panel panel-outline listmanager" data-list="manager">
+        <div class="panel-body">
+            <ul class="item-list">
+                <li class="item fade in" title="user one">
+                    <a href="#" class="close" title="Uninvited user" data-command="remove">&times;</a>
+                    User one
+                </li>
+                <li class="item fade in" title="user two">
+                    <a href="#" class="close" title="Uninvited user" data-command="remove">&times;</a>
+                    User two
+                </li>
+                <li class="item fade in" title="user three">
+                    <a href="#" class="close" title="Uninvited user" data-command="remove">&times;</a>
+                    User three
+                </li>
+            </ul>
+        </div>
+
+        <div class="panel-footer" data-log="error">
+            <div class="message-log"></div>
+        </div>
+    </div>
+
+
+
+    <h2>Complex server interaction</h2>
+
+    <div class="panel panel-outline listmanager" data-manager="appender" data-list="manager" data-key="Emails" data-state="on" data-update=".auto-update">
+    <div class="panel-heading">
+    <h4>Invite submitters</h4>
+    <p>In addition to managing files, these users will be able to submit the final response to NICE</p>
+    </div>
+
+    <div class="panel-body">
+        <ul class="item-list">
+            <li class="item fade in" title="a@b.com">
+                <form action="/request/2/responses/4/submitter/6" method="POST"
+                    enctype="application/x-www-form-urlencoded" class="form-close"
+                    data-command="remove">
+                    <input type="hidden" name="ETag" value="01000000-0000-0001-0000-000000000038"/>
+<input type="hidden" name="_method" value="DELETE"/>
+                        <button type="submit" title="Remove submitter" class="close">&times;</button>
+                    </form>
+                <span data-value="a@b.com">a@b.com</span>
+            </li>
+            <li class="item fade in" title="a@b.com">
+                <form action="/request/2/responses/4/submitter/6" method="POST"
+                    enctype="application/x-www-form-urlencoded" class="form-close"
+                    data-command="remove">
+                    <input type="hidden" name="ETag" value="01000000-0000-0001-0000-000000000038"/>
+<input type="hidden" name="_method" value="DELETE"/>
+                        <button type="submit" title="Remove submitter" class="close">&times;</button>
+                    </form>
+                <span data-value="a@b.com">bbbbbbbbbbb@ccccccccccc.com</span>
+            </li>
+            <li class="item fade in" title="a@b.com">
+                <form action="/request/2/responses/4/submitter/6" method="POST"
+                    enctype="application/x-www-form-urlencoded" class="form-close"
+                    data-command="remove">
+                    <input type="hidden" name="ETag" value="01000000-0000-0001-0000-000000000038"/>
+<input type="hidden" name="_method" value="DELETE"/>
+                        <button type="submit" title="Remove submitter" class="close">&times;</button>
+                    </form>
+                <span data-value="a@b.com">c@d.com</span>
+            </li>
+        </ul>
+    </div>
+
+    <div class="panel-footer" data-log="error">
+        <div class="message-log"></div>
+
+
+<form action="/request/2/responses/4/emailnotification" method="POST" enctype="application/x-www-form-urlencoded" class="auto-update">
+<input type="hidden" name="ListType" value="Submitter"/>
+<input type="hidden" name="ETag" value="01000000-0000-0001-0000-000000000038"/>
+<input type="hidden" name="_method" value="PUT"/>
+                                                                <label class="checkbox">
+<input id="" data-submit="auto" checked="checked" type="checkbox" name="Active" value="true" class="checkbox" />
+                                                                    Send automatic email notification</label>
+                                                                <button type="submit" class="btn-primary" data-toggle="state"></button>
+                                                                </form>
+
+<p><small>If you wish to include a link to this response within your own email, please copy the URL shown in the address bar.</small></p>
+
+
+        <form action="/request/2/responses/4/submitters" method="POST" enctype="application/x-www-form-urlencoded" class="form-inline input-append" data-command="append" novalidate="novalidate" data-validation="plugin"><input type="hidden" name="ETag" value="01000000-0000-0001-0000-000000000038"/>
+                   <input type="hidden" name="_method" value="PUT"/>
+                   <input autocomplete="off" required="required" type="email" name="Emails" id="submitter-email" value="" placeholder="Add submitters (email address)" />
+                   <button type="submit" class="btn" title="Add another submitter" data-active-text="<i class='icon-spinner icon-spin'></i>"><i class="icon-plus-sign"></i></button>
+                   <a href="#submitteradd" role="button" class="btn" data-toggle="modal" title="Add multiple submitters"><i class="icon-group"></i></a>
+               </form>
+    </div>
+    <div id="submitteradd" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="submitteraddlabel" aria-hidden="true" data-manager="addmany" data-log="error">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" data-command="dismiss" aria-hidden="true">×</button>
+        <h3 id="submitteraddlabel">Add multiple submitters</h3>
+        <p class="help-block">Please paste your copied list here so that you can review the list before adding them.</p>
+        <textarea data-command="appendmany" data-spy="paste" class="input-addmany" placeholder="eg: email1@example.com; email2@example.com etc." data-match="email"></textarea>
+        <div class="message-log"></div>
+      </div>
+      <div class="modal-body">
+        <div class="listmanager">
+            <ul class="item-list"></ul>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" data-dismiss="modal" data-command="addmany">Add</button>
+        <button class="btn" data-dismiss="modal" data-command="dismiss" aria-hidden="true">Cancel</button>
+      </div>
+    </div>
+</div>
+
+
+    <script src="../Scripts/jquery/jquery-1.10.2.min.js"></script>
+    <script src="../Scripts/twitter.bootstrap.min.js"></script>
+    <script src="../Scripts/NICE.bootstrap.js"></script>
+
+    <script src="../Scripts/jquery/jquery.mockjax.js"></script>
+    <script type="text/javascript">
+
+$.mockjax({
+    url: 'http://localhost:9001/request/23/owners',
+    dataType: 'html',
+    responseText: '<li class="item fade in">a@b.com</li><li class="item fade in">b@c.com</li>',
+    etag: '111-444-666-666'
+});
+
+    </script>
+
+    <script>
+
+$(window).on('load', function()
+{
+
+    $(document)
+        .on('complete', '[data-etag]', function (e) { console.log( e ); })
+        .on('error', function (e) { console.log( e ); })
+        .on('200', function (e) { console.log( e ); })
+        .on('202', function (e) { console.log( e ); })
+        .on('500', function (e) { console.log( e ); })
+        .on('400', function (e) { console.log( e ); })
+        .on('404', function (e) { console.log( e ); })
+        .on('afterpaste', 'input, textarea', function (e) { console.log( e ); });
+
+});
+
+    </script>
+</body>
+</html>

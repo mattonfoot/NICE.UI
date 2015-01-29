@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Two column layout</title>
+  <title>Blank page</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="basic-elements/layout/two-column.html">
+  <link rel="canonical" href="">
   
   <!--[if lt IE 9]>
   <script src="//cdn.nice.org.uk/V3/scripts/html5shiv/html5shiv.js"></script>
@@ -184,147 +184,42 @@
 </head>
 
 <body>
-  <header class="nice-tophat" role="banner">
-    <div class="nice-global" id="nice-global">
-      <div class="tophat-inner">
-        <ul class="menu" role="navigation">
-          <li>
-            <a href="../../index.html">the NICE UI library</a>
-          </li>
-          <li>
-            <a href="../../basic-elements.html">Basic elements</a>
-          </li>
-          <li>
-            <a href="../../design-patterns.html">Design patterns</a>
-          </li>
-          <li>
-            <a href="../../going-further.html">Going further</a>
-          </li>
-        </ul>
-      </div>
+  <div class="nice-tophat">
+  <div class="nice-global" id="nice-global">
+    <div class="tophat-inner">
+      <ul class="menu">
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </div>
-  </header>
-
-  <!-- Page Header
-  ================================================== -->
-  <header class="page-header">
-    <div class="container">
-      <ol class="breadcrumb">
-        <li>
-          <a href="../../../../../../..">Home</a> <i class="divider glyph-chevron-right"></i>
-        </li>
-        <li>
-          <a href="../../basic-elements.html">
-            Basic elements
-          </a>
-          <i class="divider glyph-chevron-right"></i>
-        </li>
-        <li>
-          <a href="../layout.html">
-            Layout
-          </a>
-          <i class="divider glyph-chevron-right"></i>
-        </li>
-        <li class="active">
-          Two column layout
-        </li>
-      </ol>
-
-      <h1>Two column layout</h1>
-
-      <p class="lead">Provides a standard &quot;Two Column&quot; page layout for presenting articles or topics.</p>
-    </div>
-  </header>
-
-  <main class="layout layout-first-right" role="main">
-    <article class="content content-primary">
-      <p>Content areas are added to a layout by using the <code>.content</code> class along with
-an additional priority class of either <code>.content-primary</code> or
-<code>.content-secondary</code>.</p>
-<div class="note">
-  <p><strong>Note:</strong> Content areas only appear as columns on devices with a
-    screen size of <code>768px</code> or wider.</p>
-
-  <p>Devices with a screen size narrower than <code>768px</code> will display
-    each content areas stacked in the order defined by the HTML.</p>
+  </div>
 </div>
 
-<h2 id="related-site-content-on-the-right">Related site content on the right</h2>
-<p>A basic responsive layout suitable for most topical articles can be
-achieved by incorporating <code>&lt;article&gt;</code> and <code>&lt;aside&gt;</code> elements
-into the document structure with the appropriate <code>.content</code> classes.</p>
-<pre class="prettyprint linenums"><code>&lt;main class="layout" role="main"&gt;
-  &lt;article class="content content-primary" role="article"&gt;
-  ...
-  &lt;/article&gt;
+<div class="layout">
+  <div class="content content-primary">
+    <h1>NICE.Bootstrap starter template</h1>
 
-  &lt;aside class="content content-secondary"&gt;...&lt;/aside&gt;
-&lt;/main&gt;
-</code></pre>
-
-
-<h2 id="site-navigation-content-on-the-left">Site navigation content on the left</h2>
-<p>By reversing the order of the <code>.content</code> classed elements you can
-position navigational content to the left which will collapse to the
-top of the main article on a narrow screen device.</p>
-<pre class="prettyprint linenums"><code>&lt;main class="layout" role="main"&gt;
-  &lt;div class="content content-secondary"&gt;...&lt;/div&gt;
-
-  &lt;article class="content content-primary" role="article"&gt;
-  ...
-  &lt;/article&gt;
-&lt;/main&gt;
-</code></pre>
-
-<h3 id="responsive-navigation-below-main-content">Responsive navigation below main content</h3>
-<p>By adding the <code>.layout-first-right</code> class to the <code>.layout</code>
-classed element and reversing the order of the <code>.content</code> classed
-elements you can reverse the way content areas collapse on a narrow screen device.</p>
-<pre class="prettyprint linenums"><code>&lt;main class="layout layout-first-right" role="main"&gt;
-  &lt;article class="content content-primary" role="article"&gt;
-  ...
-  &lt;/article&gt;
-
-  &lt;div class="content content-secondary"&gt;
-    &lt;nav role="navigation"&gt;...&lt;/nav&gt;
-  &lt;/div&gt;
-&lt;/main&gt;
-</code></pre>
-
-    </article>
-
-    <aside class="content content-secondary">
-      <nav>
-        <ul>
-          <li>
-            <a href="two-column.html">Two column layout</a>
-          </li>
-          <li>
-            <a href="header.html">Header</a>
-          </li>
-          <li>
-            <a href="grid.html">Grid framework</a>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-  </main>
+    <p>Use this document as a way to quick start any new project.<br>
+        All you get is this message and a barebones HTML document.</p>
+  </div>
+</div>
 
   <footer class="footer-wrapper" role="contentinfo">
     <div class="navbar">
       <div class="container">
         <ul class="nav example-tldr" role="navigation">
           <li>
-            <a href="../../index.html">the NICE UI library</a>
+            <a href="">the NICE UI library</a>
           </li>
           <li>
-            <a href="../../basic-elements.html">Basic elements</a>
+            <a href="">Basic elements</a>
           </li>
           <li>
-            <a href="../../design-patterns.html">Design patterns</a>
+            <a href="">Design patterns</a>
           </li>
           <li>
-            <a href="../../going-further.html">Going further</a>
+            <a href="">Going further</a>
           </li>
         </ul>
       </div>
@@ -381,56 +276,5 @@ elements you can reverse the way content areas collapse on a narrow screen devic
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/google-code-prettify/prettify.js"></script>
   
   <script src="//cdn.nice.org.uk/V3/Content/assets/js/application.js"></script>
-
-  <script>
-  (function() {
-    $('.guide-example').each(function() {
-      if ( $(this).is('.example-processed') ) return;
-
-      var $example = $(this).clone();
-
-      $example.children().each( processChild );
-      var src = $example.html().replace( /\&/mg, '&amp;' ).replace( '\n', '' ).replace( /=""/mg, '' );
-
-      var $code = $('<code/>').text( src );
-
-      $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
-
-      $(this).addClass('example-processed');
-    });
-
-    $('.footer-code').each(function() {
-      var $example = $('.footer-wrapper').clone();
-
-      $example.children().each( processChild );
-      var src = $example.wrap('<div/>').parent().html().replace( /\&/mg, '&amp;' ).replace( '\n', '' ).replace( /=""/mg, '' );
-
-      $(this).find('code').text( src );
-    });
-
-    function processChild() {
-      var $child = $(this);
-
-      if ( $child.is('.example-ignore') ) {
-        if ( this.nextSibling && this.nextSibling.nodeType === 3 && this.nextSibling.data.trim() === '' ) {
-          $( this.nextSibling ).remove();
-        }
-        $child.remove();
-        return;
-      }
-
-      if ( $child.is('.example-tldr') ) {
-        $child.removeClass('example-tldr').html( ' [...] ' );
-        if ($child.attr('class').trim() === '') {
-          $child.removeAttr('class');
-        }
-      }
-
-      $child.children().each( processChild );
-    }
-  })();
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 </body>
 </html>
