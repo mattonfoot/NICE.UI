@@ -3,7 +3,7 @@ section: Basic elements
 title: Form controls
 description: Examples of standard form controls supported in an example form layout.
 template: page.html
-nav_sort: 6
+nav_sort: 11
 nav_groups:
   - primary
 ---

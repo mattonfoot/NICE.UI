@@ -1,16 +1,16 @@
 ---
-section: Navigation
+section: Tabs
 title: Tabbed sections
 description: Sometimes and document is easier to take in if sections are placed within tabs
 date: 2015-01-26
 template: section.html
 description:
-nav_sort: 3
+nav_sort: 1
 nav_groups:
   - primary
 ---
 
-The basic tab markup;
+A tabbed section allows you to layout several "sections" of content in one area. The browsers URL is not affected by clicking tabs to chow different sections as this pattern is primarily for keeping secondary or options content out of the way so that majority users are not inundated with irrelevant content.
 
 <div class="guide-example">
 <div class="tabs" role="tabpanel">
@@ -38,3 +38,7 @@ The basic tab markup;
   </div>
 </div>
 </div>
+
+## Lazy tab panes
+
+If a tab link has a fully qualified url rather than just and anchor link then the tab pane javascript will remotely load in the content through AJAX before displaying the tab. This may result in a delay when navigating but will dramaticly reduce page load times especially if content is inconsequential.

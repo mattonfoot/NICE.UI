@@ -3,7 +3,7 @@ section: Basic elements
 title: Lists
 template: page.html
 description:
-nav_sort: 8
+nav_sort: 10
 nav_groups:
   - primary
 ---
