@@ -39,10 +39,6 @@ The framework is built around a combination of these three elements: ```.contain
 &lt;/div&gt;
 </code></pre>
 
-<div class="note note-info">
-  ***Note:*** it is possible to use the ```.span*``` classes to indicate how many columns the element will span. This is the equivalent of ```.span*of12``` as the grid is based on twelve columns.
-</div>
-
 <div class="note note-important">
   **Beware** Do not add additional styles to rows and spans as this could affect the layout especially if the styles add borders margins or paddings. Best practice is to keep grid elements as layout helpers and style other elements visually within the grid elements.
 </div>
@@ -160,6 +156,36 @@ The different sized columns can be used in multiple combinations but be aware th
   <div class="span1of12">1/12</div>
   <div class="span5of6">5/6</div>
   <div class="span1of12">1/12</div>
+</div>
+</div>
+
+It is also possible to use the ```.span*``` classes to indicate how many columns the element will span. This is the equivalent of ```.span*of12``` as the grid is based on twelve columns.
+
+<div class="guide-example example-processed">
+<div class="row">
+  <div class="span1">1</div>
+  <div class="span2">2</div>
+  <div class="span3">3</div>
+  <div class="span6">6</div>
+</div>
+
+<div class="row">
+  <div class="span3">3</div>
+  <div class="span9">9</div>
+</div>
+
+<div class="row">
+  <div class="span8">8</div>
+  <div class="span4">4</div>
+</div>
+
+<div class="row">
+  <div class="span6">6</div>
+  <div class="span6">6</div>
+</div>
+
+<div class="row">
+  <div class="span12">12</div>
 </div>
 </div>
 

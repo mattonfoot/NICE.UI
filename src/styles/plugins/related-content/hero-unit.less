@@ -1,6 +1,6 @@
 .hero-unit {
     .padding( @base-line-height * 2 @grid-spacing * 2 );
-    .block-margins-bottom( @base-line-height * 2 );
+    .margin-zero;
     .font-hero;
     .line-height( @base-line-height * 2 );
     text-align: center;
@@ -17,5 +17,36 @@
 
     li {
       .font-base;
+    }
+
+    input[type="reset"],
+    input[type="submit"],
+    input[type="button"],
+    button,
+    .btn,
+    .btn:link,
+    .btn:visited {
+      .theme-herounit-button;
+
+      &.action-primary {
+        .theme-herounit-button-primary-action;
+      }
+
+      &:hover,
+      &:focus {
+        .theme-herounit-button-hover;
+
+        &.action-primary {
+          .theme-herounit-button-primary-action-hover;
+        }
+      }
+
+      &:active {
+        .theme-herounit-button-active;
+
+        &.action-primary {
+          .theme-herounit-button-primary-action-active;
+        }
+      }
     }
 }

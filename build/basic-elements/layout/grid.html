@@ -264,10 +264,6 @@
 &lt;/div&gt;
 </code></pre>
 
-<div class="note note-info">
-  <strong><em>Note:</em></strong> it is possible to use the <code>.span*</code> classes to indicate how many columns the element will span. This is the equivalent of <code>.span*of12</code> as the grid is based on twelve columns.
-</div>
-
 <div class="note note-important">
   <strong>Beware</strong> Do not add additional styles to rows and spans as this could affect the layout especially if the styles add borders margins or paddings. Best practice is to keep grid elements as layout helpers and style other elements visually within the grid elements.
 </div>
@@ -382,6 +378,35 @@
   <div class="span1of12">1/12</div>
   <div class="span5of6">5/6</div>
   <div class="span1of12">1/12</div>
+</div>
+</div>
+
+<p>It is also possible to use the <code>.span*</code> classes to indicate how many columns the element will span. This is the equivalent of <code>.span*of12</code> as the grid is based on twelve columns.</p>
+<div class="guide-example example-processed">
+<div class="row">
+  <div class="span1">1</div>
+  <div class="span2">2</div>
+  <div class="span3">3</div>
+  <div class="span6">6</div>
+</div>
+
+<div class="row">
+  <div class="span3">3</div>
+  <div class="span9">9</div>
+</div>
+
+<div class="row">
+  <div class="span8">8</div>
+  <div class="span4">4</div>
+</div>
+
+<div class="row">
+  <div class="span6">6</div>
+  <div class="span6">6</div>
+</div>
+
+<div class="row">
+  <div class="span12">12</div>
 </div>
 </div>
 

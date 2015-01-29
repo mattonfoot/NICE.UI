@@ -7,6 +7,9 @@ html {
 *:after {
   box-sizing: inherit;
 }
+.nice-tophat {
+  box-sizing: content-box;
+}
 /*
  * HTML5 display definitions
  */
@@ -749,6 +752,35 @@ pre code {
 }
 .theme-herounit-heading {
   color: #ffffff;
+}
+.theme-herounit-button {
+  color: #e6e6e6;
+  background: none;
+  border-color: #aaaaaa;
+}
+.theme-herounit-button-hover {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.theme-herounit-button-active {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+.theme-herounit-button-primary-action {
+  color: #000000;
+  background-color: #ffdc00;
+  border-color: #ffdc00;
+}
+.theme-herounit-button-primary-action-hover {
+  color: #000000;
+  background-color: #c2a700;
+  border-color: #c2a700;
+}
+.theme-herounit-button-primary-action-active {
+  color: #000000;
+  background-color: #ffdc00;
+  border-color: #c2a700;
 }
 .theme-panel-success {
   color: #124f19;

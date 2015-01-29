@@ -154,10 +154,7 @@
   /*px*/ padding: 48px 48px;
   /**/
   /*rem*/ padding: 4.8rem 4.8rem;
-  /*px*/ margin: 0 0 48px;
-  /**/
-  /*rem*/ margin: 0 0 4.8rem;
-  padding: 0;
+  margin: 0;
   /*px*/ font-size: 48px;
   /**/
   /*rem*/ font-size: 4.8rem;
@@ -194,4 +191,83 @@
   /*px*/ font-size: 16px;
   /**/
   /*rem*/ font-size: 1.6rem;
+}
+.hero-unit input[type="reset"],
+.hero-unit input[type="submit"],
+.hero-unit input[type="button"],
+.hero-unit button,
+.hero-unit .btn,
+.hero-unit .btn:link,
+.hero-unit .btn:visited {
+  color: #e6e6e6;
+  background: none;
+  border-color: #aaaaaa;
+}
+.hero-unit input[type="reset"].action-primary,
+.hero-unit input[type="submit"].action-primary,
+.hero-unit input[type="button"].action-primary,
+.hero-unit button.action-primary,
+.hero-unit .btn.action-primary,
+.hero-unit .btn:link.action-primary,
+.hero-unit .btn:visited.action-primary {
+  color: #000000;
+  background-color: #ffdc00;
+  border-color: #ffdc00;
+}
+.hero-unit input[type="reset"]:hover,
+.hero-unit input[type="submit"]:hover,
+.hero-unit input[type="button"]:hover,
+.hero-unit button:hover,
+.hero-unit .btn:hover,
+.hero-unit .btn:link:hover,
+.hero-unit .btn:visited:hover,
+.hero-unit input[type="reset"]:focus,
+.hero-unit input[type="submit"]:focus,
+.hero-unit input[type="button"]:focus,
+.hero-unit button:focus,
+.hero-unit .btn:focus,
+.hero-unit .btn:link:focus,
+.hero-unit .btn:visited:focus {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.hero-unit input[type="reset"]:hover.action-primary,
+.hero-unit input[type="submit"]:hover.action-primary,
+.hero-unit input[type="button"]:hover.action-primary,
+.hero-unit button:hover.action-primary,
+.hero-unit .btn:hover.action-primary,
+.hero-unit .btn:link:hover.action-primary,
+.hero-unit .btn:visited:hover.action-primary,
+.hero-unit input[type="reset"]:focus.action-primary,
+.hero-unit input[type="submit"]:focus.action-primary,
+.hero-unit input[type="button"]:focus.action-primary,
+.hero-unit button:focus.action-primary,
+.hero-unit .btn:focus.action-primary,
+.hero-unit .btn:link:focus.action-primary,
+.hero-unit .btn:visited:focus.action-primary {
+  color: #000000;
+  background-color: #c2a700;
+  border-color: #c2a700;
+}
+.hero-unit input[type="reset"]:active,
+.hero-unit input[type="submit"]:active,
+.hero-unit input[type="button"]:active,
+.hero-unit button:active,
+.hero-unit .btn:active,
+.hero-unit .btn:link:active,
+.hero-unit .btn:visited:active {
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #ffffff;
+}
+.hero-unit input[type="reset"]:active.action-primary,
+.hero-unit input[type="submit"]:active.action-primary,
+.hero-unit input[type="button"]:active.action-primary,
+.hero-unit button:active.action-primary,
+.hero-unit .btn:active.action-primary,
+.hero-unit .btn:link:active.action-primary,
+.hero-unit .btn:visited:active.action-primary {
+  color: #000000;
+  background-color: #ffdc00;
+  border-color: #c2a700;
 }

@@ -7,6 +7,9 @@ html {
 *:after {
   box-sizing: inherit;
 }
+.nice-tophat {
+  box-sizing: content-box;
+}
 /*
  * HTML5 display definitions
  */
