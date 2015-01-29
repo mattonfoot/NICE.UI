@@ -10,8 +10,21 @@
 
 <body>
   {{{ contents }}}
-  {{> _Global.Footer }}
 
+  <footer class="footer-wrapper" role="contentinfo">
+    <div class="navbar">
+      <div class="container">
+        <ul class="nav example-tldr" role="navigation">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+
+    {{> _Prototype.Footer }}
+  </footer>
+  
   {{> _footer }}
 </body>
 </html>
