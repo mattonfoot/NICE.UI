@@ -4,7 +4,7 @@
   "description": "A responsive UI library for NICE online services and web applications",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/grunt-cli/bin/grunt test",
+    "test": "./node_modules/grunt-cli/bin/grunt --help",
     "start": "./node_modules/grunt-cli/bin/grunt serve"
   },
   "repository": {
