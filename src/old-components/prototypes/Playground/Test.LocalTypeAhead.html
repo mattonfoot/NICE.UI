@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Typeahead with local page variable as source - NICE Bootstrap</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Lato:400normal,400italic,700normal,700italic" rel="stylesheet" />
+    <link href="../Content/NICE.bootstrap.css" rel="stylesheet" />
+
+    <style>
+    </style>
+</head>
+<body>
+
+<form action="#" class="navbar-search" method="get">
+    <div class="navbar-search-inner">
+        <div class="control-group">
+            <div class="controls"><input type="search" name="q" placeholder="Search..." class="search-query" data-provide="typeahead" data-source-type="local" data-source="topics"/></div>
+        </div>
+        <button type="submit" value="go" title="go" class="btn">Search</button>
+    </div>
+</form>
+
+<script src="../Scripts/jquery/jquery-1.10.2.min.js"></script>
+<script src="../Scripts/twitter.bootstrap.min.js"></script>
+<script src="../Scripts/NICE.bootstrap.js"></script>
+
+<script>
+
+  window.setTimeout(function() {
+      window.topics = [
+      {
+Title: "Achilles tendinopathy",
+Link: "/achilles-tendinopathy",
+SectionType: "",
+Section: "",
+Slug: "achilles-tendinopathy",
+Specialities: [
+"Injuries",
+"Musculoskeletal"
+]
+},
+{
+Title: "Acne vulgaris",
+Link: "/acne-vulgaris",
+SectionType: "",
+Section: "",
+Slug: "acne-vulgaris",
+Specialities: [
+"Skin and nail"
+]
+},
+{
+Title: "Acute kidney injury",
+Link: "/acute-kidney-injury",
+SectionType: "",
+Section: "",
+Slug: "acute-kidney-injury",
+Specialities: [
+"Kidney disease and urology"
+]
+},
+{
+Title: "Addison's disease",
+Link: "/addisons-disease",
+SectionType: "",
+Section: "",
+Slug: "addisons-disease",
+Specialities: [
+"Endocrine and metabolic"
+]
+},
+{
+Title: "Adverse drug reactions",
+Link: "/adverse-drug-reactions",
+SectionType: "",
+Section: "",
+Slug: "adverse-drug-reactions",
+Specialities: [
+"Drugs and devices"
+]
+}
+      ];
+
+      console.log( 'topics loaded' );
+  }, 3000);
+
+</script>
+
+
+<body>
+</body>
+</html>

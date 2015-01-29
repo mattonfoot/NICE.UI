@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<title>NICE Bootstrap</title>
+  
+	<link href="http://fonts.googleapis.com/css?family=Lato:200normal,200italic,300normal,300italic,400normal,400italic,700normal,700italic,900normal,900italic" rel="stylesheet" />
+	<link href="../Content/NICE.bootstrap.css" rel="stylesheet" />
+	<link href="../Content/NICE.bootstrap.responsive.css" rel="stylesheet" />
+</head>
+
+<body data-log="error" data-dismiss="3000">
+	<div class="message-log"></div>
+
+    <form action="./Base.FromValidation.html" method="POST" enctype="application/x-www-form-urlencoded" class="form-horizontal"
+        novalidate data-validation="plugin">
+		<fieldset>
+
+			<!-- Form Name -->
+			<legend>Form Name</legend>
+
+			<!-- Text input-->
+			<div class="control-group">
+			  <label class="control-label" for="firstname">First Name</label>
+			  <div class="controls">
+			    <input id="firstname" name="firstname" placeholder="e.g. Bob" required>
+			    <span class="help-block"></span>
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="control-group">
+			  <label class="control-label" for="lastname">Last Name</label>
+			  <div class="controls">
+			    <input id="lastname" name="lastname" placeholder="e.g. Smith" required>
+			    <span class="help-block"></span>
+			  </div>
+			</div>
+
+			<!-- Text input-->
+			<div class="control-group">
+			  <label class="control-label" for="email">Email</label>
+			  <div class="controls">
+			    <input id="email" name="email" type="email" placeholder="e.g. abc@def.co.uk" required>
+			    <span class="help-block"></span>
+			  </div>
+			</div>
+
+			<!-- Password input-->
+			<div class="control-group">
+			  <label class="control-label" for="passwordinput">Password</label>
+			  <div class="controls">
+			    <input id="passwordinput" name="passwordinput" type="password" placeholder="placeholder" class="input-xlarge">
+			    <span class="help-block"></span>
+			  </div>
+			</div>
+
+			<!-- Select Basic -->
+			<div class="control-group">
+			  <label class="control-label" for="selectbasic">Select Basic</label>
+			  <div class="controls">
+			    <select id="selectbasic" name="selectbasic" class="input-xlarge">
+			      <option>Option one</option>
+			      <option>Option two</option>
+			    </select>
+			  </div>
+			</div>
+
+			<!-- Multiple Checkboxes (inline) -->
+			<div class="control-group">
+			  <div class="controls">
+			    <label class="checkbox inline" for="checkboxes-0">
+			      <input type="checkbox" name="checkboxes" id="checkboxes-0" value="1234">
+			      1234
+			    </label>
+			  </div>
+			</div>
+
+			<!-- Multiple Radios -->
+			<div class="control-group">
+			  <label class="control-label" for="radios">Multiple Radios</label>
+			  <div class="controls">
+			    <label class="radio" for="radios-0">
+			      <input type="radio" name="radios" id="radios-0" value="Option one" checked="checked">
+			      Option one
+			    </label>
+			    <label class="radio" for="radios-1">
+			      <input type="radio" name="radios" id="radios-1" value="Option two">
+			      Option two
+			    </label>
+			  </div>
+			</div>
+
+			<!-- Textarea -->
+			<div class="control-group">
+			  <label class="control-label" for="textarea">Text Area</label>
+			  <div class="controls">                     
+			    <textarea id="textarea" name="textarea">default text</textarea>
+			  </div>
+			</div>
+
+			<!-- Button (Double) -->
+			<div class="form-actions">
+			    <button type="submit" class="btn btn-success">Submit</button>
+			    <a href="#" class="btn">Cancel</button>
+			</div>
+
+		</fieldset>
+
+	</form>
+
+    <script src="../Scripts/jquery/jquery-1.10.2.min.js"></script>
+    <script src="../Scripts/twitter.bootstrap.min.js"></script>
+    <script src="../Scripts/NICE.bootstrap.min.js"></script>
+</body>
+</html>
