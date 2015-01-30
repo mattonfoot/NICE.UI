@@ -1,0 +1,97 @@
+@import (reference) "../glyphs.less";
+
+.breadcrumb-stack {
+  .block-margins-vertical;
+
+  > li {
+    display: block;
+    position: relative;
+    .margin-zero;
+    .margin-bottom( @half-line-height );
+    transition: height ease .2s, margin ease .2s;
+
+    > a {
+      display: block;
+      .padding( @base-line-height / 4 @grid-spacing );
+      .theme-breadcrumb-stack-link;
+
+      &:hover {
+        .theme-breadcrumb-stack-link-hover;
+      }
+    }
+
+    &:not(.active) > a {
+      &:after {
+        content: '';
+        z-index: 10;
+        .border-arrow-down;
+        .theme-breadcrumb-stack-divider;
+        transition: margin ease .2s;
+      }
+
+      &:hover:after {
+        .theme-breadcrumb-stack-divider-hover;
+      }
+    }
+
+    &.active {
+      > a {
+        .theme-breadcrumb-stack-active;
+
+        &:active {
+          outline: none;
+        }
+      }
+
+      > .toggle {
+        margin: -(@base-line-height / 4px) auto 0;
+        .padding-zero;
+        .border-zero;
+        width: 4.8rem;
+        text-align: center;
+        .use-nice-glyph;
+        &:after {
+          content: @glyph-caret-up;
+        }
+      }
+
+    }
+
+  }
+
+  &.collapsed {
+    > li {
+      &:not(.active) {
+        height: 0;
+        .margin-zero;
+        overflow: hidden;
+
+        > a {
+          &:after {
+            margin-top: 0;
+          }
+        }
+      }
+
+      &.active {
+        > .toggle {
+          &:after {
+            content: @glyph-caret-down;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+/*
+@media (min-width: 768px) {
+  .breadcrumb-stack {
+    > li.active > .toggle {
+      display: none;
+      visibility: hidden;
+    }
+  }
+}
+*/

@@ -1,0 +1,129 @@
+
+// base values
+@prefered-font-family:    Lato;
+@fallback-font-family:    "Helvetica Neue", sans-serif;
+@monospace-font-family:   'andale mono', 'lucida console', monospace;
+
+@base-font-size:          16;
+@base-line-height:        24;
+@grid-spacing:            24;
+
+@font-weight-regular:     400;
+@font-weight-bold:        700;
+
+@cursor-disabled:         not-allowed;
+
+// color palette
+@black:                   #111;
+@superblack:              #000;
+@white:                   #FFF;
+
+@offwhite:                darken(  @white,   5% );     // #EEE;
+@lightgray:               darken(  @white,  10% );     // #E6E6E6;
+@gray:                    darken(  @white,  20% );     // #CCC;
+@silver:                  #AAA;
+@darksilver:              darken(  @silver, 10% );     // #999;
+@midgray:                 lighten( @black,  33% );     // #656565;
+@darkgray:                lighten( @black,  10% );     // #333;
+
+@navy:                    #001F3F;
+@blue:                    #0074D9;
+@lightblue:               lighten( @blue,   15% );
+@lighterblue:             lighten( @blue,   50% );
+@darkblue:                darken(  @blue,   5% );
+@aqua:                    #7FDBFF;
+@lightaqua:               lighten( @aqua,   20% );
+
+@green:                   #2ECC40;
+@lightgreen:              lighten( @green,  40% );
+@darkgreen:               darken( @green,   17% );
+@darkergreen:             darken( @green,   30% );
+@red:                     #DC372E;
+@lightred:                lighten( @red,    30% );
+@darkred:                 darken( @red,     15% );
+@darkerred:               darken( @red,     25% );
+@yellow:                  #FFDC00;
+@lightyellow:             lighten( @yellow, 40% );
+@darkyellow:              darken( @yellow,  18% );
+@darkeryellow:            darken( @yellow,  25% );
+
+// links
+@caution:                 #E91A1A;
+@caution-hover:           darken( @caution,    12% );
+@link:                    #01769D;
+@link-hover:              #08455B;
+
+// buttons
+@primary-button:          @blue;
+@primary-button-text:     @white;
+@primary-button-hover:    darken( @primary-button,    12% );
+
+@herounit-primary-button:          @yellow;
+@herounit-primary-button-text:     @superblack;
+@herounit-primary-button-hover:    darken( @herounit-primary-button,    12% );
+
+@positive-button:         @green;
+@positive-button-text:    @darkergreen;
+@positive-button-hover:   darken( @positive-button,   12% );
+@positive-button-hover-text:   darken( @positive-button-text,   12% );
+
+@danger-button:           @red;
+@danger-button-text:      @white;
+@danger-button-hover:     darken( @danger-button,     12% );
+
+@caution-button:          #f0ad4e;
+@caution-button-text:     darken( @caution-button,    40% );
+@caution-button-hover:    #d58512;
+
+@informative-button:      @lightblue;
+@informative-button-text: @lightaqua;
+@informative-button-hover: darken( @informative-button,    12% );
+
+// search
+@highlight-bg:            @yellow;
+@search-meta:             #339900;
+@search-meta-hover:       darken( @search-meta,    12% );
+
+// contextual
+@success-background:      @lightgreen;
+@success-foreground:      @darkergreen;
+@success-foreground-only: @darkgreen;
+
+@error-background:        @lightred;
+@error-foreground:        @darkerred;
+@error-foreground-only:   @red;
+
+@warning-background:      @lightyellow;
+@warning-foreground:      @darkeryellow;
+@warning-foreground-only: @darkeryellow;
+
+@info-background:         @lighterblue;
+@info-foreground:         @darkblue;
+@info-foreground-only:    @blue;
+
+// footer
+@footer-foreground:         @white;
+@footer-background:         @darkgray;
+@footer-link:               @white;
+@footer-link-hover:         @white;
+@footer-navbar-foreground:  @white;
+@footer-navbar-background:  #043c4d;
+@footer-navbar-highlight:   #006e93;
+
+@hero-unit-foreground:      @gray;
+@hero-unit-heading:         @white;
+@hero-unit-background:      #043c4d;
+
+// menus
+@menu-foreground:           @black;
+@menu-background:           transparent;
+@menu-hover-foreground:     @primary-button-text;
+@menu-hover-background:     @primary-button-hover;
+@menu-active-foreground:    @primary-button-text;
+@menu-active-background:    @primary-button;
+@submenu-foreground:        @black;
+@submenu-background:        #ddeef4;
+@submenu-hover-foreground:  #11779b;
+@submenu-hover-background:  #cae4ee;
+@submenu-active-foreground: @white;
+@submenu-active-background: #00a7df;

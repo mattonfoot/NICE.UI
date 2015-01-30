@@ -1,0 +1,32 @@
+.breadcrumb {
+  list-style: none;
+  .padding-zero;
+
+  li {
+    .padding-left( 0 );
+    display: inline-block;
+    // .ie7-inline-block();
+
+    > .divider {
+      .padding( 0 @grid-spacing / 4 );
+      .theme-breadcrumb-divider;
+    }
+  }
+  li:before {
+    display: none;
+  }
+
+  a {
+    .theme-breadcrumb-link;
+
+    &:hover,
+    &:active ,
+    &:focus {
+      .theme-breadcrumb-link-hover;
+    }
+  }
+
+  > .active {
+    .theme-breadcrumb-active;
+  }
+}

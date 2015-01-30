@@ -1,0 +1,40 @@
+// typography mixins
+.font-size( @sizeValue: @base-font-size ) {
+    .relative_size( font-size, @sizeValue );
+}
+.line-height( @sizeValue: @base-line-height ) {
+    .relative_size( line-height, @sizeValue );
+}
+
+.font-small() {     .font-size( @base-font-size * 0.8  ); }         // 12
+.font-monospace() { .font-size( @base-font-size * 0.9  ); }         // 15
+.font-acronym() {   .font-size( @base-font-size * 0.9  ); }         // 15
+.font-base() {      .font-size(                        ); }         // 16
+.font-medium() {    .font-size( @base-font-size * 1.2  ); }         // 18
+.font-large() {     .font-size( @base-font-size * 1.5  ); }         // 24
+.font-xlarge() {    .font-size( @base-font-size * 2.0  ); }         // 32
+.font-xxlarge() {   .font-size( @base-font-size * 3.0  ); }         // 48
+
+.font-hero() {            .font-size( @base-font-size * 3.0  ); }   // 48
+.font-hero-heading() {    .font-size( @base-font-size * 8.0  ); }   // 80
+
+.text-overflow-ellipsis() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+// based on http://nicolasgallagher.com/micro-clearfix-hack/
+.clearfix() {
+  zoom: 1;
+
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+
+  &:after {
+    clear: both;
+  }
+}

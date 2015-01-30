@@ -1,0 +1,71 @@
+.relative_size( @property, @sizeValues, @restLinkParams : false ) {
+  .size-to-px( @property, @sizeValues, @restLinkParams : false );
+  /**/
+  .size-to-rem( @property, @sizeValues, @restLinkParams : false );
+}
+
+@baseFactor:  10;
+
+.size-to-rem( @property, @sizeValues, @restLinkParams : false ) {
+    @propertyRem: ~'/*rem*/'@property;
+
+    .sizetoremloop();
+
+    & when not (@restLinkParams = false) {
+        @{propertyRem}+_ : @restLinkParams;
+    }
+
+    .sizetoremloop( @amount : length(@sizeValues ), @i : 1) when ( @i =< @amount ) {
+        @sizeValue: extract(@sizeValues, @i);
+
+        & when ( iskeyword(@sizeValue) ) {
+            @remValue : @sizeValue;
+
+            @{propertyRem}+_ : ~"@{remValue}";
+        }
+        & when not ( iskeyword(@sizeValue) ) {
+            @remValue : @sizeValue / @baseFactor;
+
+            & when not (@remValue = 0) {
+                @{propertyRem}+_ : ~"@{remValue}rem";
+            }
+            & when (@remValue = 0) {
+                @{propertyRem}+_ : @remValue;
+            }
+        }
+
+        .sizetoremloop(@amount, (@i + 1));
+    }
+}
+
+.size-to-px( @property, @sizeValues, @restLinkParams : false ) {
+    @propertyPx: ~'/*px*/'@property;
+
+    .sizetopxloop();
+
+    & when not (@restLinkParams = false) {
+        @{propertyPx}+_ : @restLinkParams;
+    }
+
+    .sizetopxloop( @amount : length(@sizeValues ), @i : 1) when ( @i =< @amount ) {
+        @sizeValue: extract(@sizeValues, @i);
+
+        & when ( iskeyword(@sizeValue) ) {
+            @pxValue  : @sizeValue;
+
+            @{propertyPx}+_ : ~"@{pxValue}";
+        }
+        & when not ( iskeyword(@sizeValue) ) {
+            @pxValue  : @sizeValue;
+
+            & when not (@pxValue = 0) {
+                @{propertyPx}+_ : ~"@{pxValue}px";
+            }
+            & when (@pxValue = 0) {
+                @{propertyPx}+_ : @pxValue;
+            }
+        }
+
+        .sizetopxloop(@amount, (@i + 1));
+    }
+}

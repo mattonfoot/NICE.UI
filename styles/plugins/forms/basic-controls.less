@@ -1,0 +1,123 @@
+input:not([type=file]), textarea, select {
+  display: block;
+  width: 100%;
+  margin: 0;
+  .padding( @half-line-height @half-line-height - 1 );
+  .font-base;
+  .line-height( @base-line-height - 2 );
+  background-image: none;
+  border: 1px solid;
+  border-radius: 0;
+  .theme-input;
+
+  &:focus {
+    border-color: @blue;
+    outline: 0;
+  }
+
+  // Placeholder
+  &::-moz-placeholder {               // firefox
+    .theme-input-placeholder;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {           // Internet Explorer 10+
+    .theme-input-placeholder;
+  }
+  &::-webkit-input-placeholder  {     // Safari and Chrome
+    .theme-input-placeholder;
+  }
+
+  // Disabled and read-only inputs
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] &,
+  .disabled &,
+  .readonly & {
+    .theme-input-disabled;
+    opacity: 1; // iOS fix for unreadable disabled content
+  }
+}
+
+// Reset height for `textarea`s
+textarea {
+  .span-minlines( 6 );
+  height: auto;
+  .line-height;
+  .padding( @half-line-height - 1 );
+  overflow: auto;
+}
+
+input:not([type=file]) {
+  .span-lines( 2 );
+}
+
+input {
+  &[type="checkbox"], &[type="radio"] {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    line-height: 1;
+    .margin( 3 2 0 );
+    margin-top: 1px \9; // IE8-9
+    .padding-zero;
+
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+
+  &[type="range"] {
+    display: block;
+    width: 100%;
+  }
+
+  &[type=date],
+  &[type=datetime-local],
+  &[type=month],
+  &[type=week],
+  &[type="color"] {
+  }
+
+  &[type="number"], &[type="date"] {
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      height: auto;
+    }
+  }
+
+  &[type="search"] {
+    -webkit-appearance: textfield;        // bootstrap uses "none"
+
+    &::-webkit-search-cancel-button,
+    &::-webkit-search-decoration {
+      -webkit-appearance: none;
+    }
+  }
+
+}
+
+select {
+  .span-lines( 2 );
+}
+
+select[multiple], select[size] {
+  .span-minlines( 2 );
+  height: auto;
+}
+
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  outline: thin dotted;
+  outline: .5rem auto -webkit-focus-ring-color;
+  outline-offset: -.2rem;
+}
+
+output, .form-control-static {
+  display: block;
+  width: 100%;
+  margin: 0;
+  .padding( @half-line-height );
+  .font-base;
+  .line-height;
+  .theme-output;
+}

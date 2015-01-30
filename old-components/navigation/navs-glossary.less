@@ -1,0 +1,45 @@
+@import "CONFIG.general.less";
+
+.nav-glossary {
+    .clearfix();
+
+    > li {
+        float: left;
+        margin: 1%;
+        width: 23%;
+
+        > a {
+            color: @gray;
+            background: @grayLighter;
+            font-size: 2.4em;
+            line-height: 1.5em;
+            text-align: center;
+
+            &:hover,
+            &:focus,
+            &:active {
+                background: @keyActionColor;
+                color: @grayDarker;
+            }
+        }
+
+        &.active > a,
+        &.active > a:hover,
+        > a:hover {
+            color: @grayDarker;
+            background: @keyActionColor;
+        }
+
+        &.disabled > a {
+            background: transparent;
+
+            &,
+            &:hover,
+            &:focus,
+            &:active {
+                background: transparent;
+                color: @grayMid;
+            }
+        }
+    }
+}

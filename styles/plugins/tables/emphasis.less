@@ -1,0 +1,40 @@
+table {
+  > tbody > tr,
+  tr, td {
+    &.success {
+      .theme-table-success;
+
+      &:hover,
+      &:hover td {
+        .theme-table-success-hover;
+      }
+    }
+
+    &.error {
+      .theme-table-error;
+
+      &:hover,
+      &:hover td{
+        .theme-table-error-hover;
+      }
+    }
+
+    &.warning {
+      .theme-table-warning;
+
+      &:hover,
+      &:hover td {
+        .theme-table-warning-hover;
+      }
+    }
+
+    &.info {
+      .theme-table-info;
+
+      &:hover,
+      &:hover td {
+        .theme-table-info-hover;
+      }
+    }
+  }
+}

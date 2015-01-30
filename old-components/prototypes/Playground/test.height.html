@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta content="IE=edge,chrome=1" name="X-UA-Compatible" />
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport" />
+
+	<title>NICE Bootstrap</title>
+	<style>
+			html, body {
+					padding: 0;
+					margin: 0;
+					overflow: hidden;
+			}
+
+			.content {
+					height: 90vh;
+					float: right;
+					width: 50%;
+					overflow: auto;
+			}
+	</style>
+</head>
+
+<body class="layout-offcanvas-fixed">
+		<div id="tophat" style="height: 10vh; overflow: hidden; background: black; color: white;">NICE</div>
+
+		<div class="layout layout-first-right" style="height: 90vh; overflow: hidden;">
+				<div class="content content-primary">
+					<h1>Off Canvas Test</h1>
+					<p class="lead">The off canvas pattern will be available to browsers with a browser width less than 980px.
+						Wider browsers will dislpay the off canvas as a secondary content column located on the left of the main content.</p>
+
+					<h2>1. Primary Content</h2>
+
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at leo vitae sapien ornare porta eu sed nunc. In dictum ornare blandit. Donec sodales tellus ornare est rutrum, non varius lectus pellentesque. Proin condimentum est purus, ac congue dui tristique non. Sed ut metus lectus. Donec gravida, nisi et convallis eleifend, erat orci ornare felis, id dapibus dolor diam at mi. Ut ac molestie nisi. Curabitur hendrerit eget lorem vel ullamcorper. Maecenas eleifend arcu vitae lacinia posuere. Nullam imperdiet augue nulla, quis aliquet arcu viverra a.</p>
+					<p>Nunc cursus arcu nec placerat pulvinar. Morbi nec urna lobortis, pellentesque ante feugiat, malesuada urna. Mauris sodales purus non dui sagittis, ut vestibulum urna dictum. Fusce quis mauris ut risus venenatis vestibulum ac a sapien. Sed cursus lorem a ornare interdum. Maecenas scelerisque sapien in metus laoreet, sed mollis turpis pellentesque. Fusce ut viverra neque. Donec ac nulla mi.</p>
+					<p>Pellentesque erat metus, bibendum eu volutpat vel, scelerisque viverra nunc. Cras eleifend felis at nulla tristique, a volutpat justo luctus. Donec vel urna quis nibh commodo aliquam. Mauris id risus tempus, dignissim elit vel, tincidunt turpis. Mauris vehicula augue ac orci ultrices lobortis. Ut risus sem, fringilla vel iaculis ut, ultricies ac nibh. Sed venenatis sit amet enim id lacinia. Quisque cursus, ligula vel accumsan dignissim, tellus risus condimentum elit, sit amet congue est nulla imperdiet velit. Morbi at quam sed sem condimentum imperdiet non nec magna. In elit orci, condimentum sit amet malesuada sit amet, accumsan at dui. Aliquam urna purus, dignissim ut bibendum ac, tristique non est. Cras mattis nisi vel massa porttitor dictum. Duis ac iaculis velit, commodo rutrum odio. Donec et auctor lectus. Quisque suscipit nisi et dolor sagittis, ut vulputate neque congue. Vestibulum scelerisque nulla sit amet ultricies dictum.</p>
+					<p>Maecenas consequat orci in volutpat pretium. Nunc nisi leo, luctus volutpat nulla nec, vehicula blandit odio. Praesent congue leo a est placerat, laoreet volutpat urna pellentesque. Nunc in sapien mi. Nullam eu vehicula dolor. Integer sollicitudin lectus et est malesuada hendrerit. Integer sit amet purus elementum, vulputate orci ut, convallis odio. Morbi aliquam, nunc ac imperdiet lobortis, urna eros tempor eros, quis rhoncus dui libero at orci. In adipiscing, metus et tincidunt elementum, dui lectus elementum tortor, eu bibendum neque mauris a ante. Nullam tincidunt arcu sagittis massa rhoncus, sit amet euismod nisl elementum. Nam lacinia dictum erat id pharetra. Nullam rutrum tempus elit non semper.</p>
+					<p>Morbi ante lorem, sollicitudin tempor pretium vel, scelerisque in ante. Aliquam lacinia elit lacus. Nam feugiat, magna non rhoncus condimentum, ante lacus varius ligula, in dignissim nulla dui in lectus. Phasellus velit felis, elementum eu arcu sed, tempor vulputate enim. Praesent vitae arcu tristique magna sodales luctus sed hendrerit risus. In sodales dui at nisl vehicula, in porta lectus fermentum. Suspendisse rutrum neque justo, non rhoncus neque commodo in. Maecenas aliquam, odio at ultricies auctor, libero orci interdum purus, sit amet iaculis dolor magna at lorem. Quisque semper, erat malesuada lacinia interdum, odio dui vulputate augue, at consequat nunc orci ac lorem. Nam pharetra tincidunt tellus, vel iaculis augue feugiat in. Cras mattis orci a sem dignissim, et semper nisi placerat.</p>
+				</div>
+
+				<div class="content content-secondary">
+					<button type="button" data-toggle="offcanvas" data-alt-text="" class="btn offcanvas-toggle"></button>
+
+					<div class="content-inner">
+						<h2>2. Secondary Content</h2>
+
+						<ul class="breadcrumb breadcrumb-stack in collapse" id="stacked-nav">
+								<li><a href="#">Home</a> <span class="divider"></span></li>
+								<li><a href="#">Section</a> <span class="divider"></span></li>
+								<li class="active"><a href="#">Parent</a>
+									<a href="#stacked-nav" class="toggle icon-caret-down" data-toggle="stack"></a>
+								</li>
+						</ul>
+
+						<ul class="nav nav-list">
+								<li class="active"><a href="#">Overview</a></li>
+								<li><a href="#">Recommendations</a></li>
+								<li><a href="#">Resources</a>
+										<ul class="nav nav-list">
+												<li><a href="#">Costing</a></li>
+												<li><a href="#">Local Practice</a></li>
+										</ul>
+								</li>
+								<li><a href="#" class=" ">History</a>
+										<ul class="nav nav-list">
+												<li class="active"><a href="#">Timeline</a></li>
+												<li><a href="#">Documents</a></li>
+										</ul>
+								</li>
+						</ul>
+
+					</div>
+				</div>
+		</div>
+
+		<script>
+
+
+
+		var heightCache = 0, to = false;
+		function adjustOffCanvasFixed( e ) {
+				var height = $( window ).height() + 55;
+
+				function action() {
+						$('.layout-offcanvas-fixed .layout').height( heightCache );
+				}
+
+				if (height !== heightCache) {
+						heightCache = height;
+
+						if (to) {
+								clearTimeout( to );
+						}
+
+						to = setTimeout( action, 10 );
+				}
+		}
+
+		$(window)
+			.on('resize.data-api.bs', adjustOffCanvasFixed);
+
+		$(function() {
+				adjustOffCanvasFixed();
+		});
+
+		</script>
+</body>
+</html>
