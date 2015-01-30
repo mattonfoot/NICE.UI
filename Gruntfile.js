@@ -54,8 +54,15 @@ module.exports = function( grunt )
     // build
     grunt.registerTask(
           'generate'
-        , 'generates the documentation site'
+        , 'Generates the documentation site'
         , [ 'metalsmith:generate', 'copy' ]
+    );
+
+    // publish
+    grunt.registerTask(
+          'publish'
+        , 'Publishes the generated documentation website to github.io'
+        , [ 'generate', 'gh-pages' ]
     );
 
     grunt.registerTask(
