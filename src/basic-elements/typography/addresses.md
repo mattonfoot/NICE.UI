@@ -4,6 +4,7 @@ title: Addresses
 date: 2014-12-16
 template: section.html
 description: Present contact information for the nearest ancestor or the entire body of work
+disqus_identifier: /basic-elements/typography/addresses
 nav_sort: 6
 nav_groups:
   - primary

@@ -3,6 +3,7 @@ section: Pagination and breadcrumbs
 title: Breadcrumb
 description: A design pattern to show the position of a document in a hierarchy of information
 template: section.html
+disqus_identifier: /design-patterns/pagination/breadcrumb
 nav_sort: 1
 nav_groups:
 - primary

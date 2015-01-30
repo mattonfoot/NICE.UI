@@ -2,6 +2,7 @@
 section: Basic elements
 title: Graphs and data
 template: page.html
+disqus_identifier: /basic-elements/graphs-and-data
 nav_sort: 5
 nav_groups:
   - primary

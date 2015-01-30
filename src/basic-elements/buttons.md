@@ -3,6 +3,7 @@ section: Basic elements
 title: Buttons and links
 description:
 template: page.html
+disqus_identifier: /basic-elements/button
 nav_sort: 7
 nav_groups:
   - primary

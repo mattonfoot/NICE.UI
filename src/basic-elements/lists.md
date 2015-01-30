@@ -3,6 +3,7 @@ section: Basic elements
 title: Lists
 template: page.html
 description:
+disqus_identifier: /basic-elements/lists
 nav_sort: 10
 nav_groups:
   - primary

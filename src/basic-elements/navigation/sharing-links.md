@@ -4,6 +4,7 @@ title: Sharing links
 description: It is more important than ever, today, to get as many of our documents link to from external sources, make it easy for our users to share by including a simple share toolbar.
 date: 2015-01-26
 template: section.html
+disqus_identifier: /basic-elements/navigation/shared-links
 description:
 nav_sort: 2
 nav_groups:

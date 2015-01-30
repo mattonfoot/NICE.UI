@@ -3,6 +3,7 @@ section: Buttons and links
 title: Contextual states
 description: Use any of the available button classes to quickly create a styled button.
 template: section.html
+disqus_identifier: /basic-elements/buttons/options
 nav_sort: 1
 nav_groups:
   - primary

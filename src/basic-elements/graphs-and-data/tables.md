@@ -3,6 +3,7 @@ section: Graphs and data
 title: Tabular data
 date: 2014-12-16
 description: Basic styles applied to tables to increase readability
+disqus_identifier: /basic-elements/graphs-and-data/tables
 template: section.html
 nav_sort: 1
 nav_groups:

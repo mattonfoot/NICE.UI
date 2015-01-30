@@ -3,6 +3,7 @@ section: Layout
 title: Header
 description: Provides a standard area to display publication related information.
 template: section.html
+disqus_identifier: /basic-elements/layout/header
 nav_sort: 1
 nav_groups:
   - primary

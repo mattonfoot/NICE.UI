@@ -2,6 +2,7 @@
 section: Basic Typography
 title: Ellipsis
 description: Indicate an intentional omission of a word, sentence, or whole section from a text without altering its original meaning.
+disqus_identifier: /basic-elements/typography/ellipsis
 date: 2014-12-16
 template: section.html
 nav_sort: 9

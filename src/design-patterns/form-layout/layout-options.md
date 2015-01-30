@@ -3,6 +3,7 @@ section: Forms
 title: Layout options
 description: Included with NICE.UI are three optional form layouts for common use cases
 template: section.html
+disqus_identifier: /design-patterns/form-layout/layout-options
 nav_sort: 2
 nav_groups:
 - primary

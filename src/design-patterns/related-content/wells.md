@@ -3,6 +3,7 @@ section: Related content
 title: Wells
 description: Use the well as a simple effect on some information to give it an inset effect.
 template: section.html
+disqus_identifier: /design-patterns/related-content/wells
 nav_sort: 2
 nav_groups:
 - primary

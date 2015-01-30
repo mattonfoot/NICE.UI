@@ -3,6 +3,7 @@ section: Layout
 title: Two column layout
 description: Provides a standard "Two Column" page layout for presenting articles or topics.
 template: section.html
+disqus_identifier: /basic-elements/layout/two-columns
 nav_sort: 1
 nav_groups:
   - primary

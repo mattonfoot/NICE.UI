@@ -3,6 +3,7 @@ section: Lists
 title: Definitions
 date: 2014-12-16
 template: section.html
+disqus_identifier: /basic-elements/lists/definitions
 description:
 nav_sort: 2
 nav_groups:

@@ -3,6 +3,7 @@ section: Layout
 title: Grid framework
 description: A responsive, proportional, and mobile-first 12-column grid framework
 template: section.html
+disqus_identifier: /basic-elements/layout/grid
 nav_sort: 3
 nav_groups:
   - primary

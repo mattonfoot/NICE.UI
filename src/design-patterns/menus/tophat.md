@@ -3,6 +3,7 @@ section: Menus
 title: Tophat
 description: A design pattern used across all services to provide easy access to other services and account information
 template: section.html
+disqus_identifier: /design-patterns/menus/tophat
 nav_sort: 1
 nav_groups:
   - primary

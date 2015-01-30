@@ -4,6 +4,7 @@ title: Emphasising information
 date: 2014-12-16
 template: section.html
 description: Use contextual classes to emphasise the information portrayed within table rows or cells.
+disqus_identifier: /basic-elements/graphs-and-data/emphasising-information
 nav_sort: 2
 nav_groups:
   - primary

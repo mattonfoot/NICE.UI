@@ -3,6 +3,7 @@ section: Related content
 title: Panels
 description: For those situations where you just need to put your information in a box.
 template: section.html
+disqus_identifier: /design-patterns/related-content/panels
 nav_sort: 1
 nav_groups:
 - primary

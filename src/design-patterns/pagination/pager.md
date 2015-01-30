@@ -3,6 +3,7 @@ section: Pagination and breadcrumbs
 title: Pager
 description: Simple set of page links with additional navigation links if desired, click areas are large for mobile and touch enabled devices.
 template: section.html
+disqus_identifier: /design-patterns/pagination/pager
 nav_sort: 2
 nav_groups:
 - primary

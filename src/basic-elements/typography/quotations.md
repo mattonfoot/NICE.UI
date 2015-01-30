@@ -4,6 +4,7 @@ title: Quotations
 date: 2014-12-16
 template: section.html
 description: For quoting blocks of content from another source within your document
+disqus_identifier: /basic-elements/typography/quotations
 nav_sort: 7
 nav_groups:
   - primary

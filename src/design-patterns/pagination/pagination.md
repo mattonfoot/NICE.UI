@@ -3,6 +3,7 @@ section: Pagination and breadcrumbs
 title: Pagination
 description: Quick previous and next links for simple pager implementations with light markup and styles. It's great for simple sites like blogs or magazines.
 template: section.html
+disqus_identifier: /design-patterns/pagination/pagination
 nav_sort: 3
 nav_groups:
 - primary

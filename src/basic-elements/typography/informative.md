@@ -4,6 +4,7 @@ title: Semantic information
 date: 2014-12-16
 template: section.html
 description: In some circumstances it is necessary to distinguish certain items of information in a specific descriptive style
+disqus_identifier: /basic-elements/typography/informative
 nav_sort: 8
 nav_groups:
   - primary

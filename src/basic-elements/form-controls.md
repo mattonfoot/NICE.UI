@@ -3,6 +3,7 @@ section: Basic elements
 title: Form controls
 description: Examples of standard form controls supported in an example form layout.
 template: page.html
+disqus_identifier: /basic-elements/form-controls
 nav_sort: 11
 nav_groups:
   - primary

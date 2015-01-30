@@ -4,6 +4,7 @@ title: Advanced emphasis
 date: 2014-12-16
 template: section.html
 description: element classes that extend the basic HTML5 elements to add even more emphasis in certain circumstances
+disqus_identifier: /basic-elements/typography/advanced-emphasis
 nav_sort: 4
 nav_groups:
   - primary

@@ -4,6 +4,7 @@ title: Basic Navigation
 description: The most common form of navigation for exploring the structure of a document
 date: 2015-01-26
 template: section.html
+disqus_identifier: /basic-elements/navigation/basic
 description:
 nav_sort: 1
 nav_groups:

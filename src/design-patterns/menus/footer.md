@@ -3,6 +3,7 @@ section: Menus
 title: Footer
 description: A design pattern used across all services to provide easy access to other services and display associative information
 template: section.html
+disqus_identifier: /design-patterns/menus/footer
 nav_sort: 2
 nav_groups:
 - primary

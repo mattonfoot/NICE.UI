@@ -26,6 +26,8 @@
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
       {{{ contents }}}
+
+      <section id="disqus_thread"></section>
     </article>
 
     <aside class="content content-secondary">
@@ -38,5 +40,7 @@
   {{> _Global.Footer }}
 
   {{> _footer }}
+
+  {{> _footer.disqus }}
 </body>
 </html>

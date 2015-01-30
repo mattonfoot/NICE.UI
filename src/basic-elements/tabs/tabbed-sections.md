@@ -4,6 +4,7 @@ title: Tabbed sections
 description: Sometimes and document is easier to take in if sections are placed within tabs
 date: 2015-01-26
 template: section.html
+disqus_identifier: /basic-elements/tabs/tabbed-sections
 description:
 nav_sort: 1
 nav_groups:

@@ -3,6 +3,7 @@ section: Basic elements
 title: Iconography
 description: A set of glyphs that can be used to further enhance meaning
 template: page.html
+disqus_identifier: /basic-elements/iconography
 nav_sort: 4
 nav_groups:
   - primary

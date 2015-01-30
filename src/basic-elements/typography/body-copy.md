@@ -4,6 +4,7 @@ title: Body copy
 date: 2014-12-16
 template: section.html
 description: Basic typographic styles that are applied to the default body copy of a page
+disqus_identifier: /basic-elements/typography/body-copy
 nav_sort: 2
 nav_groups:
   - primary

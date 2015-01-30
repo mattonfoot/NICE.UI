@@ -3,6 +3,7 @@ section: Related content
 title: Hero unit
 description: A lightweight, flexible component that can optionally extend the entire viewport to showcase key content on your site.
 template: section.html
+disqus_identifier: /design-patterns/related-content/hero-unit
 nav_sort: 2
 nav_groups:
 - primary

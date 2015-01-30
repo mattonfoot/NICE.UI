@@ -4,6 +4,7 @@ title: Abbreviations
 date: 2014-12-16
 template: section.html
 description:
+disqus_identifier: /basic-elements/typography/abbreviations
 nav_sort: 5
 nav_groups:
   - primary

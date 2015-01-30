@@ -2,6 +2,7 @@
 title: Basic elements
 description: The NICE UI library (currently v4.0.0) is composed of a default set of styles for all HTML5 elements as well as additional extensions that are based on our Brand Guidelines
 template: page.html
+disqus_identifier: /basic-elements
 nav_sort: 2
 nav_groups:
   - primary

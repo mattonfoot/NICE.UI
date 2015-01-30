@@ -4,6 +4,7 @@ title: Emphasis
 date: 2014-12-16
 template: section.html
 description: Make use of HTML5's default emphasis tags.
+disqus_identifier: /basic-elements/typography/emphasis
 nav_sort: 3
 nav_groups:
   - primary

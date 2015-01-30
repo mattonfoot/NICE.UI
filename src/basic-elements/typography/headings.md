@@ -4,6 +4,7 @@ title: Headings
 date: 2014-12-16
 template: section.html
 description: Basic typographic styles that help highlight the importance of a section of content within a page
+disqus_identifier: /basic-elements/typography/headings
 nav_sort: 1
 nav_groups:
   - primary

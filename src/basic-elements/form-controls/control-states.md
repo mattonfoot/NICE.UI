@@ -3,6 +3,7 @@ section: Forms
 title: Control states
 description: Provide feedback to users or visitors with basic feedback states on form controls and labels.
 template: section.html
+disqus_identifier: /basic-elements/form-controls/control-states
 nav_sort: 5
 nav_groups:
   - primary
