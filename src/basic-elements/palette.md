@@ -9,7 +9,7 @@ nav_sort: 1
 nav_groups:
 - primary
 ---
-<link rel="stylesheet" href="/styles/palette.css" />
+<link rel="stylesheet" href="/NICE.UI/styles/palette.css" />
 
 ## Document & Text
 
@@ -55,7 +55,7 @@ nav_groups:
 </li>
 </script>
 
-<script src="/scripts/vendor/color.js"></script>
+<script src="/NICE.UI/scripts/vendor/color.js"></script>
 <script>
 setTimeout(function() {
   var swatches = {};
