@@ -177,6 +177,18 @@ p {
   /*rem*/ margin: 2.4rem 0;
   padding: 0;
 }
+.lead {
+  /*px*/ margin: 24px 0;
+  /**/
+  /*rem*/ margin: 2.4rem 0;
+  padding: 0;
+  font-family: Lato, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  text-rendering: optimizelegibility;
+  /*px*/ font-size: 19.2px;
+  /**/
+  /*rem*/ font-size: 1.92rem;
+}
 a {
   color: #01769d;
   background: transparent;

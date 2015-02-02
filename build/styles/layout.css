@@ -385,9 +385,6 @@ footer .legal-copyright {
   /**/
   /*rem*/ margin: 0 auto;
   padding: 0;
-  /*px*/ padding: 0 24px;
-  /**/
-  /*rem*/ padding: 0 2.4rem;
   zoom: 1;
 }
 .layout:before,
@@ -405,18 +402,20 @@ footer .legal-copyright {
   display: block;
   float: left;
   min-height: 1px;
-  /*px*/ margin-left: 12px;
+  /*px*/ padding-left: 12px;
   /**/
-  /*rem*/ margin-left: 1.2rem;
+  /*rem*/ padding-left: 1.2rem;
 }
 .layout > :first-child {
-  margin-left: 0;
+  /*px*/ padding-left: 0;
+  /**/
+  /*rem*/ padding-left: 0;
 }
 .layout > .content-primary {
-  width: 72%;
+  width: 66.66666667%;
 }
 .layout > .content-secondary {
-  width: 25%;
+  width: 33.33333333%;
 }
 .layout-first-right .layout > .content,
 .layout.layout-first-right > .content {
@@ -626,4 +625,22 @@ footer .legal-copyright {
   .grid1of12 > * {
     width: 8.33333333%;
   }
+}
+.pull-right {
+  float: right;
+}
+.pull-left {
+  float: left;
+}
+.content-flow-right {
+  float: left;
+  /*px*/ margin: 6px 24px 18px 0;
+  /**/
+  /*rem*/ margin: 0.6rem 2.4rem 1.8rem 0;
+}
+.content-flow-left {
+  float: right;
+  /*px*/ margin: 6px 0 18px 24px;
+  /**/
+  /*rem*/ margin: 0.6rem 0 1.8rem 2.4rem;
 }

@@ -20,13 +20,18 @@ svg:not(:root) {
     overflow: hidden;
 }
 
-// Grouping content ==========================================================================
-//  * Address margin not present in IE 8/9 and Safari.
-figcaption {
-    display: block;
-}
 figure {
-    .block-margins-vertical;
+  .block-margins-vertical;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+figcaption {
+  display: block;
+  .margin( @quarter-line-height 0 @base-line-height - @quarter-line-height );
+  text-align: center;
 }
 
 audio, canvas, progress, video {

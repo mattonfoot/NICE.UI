@@ -36,7 +36,7 @@
     .padding( @half-line-height @half-grid-spacing );
   }
 
-  .panel-header,
+  .panel-heading,
   .panel-body,
   .panel-footer {
     > :first-child {
@@ -50,27 +50,21 @@
 }
 
 .panel {
+  > img,
+  > figure,
+  > svg,
   > table,
   > .table-responsive {
     .margin-zero;
-
-    td, th {
-      &:first-child {
-      //  padding-left: 15px;
-      }
-    }
+    width: 100%;
   }
+}
 
-  > .panel-body {
-    + table,
-    + .table-responsive {
-      // border-top: 1px solid @tableBorder;
-    }
-  }
-
-  .collapse {
-
-    &.in {
+.content-secondary {
+  .panel .panel-heading {
+    h1, h2, h3, h4, h5, h6, .panel-title {
+      .font-medium;
+      .line-height;
     }
   }
 }

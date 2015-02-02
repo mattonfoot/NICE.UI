@@ -69,23 +69,41 @@
   /**/
   /*rem*/ padding: 1.2rem 1.2rem;
 }
-.panel .panel-header > :first-child,
+.panel .panel-heading > :first-child,
 .panel .panel-body > :first-child,
 .panel .panel-footer > :first-child {
   /*px*/ margin-top: 0;
   /**/
   /*rem*/ margin-top: 0;
 }
-.panel .panel-header > :last-child,
+.panel .panel-heading > :last-child,
 .panel .panel-body > :last-child,
 .panel .panel-footer > :last-child {
   /*px*/ margin-bottom: 0;
   /**/
   /*rem*/ margin-bottom: 0;
 }
+.panel > img,
+.panel > figure,
+.panel > svg,
 .panel > table,
 .panel > .table-responsive {
   margin: 0;
+  width: 100%;
+}
+.content-secondary .panel .panel-heading h1,
+.content-secondary .panel .panel-heading h2,
+.content-secondary .panel .panel-heading h3,
+.content-secondary .panel .panel-heading h4,
+.content-secondary .panel .panel-heading h5,
+.content-secondary .panel .panel-heading h6,
+.content-secondary .panel .panel-heading .panel-title {
+  /*px*/ font-size: 19.2px;
+  /**/
+  /*rem*/ font-size: 1.92rem;
+  /*px*/ line-height: 24px;
+  /**/
+  /*rem*/ line-height: 2.4rem;
 }
 .panel-outline .panel-heading {
   background: transparent;

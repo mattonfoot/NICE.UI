@@ -5,7 +5,6 @@
   max-width: 1200px;
 
   .block-margins-centered( 0 );
-  .padding( 0 @grid-spacing );
 
   .clearfix();
 }
@@ -15,19 +14,19 @@
     display: block;
     float: left;
     min-height: 1px;
-    .margin-left;
+    .padding-left;
   }
 
   > :first-child {
-    margin-left: 0;
+    .padding-left( 0 );
   }
 
   > .content-primary {
-    width: 72%;
+    width: 100% * ( 2 / 3 );
   }
 
   > .content-secondary {
-    width: 25%;
+    width: 100% * ( 1 / 3 );
   }
 }
 
