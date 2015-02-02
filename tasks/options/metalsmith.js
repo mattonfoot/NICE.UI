@@ -7,43 +7,7 @@ module.exports = function( config ) {
 
   var options = {};
 
-  options.publish = {
-    options: {
-      metadata: {
-        title: config.pkg.name,
-        description: config.pkg.description,
-        version: config.pkg.version,
-        root: '/NICE.UI/'
-      },
-
-      plugins: {
-        'metalsmith-markdown': { },
-        'metalsmith-navigation': {
-          primary:{
-            sortBy: 'nav_sort',
-            filterProperty: 'nav_groups',
-            mergeMatchingFilesAndDirs: true
-          },
-          footer: {
-            sortBy: 'nav_sort',
-            filterProperty: 'nav_groups',
-            mergeMatchingFilesAndDirs: true
-          }
-        },
-        //'metalsmith-permalinks': {},
-        'metalsmith-templates': {
-          engine: 'handlebars',
-          directory: './src/templates',
-          partials: loadPartials( './src/templates' )
-        }
-      }
-    },
-
-    src: './src/docs',
-    dest: './publish'
-  };
-
-  options.generate = {
+  options.development = {
     options: {
       metadata: {
         title: config.pkg.name,
@@ -78,6 +42,42 @@ module.exports = function( config ) {
     src: './src/docs',
     dest: './build'
 
+  };
+
+  options.publish = {
+    options: {
+      metadata: {
+        title: config.pkg.name,
+        description: config.pkg.description,
+        version: config.pkg.version,
+        root: '/NICE.UI/'
+      },
+
+      plugins: {
+        'metalsmith-markdown': { },
+        'metalsmith-navigation': {
+          primary:{
+            sortBy: 'nav_sort',
+            filterProperty: 'nav_groups',
+            mergeMatchingFilesAndDirs: true
+          },
+          footer: {
+            sortBy: 'nav_sort',
+            filterProperty: 'nav_groups',
+            mergeMatchingFilesAndDirs: true
+          }
+        },
+        //'metalsmith-permalinks': {},
+        'metalsmith-templates': {
+          engine: 'handlebars',
+          directory: './src/templates',
+          partials: loadPartials( './src/templates' )
+        }
+      }
+    },
+
+    src: './src/docs',
+    dest: './publish'
   };
 
   return options;

@@ -13,7 +13,7 @@
   <link rel="canonical" href="basic-elements/palette.html">
   
   <!--[if lt IE 9]>
-  <script src="//scripts/vendor/html5shiv.js"></script>
+  <script src="/scripts/vendor/html5shiv.js"></script>
   <![endif]-->
   
   <!-- Le styles -->
@@ -213,7 +213,7 @@
     <div class="container">
       <ol class="breadcrumb">
         <li>
-          <a href="../../../../../..">Home</a> <i class="divider glyph-chevron-right"></i>
+          <a href="/">Home</a> <i class="divider glyph-chevron-right"></i>
         </li>
         <li>
           <a href="../basic-elements.html">
@@ -235,39 +235,39 @@
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
 
-      ## Document & Text
+      <h2>Document & Text</h2>
 
       <ul class="palette palette-document palette-text palette-blockquote palette-highlighted palette-postal"></ul>
 
-      ## Links
+      <h2>Links</h2>
 
       <ul class="palette palette-link"></ul>
 
-      ## Forms
+      <h2>Forms</h2>
 
       <ul class="palette palette-legend palette-label palette-input palette-output"></ul>
 
-      ## Buttons
+      <h2>Buttons</h2>
 
       <ul class="palette palette-button"></ul>
 
-      ## Tables
+      <h2>Tables</h2>
 
       <ul class="palette palette-table"></ul>
 
-      ## Pagination & breadcrumbs
+      <h2>Pagination &amp; breadcrumbs</h2>
 
       <ul class="palette palette-breadcrumb palette-pagination palette-pager"></ul>
 
-      ## Headers
+      <h2>Headers</h2>
 
       <ul class="palette palette-header"></ul>
 
-      ## Footer
+      <h2>Footer</h2>
 
       <ul class="palette palette-footer"></ul>
 
-      ## Panels
+      <h2>Panels</h2>
 
       <ul class="palette palette-panel palette-herounit palete-well"></ul>
 
@@ -277,6 +277,11 @@
     <aside class="content content-secondary">
       <nav>
         <ul>
+          <li class="active">
+            <a href="">Palette</a>
+            <ul>
+            </ul>
+          </li>
         </ul>
       </nav>
     </aside>
@@ -346,7 +351,7 @@
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="//cdn.nice.org.uk/V3/Scripts/nice/NICE.TopHat.js" async></script>
   
-  <script src="//cdn.nice.org.uk/V3/Scripts/jquery/jquery-1.10.2.min.js"></script>
+  <script src="/scripts/vendor/jquery.js"></script>
   <script src="//cdn.nice.org.uk/V3/Scripts/twitter.bootstrap.js"></script>
   <script src="//cdn.nice.org.uk/V3/Scripts/NICE.bootstrap.js"></script>
   
@@ -360,9 +365,9 @@
 
   <script type="text/html" id="swatch">
     <li class="swatch">
-      <span class="example ">The quick brown fox jumps over the lazy dog.</span>
+      <span class="example {{classname}}">The quick brown fox jumps over the lazy dog.</span>
       <h4 class="name">This is a reference screen showing the full default theme elements available through the framework.</h4>
-      <code class="hex" title=""></code>
+      <code class="hex" title="{{swatchclass}}">{{swatchclass}}</code>
     </li>
   </script>
 

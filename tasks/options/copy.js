@@ -35,7 +35,6 @@ module.exports = function( config ) {
       ]
     },
 
-
     distribute: {
       files: [
       {
@@ -47,12 +46,11 @@ module.exports = function( config ) {
       ]
     },
 
-
     publish: {
       files: [
       {
         expand: true,
-        cwd: './temp/',
+        cwd: './dist/',
         src: [ '**/*.*' ],
         dest: './publish/'
       }

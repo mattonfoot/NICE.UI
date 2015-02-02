@@ -48,27 +48,33 @@ module.exports = function( grunt )
     );
 
     grunt.registerTask(
-        'distribute'
+      'distribute'
       , 'Builds and collates the distributable parts of the package'
-      , [ 'clean:distribute', 'less:distribute', 'copy:collect', 'copy:distribute' ]
+      , [ 'clean:distribute', 'copy:collect', 'less:distribute', 'copy:distribute' ]
     );
 
     grunt.registerTask(
-        'generate'
+      'build'
       , 'Generates the documentation site'
-      , [ 'clean:development', 'metalsmith:generate', 'less:development', 'copy:collect', 'copy:development' ]
+      , [ 'metalsmith:development', 'copy:collect', 'less:development', 'copy:development' ]
+    );
+
+    grunt.registerTask(
+        'rebuild'
+      , 'Generates the documentation site with a clean set of folders'
+      , [ 'clean:development', 'build' ]
     );
 
     grunt.registerTask(
           'publish'
-        , 'Publishes the generated documentation website to github.io'
-        , [ 'clean:publish', 'metalsmith:publish', 'less:publish', 'copy:collect', 'copy:publish', 'gh-pages' ]
+        , 'Publishes the documentation site to github pages'
+        , [ 'clean:publish', 'distribute', 'metalsmith:publish', 'copy:publish', 'gh-pages' ]
     );
 
     grunt.registerTask(
           'default'
-        , 'generates the site, starts a connect server and then watches for changes'
-        , [ 'metalsmith:generate', 'less:development', 'copy:collect', 'copy:development', 'watch' ]
+        , 'generates the documentation site, starts a connect server and then watches for changes'
+        , [ 'rebuild', 'watch:build' ]
     );
 
 };

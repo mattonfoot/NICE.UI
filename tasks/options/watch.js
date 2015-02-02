@@ -2,10 +2,10 @@ module.exports = function( config ) {
 
     return {
 
-        src: {
-            files: [ './src/**/*.*', './templates/**/*.*'],
-            tasks: [ 'generate' ]
-        }
+      build: {
+        files: [ './src/**/*.*' ],
+        tasks: [ 'build' ]
+      }
 
     };
 

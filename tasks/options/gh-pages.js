@@ -3,7 +3,7 @@ module.exports = function( config ) {
   return {
 
     options: {
-      base: './build'
+      base: './publish'
     },
 
     src: [ '**' ]

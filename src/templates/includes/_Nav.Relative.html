@@ -1,5 +1,10 @@
-<ul class="menu">
-{{#each nav_children.primary}}
-  {{> _Global.NavChildren}}
-{{/each}}
+<ul>
+  <li class="active">
+    <a href="{{relative_path @root.nav_path path}}">{{ title }}</a>
+    <ul>
+    {{#each nav_children.primary}}
+      {{> _Global.NavChildren}}
+    {{/each}}
+    </ul>
+  </li>
 </ul>

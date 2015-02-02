@@ -20,23 +20,11 @@ module.exports = function( config ) {
       }]
     },
 
-    publish: {
-      files: [{
-        expand: true,                     // Enable dynamic expansion.
-        cwd: './src/styles/',             // Src matches are relative to this path.
-        src: [ '*.less' ],                   // Actual pattern(s) to match.
-        dest: './publish/styles/',            // Destination path prefix.,
-        ext: '.css'
-      }]
-    },
-
     development: {
       options: {
         compress : false,
         yuicompress: false,
-        cleancss : false,
-        ieCompat : false,
-        optimization: 2
+        cleancss : false
       },
 
       files: [{
