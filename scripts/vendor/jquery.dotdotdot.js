@@ -1,5 +1,5 @@
 /*
- *	jQuery dotdotdot 1.6.13
+ *	jQuery dotdotdot 1.7.0
  *
  *	Copyright (c) Fred Heusschen
  *	www.frebsite.nl
@@ -7,9 +7,8 @@
  *	Plugin website:
  *	dotdotdot.frebsite.nl
  *
- *	Dual licensed under the MIT and GPL licenses.
+ *	Licensed under the MIT license.
  *	http://en.wikipedia.org/wiki/MIT_License
- *	http://en.wikipedia.org/wiki/GNU_General_Public_License
  */
 
 (function( $, undef )
@@ -83,7 +82,9 @@
 						.detach()
 						.end()
 						.append( orgContent.clone( true ) )
-						.find( 'br' ).replaceWith( '  <br />  ' ).end()
+						.find( 'br' )
+						.replaceWith( '  <br />  ' )
+						.end()
 						.css({
 							'height'	: 'auto',
 							'width'		: 'auto',
@@ -205,7 +206,7 @@
 								function()
 								{
 									$dot.trigger( 'update.dot' );
-								}, 10
+								}, 100
 							);
 						}
 					}
@@ -217,14 +218,17 @@
 				watchInt = setInterval(
 					function()
 					{
-						var watchNew = getSizes( $dot );
-						if ( watchOrg.width  != watchNew.width ||
-							 watchOrg.height != watchNew.height )
+						if ( $dot.is( ':visible' ) )
 						{
-							$dot.trigger( 'update.dot' );
-							watchOrg = getSizes( $dot );
+							var watchNew = getSizes( $dot );
+							if ( watchOrg.width  != watchNew.width ||
+								 watchOrg.height != watchNew.height )
+							{
+								$dot.trigger( 'update.dot' );
+								watchOrg = watchNew;
+							}
 						}
-					}, 100
+					}, 500
 				);
 			}
 			return $dot;
@@ -339,7 +343,7 @@
 		var notx = 'table, thead, tbody, tfoot, tr, col, colgroup, object, embed, param, ol, ul, dl, blockquote, select, optgroup, option, textarea, script, style';
 
 		//	Don't remove these elements even if they are after the ellipsis
-		var noty = 'script';
+		var noty = 'script, .dotdotdot-keep';
 
 		$elem
 			.contents()

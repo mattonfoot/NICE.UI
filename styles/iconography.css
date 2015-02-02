@@ -253,7 +253,7 @@
   content: "\e000";
 }
 .glyph-large {
-  font-size: 1.33333333em;
+  font-size: 1.33333333;
 }
 .glyph-2x {
   font-size: 2em;
@@ -323,21 +323,21 @@
   *line-height: 1em;
 }
 .glyph-stack.glyph-large {
-  width: 2.66666667em;
-  height: 2.66666667em;
+  width: 2.66666667;
+  height: 2.66666667;
   font-size: 1em;
-  line-height: 2.66666667em;
+  line-height: 2.66666667;
 }
 .glyph-stack.glyph-large [class^="glyph-"],
 .glyph-stack.glyph-large [class*=" glyph-"] {
-  font-size: 1.33333333em;
+  font-size: 1.33333333;
   line-height: inherit;
-  *line-height: 2.66666667em;
+  *line-height: 2.66666667;
 }
 .glyph-stack.glyph-large .glyph-stack-base {
-  font-size: 2.66666667em;
+  font-size: 2.66666667;
   line-height: inherit;
-  *line-height: 1em;
+  *line-height: 1;
 }
 .glyph-stack.glyph-2x {
   width: 4em;
