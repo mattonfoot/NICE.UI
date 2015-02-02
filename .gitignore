@@ -5,15 +5,16 @@ Thumbs.db
 .DS_Store
 .grunt
 Desktop.ini
+*.sublime
+
 node_modules
 bower_components
-build
-temp
-tests/visual/results
-tests/visual/screenshots
 
 npm-debug.log
 validation-status.json
 validation-report.json
 
-*.sublime
+build
+publish
+dist
+temp

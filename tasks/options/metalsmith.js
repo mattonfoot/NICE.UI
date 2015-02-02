@@ -5,50 +5,82 @@ module.exports = function( config ) {
 
   Handlebars.registerHelper('relative_path', relativePathHelper);
 
-  return {
-    generate: {
-      options: {
-        metadata: {
-          title: config.pkg.name,
-          description: config.pkg.description,
-          version: config.pkg.version
-        },
+  var options = {};
 
-        plugins: {
-          'metalsmith-less': {
-            pattern: 'styles/*.less',
-            parse: {
-              paths: [ './src/styles' ]
-            }
-          },
-          'metalsmith-markdown': { },
-          //'metalsmith-permalinks': {},
-          'metalsmith-navigation': {
-            primary:{
-              sortBy: 'nav_sort',
-              filterProperty: 'nav_groups',
-              mergeMatchingFilesAndDirs: true
-            },
-            footer: {
-              sortBy: 'nav_sort',
-              filterProperty: 'nav_groups',
-              mergeMatchingFilesAndDirs: true
-            }
-          },
-          'metalsmith-templates': {
-            engine: 'handlebars',
-            directory: 'templates',
-            partials: loadPartials()
-          }
-        }
+  options.publish = {
+    options: {
+      metadata: {
+        title: config.pkg.name,
+        description: config.pkg.description,
+        version: config.pkg.version,
+        root: '/NICE.UI/'
       },
 
-      src: './src',
-      dest: './build'
-    }
+      plugins: {
+        'metalsmith-markdown': { },
+        'metalsmith-navigation': {
+          primary:{
+            sortBy: 'nav_sort',
+            filterProperty: 'nav_groups',
+            mergeMatchingFilesAndDirs: true
+          },
+          footer: {
+            sortBy: 'nav_sort',
+            filterProperty: 'nav_groups',
+            mergeMatchingFilesAndDirs: true
+          }
+        },
+        //'metalsmith-permalinks': {},
+        'metalsmith-templates': {
+          engine: 'handlebars',
+          directory: './src/templates',
+          partials: loadPartials( './src/templates' )
+        }
+      }
+    },
+
+    src: './src/docs',
+    dest: './publish'
   };
 
+  options.generate = {
+    options: {
+      metadata: {
+        title: config.pkg.name,
+        description: config.pkg.description,
+        version: config.pkg.version,
+        root: '/'
+      },
 
+      plugins: {
+        'metalsmith-markdown': { },
+        'metalsmith-navigation': {
+          primary:{
+            sortBy: 'nav_sort',
+            filterProperty: 'nav_groups',
+            mergeMatchingFilesAndDirs: true
+          },
+          footer: {
+            sortBy: 'nav_sort',
+            filterProperty: 'nav_groups',
+            mergeMatchingFilesAndDirs: true
+          }
+        },
+        //'metalsmith-permalinks': {},
+        'metalsmith-templates': {
+          engine: 'handlebars',
+          directory: './src/templates',
+          partials: loadPartials( './src/templates' )
+        }
+      }
+    },
+
+    src: './src/docs',
+    dest: './build'
+
+  };
+
+  return options;
 
 
   function relativePathHelper( current, target ) {
@@ -66,12 +98,13 @@ module.exports = function( config ) {
 
   function loadPartials( path ) {
     var glob = require( 'glob' )
-    , object = {};
+    , object = {}
+    , includes = '/includes/';
 
-    glob.sync('*', { cwd: './templates/includes/' })
+    glob.sync('*', { cwd: path + includes })
     .forEach(function( option ) {
       var key = option.replace( /\.html$/, '' );
-      object[ key ] = '/includes/' + key;
+      object[ key ] = includes + key;
     });
 
     return object;

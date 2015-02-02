@@ -21,11 +21,8 @@ module.exports = function( grunt )
     // actual config
 
     var config = {
-
-        pkg: grunt.file.readJSON('package.json')
-
-      , env: process.env
-
+      pkg: grunt.file.readJSON('package.json'),
+      env: process.env
     };
 
     grunt.util._.extend(config, loadConfig( './tasks/options/', config ));
@@ -42,33 +39,36 @@ module.exports = function( grunt )
 
 
     // clean
-    // metalsmith auto cleans the build directory
+    // cleans the build directory
 
-    // test
     grunt.registerTask(
           'serve'
         , 'Starts a dev web server on the first available port starting from 8000 with the build folder as the root.'
         , [ 'connect:dev' ]
     );
 
-    // build
     grunt.registerTask(
-          'generate'
-        , 'Generates the documentation site'
-        , [ 'metalsmith:generate', 'copy' ]
+        'distribute'
+      , 'Builds and collates the distributable parts of the package'
+      , [ 'clean:distribute', 'less:distribute', 'copy:collect', 'copy:distribute' ]
     );
 
-    // publish
+    grunt.registerTask(
+        'generate'
+      , 'Generates the documentation site'
+      , [ 'clean:development', 'metalsmith:generate', 'less:development', 'copy:collect', 'copy:development' ]
+    );
+
     grunt.registerTask(
           'publish'
         , 'Publishes the generated documentation website to github.io'
-        , [ 'generate', 'gh-pages' ]
+        , [ 'clean:publish', 'metalsmith:publish', 'less:publish', 'copy:collect', 'copy:publish', 'gh-pages' ]
     );
 
     grunt.registerTask(
           'default'
         , 'generates the site, starts a connect server and then watches for changes'
-        , [ 'generate', 'watch' ]
+        , [ 'metalsmith:generate', 'less:development', 'copy:collect', 'copy:development', 'watch' ]
     );
 
 };
