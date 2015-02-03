@@ -1,12 +1,18 @@
 .breadcrumb {
   list-style: none;
   padding: 0;
+  /*px*/ height: 24px;
+  /**/
+  /*rem*/ height: 2.4rem;
 }
 .breadcrumb li {
   /*px*/ padding-left: 0;
   /**/
   /*rem*/ padding-left: 0;
   display: inline-block;
+  /*px*/ height: 24px;
+  /**/
+  /*rem*/ height: 2.4rem;
 }
 .breadcrumb li > .divider {
   /*px*/ padding: 0 6px;

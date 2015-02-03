@@ -47,6 +47,11 @@
       .margin-bottom( 0 );
     }
   }
+
+  [class^="grid"],
+  [class*=" grid"] {
+    .margin( 0 @half-grid-spacing * -1 );
+  }
 }
 
 .panel {

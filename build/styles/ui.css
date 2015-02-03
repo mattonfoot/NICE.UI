@@ -15,6 +15,11 @@ html {
   /**/
   /*rem*/ line-height: 2.4rem;
 }
+.nice-tophat .nice-global .nice-search {
+  /*px*/ margin: 17px 0;
+  /**/
+  /*rem*/ margin: 1.7rem 0;
+}
 /*
  * HTML5 display definitions
  */
@@ -193,6 +198,9 @@ p {
   /*px*/ font-size: 19.2px;
   /**/
   /*rem*/ font-size: 1.92rem;
+  /*px*/ line-height: 24px;
+  /**/
+  /*rem*/ line-height: 2.4rem;
 }
 a {
   color: #01769d;
@@ -2623,12 +2631,18 @@ blockquote:before {
 .breadcrumb {
   list-style: none;
   padding: 0;
+  /*px*/ height: 24px;
+  /**/
+  /*rem*/ height: 2.4rem;
 }
 .breadcrumb li {
   /*px*/ padding-left: 0;
   /**/
   /*rem*/ padding-left: 0;
   display: inline-block;
+  /*px*/ height: 24px;
+  /**/
+  /*rem*/ height: 2.4rem;
 }
 .breadcrumb li > .divider {
   /*px*/ padding: 0 6px;
@@ -2931,6 +2945,12 @@ blockquote:before {
   /*px*/ margin-bottom: 0;
   /**/
   /*rem*/ margin-bottom: 0;
+}
+.panel [class^="grid"],
+.panel [class*=" grid"] {
+  /*px*/ margin: 0 -12px;
+  /**/
+  /*rem*/ margin: 0 -1.2rem;
 }
 .panel > img,
 .panel > figure,

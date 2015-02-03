@@ -83,6 +83,12 @@
   /**/
   /*rem*/ margin-bottom: 0;
 }
+.panel [class^="grid"],
+.panel [class*=" grid"] {
+  /*px*/ margin: 0 -12px;
+  /**/
+  /*rem*/ margin: 0 -1.2rem;
+}
 .panel > img,
 .panel > figure,
 .panel > svg,
