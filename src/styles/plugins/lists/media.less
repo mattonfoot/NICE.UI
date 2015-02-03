@@ -1,0 +1,43 @@
+// Clear the floats
+.media,
+.media-body {
+  .clearfix;
+}
+
+.media,
+.media .media {
+  .margin-zero;
+  .padding-zero;
+}
+
+.media-heading {
+  display: block;
+  .margin-zero;
+  .padding-zero;
+  .font-base;
+  .font-bold;
+}
+
+.media-list {
+  .margin-zero;
+  .padding-zero;
+
+  list-style: none;
+
+  .media {
+    .border-top( @lightgray );
+
+    &:first-child {
+      border-top: 0;
+    }
+  }
+}
+
+.media .source {
+  .font-small;
+  .line-height;
+}
+
+.media-body {
+  .padding( @half-line-height 0 );
+}

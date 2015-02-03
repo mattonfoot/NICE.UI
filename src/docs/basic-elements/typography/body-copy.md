@@ -10,7 +10,7 @@ nav_groups:
   - primary
 ---
 
-NICE's global default <code>font-size</code> is **16px**, with a <code>line-height</code> of **24px**. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of their line-height to ensure vertical rhythm is adhered to.
+NICE's global default ```font-size``` is **16px**, with a ```line-height``` of **24px**. This is applied to the ```&lt;body&gt;``` and all paragraphs. In addition, ```&lt;p&gt;``` (paragraphs) receive a bottom margin of their line-height to ensure vertical rhythm is adhered to.
 
 <div class="guide-example">
   <p class="example-tldr">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
@@ -20,14 +20,15 @@ NICE's global default <code>font-size</code> is **16px**, with a <code>line-heig
 
 ### Lead body copy
 
-Make a paragraph stand out by adding <code>.lead</code>.
+Make the lead paragraph stand out by adding <code>.lead</code>.
 
 <div class="guide-example">
   <p class="lead example-tldr">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
 </div>
 
 ### Paragraphs directly following a heading
-Paragraphs that follow <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> elements will pull up to reduce whitespace between them and the headings.
+
+Paragraphs that follow ```&lt;h1&gt;``` through ```&lt;h6&gt;``` elements will pull up to reduce whitespace between them and the headings.
 
 <div class="guide-example">
   <h1>h1. Heading 1</h1>

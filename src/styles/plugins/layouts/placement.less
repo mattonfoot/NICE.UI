@@ -5,11 +5,38 @@
   float: left;
 }
 
-.content-flow-right {
-  float: left;
-  .margin( @quarter-line-height @grid-spacing @base-line-height - @quarter-line-height 0 );
+// embedable positioning and sizing only in primary content
+
+.content-primary {
+  .content-flow-right {
+    float: left;
+    .margin-left( @grid-spacing * -1 );
+  }
+  .content-flow-left {
+    float: right;
+    .margin-right( @grid-spacing * -1 );
+  }
+
+  .content-flow-right,
+  .content-flow-left {
+    width: 100% * ( 208 / 500 );
+    .padding( @quarter-line-height @grid-spacing @base-line-height - @quarter-line-height );
+
+    &.large {
+      width: 100% * ( 6 / 11 );
+    }
+  }
 }
-.content-flow-left {
-  float: right;
-  .margin( @quarter-line-height 0 @base-line-height - @quarter-line-height @grid-spacing );
+
+.layout-primary-wide {
+  .content-primary {
+    .content-flow-right,
+    .content-flow-left {
+      width: 100% * ( 71 / 192 );
+
+      &.large {
+        width: 100% * ( 160 / 330 );
+      }
+    }
+  }
 }

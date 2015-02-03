@@ -1,23 +1,25 @@
-// Embedded content ==========================================================================
-img, svg, figure {
-    display: block;
-    max-width: 100%;
-    width: auto;
+
+// Embedable blocks
+
+img, svg, canvas, figure {
+  display: block;
+  max-width: 100%;
+  width: auto;
 }
 
 iframe {
-    display: block;
-    max-width: 100%;
+  display: block;
+  max-width: 100%;
 }
 
-//  * Remove border when inside `a` element in IE 8/9/10.
 img {
-    border: 0;
+  //  * Remove border when inside `a` element in IE 8/9/10.
+  border: 0;
 }
 
-//  * Correct overflow not hidden in IE 9/10/11.
 svg:not(:root) {
-    overflow: hidden;
+  //  * Correct overflow not hidden in IE 9/10/11.
+  overflow: hidden;
 }
 
 figure {
@@ -34,20 +36,22 @@ figcaption {
   text-align: center;
 }
 
-audio, canvas, progress, video {
-    display: inline-block;
-    vertical-align: top;
+// inline embedables
+
+audio, progress, video {
+  display: inline-block;
+  vertical-align: top;
 }
 
 audio {
-    .span-lines( 2 );
+  .span-lines( 2 );
 }
 
 progress {
-    .span-lines( 1 );
+  .span-lines( 1 );
 }
 
 audio:not([controls]) {
-    display: none;
-    height: 0;
+  display: none;
+  height: 0;
 }
