@@ -2,9 +2,6 @@
 .font-size( @sizeValue: @base-font-size ) {
     .relative_size( font-size, @sizeValue );
 }
-.line-height( @sizeValue: @base-line-height ) {
-    .relative_size( line-height, @sizeValue );
-}
 
 .font-small() {     .font-size( @base-font-size * 0.8  ); }         // 12
 .font-monospace() { .font-size( @base-font-size * 0.9  ); }         // 15
@@ -25,19 +22,4 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-}
-
-// based on http://nicolasgallagher.com/micro-clearfix-hack/
-.clearfix() {
-  zoom: 1;
-
-  &:before,
-  &:after {
-    content: "";
-    display: table;
-  }
-
-  &:after {
-    clear: both;
-  }
 }

@@ -61,10 +61,23 @@
 }
 
 .content-secondary {
-  .panel .panel-heading {
-    h1, h2, h3, h4, h5, h6, .panel-title {
-      .font-medium;
-      .line-height;
+  .panel {
+    border: 0;
+
+    .panel-heading {
+      .padding-left( 0 );
+      .padding-right( 0 );
+      background: none;
+      border: 0;
+
+      h1, h2, h3, h4, h5, h6, .panel-title {
+        .font-medium;
+        .line-height;
+      }
+    }
+
+    .panel-body {
+      .border( @lightgray );
     }
   }
 }

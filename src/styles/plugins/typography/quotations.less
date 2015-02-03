@@ -1,8 +1,5 @@
 
-blockquote {
-  .block-margins-all;
-  .theme-blockquote;
-}
+// inline
 cite, [cite] {
   .theme-text-cited;
   line-height: 0;       // when mixed fonts are used line height can be affected
@@ -10,4 +7,43 @@ cite, [cite] {
 q {
   .theme-text-quoted;
   line-height: 0;       // when mixed fonts are used line height can be affected
+}
+
+// block level
+
+blockquote {
+  display: block;
+  position: relative;
+  .margin-zero;
+  .padding( @base-line-height 0 );
+  .theme-blockquote;
+
+  &:before {
+    display: block;
+    position: absolute;
+    top: 0;
+    .font-xlarge;
+    .theme-blockquote-before;
+  }
+
+  p {
+    margin-bottom: 0;
+  }
+
+  cite {
+    display: block;
+    .theme-blockquote-cited;
+    .font-small;
+    .line-height;
+  }
+
+  + blockquote {
+    .margin-top( @half-line-height );
+    .padding-top( @base-line-height + @half-line-height );
+    .border-top( @lightgray );
+
+    &:before {
+      top: @half-line-height * 1px;
+    }
+  }
 }

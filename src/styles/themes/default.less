@@ -22,6 +22,14 @@
   color: @midgray;
   font-style: italic;
 }
+.theme-blockquote-before {
+  color: @yellow;
+}
+.theme-blockquote-cited {
+  .font-bold;
+  font-style: normal;
+  color: @black;
+}
 .theme-highlighted {
   color: @superblack;
   background-color: @highlight-bg;
@@ -359,11 +367,11 @@
 // panels
 .theme-panel-basic {
   background: @white;
-  .border( darken( @lightgray, 5% ) );
+  .border( @offwhite );
 }
 .theme-panel-basic-header {
   background: @offwhite;
-  border-color: @lightgray;
+  border-color: @offwhite;
 }
 .theme-herounit {
   color: @hero-unit-foreground;

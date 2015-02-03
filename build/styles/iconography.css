@@ -11,10 +11,11 @@
 [class^="glyph-"],
 [class*=" glyph-"] {
   font-size: 1em;
-  font-style: normal;
   font-family: 'Nice Glyphs';
   speak: none;
   font-variant: normal;
+  font-style: normal;
+  font-weight: 400;
   text-transform: none;
   -webkit-font-smoothing: antialiased;
 }
@@ -460,13 +461,25 @@
 }
 .caret {
   font-size: 1em;
-  font-style: normal;
   font-family: 'Nice Glyphs';
   speak: none;
   font-variant: normal;
+  font-style: normal;
+  font-weight: 400;
   text-transform: none;
   -webkit-font-smoothing: antialiased;
 }
 .caret:before {
   content: "\e030";
+}
+blockquote:before {
+  font-size: 2em;
+  font-family: 'Nice Glyphs';
+  speak: none;
+  font-variant: normal;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  content: "\e026";
 }

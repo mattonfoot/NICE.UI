@@ -93,6 +93,8 @@
   font-family: 'Nice Glyphs';
   speak: none;
   font-variant: normal;
+  font-style: normal;
+  font-weight: 400;
   text-transform: none;
   -webkit-font-smoothing: antialiased;
 }
