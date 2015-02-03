@@ -10,6 +10,11 @@ html {
 .nice-tophat {
   box-sizing: content-box;
 }
+.nice-tophat .nice-global .icon-search {
+  /*px*/ line-height: 24px;
+  /**/
+  /*rem*/ line-height: 2.4rem;
+}
 /*
  * HTML5 display definitions
  */
@@ -279,7 +284,9 @@ q {
 blockquote {
   display: block;
   position: relative;
-  margin: 0;
+  /*px*/ margin: 24px 0 0;
+  /**/
+  /*rem*/ margin: 2.4rem 0 0;
   /*px*/ padding: 24px 0;
   /**/
   /*rem*/ padding: 2.4rem 0;
