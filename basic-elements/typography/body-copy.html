@@ -70,9 +70,10 @@
     border-top-width: 0;
   }
   pre.prettyprint {
-    border: 1px solid #ddd;
+    background: white;
   }
   .prettyprint ol.linenums {
+    margin: 0;
     padding-left: 48px;
     padding-left: 4.8em;
   }
@@ -86,7 +87,7 @@
     background: rgba(0,0,255,.01);
   }
   pre code {
-    border:0;
+    border: 0;
     padding: 0;
     background: none;
   }
@@ -238,7 +239,7 @@
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <p>NICE&#39;s global default <code>font-size</code> is <strong>16px</strong>, with a <code>line-height</code> of <strong>24px</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of their line-height to ensure vertical rhythm is adhered to.</p>
+      <p>NICE&#39;s global default <code>font-size</code> is <strong>16px</strong>, with a <code>line-height</code> of <strong>24px</strong>. This is applied to the <code>&amp;lt;body&amp;gt;</code> and all paragraphs. In addition, <code>&amp;lt;p&amp;gt;</code> (paragraphs) receive a bottom margin of their line-height to ensure vertical rhythm is adhered to.</p>
 <div class="guide-example">
   <p class="example-tldr">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
   <p class="example-ignore">Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
@@ -246,13 +247,13 @@
 </div>
 
 <h3 id="lead-body-copy">Lead body copy</h3>
-<p>Make a paragraph stand out by adding <code>.lead</code>.</p>
+<p>Make the lead paragraph stand out by adding <code>.lead</code>.</p>
 <div class="guide-example">
   <p class="lead example-tldr">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
 </div>
 
 <h3 id="paragraphs-directly-following-a-heading">Paragraphs directly following a heading</h3>
-<p>Paragraphs that follow <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> elements will pull up to reduce whitespace between them and the headings.</p>
+<p>Paragraphs that follow <code>&amp;lt;h1&amp;gt;</code> through <code>&amp;lt;h6&amp;gt;</code> elements will pull up to reduce whitespace between them and the headings.</p>
 <div class="guide-example">
   <h1>h1. Heading 1</h1>
   <p class="lead example-tldr">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
@@ -335,24 +336,23 @@
       </div>
     </div>
   </footer>
-
   
+  <script src="//cdn.nice.org.uk/V3/Scripts/nice/NICE.TopHat.js" async></script>
+
   <!-- Le javascript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="//cdn.nice.org.uk/V3/Scripts/nice/NICE.TopHat.js" async></script>
-  
   <script src="/NICE.UI/scripts/vendor/jquery.js"></script>
   <script src="//cdn.nice.org.uk/V3/Scripts/twitter.bootstrap.js"></script>
   <script src="//cdn.nice.org.uk/V3/Scripts/NICE.bootstrap.js"></script>
-  
-  <script src="//cdn.nice.org.uk/V3/Content/assets/js/google-code-prettify/prettify.js"></script>
 
   <script>
     var disqus_identifier = '/basic-elements/typography/body-copy';
   </script>
   
   <script src="//niceuilibrary.disqus.com/embed.js" async></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js"></script>
 
   <script>
   (function() {
@@ -402,7 +402,5 @@
     }
   })();
   </script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.js"></script>
 </body>
 </html>
