@@ -29,7 +29,7 @@
 
     setBackgroundImage: function() {
       if ( this.$element.css('background-image') !== 'none' ) {
-        this.$element.css('background-image', 'url(' + this.generateUrl( this.options.sizes[ 2 ] ) + ')');
+        this.$element.css('background-image', 'url(' + this.generateUrl( this.options.sizes[ 1 ] ) + ')');
       }
     },
 
