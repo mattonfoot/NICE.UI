@@ -2,8 +2,3 @@ general:
   branches:
     ignore:
       - gh-pages
-deployment:
-  production:
-    branch: master
-    commands:
-      - ./node_modules/grunt-cli/bin/grunt publish
