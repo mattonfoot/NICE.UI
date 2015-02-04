@@ -8,3 +8,15 @@ nav_sort: 7
 nav_groups:
   - primary
 ---
+
+### Non-essential knowledge sharing
+
+  - Modals
+  - Popovers
+
+### Informative content
+
+  - Tooltips
+  - Alerts
+  - Labels and badges
+  - Logger

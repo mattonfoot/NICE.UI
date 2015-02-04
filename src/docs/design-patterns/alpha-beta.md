@@ -8,3 +8,11 @@ nav_sort: 8
 nav_groups:
   - primary
 ---
+
+## Sign posting
+
+  - Beta labeling
+
+## Brand differentiation
+
+  - Beta logos and authentication
