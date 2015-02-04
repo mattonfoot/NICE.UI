@@ -65,7 +65,7 @@
 
   $.fn.imageroll.defaults = {
     background: true,
-    template: "/content/nice/{{image}}{{size}}.jpg",
+    template: "http://mattonfoot.github.io/NICE.UI/content/nice/{{image}}{{size}}.jpg",
     sizes: [ 1100, 1600, 3000 ]
   }
 
