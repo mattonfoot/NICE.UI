@@ -78,3 +78,18 @@ If you are creating a new service or updating an existing service please refer t
 </table>
 
 If you need to store different information than has been identified here then you will also need to ensure that your use case is covered by the existing e-Privacy directive and cookie policy.
+
+## Cookies vs Local Storage
+
+Best practice should be to use client side data storage only for user interface settings
+or session specific data that does not affect the way the server renders a page. Any
+user or session data that the web server needs to adjust the page content should be
+stored by that server and not in the client browser or device.
+
+**Cookie data** should only be used to provide unique identifiers of a client to the server
+in a request such as <code>uid</code>. Web services must not pass serialized data
+objects between client and server using cookies as this increases the size of future
+requests to this domain.
+
+**Local storage** should be the method of choice for storing user interface settings. If
+not available on the current device then cookie data can be used.
