@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Typographic Elements</title>
+  <title>E-Privacy directive</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="basic-elements/typography.html">
+  <link rel="canonical" href="design-patterns/user-data/cookie-policy.html">
   
   <!--[if lt IE 9]>
   <script src="/NICE.UI/scripts/vendor/html5shiv.js"></script>
@@ -190,16 +190,16 @@
       <div class="tophat-inner">
         <ul class="menu" role="navigation">
           <li>
-            <a href="../index.html">the NICE UI library</a>
+            <a href="../../index.html">the NICE UI library</a>
           </li>
           <li>
-            <a href="../basic-elements.html">Basic elements</a>
+            <a href="../../basic-elements.html">Basic elements</a>
           </li>
           <li>
-            <a href="../design-patterns.html">Design patterns</a>
+            <a href="../../design-patterns.html">Design patterns</a>
           </li>
           <li>
-            <a href="../going-further.html">Going further</a>
+            <a href="../../going-further.html">Going further</a>
           </li>
         </ul>
       </div>
@@ -215,25 +215,90 @@
           <a href="/NICE.UI/">Home</a> <i class="divider glyph-chevron-right"></i>
         </li>
         <li>
-          <a href="../basic-elements.html">
-            Basic elements
+          <a href="../../design-patterns.html">
+            Design patterns
+          </a>
+          <i class="divider glyph-chevron-right"></i>
+        </li>
+        <li>
+          <a href="../user-data.html">
+            Cookies and user data storage
           </a>
           <i class="divider glyph-chevron-right"></i>
         </li>
         <li class="active">
-          Typographic Elements
+          E-Privacy directive
         </li>
       </ol>
 
-      <h1>Typographic Elements</h1>
+      <h1>E-Privacy directive</h1>
 
-      <p class="lead">A responsive UI library for NICE online services and web applications</p>
+      <p class="lead">Tracking users around our systems allows us to offer a more tailored service but users need to know what information we are tracking.</p>
     </div>
   </header>
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      
+      <p>Because we use third party tracking and analysis tools to help understand what needs our users have, we have to explain to our visitors that they will be tracked anonymously through the use of cookies.</p>
+<p><a href="http://www.nice.org.uk/cookies">You can read the full E-Privacy policy here</a>.</p>
+<div class="notice notice-important">
+  <p><strong>Important</strong> Please ensure that your service conforms to the NICE E-Privacy policy and notify the appropriate department if it does not.</p>
+</div>
+
+<h2 id="including-the-e-privacy-banner">Including the E-Privacy banner</h2>
+<p>The NICE UI library provides a standard E-Privacy banner component that must be included on all
+web pages to ensure compliance across services. Below is an example of the basic E-Privacy banner.</p>
+<div class="guide-example example-processed">
+<div style="display:block;font-family:Lato,Arial,Helvetica,sans-serif;background:#ddeef4;border:1px solid #cddee4;color:#11779b;" id="cookiePolicy"><div style="display:block;margin:0 auto;width:95.74468085%;max-width:1170px;padding:12px 36px 12px 0;padding:1.2rem 3.6rem 1.2rem 0"><button style="float:right;margin:0 -36px 0 0;margin:0 -3.6rem 0 0;padding:0 1em;line-height:24px;line-height:2.4rem;background:none;border:0;color:#000;cursor:pointer;" onclick="return false;">×</button>NICE uses cookies to make the site better. <a href="http://www.nice.org.uk/cookies" target="_blank" style="font-weight:700;color:inherit">Learn more</a></div></div>
+</div>
+
+<p>To include the component you need to include the following script tag after all
+other script tags in your HTML5 document <code>&lt;body&gt;</code>.</p>
+<pre class="prettyprint linenums"><code>&lt;!-- e-privacy policy script --&gt;
+&lt;script src="https://cdn.nice.org.uk/v4.0.0/scripts/ui.eprivacy-policy.js" async defer&gt;&lt;/script&gt;</code></pre>
+
+<h2 id="data-storage">Data Storage</h2>
+<p>The <a href="http://eur-lex.europa.eu/legal-content/EN/TXT/HTML/?uri=CELEX:31995L0046&amp;from=en">e-Privacy Directive</a> was updated in 2012 but still requires that website inform users in an obvious way that data is being stored regarding their online activity within a website - <a href="https://ico.org.uk/for-organisations/guide-to-pecr/cookies/">See the ICO for a summary of this directive</a>. THis extends beyond cookies to the information that we store on our server or in local storage regarding a users activity.</p>
+<p>Items exempt from this directive are items of data regarding personal user settings, or a users authenticated status. It is acceptable to presume that a user that creates an account to access further, enriched or customised content is happy to allow data tracking within the current website.</p>
+<h2 id="standard-storage-keys">Standard storage keys</h2>
+<p>If you are creating a new service or updating an existing service please refer to the following table for standard storage keys for specific types of information.</p>
+<table>
+  <thead>
+    <tr>
+      <th>key</th><th>type</th>
+      <th>usage</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><var>seen_cookie_message</var></td><td>String</td>
+      <td>Indicates whether a user has had the The e-Privacy banner displayed to them on the active service. It is set to the the value <samp>&#39;yes&#39;</samp> if they have.</td>
+    </tr>
+    <tr>
+      <td><var>ASP.NET_SessionId</var></td><td>String</td>
+      <td>General purpose platform session key, used by sites written with Miscrosoft .NET based technologies. Usually used to maintain an anonymised user session by the server. <a href="http://cookiepedia.co.uk/cookies/ASP.NET_SessionId">For more infomation see cookiepedia</a></td>
+    </tr>
+    <tr>
+      <td><var>uid</var></td><td>String</td>
+      <td>General purpose userid key, used to identify a known user so the service can be tailored to their needs or usage patterns. Usually used to maintain an known user session by the server.</td>
+    </tr>
+    <tr>
+      <td><var>__nrpa_2.2</var></td><td>String</td>
+      <td>A session identifier, used by the operational service to authenticate the user against NICE Accounts to assertain acces rights and policies for an individual.</td>
+    </tr>
+    <tr>
+      <td><var>ud</var></td><td>JSON</td>
+      <td>General purpose storage key used to keep data for this session. Used for storing user interface settings that need to persist thorough the users active session. The user data plugin provided by the NICE UI library uses this key.</td>
+    </tr>
+    <tr>
+      <td><var>Orchrd</var></td><td>JSON</td>
+      <td>Orchards default session storage bucket available to all Orchard CMS Modules. Used for storing user interface settings that need to persist thorough the users active session.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>If you need to store different information than has been identified here then you will also need to ensure that your use case is covered by the existing e-Privacy directive and cookie policy.</p>
+
 
       <section id="disqus_thread"></section>
     </article>
@@ -242,35 +307,8 @@
       <nav>
         <ul>
           <li class="active">
-            <a href="">Typographic Elements</a>
+            <a href="">E-Privacy directive</a>
             <ul>
-              <li>
-                <a href="typography/headings.html">Headings</a>
-              </li>
-              <li>
-                <a href="typography/body-copy.html">Body copy</a>
-              </li>
-              <li>
-                <a href="typography/emphasis.html">Emphasis</a>
-              </li>
-              <li>
-                <a href="typography/advanced-emphasis.html">Advanced emphasis</a>
-              </li>
-              <li>
-                <a href="typography/abbreviations.html">Abbreviations</a>
-              </li>
-              <li>
-                <a href="typography/addresses.html">Addresses</a>
-              </li>
-              <li>
-                <a href="typography/quotations.html">Quotations</a>
-              </li>
-              <li>
-                <a href="typography/informative.html">Semantic information</a>
-              </li>
-              <li>
-                <a href="typography/ellipsis.html">Ellipsis</a>
-              </li>
             </ul>
           </li>
         </ul>
@@ -283,16 +321,16 @@
       <div class="container">
         <ul class="nav example-tldr" role="navigation">
           <li>
-            <a href="../index.html">the NICE UI library</a>
+            <a href="../../index.html">the NICE UI library</a>
           </li>
           <li>
-            <a href="../basic-elements.html">Basic elements</a>
+            <a href="../../basic-elements.html">Basic elements</a>
           </li>
           <li>
-            <a href="../design-patterns.html">Design patterns</a>
+            <a href="../../design-patterns.html">Design patterns</a>
           </li>
           <li>
-            <a href="../going-further.html">Going further</a>
+            <a href="../../going-further.html">Going further</a>
           </li>
         </ul>
       </div>
@@ -348,9 +386,60 @@
   <script src="/NICE.UI/scripts/ui.cookie-policy.js"></script>
 
   <script>
-    var disqus_identifier = '/basic-elements/typography';
+    var disqus_identifier = '/design-patterns/user-data/cookie-policy';
   </script>
   
   <script src="//niceuilibrary.disqus.com/embed.js" async></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js"></script>
+
+  <script>
+  (function() {
+    $('.guide-example').each(function() {
+      if ( $(this).is('.example-processed') ) return;
+
+      var $example = $(this).clone();
+
+      $example.children().each( processChild );
+      var src = $example.html().replace( /\&/mg, '&amp;' ).replace( '\n', '' ).replace( /=""/mg, '' );
+
+      var $code = $('<code/>').text( src );
+
+      $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
+
+      $(this).addClass('example-processed');
+    });
+
+    $('.footer-code').each(function() {
+      var $example = $('.footer-wrapper').clone();
+
+      $example.children().each( processChild );
+      var src = $example.wrap('<div/>').parent().html().replace( /\&/mg, '&amp;' ).replace( '\n', '' ).replace( /=""/mg, '' );
+
+      $(this).find('code').text( src );
+    });
+
+    function processChild() {
+      var $child = $(this);
+
+      if ( $child.is('.example-ignore') ) {
+        if ( this.nextSibling && this.nextSibling.nodeType === 3 && this.nextSibling.data.trim() === '' ) {
+          $( this.nextSibling ).remove();
+        }
+        $child.remove();
+        return;
+      }
+
+      if ( $child.is('.example-tldr') ) {
+        $child.removeClass('example-tldr').html( ' [...] ' );
+        if ($child.attr('class').trim() === '') {
+          $child.removeAttr('class');
+        }
+      }
+
+      $child.children().each( processChild );
+    }
+  })();
+  </script>
 </body>
 </html>
