@@ -1,0 +1,28 @@
+---
+section: Templates
+title: Image roll
+template: prototype.html
+nav_sort: 5
+nav_groups:
+  - primary
+  - prototypes
+---
+<link href="http://beta.evidence.nhs.uk/Content/NICE.evidence.home.css" rel="stylesheet" />
+
+<div class="evidence-hero" data-rotate="images" data-images="molecules,bike,care,lab,playing,surgery,table">
+  <div class="hero-inner">
+    <form action="/Search" method="get" data-track="search" class="evidence-search clearfix">
+      <h1>Evidence search</h1>
+      <p class="lead">Health and social care</p>
+
+      <div class="nice-search">
+        <div class="controls">
+          <input name="q" type="text" value="" autocomplete="off" spellcheck="false" placeholder="Search..." maxlength="250" class="search-query" />
+        </div>
+        <button type="submit"><i class="glyph-search" style="font-size: 2.4rem;line-height: 2.4rem;"></i> <span class="menu-label">Search</span></button>
+      </div>
+
+      <p class="strap">Search our unique index of authoritative, evidence-based information from hundreds of trustworthy and accredited sources.</p>
+    </form>
+  </div>
+</div>

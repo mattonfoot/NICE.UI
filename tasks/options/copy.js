@@ -16,6 +16,12 @@ module.exports = function( config ) {
           src: [ 'scripts/**/*.js' ],
           dest: './temp/'
         },
+        {
+          expand: true,
+          cwd: './src/',
+          src: [ 'content/**/*.*' ],
+          dest: './temp/'
+        },
         { './temp/scripts/vendor/color.js': './node_modules/color/color-0.4.1.js' },
         { './temp/scripts/vendor/jquery.dotdotdot.js': './node_modules/dotdotdot/src/js/jquery.dotdotdot.js' },
         { './temp/scripts/vendor/jquery.js': './node_modules/jquery/dist/jquery.js' },
