@@ -3,6 +3,46 @@
 
   "use strict";
 
+  var style = 'html .evidence-hero { \
+    background-image: url(/content/nice/{{image}}1600.jpg); \
+  } \
+  @media \
+  only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 768px), \
+  only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 768px), \
+  only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 768px), \
+  only screen and (        min-device-pixel-ratio: 2)      and (min-width: 768px), \
+  only screen and (                min-resolution: 192dpi) and (min-width: 768px), \
+  only screen and (                min-resolution: 2dppx)  and (min-width: 768px) { \
+    /* Medium screen, retina, stuff to override above media query */ \
+    html .evidence-hero { \
+      background-image: url(/content/nice/{{image}}1600.jpg); /* 1600px */ \
+    } \
+  } \
+  @media only screen and (min-width: 1100px) { \
+    /* Large screen, non-retina */ \
+    html .evidence-hero { \
+      background-image: url(/content/nice/{{image}}1600.jpg); /* 1600px */ \
+    } \
+  } \
+  @media \
+  only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1100px), \
+  only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1100px), \
+  only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1100px), \
+  only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1100px), \
+  only screen and (                min-resolution: 192dpi) and (min-width: 1100px), \
+  only screen and (                min-resolution: 2dppx)  and (min-width: 1100px) { \
+    /* Large screen, retina, stuff to override above media query */ \
+    html .evidence-hero { \
+      background-image: url(/content/nice/{{image}}3000.jpg); /* 3000px */ \
+    } \
+  } \
+  @media only screen and (min-width: 1600px) { \
+    /* Large screen, non-retina */ \
+    html .evidence-hero { \
+      background-image: url(/content/nice/{{image}}3000.jpg); /* 3000px */ \
+    } \
+  }';
+
 
  /* IMAGEROLL PUBLIC CLASS DEFINITION
   * ============================== */
@@ -22,19 +62,15 @@
   ImageRoll.prototype = {
 
     roll: function() {
-      if (this.options.background) {
-        this.setBackgroundImage();
-      }
+      this.injectStyles();
     },
 
-    setBackgroundImage: function() {
-      if ( this.$element.css('background-image') !== 'none' ) {
-        this.$element.css('background-image', 'url(' + this.generateUrl( this.options.sizes[ 2 ] ) + ')');
-      }
+    injectStyles: function() {
+      $('head').append('<style>'+ this.generateStyles() +'</style>');
     },
 
-    generateUrl: function( size ) {
-      return this.options.template.replace(/{{image}}/ig, this.rollImage() ).replace(/{{size}}/ig, size );
+    generateStyles: function() {
+      return style.replace(/{{image}}/ig, this.rollImage() );
     },
 
     rollImage: function() {
@@ -64,9 +100,7 @@
   }
 
   $.fn.imageroll.defaults = {
-    background: true,
-    template: "/content/nice/{{image}}{{size}}.jpg",
-    sizes: [ 1100, 1600, 3000 ]
+    template: "http://mattonfoot.github.io/NICE.UI/content/nice/{{image}}{{size}}.jpg"
   }
 
   $.fn.imageroll.Constructor = ImageRoll;
@@ -93,10 +127,10 @@
     $('[data-rotate="images"]').imageroll();
   }
 
+  setup();
+
   $(window).on('load', function()
   {
-    setup();
-
     $(document).ajaxComplete( setup );
   });
 
