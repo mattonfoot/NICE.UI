@@ -8,10 +8,6 @@
 
   if ( document.cookie.replace( keyCheck, '$1' ) !== value ) {
     setTimeout(cookiePolicyDisplay, 50);
-
-    var cookie = key + '='+ value +'; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/;';
-
-    document.cookie = cookie;
   }
 
   function cookiePolicyDisplay() {
@@ -24,6 +20,9 @@
     var container = document.createElement('div');
     container.innerHTML = banner;
     tophat.appendChild( container.firstChild );
+
+    var cookie = key + '='+ value +'; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/;';
+    document.cookie = cookie;
   }
 
   function locateTophat() {
