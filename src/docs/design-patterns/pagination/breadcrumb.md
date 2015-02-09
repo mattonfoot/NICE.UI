@@ -6,7 +6,7 @@ template: section.html
 disqus_identifier: /design-patterns/pagination/breadcrumb
 nav_sort: 1
 nav_groups:
-- primary
+  - primary
 ---
 
 A single example shown as it might be displayed across multiple pages.
