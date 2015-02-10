@@ -28,11 +28,6 @@
   <!-- docs specific styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" />
   <style>
-  .container, .layout {
-    width: 95.74468085%;
-    max-width: 1170px;
-    margin: 0 auto;
-  }
   
   .guide-example {
     position: relative;
@@ -181,6 +176,26 @@
   .glyph .glyph-stack .glyph-stack-base {
     color: #111;
   }
+  
+  body {
+    background: url(http://griddle.it/1128-12-24?background=fff&color=f0f7ff&text=bce) repeat-y center top;
+  }
+  @media ( max-width:1199px ) {
+    body {
+      background: url(http://griddle.it/936-12-24?background=fff&color=f0f7ff&text=bce) repeat-y center top;
+    }
+  }
+  @media ( max-width:991px ) {
+    body {
+      background: url(http://griddle.it/720-6-24?background=fff&color=f0f7ff&text=bce) repeat-y center top;
+    }
+  }
+  @media ( max-width:767px ) {
+    body {
+      background: none;
+    }
+  }
+  
   </style>
 </head>
 
@@ -286,6 +301,19 @@
   </ul>
 </div>
 
+<h3 id="link-list">Link list</h3>
+<p>by combining an unordered list with a set of links you can provide the user with a simple way to easily view a list of links.</p>
+<div class="guide-example">
+  <ul>
+    <li><a href="#" class="example-tldr">Lorem ipsum dolor sit amet</a></li>
+    <li class="example-ignore"><a href="#">Consectetur adipiscing elit</a></li>
+    <li class="example-ignore"><a href="#">Aenean sit amet erat nunc</a></li>
+  </ul>
+</div>
+
+<h3 id="other">Other</h3>
+<p>The NICE UI library encase some additional list style for both <a href="./lists/definitions.html">definition lists</a> and <a href="./lists/media.html">media lists</a>. Additionally you can find information about <a href="./lists/search-results">search results</a> which contribute to the <a href="./going-further/search-experience.html">shared search experience</a>.</p>
+
 
       <section id="disqus_thread"></section>
     </article>
@@ -378,7 +406,7 @@
   <script src="//cdn.nice.org.uk/V3/Scripts/NICE.bootstrap.js"></script>
   -->
   
-  <script src="/NICE.UI/scripts/ui.cookie-policy.js"></script>
+  <script src="/NICE.UI/scripts/ui.eprivacy-policy.js"></script>
   <script src="/NICE.UI/scripts/plugins/imageroll.js"></script>
 
   <script>

@@ -28,11 +28,6 @@
   <!-- docs specific styles -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css" />
   <style>
-  .container, .layout {
-    width: 95.74468085%;
-    max-width: 1170px;
-    margin: 0 auto;
-  }
   
   .guide-example {
     position: relative;
@@ -181,6 +176,26 @@
   .glyph .glyph-stack .glyph-stack-base {
     color: #111;
   }
+  
+  body {
+    background: url(http://griddle.it/1128-12-24?background=fff&color=f0f7ff&text=bce) repeat-y center top;
+  }
+  @media ( max-width:1199px ) {
+    body {
+      background: url(http://griddle.it/936-12-24?background=fff&color=f0f7ff&text=bce) repeat-y center top;
+    }
+  }
+  @media ( max-width:991px ) {
+    body {
+      background: url(http://griddle.it/720-6-24?background=fff&color=f0f7ff&text=bce) repeat-y center top;
+    }
+  }
+  @media ( max-width:767px ) {
+    body {
+      background: none;
+    }
+  }
+  
   </style>
 </head>
 
@@ -239,25 +254,30 @@
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code> are available.</p>
+      <p>All HTML headings are available for use but the lower levels are discouraged generally.</p>
 <div class="guide-example guide-example-tight">
-  <h1>h1. Bootstrap heading</h1>
-  <h2>h2. Bootstrap heading</h2>
-  <h3>h3. Bootstrap heading</h3>
-  <h4>h4. Bootstrap heading</h4>
-  <h5>h5. Bootstrap heading</h5>
-  <h6>h6. Bootstrap heading</h6>
+  <h1>h1. Level 1 heading</h1>
+  <h2>h2. Level 2 heading</h2>
+  <h3>h3. Level 3 heading</h3>
+  <h4>h4. Level 4 heading</h4>
 </div>
 
-<p>Create lighter, secondary text in any heading with a generic <code>&lt;small&gt;</code> tag.</p>
+<h3 id="options">Options</h3>
+<p>Create lighter, secondary text in any of the top 2 levels of heading with a generic <code>&lt;small&gt;</code> tag.</p>
 <div class="guide-example guide-example-tight">
-  <h1>h1. Bootstrap heading <small>Secondary text</small></h1>
-  <h2>h2. Bootstrap heading <small>Secondary text</small></h2>
-  <h3>h3. Bootstrap heading <small>Secondary text</small></h3>
-  <h4>h4. Bootstrap heading <small>Secondary text</small></h4>
-  <h5>h5. Bootstrap heading <small>Secondary text</small></h5>
-  <h6>h6. Bootstrap heading <small>Secondary text</small></h6>
+  <h1>h1. Level 1 heading <small>Secondary text</small></h1>
+  <h2>h2. Level 2 heading <small>Secondary text</small></h2>
 </div>
+
+<h2 id="understanding-usage">Understanding usage</h2>
+<h3 id="page-or-article-level">Page or Article level</h3>
+<p>The <code>&lt;h1&gt;</code> element must only be used once per page. It is typically reserved for the page/article title and generally sits within a <code>&lt;header&gt;</code> element. You can <a href="./layout/header.html">read more about using headers within documents</a>.</p>
+<h3 id="section-level">Section level</h3>
+<p>The <code>&lt;h2&gt;</code> element should be used for any form of important page-level heading, such as a section title. More than one may be used per page. Consider using this level of heading unless you need a level of less importance, such as within a sub-section.</p>
+<h3 id="sub-section-level">Sub-section level</h3>
+<p>The <code>&lt;h3&gt;</code> element should be used for any form of page-level heading which falls within a sub-section of a document hierarchy.</p>
+<h3 id="other-levels">Other levels</h3>
+<p>For anything that requires a subtle label or definition without dominating the main copy you can use the <code>&lt;h4&gt;</code> to <code>&lt;h6&gt;</code> elements. The NICE UI library purposefully discourages excessive levels of [visual] hierarchy by having identical styles for these three levels of heading.</p>
 
 
       <section id="disqus_thread"></section>
@@ -345,7 +365,7 @@
   <script src="//cdn.nice.org.uk/V3/Scripts/NICE.bootstrap.js"></script>
   -->
   
-  <script src="/NICE.UI/scripts/ui.cookie-policy.js"></script>
+  <script src="/NICE.UI/scripts/ui.eprivacy-policy.js"></script>
   <script src="/NICE.UI/scripts/plugins/imageroll.js"></script>
 
   <script>
