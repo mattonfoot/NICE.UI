@@ -4,36 +4,31 @@
 h1, h2, h3, h4, h5, h6 {
   .block-margins-vertical;
   font-family: @title-font-face;
-  font-weight: @base-font-weight;
+  .font-regular;
 
   text-rendering: optimizelegibility;
 }
 h1, h2, h3 {
     .line-height( @base-line-height * 2 );
-
-    small {
-      font-size: 65%;
-    }
-}
-h4, h5, h6 {
-    .line-height;
 }
 h1 {
     .font-xxlarge;
+
+    small {
+      .font-large;
+    }
 }
 h2 {
     .font-xlarge;
+
+    small {
+      .font-medium;
+    }
 }
 h3 {
     .font-large;
 }
-h4 {
+h4, h5, h6 {
     .font-medium;
-}
-h5 {
-    .font-base;
-    font-weight: @font-weight-bold;
-}
-h6 {
-    .font-base;
+    .line-height;
 }

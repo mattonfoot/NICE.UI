@@ -70,3 +70,20 @@ Place all list items on a single line by adding <code>.inline</code> to the wrap
     <li class="example-ignore">Nulla volutpat</li>
   </ul>
 </div>
+
+### Link list
+
+by combining an unordered list with a set of links you can provide the user with a simple way to easily view a list of links.
+
+
+<div class="guide-example">
+  <ul>
+    <li><a href="#" class="example-tldr">Lorem ipsum dolor sit amet</a></li>
+    <li class="example-ignore"><a href="#">Consectetur adipiscing elit</a></li>
+    <li class="example-ignore"><a href="#">Aenean sit amet erat nunc</a></li>
+  </ul>
+</div>
+
+### Other
+
+The NICE UI library encase some additional list style for both [definition lists](./lists/definitions.html) and [media lists](./lists/media.html). Additionally you can find information about [search results](./lists/search-results) which contribute to the [shared search experience](./going-further/search-experience.html).

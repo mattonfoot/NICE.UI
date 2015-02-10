@@ -43,6 +43,21 @@ elements <code>body</code>, <code>header</code>, <code>footer</code> and <code>m
 &lt;/body&gt;
 </code></pre>
 
+### Columns
+
+As mentioned in [our typography section on establishing a baseline](./typography.html) the NICE UI library uses a baseline grid of ```24px```. This basic unit of measurement also extends to the horizontal grid giving us a consistent space between elements. This standard unit provides us with column widths of ```72px``` on large screen devices when we use a 12 column grid. This gives us a maximum site width of ```1176px``` which includes two gutters of ``24px`` resulting in a maximum content width of ```1128px```. Visit [Grid Calculator](http://gridcalculator.dk/#/1176/12/24/24) to see this in action.
+
+Based on typical breakpoints, we have set our maximum site widths for each major breakpoint as follows:
+
+  - Large devices ( &ge;1200px ): 1176px ( 12 columns )
+  - Medium devices ( &ge;992px ): 984px ( 12 columns )
+  - Small devices ( &ge;768px ): 744px ( 6 columns )
+  - Extra small devices ( &lt;768px ): 100% fluid ( 1 full width column )
+
+### Two column layouts
+
+If within this basic page layout you wish to include related content or site navigation then you will also need to [read about using the basic two column layout](./layout/two-column.html).
+
 ## Advanced layout patterns
 
 ### Narrow screen devices
