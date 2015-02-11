@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
 
-  <title>Icon stack</title>
+  <title>500 Internal Server Error</title>
 
   <meta name="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
   <meta name="description" content="">
   <meta name="author" content="NICE - The National Institute of Health and Care Excellence">
   
-  <link rel="canonical" href="basic-elements/iconography/icon-stack.html">
+  <link rel="canonical" href="going-further/prototypes/500.html">
   
   <!--[if lt IE 9]>
   <script src="/NICE.UI/scripts/vendor/html5shiv.js"></script>
@@ -202,203 +202,40 @@
 </head>
 
 <body>
-  <header class="nice-tophat" role="banner">
-    <div class="nice-global" id="nice-global">
-      <div class="tophat-inner">
-        <ul class="menu" role="navigation">
-          <li>
-            <a href="../../index.html">the NICE UI library</a>
-          </li>
-          <li>
-            <a href="../../basic-elements.html">Basic elements</a>
-          </li>
-          <li>
-            <a href="../../design-patterns.html">Design patterns</a>
-          </li>
-          <li>
-            <a href="../../going-further.html">Going further</a>
-          </li>
+  <main role="main">
+  <header role="banner">
+    <div class="container">
+      <h2 title="500 Internal Server Error">An unexpected error has occured.</h2>
+      <p class="lead">We have been notified by our internal systems and will try and rectify the problem. Please try again in a few minutes and if the situation persists please contact NICE with details of what you were trying to do.</p>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="span3of4 centered">
+        <h2>What can I do now?</h2>
+
+        <p>If you were hoping to find out more about our services then you should
+          <a href="http://www.nice.org.uk/about/what-we-do">see what services NICE has to offer</a>.</p>
+
+        <p>If this is your first time visiting a NICE service you could try exploring one of our services which can be found at the very top of the page or in the area below.</p>
+
+        <p>Here’s where you can go from here:</p>
+
+        <ul>
+          <li><a href="http://www.nice.org.uk/guidance">Explore NICE guidance, quality standards and advice</a>, You can do this by category to find a topic, or choose a list organised by date or title.</li>
+          <li><a href="http://www.evidence.nhs.uk/">Try evidence search</a>. This is our unique index of authoritative, evidence-based information from hundreds of trustworthy and accredited sources.</li>
+          <li><a href="http://www.nice.org.uk">Visit our about pages</a> to find information about our services, who we are and what we do</li>
         </ul>
+
+        <p>If this is not the first time you have seen this message and believe that there is a serious problem <a href="http://www.nice.org.uk/get-involved/contact-us">please contact us directly</a></p>
       </div>
     </div>
-  </header>
+  </div>
+</main>
 
-  <!-- Page Header
-  ================================================== -->
-  <header class="page-header">
-    <div class="container">
-      <ol class="breadcrumb">
-        <li>
-          <a href="/NICE.UI/">Home</a> <i class="divider glyph-chevron-right"></i>
-        </li>
-        <li>
-          <a href="../../basic-elements.html">
-            Basic elements
-          </a>
-          <i class="divider glyph-chevron-right"></i>
-        </li>
-        <li>
-          <a href="../iconography.html">
-            Iconography
-          </a>
-          <i class="divider glyph-chevron-right"></i>
-        </li>
-        <li class="active">
-          Icon stack
-        </li>
-      </ol>
-
-      <h1>Icon stack</h1>
-
-      <p class="lead">It is possible to use the NICE Glyphs along with a Font Awesome style icon-stack</p>
-    </div>
-  </header>
-
-  <main class="layout layout-first-right" role="main">
-    <article class="content content-primary">
-      <p>Use the <code>.glyph-stack</code> class to overlay a list of glyphs on top of
-each other to combine them into more advanced icons;</p>
-<p><div class="glyph-grid" id="iconstack-examples"></div></p>
-<pre class="prettyprint"><code>&lt;span class="glyph-stack"&gt;
-  &lt;i aria-hidden="true" class="glyph-circle glyph-stack-base"&gt;&lt;/i&gt;
-  &lt;i aria-hidden="true" class="glyph-twitter"&gt;&lt;/i&gt;
-&lt;/span&gt;
-</code></pre>
-
-<script type="text/javascript" defer>
-setTimeout(function() {
-  var icon_classes = [
-    'twitter'
-    , 'print'
-    , 'standards'
-    , 'email-open'
-    , 'search'
-    , 'pathways'
-    , 'download'
-    , 'support'
-    , 'share'
-    , 'readnews'
-    , 'infoforpublic'
-    , 'podcast'
-    , 'previous'
-    , 'news'
-    , 'guideline'
-    , 'fullscreen'
-    , 'information'
-    , 'guidance'
-    , 'facebook'
-    , 'syndication'
-    , 'email-closed'
-    , 'next'
-    , 'bookmark'
-    , 'evidence'
-    , 'apps'
-    , 'circle'
-    , 'logo'
-    , 'logo-name'
-    , 'capsule'
-    , 'pathways-node'
-    , 'circle-blank'
-    , 'user'
-    , 'trash'
-    , 'sort'
-    , 'sort-up'
-    , 'sort-down'
-    , 'remove'
-    , 'quote-right'
-    , 'quote-left'
-    , 'plus'
-    , 'play'
-    , 'ok'
-    , 'minus'
-    , 'cloud-upload'
-    , 'cloud-download'
-    , 'caret-up'
-    , 'caret-right'
-    , 'caret-left'
-    , 'caret-down'
-    , 'angle-up'
-    , 'angle-right'
-    , 'angle-left'
-    , 'angle-down'
-    , 'double-angle-up'
-    , 'double-angle-right'
-    , 'double-angle-left'
-    , 'double-angle-down'
-    , 'chevron-up'
-    , 'chevron-right'
-    , 'chevron-left'
-    , 'chevron-down'
-    , 'hamburger'
-    , 'file'
-    , 'file-blank'
-    , 'file-text'
-    , 'file-text-blank'
-    , 'spinner'
-    , 'stop'
-    , 'lines'
-    , 'calendar'
-    , 'group'
-    , 'adjust'
-    , 'plus-circle'
-    , 'linkedin'
-    , 'google-plus'
-    , 'warning'
-    , 'prescribing'
-    , 'uptake'
-    , 'filter'
-  ];
-
-  $('#iconstack-examples').html(
-    $.map(icon_classes, function( value, i ) {
-      var ico_class = 'glyph-' + value;
-      return '<div class="glyph"><span class="fs1 glyph-stack"><i aria-hidden="true" '
-        + 'class="glyph-circle glyph-stack-base"></i><i aria-hidden="true" class="' + ico_class
-        + '"></i></span></div>';
-    }).join('')
-  );
-
-  $('#glyphs').on('click, focus', 'input', function(e) { e.target.select(); });
-}, 500);
-</script>
-
-
-      <section id="disqus_thread"></section>
-    </article>
-
-    <aside class="content content-secondary">
-      <nav>
-        <ul>
-          <li class="active">
-            <a href="">Icon stack</a>
-            <ul>
-            </ul>
-          </li>
-        </ul>
-      </nav>
-    </aside>
-  </main>
 
   <footer class="footer-wrapper" role="contentinfo">
-    <div class="navbar">
-      <div class="container">
-        <ul class="nav example-tldr" role="navigation">
-          <li>
-            <a href="../../index.html">the NICE UI library</a>
-          </li>
-          <li>
-            <a href="../../basic-elements.html">Basic elements</a>
-          </li>
-          <li>
-            <a href="../../design-patterns.html">Design patterns</a>
-          </li>
-          <li>
-            <a href="../../going-further.html">Going further</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  
     <div class="footer">
       <div class="container">
         <a href="http://www.nice.org.uk" class="footer-logo"><span class="glyph-logo"></span></a>
@@ -436,8 +273,8 @@ setTimeout(function() {
       </div>
     </div>
   </footer>
-  
-  <script src="//cdn.nice.org.uk/V3/Scripts/nice/NICE.TopHat.js" async></script>
+
+  <script src="//cdn.nice.org.uk/V3/Scripts/nice/NICE.TopHat.js" async data-search="#search?q=%term" data-source-type="local"></script>
 
   <!-- Le javascript
   ================================================== -->
@@ -450,62 +287,5 @@ setTimeout(function() {
   
   <script src="/NICE.UI/scripts/ui.eprivacy-policy.js"></script>
   <script src="/NICE.UI/scripts/plugins/imageroll.js"></script>
-
-  <script>
-    var disqus_identifier = '/basic-elements/layout/icon-stack';
-  </script>
-  
-  <script src="//niceuilibrary.disqus.com/embed.js" async></script>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/run_prettify.js"></script>
-
-  <script>
-  (function() {
-    $('.guide-example').each(function() {
-      if ( $(this).is('.example-processed') ) return;
-
-      var $example = $(this).clone();
-
-      $example.children().each( processChild );
-      var src = $example.html().replace( /\&/mg, '&amp;' ).replace( '\n', '' ).replace( /=""/mg, '' );
-
-      var $code = $('<code/>').text( src );
-
-      $('<pre class="prettyprint linenums" />').append( $code ).insertAfter( this );
-
-      $(this).addClass('example-processed');
-    });
-
-    $('.footer-code').each(function() {
-      var $example = $('.footer-wrapper').clone();
-
-      $example.children().each( processChild );
-      var src = $example.wrap('<div/>').parent().html().replace( /\&/mg, '&amp;' ).replace( '\n', '' ).replace( /=""/mg, '' );
-
-      $(this).find('code').text( src );
-    });
-
-    function processChild() {
-      var $child = $(this);
-
-      if ( $child.is('.example-ignore') ) {
-        if ( this.nextSibling && this.nextSibling.nodeType === 3 && this.nextSibling.data.trim() === '' ) {
-          $( this.nextSibling ).remove();
-        }
-        $child.remove();
-        return;
-      }
-
-      if ( $child.is('.example-tldr') ) {
-        $child.removeClass('example-tldr').html( ' [...] ' );
-        if ($child.attr('class').trim() === '') {
-          $child.removeAttr('class');
-        }
-      }
-
-      $child.children().each( processChild );
-    }
-  })();
-  </script>
 </body>
 </html>

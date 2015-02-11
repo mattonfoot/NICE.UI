@@ -91,7 +91,8 @@
     font-size: 1.1rem;
     line-height: 2.4rem;
     background: #f6f6f6;
-    margin: 1.2rem 0;
+    margin-top: 1.2rem;
+    margin-bottom: 1.2rem;
     background-image:   linear-gradient(
                           90deg,
                           transparent 24.75%,
@@ -177,6 +178,7 @@
     color: #111;
   }
   
+  /*
   body {
     background: url(http://griddle.it/1128-12-24?background=fff&color=f0f7ff&text=bce) repeat-y center top;
   }
@@ -195,7 +197,7 @@
       background: none;
     }
   }
-  
+  */
   </style>
 </head>
 
@@ -254,7 +256,7 @@
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <p>The NICE UI library layout patterns are based around a 12 column design grid. When laying out content this basic presentation rule should be adhered to as often as possible.</p>
+      <p>The NICE UI library layout patterns are based around a 12 column design grid, reducing to 6 columns in device with a screen size below 992px. When laying out content this basic presentation rule should be adhered to as often as possible and to facilitate this guideling our grid framework is designed to work with the layout system.</p>
 <h2 id="features">Features</h2>
 <ol>
 <li><strong>Responsive grid</strong> defined in percentages</li>
