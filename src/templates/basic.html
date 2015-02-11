@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>{{ title }}</title>
+
+  {{> _header }}
+</head>
+
+<body>
+  {{{ contents }}}
+
+  <footer class="footer-wrapper" role="contentinfo">
+    {{> _Prototype.Footer }}
+  </footer>
+
+  <script src="//cdn.nice.org.uk/V3/Scripts/nice/NICE.TopHat.js" async data-search="#search?q=%term" data-source-type="local"></script>
+
+  {{> _footer }}
+</body>
+</html>
