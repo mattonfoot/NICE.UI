@@ -1,73 +1,88 @@
+.columns( @num-cols, @content-width, @spacing ) {
+  @column-size:       ( ( @content-width - @spacing ) / @num-cols );
 
-.row {
+  .row {
+    > * {
+      width: ( ( @column-size * 9 ) - @spacing ) * 1px;
+    }
+
+    .container &,
+    .content-primary & {
+      > .span1, > .span1of12                  { width: ( ( @column-size * 1 ) - @spacing ) * 1px;  }
+      > .span2, > .span1of6                   { width: ( ( @column-size * 2 ) - @spacing ) * 1px;  }
+      > .span3, > .span1of4                   { width: ( ( @column-size * 3 ) - @spacing ) * 1px;  }
+      > .span4, > .span1of3                   { width: ( ( @column-size * 4 ) - @spacing ) * 1px;  }
+      > .span5                                { width: ( ( @column-size * 5 ) - @spacing ) * 1px;  }
+      > .span6, > .span1of2                   { width: ( ( @column-size * 6 ) - @spacing ) * 1px;  }
+      > .span7                                { width: ( ( @column-size * 7 ) - @spacing ) * 1px;  }
+    }
+
+    .container &,
+    .layout-primary-wide .content-primary & {
+      > .span8, > .span2of3, > .span4of6      { width: ( ( @column-size * 8 ) - @spacing ) * 1px;  }
+    }
+
+    .container & {
+      > .span9, > .span3of4, > .span6of8      { width: ( ( @column-size * 9 ) - @spacing ) * 1px;  }
+      > .span10, > .span5of6, > .span10of12   { width: ( ( @column-size * 10 ) - @spacing ) * 1px; }
+      > .span11                               { width: ( ( @column-size * 11 ) - @spacing ) * 1px; }
+    }
+  }
+
+  .container,
+  .content-primary {
+    > .grid2 > * , > .grid1of2  > * { width: ( ( @column-size * 6 ) - @spacing ) * 1px;  }
+    > .grid3 > * , > .grid1of3  > * { width: ( ( @column-size * 4 ) - @spacing ) * 1px;  }
+    > .grid4 > * , > .grid1of4  > * { width: ( ( @column-size * 3 ) - @spacing ) * 1px;  }
+    > .grid6 > * , > .grid1of6  > * { width: ( ( @column-size * 2 ) - @spacing ) * 1px;  }
+    > .grid12 > *, > .grid1of12 > * { width: ( ( @column-size * 1 ) - @spacing ) * 1px;  }
+  }
+
+}
+
+.row,
+[class^="grid"],
+[class*=" grid"] {
   display: block;
+  .margin( 0 0 0 ( @grid-spacing * -1 ) );
+  .padding-zero;
+  list-style: none;
   .clearfix;
 
-  > [class^="span"],
-  > [class*=" span"] {
+  > * {
     display: block;
-    width: 100%;
-    .block-padding-horizontal;
+    position: relative;
+    float: left;
+    .margin( 0 0 0 @grid-spacing );
+    .padding-zero;
     .clearfix;
+  }
+
+  > .centered {
+    float: none;
+    .margin( 0 auto );
   }
 }
 
-@media ( min-width: 768px ) {
+.columns( @grid-columns-lg, @grid-container-lg, @grid-spacing );
+
+@media ( max-width: 767px ) {
   .row {
     > [class^="span"],
     > [class*=" span"] {
-      position: relative;
-      float: left;
+      float: none;
+      width: auto;
     }
 
     > .centered {
-      float: none;
-      margin: 0 auto;
-    }
-
-    > .span12,  > .span1of1 { float: none; }
-  }
-
-  // allow use of span sizing on table cells
-  .row, tr {
-    > .span1,  > .span1of12 { width: 100% / 12;  }
-    > .span2,   > .span1of6 { width: 100% / 6;  }
-    > .span3,   > .span1of4 { width: 100% / 4;  }
-    > .span4,   > .span1of3 { width: 100% / 3;  }
-    > .span6,   > .span1of2 { width: 100% / 2;  }
-    > .span8,   > .span2of3,   > .span4of6 { width: (100% / 3) * 2;  }
-    > .span9,   > .span3of4,   > .span6of8 { width: (100% / 4) * 3;  }
-    > .span10,  > .span5of6, > .span10of12 { width: (100% / 6) * 5;  }
-  }
-
-  [class^="grid"],
-  [class*=" grid"] {
-    display: block;
-    .margin-zero;
-    .padding-zero;
-    list-style: none;
-    .clearfix;
-
-    > * {
-      display: block;
-      position: relative;
-      float: left;
-      width: 100%;
-      .padding( 0 @half-grid-spacing );
-      .margin( 0 0 @base-line-height );
-      .clearfix;
-    }
-
-    > .centered {
-      float: none;
-      margin: 0 auto;
+      .margin-zero;
     }
   }
 
-  .grid2 > *,   .grid1of2 > * { width: 100% / 2;  }
-  .grid3 > *,   .grid1of3 > * { width: 100% / 3;  }
-  .grid4 > *,   .grid1of4 > * { width: 100% / 4;  }
-  .grid6 > *,   .grid1of6 > * { width: 100% / 6;  }
-  .grid12 > *,  .grid1of12 > * { width: 100% / 12;  }
-
+  tr {
+    > [class^="span"],
+    > [class*=" span"] {
+      width: auto;
+    }
+  }
 }

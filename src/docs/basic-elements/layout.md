@@ -51,7 +51,7 @@ Based on typical breakpoints, we have set our maximum site widths for each major
 
   - Large devices ( &ge;1200px ): 1176px ( 12 columns )
   - Medium devices ( &ge;992px ): 984px ( 12 columns )
-  - Small devices ( &ge;768px ): 744px ( 6 columns )
+  - Small devices ( &ge;768px ): 768px ( 6 columns )
   - Extra small devices ( &lt;768px ): 100% fluid ( 1 full width column )
 
 ### Two column layouts

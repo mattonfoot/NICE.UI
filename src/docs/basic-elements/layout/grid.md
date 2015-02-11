@@ -9,7 +9,7 @@ nav_groups:
   - primary
 ---
 
-The NICE UI library layout patterns are based around a 12 column design grid. When laying out content this basic presentation rule should be adhered to as often as possible.
+The NICE UI library layout patterns are based around a 12 column design grid, reducing to 6 columns in device with a screen size below 992px. When laying out content this basic presentation rule should be adhered to as often as possible and to facilitate this guideling our grid framework is designed to work with the layout system.
 
 ## Features
 
