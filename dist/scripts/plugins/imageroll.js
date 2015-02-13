@@ -3,8 +3,10 @@
 
   "use strict";
 
-  var style = 'html .evidence-hero { \
-    background-image: url(/content/nice/{{image}}1600.jpg); \
+  var style = '@media only screen and (min-width: 461px) { \
+    html .evidence-hero { \
+      background-image: url(/content/nice/{{image}}1600.jpg); \
+    } \
   } \
   @media \
   only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 768px), \
@@ -47,7 +49,7 @@
  /* IMAGEROLL PUBLIC CLASS DEFINITION
   * ============================== */
 
-  var ImageRoll = function (element, options) {
+  function ImageRoll ( element, options ) {
     this.$element = $(element);
     this.options = options;
 
@@ -57,7 +59,7 @@
     if ( typeof this.options.sizes === 'string' ) {
       this.options.sizes = (this.options.sizes || '').split(',');
     }
-  }
+  };
 
   ImageRoll.prototype = {
 
@@ -79,7 +81,7 @@
       return this.options.images[ rand ];
     }
 
-  }
+  };
 
 
  /* IMAGEROLL PLUGIN DEFINITION
@@ -97,11 +99,10 @@
 
         data.roll();
       })
-  }
+  };
 
   $.fn.imageroll.defaults = {
-    template: "http://mattonfoot.github.io/NICE.UI/content/nice/{{image}}{{size}}.jpg"
-  }
+  };
 
   $.fn.imageroll.Constructor = ImageRoll;
 
@@ -113,28 +114,15 @@
       $.fn.imageroll = old;
 
       return this;
-  }
+  };
 
 
  /* IMAGEROLL DATA-API
   * =============== */
 
-
- /* REMOTE LOAD DATA-API
-  * =============== */
-
-  function setup() {
-    $('[data-rotate="images"]').imageroll();
-  }
-
   $(function()
   {
-    setup();
-  });
-
-  $(window).on('load', function()
-  {
-    $(document).ajaxComplete( setup );
+    $('[data-rotate="images"]').imageroll();
   });
 
 }(window.jQuery);
