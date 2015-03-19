@@ -13,7 +13,7 @@ nav_groups:
 
 Add <code>.inline</code> for left-aligned labels and inline-block controls for a compact layout.
 
-<div class="alert alert-info">
+<div class="note note-info">
   <p><strong>Note:</strong> elements become inline and so will wrap when the available width is
     shorter than the length of the total line</p>
 </div>

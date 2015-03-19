@@ -9,7 +9,6 @@ nav_groups:
   - primary
 ---
 
-
 ## Inputs
 
 Most common form control, text-based input fields. Includes support for all HTML5 types:
@@ -19,7 +18,7 @@ Most common form control, text-based input fields. Includes support for all HTML
 
 Requires the use of a specified <code>type</code> at all times.
 
-<div class="alert alert-info">
+<div class="note note-info">
   <p><strong>Note:</strong> the <code>file</code> type input field needs to be marked up dfferently so
     is not included within this basic control section</p>
   </div>

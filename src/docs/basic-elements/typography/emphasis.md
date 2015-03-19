@@ -50,7 +50,7 @@ For marking a snippet of text such as a search term.
   <p>The following snippet of text is <mark>marked as found</mark>.</p>
 </div>
 
-<div class="alert alert-info alert-block">
+<div class="note note-info">
   <h4>Feel free to also use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code></h4>
 
   <p>In HTML5 <code>&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance while <code>&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p>

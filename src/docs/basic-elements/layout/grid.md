@@ -9,29 +9,28 @@ nav_groups:
   - primary
 ---
 
-The NICE UI library layout patterns are based around a 12 column design grid, reducing to 6 columns in device with a screen size below 992px. When laying out content this basic presentation rule should be adhered to as often as possible and to facilitate this guideling our grid framework is designed to work with the layout system.
+The NICE UI library layout patterns are based around a 12 column design grid, reducing to 6 columns in device with a screen size below 992px. When laying out content, this basic presentation rule should be adhered to as often as possible. To facilitate this our grid framework is designed to work alongside the layout system.
 
 ## Features
 
-  1. **Responsive grid** defined in percentages
-  1. **Flexible media** that will proportionaly scale down when larger than the parent tag
-  1. **Media Queries** that create breakpoints at: 768px and 980px
-  1. **Mobile-First** Only when the viewport width is above 768px does the grid take affect, otherwise it remains collapsed vertically.
+  1. **Responsive grid** with predictable breakpoints that understand their contextual position
+  1. **Flexible media** that will proportionately scale down when larger than the parent tag
+  1. **Media Queries** that create breakpoints at: 768px, 992px and 1200px
+  1. **Mobile Friendly** Only when the viewport width is above 768px does the grid take affect, otherwise it remains collapsed vertically.
 
 ## Getting Started
 
-The framework is built around a combination of these three elements: ```.container```, ```.row```, and ```.span*of*```.
+If you are not using the simple layout system, such as in a custom landing page or portal homepage, then the basic grid system will help your content to conform to the design grid. The framework is built around a combination of these three element classes: ```.container```, ```.row```, and ```.span*of*``` which can be used with any valid HTML element structure.
 
-  1. The ```.container``` class sets the max-width of the page and centers it horizontally. It also sets the left and right margins on small screens.
-  1. The ```.row``` class defines horizontal divisions of the page.
-  1. The ```.span*of*``` classes create vertical divisions of the page with defined sizes for containing content. (They can be thought of as "column spans")
+<dl class="dl-horizontal">
+  <dt>```.container```<dt>
+  <dd>sets the max-width of the page and centers it horizontally. It also sets the left and right margins so that the grid is centered, this must be positioned directly inside the ```<body>``` tag or a set of elements with **no margins or padding** of their own.</dd>
+  <dt>```.row```</dt>
+  <dd>defines the horizontal divisions of the page.</dd>
+  <dt>```.span*of*```</dt>
+  <dd>create vertical divisions of the page with defined sizes for containing content. (They can be thought of as "column spans")</dd>
+</dl>
 
-<div class="guide-example example-processed">
-<div class="row">
-  <div class="span2of3">2/3</div>
-  <div class="span1of3">1/3</div>
-</div>
-</div>
 <pre class="prettyprint linenums"><code>&lt;div class="container"&gt;
   &lt;div class="row"&gt;
     &lt;div class="span2of3"&gt;2/3&lt;/div&gt;
@@ -46,149 +45,27 @@ The framework is built around a combination of these three elements: ```.contain
 
 ## Sizes
 
-All of the available sizes can also be seen below.
+The different sized columns can be used in multiple combinations but be aware that if the sum of the column spans is greater than the 12 of the design grid they will wrap onto the next line.
 
-<div class="guide-example example-processed">
-<div class="row">
-  <div class="span1of1">1/1</div>
-</div>
+As an example the following would wrap the second column;
 
-<div class="row">
-  <div class="span1of2">1/2</div>
-  <div class="span1of2">1/2</div>
-</div>
-
-<div class="row">
-  <div class="span1of3">1/3</div>
-  <div class="span1of3">1/3</div>
-  <div class="span1of3">1/3</div>
-</div>
-
-<div class="row">
-  <div class="span1of4">1/4</div>
-  <div class="span1of4">1/4</div>
-  <div class="span1of4">1/4</div>
-  <div class="span1of4">1/4</div>
-</div>
-
-<div class="row">
-  <div class="span1of6">1/6</div>
-  <div class="span1of6">1/6</div>
-  <div class="span1of6">1/6</div>
-  <div class="span1of6">1/6</div>
-  <div class="span1of6">1/6</div>
-  <div class="span1of6">1/6</div>
-</div>
-
-<div class="row">
-  <div class="span1of12">1/12</div>
-  <div class="span1of12">1/12</div>
-  <div class="span1of12">1/12</div>
-  <div class="span1of12">1/12</div>
-  <div class="span1of12">1/12</div>
-  <div class="span1of12">1/12</div>
-  <div class="span1of12">1/12</div>
-  <div class="span1of12">1/12</div>
-  <div class="span1of12">1/12</div>
-  <div class="span1of12">1/12</div>
-  <div class="span1of12">1/12</div>
-  <div class="span1of12">1/12</div>
-</div>
-</div>
-
-The different sized columns can be used in multiple combinations but be aware that if the sum of the column spans is greater than 12 they will wrap onto the next line.
-
-<div class="guide-example example-processed">
-<div class="row">
-  <div class="span1of3">1/3</div>
-  <div class="span2of3">2/3</div>
-</div>
-
-<div class="row">
-  <div class="span1of4">1/4</div>
-  <div class="span3of4">3/4</div>
-</div>
-
-<div class="row">
-  <div class="span1of6">1/6</div>
-  <div class="span5of6">5/6</div>
-</div>
-
-<div class="row">
-  <div class="span2of3">2/3</div>
-  <div class="span1of3">1/3</div>
-</div>
-
-<div class="row">
-  <div class="span3of4">3/4</div>
-  <div class="span1of4">1/4</div>
-</div>
-
-<div class="row">
-  <div class="span5of6">5/6</div>
-  <div class="span1of6">1/6</div>
-</div>
-
-<div class="row">
-  <div class="span1of4">1/4</div>
-  <div class="span1of4">1/4</div>
-  <div class="span1of2">1/2</div>
-</div>
-
-<div class="row">
-  <div class="span1of4">1/4</div>
-  <div class="span1of2">1/2</div>
-  <div class="span1of4">1/4</div>
-</div>
-
-<div class="row">
-  <div class="span1of2">1/2</div>
-  <div class="span1of4">1/4</div>
-  <div class="span1of4">1/4</div>
-</div>
-
-<div class="row">
-  <div class="span5of6">5/6</div>
-  <div class="span1of12">1/12</div>
-  <div class="span1of12">1/12</div>
-</div>
-
-<div class="row">
-  <div class="span1of12">1/12</div>
-  <div class="span5of6">5/6</div>
-  <div class="span1of12">1/12</div>
-</div>
-</div>
+<pre class="prettyprint linenums"><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="span2of3"&gt;2/3&lt;/div&gt;
+    &lt;div class="span2of3"&gt;1/3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 
 It is also possible to use the ```.span*``` classes to indicate how many columns the element will span. This is the equivalent of ```.span*of12``` as the grid is based on twelve columns.
 
-<div class="guide-example example-processed">
-<div class="row">
-  <div class="span1">1</div>
-  <div class="span2">2</div>
-  <div class="span3">3</div>
-  <div class="span6">6</div>
-</div>
-
-<div class="row">
-  <div class="span3">3</div>
-  <div class="span9">9</div>
-</div>
-
-<div class="row">
-  <div class="span8">8</div>
-  <div class="span4">4</div>
-</div>
-
-<div class="row">
-  <div class="span6">6</div>
-  <div class="span6">6</div>
-</div>
-
-<div class="row">
-  <div class="span12">12</div>
-</div>
-</div>
+<pre class="prettyprint linenums"><code>&lt;div class="container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="span4"&gt;1/3&lt;/div&gt;
+    &lt;div class="span8"&gt;2/3&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
 
 ## Nesting columns
 
@@ -196,13 +73,13 @@ It is possible to nest columns within other columns. However, only certain combi
 
 <pre class="prettyprint linenums"><code>&lt;div class="container"&gt;
   &lt;div class="row"&gt;
-    &lt;div class="span2of3"&gt;
+    &lt;div class="span2of4"&gt;
       &lt;div class="row"&gt;
-        &lt;div class="span2of3"&gt;2/3&lt;/div&gt;
-        &lt;div class="span1of3"&gt;1/3&lt;/div&gt;
+        &lt;div class="span2of3"&gt;6 columns&lt;/div&gt;
+        &lt;div class="span1of3"&gt;3 columns&lt;/div&gt;
       &lt;/div&gt;
     &lt;/div&gt;
-    &lt;div class="span1of3"&gt;1/3&lt;/div&gt;
+    &lt;div class="span1of4"&gt;3 columns&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
@@ -210,9 +87,9 @@ It is possible to nest columns within other columns. However, only certain combi
 <div class="note note-important">
   <p>**Beware** It is easy to break the grid based designs by nesting columns. **Use with caution**.</p>
 
-  <p>If you were to nest a ```.span1of2``` (which has a width of 50%) within a ```.span1of6``` (which has a width of 16.67%) you get a column which is now equivalent to ```.span1of12``` 8.33%; This is ok because it still fits with the design grid.</p>
+  <p>If you were to nest a ```.span1of2``` (one half) within a ```.span1of6``` (1 sixth) you get a column which is now one twelfth; This is ok because it is equivalent to a ```.span1of12``` which naturally fits with the design grid.</p>
 
-  <p>If, however, you were to nest a ```.span1of6``` inside another ```.span1of6``` then this would be one sixth of one sixth which is 1/36<sup>th</sup> or 2.78% ( thats as if you are designing to a 36 column design grid ).</p>
+  <p>If, however, you were to nest a ```.span1of6``` inside another ```.span1of6``` then this would be one sixth of one sixth which is 1/36<sup>th</sup> this means your second column is now smaller than a single design grid column and now looks lik you are designing to a 36 column design grid.</p>
 </div>
 
 ## Centering

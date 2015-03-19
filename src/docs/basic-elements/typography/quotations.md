@@ -35,7 +35,7 @@ Add <code>&lt;small&gt;</code> tag for identifying the source. Wrap the name of 
 </blockquote>
 </div>
 
-<div class="alert alert-block alert-info">
+<div class="note note-info">
 <h4>Right pulled quotations</h4>
 
 <p>Although bootstrap provides an alternate display by adding <code>.pull-right</code> to blockquotes NICE does not use this style.</p>

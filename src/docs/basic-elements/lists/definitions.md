@@ -44,7 +44,7 @@ Make terms and definitions in <code>&lt;dl&gt;</code> line up side-by-side.
 </dl>
 </div>
 
-<div class="alert alert-block alert-info">
+<div class="note note-info">
   <h4>Auto-truncating</h4>
 
   <p>Horizontal description lists will truncate terms that are too long to fit in the left column fix <code>text-overflow</code>. In narrower viewports, they will change to the default stacked layout.</p>

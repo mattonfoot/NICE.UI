@@ -6,8 +6,7 @@
       width: ( ( @column-size * 9 ) - @spacing ) * 1px;
     }
 
-    .container &,
-    .content-primary & {
+    .container & {
       > .span1, > .span1of12                  { width: ( ( @column-size * 1 ) - @spacing ) * 1px;  }
       > .span2, > .span1of6                   { width: ( ( @column-size * 2 ) - @spacing ) * 1px;  }
       > .span3, > .span1of4                   { width: ( ( @column-size * 3 ) - @spacing ) * 1px;  }
@@ -15,17 +14,29 @@
       > .span5                                { width: ( ( @column-size * 5 ) - @spacing ) * 1px;  }
       > .span6, > .span1of2                   { width: ( ( @column-size * 6 ) - @spacing ) * 1px;  }
       > .span7                                { width: ( ( @column-size * 7 ) - @spacing ) * 1px;  }
-    }
-
-    .container &,
-    .layout-primary-wide .content-primary & {
       > .span8, > .span2of3, > .span4of6      { width: ( ( @column-size * 8 ) - @spacing ) * 1px;  }
-    }
-
-    .container & {
       > .span9, > .span3of4, > .span6of8      { width: ( ( @column-size * 9 ) - @spacing ) * 1px;  }
       > .span10, > .span5of6, > .span10of12   { width: ( ( @column-size * 10 ) - @spacing ) * 1px; }
       > .span11                               { width: ( ( @column-size * 11 ) - @spacing ) * 1px; }
+    }
+
+    .content-primary & {
+      > .span1of8                   { width: ( ( @column-size * 1 ) - @spacing ) * 1px;  }
+      > .span1of4                   { width: ( ( @column-size * 2 ) - @spacing ) * 1px;  }
+      // 3 = 2.667
+      > .span1of2, > .span2of4      { width: ( ( @column-size * 4 ) - @spacing ) * 1px;  }
+      // 5 = 1.6
+      > .span3of4                   { width: ( ( @column-size * 6 ) - @spacing ) * 1px;  }
+      // 7 = 1.14
+    }
+
+    .layout-primary-wide .content-primary & {
+      > .span1of9                   { width: ( ( @column-size * 1 ) - @spacing ) * 1px;  }
+      // 2 = 4.5
+      > .span1of3                   { width: ( ( @column-size * 3 ) - @spacing ) * 1px;  }
+      // 4 = 2.25
+      // 5 = 1.8
+      > .span2of3                   { width: ( ( @column-size * 6 ) - @spacing ) * 1px;  }
     }
   }
 
