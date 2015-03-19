@@ -178,6 +178,37 @@
     color: #111;
   }
   
+  .note {
+    display: block;
+    margin: 24px 0;
+    padding: 6px 12px;
+  }
+  
+  .note > :first-child {
+    margin-top: 0;
+  }
+  .note > :last-child {
+    margin-bottom: 0;
+  }
+  
+  .note-important {
+    padding-left: 18px;
+    border-left: 6px solid rgba( 255, 0, 0, .2);
+    background: rgba( 255, 0, 0, .06);
+  }
+  
+  .note-warning {
+    padding-left: 18px;
+    border-left: 6px solid rgba( 255, 200, 100, .2);
+    background: rgba( 255, 200, 100, .06);
+  }
+  
+  .note-info {
+    padding-left: 18px;
+    border-left: 6px solid rgba( 100, 200, 255, .2);
+    background: rgba( 100, 200, 255, .06);
+  }
+  
   /*
   body {
     background: url(http://griddle.it/1128-12-24?background=fff&color=f0f7ff&text=bce) repeat-y center top;
@@ -250,7 +281,7 @@
 
   <main class="layout layout-first-right" role="main">
     <article class="content content-primary">
-      <div class="alert alert-important">
+      <div class="note note-important">
 <h4>Do you really need a table?</h4>
 
 <p>When choosing the best way to correctly markup your content you need to look at the purpose of the information conveyed by it. better ways to mark up your information could be <a href="/docs/typography/lists">lists</a> which can represent either hierarchies or terms and definitions in a much more effective way than a table can.</p>
