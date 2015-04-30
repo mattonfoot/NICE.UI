@@ -101,6 +101,8 @@ setTimeout(function() {
     , 'prescribing'
     , 'uptake'
     , 'filter'
+    , 'home'
+    , 'text-size'
   ];
 
   $('#iconstack-examples').html(

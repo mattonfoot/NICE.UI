@@ -98,6 +98,8 @@ setTimeout(function() {
     , 'prescribing'
     , 'uptake'
     , 'filter'
+    , 'home'
+    , 'text-size'
   ];
 
   $('#charset-examples').html(

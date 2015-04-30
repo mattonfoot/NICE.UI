@@ -125,6 +125,8 @@ setTimeout(function() {
       , 'prescribing'
       , 'uptake'
       , 'filter'
+      , 'home'
+      , 'text-size'
   ];
 
   $('#classes-examples').html(
