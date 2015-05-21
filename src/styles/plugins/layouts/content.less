@@ -77,15 +77,15 @@
 
 .layout( @grid-columns-lg, @grid-container-lg, @grid-spacing, 9, 8 );
 
-@media ( max-width: 1199px ) {
+@media ( max-width: @screen-md-max ) {
   .layout( @grid-columns-md, @grid-container-md, @grid-spacing, 9, 8 );
 }
 
-@media ( max-width: 991px ) {
+@media ( max-width: @screen-sm-max ) {
   .layout( @grid-columns-sm, @grid-container-sm, @grid-spacing, 4, 4 );
 }
 
-@media ( max-width: 767px ) {
+@media ( max-width: @screen-xs-max ) {
   .layout {
     > .content {
       float: none;

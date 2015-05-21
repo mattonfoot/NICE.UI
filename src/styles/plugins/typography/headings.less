@@ -32,3 +32,22 @@ h4, h5, h6 {
     .font-medium;
     .line-height;
 }
+
+@media ( max-width: @screen-xs-max ) {
+
+  h1 {
+    .font-xlarge;
+    .line-height( @base-line-height * 2 );
+  }
+
+  h2 {
+    .font-large;
+    .line-height( @base-line-height );
+  }
+
+  h3 {
+    .font-medium;
+    .line-height;
+  }
+
+}
