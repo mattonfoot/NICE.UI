@@ -1,0 +1,313 @@
+#chapter-viewer {
+  font-family: Lato, "Helvetica Neue", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-rendering: optimizelegibility;
+}
+
+#chapter-viewer h3,
+#chapter-viewer h4,
+#chapter-viewer h5,
+#chapter-viewer h6 {
+  margin: 2.4rem 0;
+  padding: 0;
+}
+#chapter-viewer h3 {
+  font-size: 3.6rem;
+  line-height: 4.8rem;
+}
+#chapter-viewer h4 {
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+}
+#chapter-viewer h5,
+#chapter-viewer h6 {
+  font-size: 1.9rem;
+  line-height: 2.4rem;
+}
+@media (max-width: 767px) {
+  #chapter-viewer h3 {
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+  }
+  #chapter-viewer h4 {
+    font-size: 1.9rem;
+  }
+  #chapter-viewer h5,
+  #chapter-viewer h6 {
+    font-size: 1.6rem;
+  }
+}
+#chapter-viewer p {
+  margin: 2.4rem 0;
+  padding: 0;
+}
+#chapter-viewer a {
+  color: #01769d;
+  background: transparent;
+  text-decoration: underline;
+}
+#chapter-viewer a:focus,
+#chapter-viewer a:hover {
+  color: #08455b;
+}
+#chapter-viewer a:focus {
+  outline: 1px dotted #7fdbff;
+}
+#chapter-viewer a:active,
+#chapter-viewer a:hover {
+  outline: 0;
+}
+#chapter-viewer small {
+  font-size: 80%;
+  line-height: 0;
+}
+#chapter-viewer em,
+#chapter-viewer i {
+  font-style: italic;
+  line-height: 0;
+}
+#chapter-viewer b,
+#chapter-viewer strong {
+  font-weight: 700;
+  line-height: 0;
+}
+#chapter-viewer u {
+  text-decoration: underline;
+}
+#chapter-viewer mark {
+  color: #000000;
+  background-color: #ffdc00;
+}
+#chapter-viewer abbr[title],
+#chapter-viewer acronym[title] {
+  border-bottom: 1px dotted #656565;
+  cursor: help;
+}
+#chapter-viewer acronym[title] {
+  font-size: 1.5rem;
+}
+#chapter-viewer address {
+  margin: 2.4rem 0;
+  padding: 0;
+  font-style: italic;
+}
+#chapter-viewer cite,
+#chapter-viewer [cite] {
+  font-style: italic;
+  line-height: 0;
+}
+#chapter-viewer q {
+  font-style: italic;
+  line-height: 0;
+}
+#chapter-viewer blockquote {
+  display: block;
+  position: relative;
+  margin: 2.4rem 0 0;
+  padding: 2.4rem 0;
+  color: #656565;
+  font-style: italic;
+}
+#chapter-viewer blockquote:before {
+  display: block;
+  position: absolute;
+  top: 0;
+  font-size: 3.6rem;
+  color: #ffdc00;
+}
+#chapter-viewer blockquote p {
+  margin-bottom: 0;
+}
+#chapter-viewer blockquote cite {
+  display: block;
+  font-weight: 700;
+  font-style: normal;
+  color: #111111;
+  font-size: 1.2rem;
+  line-height: 2.4rem;
+}
+#chapter-viewer blockquote + blockquote {
+  margin-top: 1.2rem;
+  padding-top: 3.6rem;
+  border-width: 0;
+  border-top: 1px solid #e6e6e6;
+}
+#chapter-viewer blockquote + blockquote:before {
+  top: 12px;
+}
+#chapter-viewer dfn {
+  font-weight: 700;
+  font-style: italic;
+  line-height: 0;
+}
+#chapter-viewer ins {
+  text-decoration: underline;
+}
+#chapter-viewer del,
+#chapter-viewer s {
+  text-decoration: line-through;
+}
+#chapter-viewer del {
+  color: #919191;
+}
+#chapter-viewer sup,
+#chapter-viewer sub {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+#chapter-viewer sup {
+  top: -0.5em;
+}
+#chapter-viewer sub {
+  bottom: -0.25em;
+}
+#chapter-viewer li ul,
+#chapter-viewer li ol {
+  margin: 0;
+}
+#chapter-viewer li > p:first-child {
+  margin-top: 0;
+}
+#chapter-viewer li > p:last-child {
+  margin-bottom: 0;
+}
+#chapter-viewer ul,
+#chapter-viewer ol {
+  margin: 2.4rem 2.4rem 2.4rem 0;
+  padding: 0 0 0 2.4rem;
+}
+#chapter-viewer ul {
+  list-style-type: disc;
+}
+#chapter-viewer ol {
+  list-style-type: decimal;
+}
+#chapter-viewer dl {
+  margin: 2.4rem 0;
+  padding: 0;
+}
+#chapter-viewer dl dt {
+  font-weight: 700;
+}
+#chapter-viewer dd {
+  margin-left: 1.2rem;
+}
+#chapter-viewer img,
+#chapter-viewer svg,
+#chapter-viewer canvas,
+#chapter-viewer figure {
+  display: block;
+  max-width: 100%;
+  width: auto;
+}
+#chapter-viewer iframe {
+  display: block;
+  max-width: 100%;
+}
+#chapter-viewer img {
+  border: 0;
+}
+#chapter-viewer svg:not(:root) {
+  overflow: hidden;
+}
+#chapter-viewer figure {
+  margin: 2.4rem 0;
+  padding: 0;
+}
+#chapter-viewer figure img {
+  width: 100%;
+  height: auto;
+}
+#chapter-viewer figcaption {
+  display: block;
+  margin: 0.6rem 0 1.8rem;
+  text-align: center;
+}
+#chapter-viewer audio,
+#chapter-viewer progress,
+#chapter-viewer video {
+  display: inline-block;
+  vertical-align: top;
+}
+#chapter-viewer audio {
+  height: 4.8rem;
+}
+#chapter-viewer progress {
+  height: 2.4rem;
+}
+#chapter-viewer audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+#chapter-viewer table {
+  width: 100%;
+  max-width: 100%;
+  margin: 2.4rem 0;
+  padding: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
+  background-color: #ffffff;
+}
+#chapter-viewer table > thead > tr > th,
+#chapter-viewer table > tbody > tr > th,
+#chapter-viewer table > tfoot > tr > th {
+  text-align: left;
+  font-weight: 700;
+}
+#chapter-viewer table > thead > tr > th,
+#chapter-viewer table > tbody > tr > th,
+#chapter-viewer table > tfoot > tr > th,
+#chapter-viewer table > thead > tr > td,
+#chapter-viewer table > tbody > tr > td,
+#chapter-viewer table > tfoot > tr > td {
+  padding: 1.2rem 2.4rem 1.1rem;
+  line-height: 2.4rem;
+  vertical-align: top;
+  border-style: solid;
+  border-width: 1px 0;
+  border-color: #aaaaaa;
+}
+#chapter-viewer table > thead > tr > td,
+#chapter-viewer table > tbody > tr > td,
+#chapter-viewer table > tfoot > tr > td {
+  transition: background-color 0.3s;
+}
+#chapter-viewer table > thead > tr > th {
+  vertical-align: bottom;
+  border-style: solid;
+  border-width: 1px 0;
+  color: #111111;
+  background-color: #7fdbff;
+}
+#chapter-viewer table > caption + thead > tr:first-child > th,
+#chapter-viewer table > colgroup + thead > tr:first-child > th,
+#chapter-viewer table > thead:first-child > tr:first-child > th,
+#chapter-viewer table > caption + thead > tr:first-child > td,
+#chapter-viewer table > colgroup + thead > tr:first-child > td,
+#chapter-viewer table > thead:first-child > tr:first-child > td {
+  border-top: 0;
+}
+#chapter-viewer table > tbody + tbody {
+  border-top: 2px solid;
+  border-color: #aaaaaa;
+}
+#chapter-viewer table > tbody tr:nth-child(even),
+#chapter-viewer table > tbody tr.even {
+  background-color: #f2f2f2;
+}
+#chapter-viewer table > tbody > tr:hover td {
+  background-color: #e5f8ff;
+  transition: background-color 0.2s;
+}
+#chapter-viewer table > tfoot {
+  font-style: italic;
+}
+#chapter-viewer table > caption {
+    padding: 1.2rem;
+    font-style: italic;
+    background-color: #f2f2f2;
+    text-align: left;
+}
