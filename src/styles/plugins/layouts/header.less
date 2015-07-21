@@ -36,10 +36,13 @@ header {
     .margin( 0 0 0 @grid-spacing );
   }
 
-}
+  article > & {
+    background: transparent;
+  }
 
-article > header {
-  background: transparent;
+  .nice-tophat + & {
+    margin-top: -24px;
+  }
 }
 
 // responsive

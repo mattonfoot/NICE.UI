@@ -11,24 +11,22 @@
 <body>
   {{> _Global.Nav }}
 
-  <main role="main">
-    <header class="hero-unit" role="banner">
-      <div class="container">
-        <h1>{{ title }}</h1>
+  <header class="hero-unit" role="banner">
+    <div class="container">
+      <h1>{{ title }}</h1>
 
-        <p>{{ description }}</p>
+      <p>{{ description }}</p>
 
-        <ul class="inline">
-          <li><a href="{{ gitrepo }}" class="btn">GitHub project</a></li>
-          <li><a href="/design-patterns.html" class="btn action-primary">Design patterns</a></li>
-          <li>Version {{ version }}</li>
-        </ul>
-      </div>
-    </header>
-
-    <div class="container marketing">
-      {{{ contents }}}
+      <ul class="inline">
+        <li><a href="{{ gitrepo }}" class="btn">GitHub project</a></li>
+        <li><a href="/design-patterns.html" class="btn action-primary">Design patterns</a></li>
+        <li>Version {{ version }}</li>
+      </ul>
     </div>
+  </header>
+
+  <main role="main" class="container marketing">
+    {{{ contents }}}
   </main>
 
   {{> _Global.Footer }}
